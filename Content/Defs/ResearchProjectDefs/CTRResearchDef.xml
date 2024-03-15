@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Basic Alchemy -->
+	<ResearchProjectDef>
+		<defName>CTR_BasicAlchemy</defName>
+		<label>Basic of Alchemy</label>
+		<description>. . .</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>DrugProduction</li>
+		</prerequisites>
+		<tab>CTR_Alchemy_ResearchTab</tab>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>0.40</researchViewY>
+	</ResearchProjectDef>	
+	
+	<!-- Cultivation Pill -->
+	<ResearchProjectDef>
+		<defName>CTR_QiCondensingPillMaking</defName>
+		<label>Alchemy - Qi Condensing Pills</label>
+		<description>. . .</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_BasicAlchemy</li>
+		</prerequisites>
+		<tab>CTR_Alchemy_ResearchTab</tab>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>CTR_ImproveAbsorptionPillMaking</defName>
+		<label>Alchemy - Qi Absorption Pills</label>
+		<description>. . .</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_BasicAlchemy</li>
+		</prerequisites>
+		<tab>CTR_Alchemy_ResearchTab</tab>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>	
+		<defName>CTR_FleshHealingPillMaking</defName>
+		<label>Alchemy - Flesh Healing Pills</label>
+		<description>. . .</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_BasicAlchemy</li>
+		</prerequisites>
+		<tab>CTR_Alchemy_ResearchTab</tab>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>1.60</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>	
+		<defName>CTR_ColdResistPillMaking</defName>
+		<label>Alchemy - Cold-Resistance Pills</label>
+		<description>. . .</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_BasicAlchemy</li>
+		</prerequisites>
+		<tab>CTR_Alchemy_ResearchTab</tab>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>2.20</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>	
+		<defName>CTR_HeatResistPillMaking</defName>
+		<label>Alchemy - Heat-Resistance Pills</label>
+		<description>. . .</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_BasicAlchemy</li>
+		</prerequisites>
+		<tab>CTR_Alchemy_ResearchTab</tab>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>2.80</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>	
+		<defName>CTR_ImproveGWSPillMaking</defName>
+		<label>Alchemy - Work Speed Pills</label>
+		<description>. . .</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_BasicAlchemy</li>
+		</prerequisites>
+		<tab>CTR_Alchemy_ResearchTab</tab>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>1.60</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>	
+		<defName>CTR_StoneSkinPillMaking</defName>
+		<label>Alchemy - Stoneskin Pills</label>
+		<description>. . .</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_BasicAlchemy</li>
+		</prerequisites>
+		<tab>CTR_Alchemy_ResearchTab</tab>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>2.20</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>	
+		<defName>CTR_FertilityPillMaking</defName>
+		<label>Alchemy - Fertility Pills</label>
+		<description>. . .</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_BasicAlchemy</li>
+		</prerequisites>
+		<tab>CTR_Alchemy_ResearchTab</tab>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>2.80</researchViewY>
+	</ResearchProjectDef>
+	
+	
+	
+	<!-- Intermediate Alchemy -->
+	<ResearchProjectDef>
+		<defName>CTR_IntermediateAlchemy</defName>
+		<label>Intermediate Alchemy</label>
+		<description>. . .</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_BasicAlchemy</li>
+		</prerequisites>
+		<tab>CTR_Alchemy_ResearchTab</tab>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>0.40</researchViewY>
+	</ResearchProjectDef>		
+
+	<!-- Nascent Pill -->
+	<ResearchProjectDef>
+		<defName>CTR_NascentQiPillMaking</defName>
+		<label>Alchemy - Nascent Qi Pills</label>
+		<description>. . .</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_IntermediateAlchemy</li>
+		</prerequisites>
+		<tab>CTR_Alchemy_ResearchTab</tab>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>	
+		<defName>CTR_DantianRepairPillMaking</defName>
+		<label>Alchemy - Dantian Repair Pills</label>
+		<description>. . .</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_IntermediateAlchemy</li>
+		</prerequisites>
+		<tab>CTR_Alchemy_ResearchTab</tab>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>1.60</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>	
+		<defName>CTR_ImproveReflexPillMaking</defName>
+		<label>Alchemy - Reflex Improvement Pills</label>
+		<description>. . .</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_IntermediateAlchemy</li>
+		</prerequisites>
+		<tab>CTR_Alchemy_ResearchTab</tab>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>2.20</researchViewY>
+	</ResearchProjectDef>
+	
+	<!-- Advanced Alchemy -->
+	<ResearchProjectDef>
+		<defName>CTR_AdvancedAlchemy</defName>
+		<label>Advanced Alchemy</label>
+		<description>. . .</description>
+		<baseCost>5000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_IntermediateAlchemy</li>
+		</prerequisites>
+		<tab>CTR_Alchemy_ResearchTab</tab>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>0.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>	
+		<defName>CTR_SaintQiPillMaking</defName>
+		<label>Alchemy - Saint Qi Pills</label>
+		<description>. . .</description>
+		<baseCost>5000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_AdvancedAlchemy</li>
+		</prerequisites>
+		<tab>CTR_Alchemy_ResearchTab</tab>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>	
+		<defName>CTR_ImmortalQiPillMaking</defName>
+		<label>Alchemy - Immortal Qi Pills</label>
+		<description>. . .</description>
+		<baseCost>7500</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_AdvancedAlchemy</li>
+		</prerequisites>
+		<tab>CTR_Alchemy_ResearchTab</tab>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>	
+		<defName>CTR_LifeSpanPillMaking</defName>
+		<label>Alchemy - Lifespan Extending Pills</label>
+		<description>. . .</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_AdvancedAlchemy</li>
+		</prerequisites>
+		<tab>CTR_Alchemy_ResearchTab</tab>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>1.60</researchViewY>
+	</ResearchProjectDef>
+
+
+	<!-- Basic Talisman -->
+	<ResearchProjectDef>
+		<defName>CTR_TalismanMaking</defName>
+		<label>Basic of Talisman</label>
+		<description>. . .</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<!-- <li>DrugProduction</li> -->
+		</prerequisites>
+		<tab>CTR_Cultivation_ResearchTab</tab>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>0.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>CTR_MaterialInfusion</defName>
+		<label>Material Infusion</label>
+		<description>a method to infuse Qi into elemental material</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<!-- <li>DrugProduction</li> -->
+		</prerequisites>
+		<tab>CTR_Cultivation_ResearchTab</tab>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>1.60</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>CTR_MaterialCondensation</defName>
+		<label>Material Condensation</label>
+		<description>a method to infuse Qi into elemental material</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_MaterialInfusion</li>
+		</prerequisites>
+		<tab>CTR_Cultivation_ResearchTab</tab>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>1.60</researchViewY>
+	</ResearchProjectDef>	
+	
+	<ResearchProjectDef>
+		<defName>CTR_SpiritPlantCultivationBasic</defName>
+		<label>Spirit Plant Farming - Basic</label>
+		<description>a method to artificially farm basic spirit plant</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<!-- <li>DrugProduction</li> -->
+		</prerequisites>
+		<tab>CTR_Cultivation_ResearchTab</tab>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>2.80</researchViewY>
+	</ResearchProjectDef>	
+	
+	<ResearchProjectDef>
+		<defName>CTR_SpiritPlantCultivationIntermediate</defName>
+		<label>Spirit Plant Farming - Intermediate</label>
+		<description>a method to artificially farm a more intermediate kind of spirit plant</description>
+		<baseCost>2500</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_SpiritPlantCultivationBasic</li>
+		</prerequisites>
+		<tab>CTR_Cultivation_ResearchTab</tab>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>2.80</researchViewY>
+	</ResearchProjectDef>	
+	
+	<ResearchProjectDef>
+		<defName>CTR_SpiritPlantCultivationAdvanced</defName>
+		<label>Spirit Plant Farming - Advanced</label>
+		<description>a method to artificially farm a more advanced kind of spirit plant</description>
+		<baseCost>5000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_SpiritPlantCultivationIntermediate</li>
+		</prerequisites>
+		<tab>CTR_Cultivation_ResearchTab</tab>
+		<researchViewX>2.00</researchViewX>
+		<researchViewY>2.80</researchViewY>
+	</ResearchProjectDef>	
+
+</Defs>

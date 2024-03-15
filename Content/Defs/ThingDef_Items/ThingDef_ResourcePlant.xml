@@ -1,0 +1,264 @@
+<Defs>
+
+	<ThingDef Name="SpiritPlantYieldBase" ParentName="RoughPlantBase" Abstract="true">
+		<statBases>
+			<MarketValue>2</MarketValue>
+			<Flammability>0.2</Flammability>
+		</statBases>
+		<tradeTags>
+		<!-- <li>Qi_Source</li> -->
+			<li>Spirit_Plant_Product</li>		
+		</tradeTags>
+		<thingCategories>
+			<li>Spirit_PlantProduct</li>
+		</thingCategories>
+		<ingestible>
+		<preferability>DesperateOnly</preferability>
+		<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+		</ingestible>
+		<comps>
+			<!-- <li Class="CompProperties_Glower"> -->
+				<!-- <glowRadius>2</glowRadius> -->
+				<!-- <glowColor>(154,230,255)</glowColor> -->
+			<!-- </li> -->
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="SpiritPlantYieldBase">
+		<defName>CTR_SpiritGrass</defName>
+		<label>spirit leaves</label>
+		<description>leaf full of Qi harvested from Spirit Grass plant. can be used in Alchemy for pill making \n\nTags:Qi Condensing Ingredient, Neutral Qi</description>
+		<graphicData>
+			<texPath>Things/Items/Plants/SpiritGrassBundle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+		</graphicData>    
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>60</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>    
+		<tradeTags>
+			<li>Qi_Condensing_Ingredient</li>
+			<li>Neutral_Qi</li>
+			<li>Qi_Source</li>
+			<li>Qi_Source_Tier1</li>
+		</tradeTags>    
+	</ThingDef>
+	
+	<ThingDef ParentName="SpiritPlantYieldBase">
+		<defName>CTR_MoonLeaf</defName>
+		<label>moon shard</label>
+		<description>leaf harvested from Moon Grass. contain cold Qi from absorbing Moonlight \n\nTags:Cold Qi</description>
+		<graphicData>
+			<texPath>Things/Items/Plants/MoonShard</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+		</graphicData>    
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>60</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>    
+		<tradeTags>
+			<li>Cold_Qi</li>
+			<li>Yin_Qi</li>
+		</tradeTags>    
+	</ThingDef>
+	
+	<ThingDef ParentName="SpiritPlantYieldBase">
+		<defName>CTR_YangFlower</defName>
+		<label>Yang flower</label>
+		<description>a flower harvested from YinYang Flower during the day. contain potent Yang Qi \n\nTags:Yang Qi</description>
+		<graphicData>
+			<texPath>Things/Items/Plants/YangFlower</texPath>
+			<drawSize>2</drawSize>
+		</graphicData>    
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>60</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>    
+		<tradeTags>	
+			<li>Yang_Qi</li>
+		</tradeTags>    
+	</ThingDef>
+	
+	<ThingDef ParentName="SpiritPlantYieldBase">
+		<defName>CTR_YinFlower</defName>
+		<label>Yin flower</label>
+		<description>a flower harvested from YinYang Flower during the night. contain potent Yin Qi \n\nTags:Yin Qi</description>
+		<graphicData>
+			<texPath>Things/Items/Plants/YinFlower</texPath>
+			<drawSize>2</drawSize>
+		</graphicData>    
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>60</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>    
+		<tradeTags>
+			<li>Yin_Qi</li>
+		</tradeTags>    
+	</ThingDef>
+	
+	<ThingDef ParentName="SpiritPlantYieldBase">
+		<defName>CTR_EarthFruit</defName>
+		<label>Earthen fruit</label>
+		<description>a fruit harvested from Eathen tree. contain potent Earth Qi \n\nTags:Earth Qi</description>
+		<graphicData>
+			<texPath>Things/Items/Plants/EarthenFruit</texPath>
+			<drawSize>0.75</drawSize>
+		</graphicData>    
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>60</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>    
+		<tradeTags>	
+			<li>Earth_Qi</li>
+			<li>Yang_Qi</li>
+			<li>Yin_Qi</li>
+		</tradeTags>    
+	</ThingDef>
+	
+	<ThingDef ParentName="SpiritPlantYieldBase">
+		<defName>CTR_WaterFruit</defName>
+		<label>Aquatic fruit</label>
+		<description>a fruit harvested from Water tree. contain potent Water Qi \n\nTags:Water Qi</description>
+		<graphicData>
+			<texPath>Things/Items/Plants/WaterFruit</texPath>
+			<drawSize>1.5</drawSize>
+		</graphicData>    
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>60</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>    
+		<tradeTags>		
+			<li>Water_Qi</li>
+			<li>Yin_Qi</li>
+		</tradeTags>    
+	</ThingDef>
+	
+	<ThingDef ParentName="SpiritPlantYieldBase">
+		<defName>CTR_WoodFruit</defName>
+		<label>Ancient Branch</label>
+		<description>a branch harvested from Ancient tree. contain potent Wood Qi \n\nTags:Wood Qi</description>
+		<graphicData>
+			<texPath>Things/Items/Plants/AncientBranch</texPath>
+			<drawSize>1</drawSize>
+		</graphicData>    
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>60</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>    
+		<tradeTags>		
+			<li>Wood_Qi</li>
+			<li>Yang_Qi</li>
+		</tradeTags>    
+	</ThingDef>
+	
+	<ThingDef ParentName="SpiritPlantYieldBase">
+		<defName>CTR_FireFlower</defName>
+		<label>Crimson Flower</label>
+		<description>a branch harvested from Ancient tree. contain potent Fire Qi \n\nTags:Fire Qi, Yang Qi</description>
+		<graphicData>
+			<texPath>Things/Items/Plants/FireFlower</texPath>
+			<drawSize>1</drawSize>
+		</graphicData>    
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>60</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>    
+		<tradeTags>		
+			<li>Fire_Qi</li>
+			<li>Yang_Qi</li>
+		</tradeTags>    
+	</ThingDef>
+	
+	<ThingDef ParentName="SpiritPlantYieldBase">
+		<defName>CTR_MetalSteleFragment</defName>
+		<label>Stele Fragment</label>
+		<description>a fragment harvested from Metal Totem. contain potent Metal Qi \n\nTags:Metal Qi, Yin Qi</description>
+		<graphicData>
+			<texPath>Things/Items/Plants/SteleFrag</texPath>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<statBases>
+			<MarketValue>9</MarketValue>
+			<Mass>0.25</Mass>
+			<StuffPower_Armor_Sharp>1.20</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>1.20</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.60</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>10</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1.5</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1.5</BluntDamageMultiplier>
+		</statBases>
+		<burnableByRecipe>false</burnableByRecipe>
+		<smeltable>true</smeltable>
+		<stuffProps>
+			<categories>
+			<li>Metallic</li>
+			</categories>
+			<appearance>Metal</appearance>
+			<commonality>0.05</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(113,105,74)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>2.8</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0</Flammability>
+				<WorkToMake>2.2</WorkToMake>
+				<WorkToBuild>2.2</WorkToBuild>
+				<MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+		</stuffProps>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>60</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<tradeTags>		
+			<li>Metal_Qi</li>
+			<li>Yin_Qi</li>
+		</tradeTags>    
+	</ThingDef>
+	
+	<ThingDef ParentName="SpiritPlantYieldBase">
+		<defName>CTR_ImmortalGrass</defName>
+		<label>immortal seed</label>
+		<description>seed harvested from Immortal Grass plant, contain potent Immortal Qi \n\nTags:Immortal Qi Wood_Qi</description>
+		<graphicData>
+			<texPath>Things/Items/Plants/ImmortalDan</texPath>
+			<drawSize>1</drawSize>
+		</graphicData>    
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(154,230,255)</glowColor>
+			</li>
+		</comps>
+		<tradeTags>		
+			<li>Immortal_Qi</li>
+			<li>Wood_Qi</li>
+		</tradeTags>    
+	</ThingDef>
+  
+  
+</Defs>

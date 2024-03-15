@@ -1,0 +1,165 @@
+<Patch>
+
+	<!-- Steel -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Steel"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Steel"]</xpath>
+			<value>
+				<tradeTags />
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Steel"]/tradeTags</xpath>
+		<value>
+			<li>Metal_Qi</li>
+		</value>
+	</Operation>
+	
+	<!-- Plasteel -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Plasteel"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Plasteel"]</xpath>
+			<value>
+				<tradeTags />
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Plasteel"]/tradeTags</xpath>
+		<value>
+			<li>Metal_Qi</li>
+		</value>
+	</Operation>
+	
+	<!-- Plasteel -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="WoodLog"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="WoodLog"]</xpath>
+			<value>
+				<tradeTags />
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="WoodLog"]/tradeTags</xpath>
+		<value>
+			<li>Wood_Qi</li>
+		</value>
+	</Operation>
+	
+	<!-- Uranium -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Uranium"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Uranium"]</xpath>
+			<value>
+				<tradeTags />
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Uranium"]/tradeTags</xpath>
+		<value>
+			<li>Earth_Qi</li>
+		</value>
+	</Operation>
+	
+	<!-- Jade -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Jade"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Jade"]</xpath>
+			<value>
+				<tradeTags />
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Uranium"]/tradeTags</xpath>
+		<value>
+			<li>Earth_Qi</li>
+		</value>
+	</Operation>
+	
+	<!-- Stone Block-->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[@Name="StoneBlocksBase"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[@Name="StoneBlocksBase"]</xpath>
+			<value>
+				<tradeTags />
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="StoneBlocksBase"]/tradeTags</xpath>
+		<value>
+			<li>Earth_Qi</li>
+		</value>
+	</Operation>
+	
+	<!-- Herb Med -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="MedicineHerbal"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="MedicineHerbal"]</xpath>
+			<value>
+				<tradeTags />
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="MedicineHerbal"]/tradeTags</xpath>
+		<value>
+			<li>Healing_Item</li>
+		</value>
+	</Operation>
+	
+	<!-- Ind Med -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="MedicineIndustrial"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="MedicineIndustrial"]</xpath>
+			<value>
+				<tradeTags />
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="MedicineIndustrial"]/tradeTags</xpath>
+		<value>
+			<li>Healing_Item</li>
+		</value>
+	</Operation>
+	
+	<!-- MedicineUltratech -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="MedicineUltratech"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="MedicineUltratech"]</xpath>
+			<value>
+				<tradeTags />
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="MedicineUltratech"]/tradeTags</xpath>
+		<value>
+			<li>Healing_Item</li>
+		</value>
+	</Operation>
+
+</Patch>

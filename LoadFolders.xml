@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<loadFolders>
+  <v1.4>
+	<li>Common</li>
+	<li>Content</li>
+	<li>Content/Mods/It'sSorcery</li>
+	<!-- IfModNotActive -->
+	<li IfModActive="aranmaho.makai">Content/Mods/Makai</li>
+  </v1.4>
+</loadFolders>

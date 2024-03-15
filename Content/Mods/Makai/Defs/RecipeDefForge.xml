@@ -1,0 +1,12 @@
+<Defs>
+
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource">
+		<defName>Makai_Manifest_CTR_SpiritStone</defName>
+		<label>Materialize Spirit Stone</label>
+		<description>Materialize Spirit Stone from Primordial Forge</description>
+		<products>
+			<CTR_SpiritStone>100</CTR_SpiritStone>
+		</products>
+	</RecipeDef>
+
+</Defs>

@@ -1,0 +1,929 @@
+<Defs>
+	
+	<ThingDef ParentName="PlantBase" Name="SpiritPlantBase" Abstract="True">
+		<plant>
+			<dieIfLeafless>false</dieIfLeafless>
+			<maxMeshCount>1</maxMeshCount>
+			<harvestTag>Standard</harvestTag>			
+			<!-- <harvestedThingDef>CTR_SpiritGrass</harvestedThingDef> -->
+			<!-- <harvestYield>10</harvestYield> -->
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<topWindExposure>0.1</topWindExposure>			
+			<fertilitySensitivity>0.1</fertilitySensitivity>
+			<growDays>7</growDays>
+			<visualSizeRange>0.3~0.8</visualSizeRange>
+			<wildOrder>2</wildOrder>
+			<purpose>Health</purpose>
+			<sowWork>250</sowWork>
+			<sowMinSkill>10</sowMinSkill>
+			<!-- <humanFoodPlant>true</humanFoodPlant> -->			
+		</plant>
+		<tradeTags>
+			<li>Spirit_Plant</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="SpiritPlantBase">
+		<defName>CTR_SpiritGrassPlant</defName>
+		<thingClass>CultivatorOfTheRim.Plant_SpiritPlant</thingClass>
+		<label>spirit grass</label>
+		<description>A short, fast-growing grass that yield a batch of spirit grass, require nearby Qi Source to growth \n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; \nSpirit Grass require a nearby Qi source to grow. otherwise it will slowly wither</description>
+		<statBases>
+		  <MaxHitPoints>120</MaxHitPoints>
+		  <Nutrition>0.175</Nutrition>
+		</statBases>
+		<graphicData>
+		  <texPath>Things/Plants/SpiritGrass/SpiritGrass</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>2</drawSize>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible />
+		<tradeTags>			
+			<li>Neutral_Qi</li>
+			<li>Qi_Source</li>
+			<li>Qi_Source_Tier1</li>
+		</tradeTags>
+		<plant>
+			<harvestedThingDef>CTR_SpiritGrass</harvestedThingDef>
+			<harvestYield>10</harvestYield> 	  
+			<growMinGlow>0.1</growMinGlow>
+			<growDays>7</growDays>
+			<purpose>Health</purpose>			
+			
+			<sowResearchPrerequisites>
+				<li>CTR_SpiritPlantCultivationBasic</li>
+			</sowResearchPrerequisites>
+			
+			<wildClusterRadius>10</wildClusterRadius>
+			<wildClusterWeight>600</wildClusterWeight>
+			<wildBiomes>
+				<TemperateForest>0.2</TemperateForest>
+				<TemperateSwamp>0.2</TemperateSwamp>
+				<TropicalRainforest>0.02</TropicalRainforest>
+				<TropicalSwamp>0.05</TropicalSwamp>
+				<AridShrubland>0.02</AridShrubland>
+				<Desert>0.01</Desert>
+				<ExtremeDesert>0.02</ExtremeDesert>
+				<BorealForest>0.16</BorealForest>
+				<Tundra>0.05</Tundra>
+				<ColdBog>0.05</ColdBog>				
+			</wildBiomes>
+		</plant>
+		<specialDisplayRadius>4</specialDisplayRadius>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(154,230,255)</glowColor>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.PlantExtension_SpiritPlant">
+				<requireSource>true</requireSource>
+				<sourceName>Qi Source</sourceName>
+				<consumeSource>true</consumeSource>
+				<radius>4</radius>
+				<destroyOnConsume>false</destroyOnConsume>
+				<sourceDamagePerTrigger>1</sourceDamagePerTrigger>
+				<allowedTags>
+					<li>Qi_Source</li>
+				</allowedTags>
+				<excludedThing>
+					<li>CTR_SpiritGrass</li>
+				</excludedThing>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="SpiritPlantBase">
+		<defName>CTR_MoonGrass</defName>
+		<thingClass>CultivatorOfTheRim.Plant_SpiritPlant</thingClass>
+		<label>moon grass</label>
+		<description>A type of grass that only grow during the night, and rest during the day. \n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; \nRequire Qi Source \nOnly grow and Harvestable at night</description>
+		<statBases>
+		  <MaxHitPoints>120</MaxHitPoints>
+		  <Nutrition>0.175</Nutrition>
+		</statBases>
+		<graphicData>
+		  <texPath>Things/Plants/MoonGrass/MoonGrass</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>2</drawSize>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible />
+		<tradeTags>
+		</tradeTags>
+		<plant>
+			<harvestedThingDef>CTR_MoonLeaf</harvestedThingDef>
+			<harvestYield>10</harvestYield>
+			<growMinGlow>0.1</growMinGlow>
+			<growDays>7</growDays>
+			<immatureGraphicPath>Things/Plants/MoonGrass/MoonGrass_Immature</immatureGraphicPath>
+			<purpose>Health</purpose>
+			
+			<sowResearchPrerequisites>
+				<li>CTR_SpiritPlantCultivationBasic</li>
+			</sowResearchPrerequisites>
+			
+			<wildClusterRadius>3</wildClusterRadius>
+			<wildClusterWeight>100</wildClusterWeight>
+			<wildBiomes>
+				<TemperateForest>0.05</TemperateForest>
+				<TemperateSwamp>0.05</TemperateSwamp>
+				<TropicalRainforest>0.05</TropicalRainforest>
+				<TropicalSwamp>0.05</TropicalSwamp>
+				<AridShrubland>0.02</AridShrubland>
+				<Desert>0.01</Desert>
+				<ExtremeDesert>0.02</ExtremeDesert>
+				<BorealForest>0.16</BorealForest>
+				<Tundra>0.05</Tundra>
+				<ColdBog>0.05</ColdBog>				
+			</wildBiomes>
+		</plant>
+		<specialDisplayRadius>4</specialDisplayRadius>
+		<comps>
+			<!-- <li Class="CompProperties_Glower"> -->
+				<!-- <glowRadius>2</glowRadius> -->
+				<!-- <glowColor>(154,230,255)</glowColor> -->
+			<!-- </li> -->
+		</comps>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.PlantExtension_SpiritPlant">
+				<requireSource>true</requireSource>
+				<sourceName>Qi Source</sourceName>
+				<consumeSource>true</consumeSource>
+				<radius>4</radius>
+				<destroyOnConsume>false</destroyOnConsume>
+				<sourceDamagePerTrigger>1</sourceDamagePerTrigger>
+				<allowedTags>
+					<li>Qi_Source</li>
+				</allowedTags>
+				<isNightPlant>true</isNightPlant>
+				<onlyHarvestableAtNight>true</onlyHarvestableAtNight>
+				<allowedTags>
+					<li>Qi_Source</li>
+				</allowedTags>
+				<ignoreTemp>true</ignoreTemp>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="SpiritPlantBase">
+		<defName>CTR_YinYangFlower</defName>
+		<thingClass>CultivatorOfTheRim.Plant_SpiritPlant</thingClass>
+		<label>Yin Yang flower</label>
+		<description>A type of flower which can grow 24/7, but the harvest yield depend on the time of harvest. \n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; \nRequire Qi source \nNo Resting Period \nYield different item based on time of harvest \nDaytime yield: Yang flower \nNighttime yield: Yin flower</description>
+		<statBases>
+		  <MaxHitPoints>120</MaxHitPoints>
+		  <Nutrition>0.175</Nutrition>		  
+		</statBases>
+		<graphicData>
+		  <texPath>Things/Plants/YinYangFlower/CTR_YinYangFlower</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>2</drawSize>		  
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible />
+		<tradeTags>
+		</tradeTags>
+		<plant>
+		  <!-- <harvestedThingDef>Filth_Dirt</harvestedThingDef> -->
+		  <harvestYield>10</harvestYield>
+		  <growMinGlow>0.1</growMinGlow>
+		  <growDays>7</growDays>
+		  <immatureGraphicPath>Things/Plants/YinYangFlower/CTR_YinYangFlower_Immature</immatureGraphicPath>    
+		  <purpose>Health</purpose>
+		  
+		  <sowResearchPrerequisites>
+				<li>CTR_SpiritPlantCultivationBasic</li>
+			</sowResearchPrerequisites>
+		  
+		  <wildClusterRadius>2</wildClusterRadius>
+			<wildClusterWeight>400</wildClusterWeight>
+			<wildBiomes>
+				<TemperateForest>0.02</TemperateForest>
+				<TemperateSwamp>0.02</TemperateSwamp>
+				<TropicalRainforest>0.02</TropicalRainforest>
+				<TropicalSwamp>0.02</TropicalSwamp>
+				<AridShrubland>0.02</AridShrubland>
+				<Desert>0.02</Desert>
+				<BorealForest>0.02</BorealForest>
+				<ExtremeDesert>0.02</ExtremeDesert>
+				<Tundra>0.02</Tundra>
+				<ColdBog>0.02</ColdBog>				
+			</wildBiomes>
+		</plant>
+		<specialDisplayRadius>4</specialDisplayRadius>
+		<comps>
+			<!-- <li Class="CompProperties_Glower"> -->
+				<!-- <glowRadius>2</glowRadius> -->
+				<!-- <glowColor>(154,230,255)</glowColor> -->
+			<!-- </li> -->
+		</comps>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.PlantExtension_SpiritPlant">
+				<requireSource>true</requireSource>
+				<sourceName>Qi Source</sourceName>
+				<consumeSource>true</consumeSource>
+				<radius>4</radius>
+				<destroyOnConsume>false</destroyOnConsume>
+				<sourceDamagePerTrigger>1</sourceDamagePerTrigger>
+				<allowedTags>
+					<li>Qi_Source</li>
+				</allowedTags>
+				<differentYieldBasedOnTimeOfHarvest>true</differentYieldBasedOnTimeOfHarvest>
+				<dayTimeYield>CTR_YangFlower</dayTimeYield>
+				<nightTimeYield>CTR_YinFlower</nightTimeYield>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="SpiritPlantBase">
+		<defName>CTR_EarthTree</defName>
+		<thingClass>CultivatorOfTheRim.Plant_SpiritPlant</thingClass>
+		<label>Earthen tree</label>
+		<description>fruit plant with dense Earth Qi. growth rate is the fastest during the start and end of Quadrum \n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; \nRequire Qi source \nNo Resting Period \nOnly harvestable during 1st and 15th day of the month</description>
+		<statBases>
+		  <MaxHitPoints>120</MaxHitPoints>
+		  <Nutrition>0.175</Nutrition>
+		</statBases>
+		<graphicData>
+		  <texPath>Things/Plants/EarthenTree/EarthenTree</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>1</drawSize>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible />
+		<tradeTags>
+		</tradeTags>
+		<plant>
+			<harvestedThingDef>CTR_EarthFruit</harvestedThingDef>
+			<harvestYield>10</harvestYield>
+			<growMinGlow>0.1</growMinGlow>
+			<growDays>7</growDays>
+			<harvestAfterGrowth>0.5</harvestAfterGrowth>
+			<immatureGraphicPath>Things/Plants/EarthenTree/EarthenTree_Immature</immatureGraphicPath>    
+			<purpose>Health</purpose>
+			<visualSizeRange>1~2.0</visualSizeRange>
+			<blockAdjacentSow>true</blockAdjacentSow>
+			
+			<sowResearchPrerequisites>
+				<li>CTR_SpiritPlantCultivationIntermediate</li>
+			</sowResearchPrerequisites>
+			
+			<wildClusterRadius>1</wildClusterRadius>
+			<wildClusterWeight>200</wildClusterWeight>
+			<wildBiomes>
+				<TemperateForest>0.01</TemperateForest>
+				<TemperateSwamp>0.01</TemperateSwamp>
+				<TropicalRainforest>0.01</TropicalRainforest>
+				<TropicalSwamp>0.01</TropicalSwamp>
+				<AridShrubland>0.01</AridShrubland>
+				<Desert>0.01</Desert>
+				<ExtremeDesert>0.01</ExtremeDesert>				
+				<BorealForest>0.01</BorealForest>
+				<!-- <Tundra>0.05</Tundra> -->
+				<!-- <ColdBog>0.05</ColdBog>				 -->
+			</wildBiomes>
+		</plant>
+		<specialDisplayRadius>4</specialDisplayRadius>
+		<comps>
+			<!-- <li Class="CompProperties_Glower"> -->
+				<!-- <glowRadius>2</glowRadius> -->
+				<!-- <glowColor>(154,230,255)</glowColor> -->
+			<!-- </li> -->
+		</comps>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.PlantExtension_SpiritPlant">
+				<requireSource>true</requireSource>
+				<sourceName>Qi Source</sourceName>
+				<consumeSource>true</consumeSource>
+				<radius>4</radius>
+				<destroyOnConsume>false</destroyOnConsume>
+				<sourceDamagePerTrigger>1</sourceDamagePerTrigger>
+				<allowedTags>
+					<li>Qi_Source</li>
+				</allowedTags>
+				<differentEffectBasedOnTimeOfMonth>true</differentEffectBasedOnTimeOfMonth>
+				<differentGrowthRate>true</differentGrowthRate>
+				<growthRateCurves>
+					<points>
+						<li>(1, 1.5)</li>
+						<li>(7.5, 0.01)</li>
+						<li>(15, 1.5)</li>
+					</points>
+				</growthRateCurves>
+				<ignoreTemp>true</ignoreTemp>
+				<endOfMonthHarvestable>true</endOfMonthHarvestable>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="SpiritPlantBase">
+		<defName>CTR_WinterLeaf</defName>
+		<thingClass>CultivatorOfTheRim.Plant_SpiritPlant</thingClass>
+		<label>Water tree</label>
+		<description>fruit plant with dense Water Qi. growth rate is the fastest during the winter and slowest during summer \n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; \nRequire Qi source \nNo Resting Period \nOnly harvestable during Winter and Spring\nIgnore temperature \n\nnote* due to vanilla limitation you can't sow this during winter, consider sowing it BEFORE winter or making indoor zone</description>
+		<statBases>
+		  <MaxHitPoints>120</MaxHitPoints>
+		  <Nutrition>0.175</Nutrition>
+		</statBases>
+		<graphicData>
+		  <texPath>Things/Plants/WaterTree/WaterTree</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible />
+		<tradeTags>
+		</tradeTags>
+		<plant>
+			<harvestedThingDef>CTR_WaterFruit</harvestedThingDef>
+			<harvestYield>10</harvestYield>
+			<growMinGlow>0.1</growMinGlow>
+			<growDays>7</growDays>
+			<harvestAfterGrowth>0.5</harvestAfterGrowth>
+			<immatureGraphicPath>Things/Plants/WaterTree/WaterTree_Immature</immatureGraphicPath>    
+			<purpose>Health</purpose>
+			<visualSizeRange>1~2.0</visualSizeRange>
+			<blockAdjacentSow>true</blockAdjacentSow>
+			
+			<sowResearchPrerequisites>
+				<li>CTR_SpiritPlantCultivationIntermediate</li>
+			</sowResearchPrerequisites>
+			
+			<wildClusterRadius>4</wildClusterRadius>
+			<wildClusterWeight>200</wildClusterWeight>
+			<wildBiomes>
+				<TemperateForest>0.01</TemperateForest>
+				<TemperateSwamp>0.01</TemperateSwamp>
+				<!-- <TropicalRainforest>0.02</TropicalRainforest> -->
+				<!-- <TropicalSwamp>0.02</TropicalSwamp> -->
+				<!-- <AridShrubland>0.02</AridShrubland> -->
+				<!-- <Desert>0.0</Desert> -->
+				<!-- <ExtremeDesert>0.0</ExtremeDesert>				 -->
+				<BorealForest>0.10</BorealForest>
+				<Tundra>0.10</Tundra>
+				<ColdBog>0.10</ColdBog>				
+			</wildBiomes>
+		</plant>
+		<specialDisplayRadius>4</specialDisplayRadius>
+		<comps>
+			<!-- <li Class="CompProperties_Glower"> -->
+				<!-- <glowRadius>2</glowRadius> -->
+				<!-- <glowColor>(154,230,255)</glowColor> -->
+			<!-- </li> -->
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>-20</heatPerSecond>
+				<heatPushMinTemperature>-273</heatPushMinTemperature>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.PlantExtension_SpiritPlant">
+				<requireSource>true</requireSource>
+				<sourceName>Qi Source</sourceName>
+				<consumeSource>true</consumeSource>
+				<radius>4</radius>
+				<destroyOnConsume>false</destroyOnConsume>
+				<sourceDamagePerTrigger>1</sourceDamagePerTrigger>
+				<allowedTags>
+					<li>Qi_Source</li>
+				</allowedTags>
+				<ignoreTemp>true</ignoreTemp>
+				<isAffectBySeason>true</isAffectBySeason>
+				<specificMonthHarvestable>
+					<li>PermanentWinter</li>
+					<li>Winter</li>
+					<li>Spring</li>
+				</specificMonthHarvestable>
+				<seasonCurves>
+					<points>
+						<li>(1,0.5)</li>
+						<li>(2,0.1)</li>
+						<li>(3,0.75)</li>
+						<li>(4,1.5)</li>
+						<li>(5,0)</li>
+						<li>(6,2)</li>
+					</points>
+				</seasonCurves>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="SpiritPlantBase">
+		<defName>CTR_WoodLeaf</defName>
+		<thingClass>CultivatorOfTheRim.Plant_SpiritPlant</thingClass>
+		<label>Ancient tree</label>
+		<description>fruit plant with dense Wood Qi. growth rate is the fastest during the spring and slowest during fall \n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; \nRequire Qi source \nNo Resting Period \nOnly Harvestable during Spring and Summer</description>
+		<statBases>
+		  <MaxHitPoints>120</MaxHitPoints>
+		  <Nutrition>0.175</Nutrition>
+		</statBases>
+		<graphicData>
+		  <texPath>Things/Plants/AncientTree/AncientTree</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible />
+		<tradeTags>
+		</tradeTags>
+		<plant>
+			<harvestedThingDef>CTR_WoodFruit</harvestedThingDef>
+			<harvestYield>10</harvestYield>
+			<growMinGlow>0.51</growMinGlow>
+			<harvestMinGrowth>0.95</harvestMinGrowth>
+			<harvestAfterGrowth>0.75</harvestAfterGrowth>
+			<growDays>120</growDays>
+			<immatureGraphicPath>Things/Plants/AncientTree/AncientTree_Immature</immatureGraphicPath>    
+			<purpose>Health</purpose>
+			<visualSizeRange>1~5.0</visualSizeRange>
+			<blockAdjacentSow>true</blockAdjacentSow>
+			
+			<sowResearchPrerequisites>
+				<li>CTR_SpiritPlantCultivationIntermediate</li>
+			</sowResearchPrerequisites>
+			
+			<wildClusterRadius>1</wildClusterRadius>
+			<wildClusterWeight>200</wildClusterWeight>
+			<wildBiomes>
+				<TemperateForest>0.01</TemperateForest>
+				<TemperateSwamp>0.01</TemperateSwamp>
+				<TropicalRainforest>0.01</TropicalRainforest>
+				<TropicalSwamp>0.01</TropicalSwamp>
+				<AridShrubland>0.01</AridShrubland>
+				<Desert>0.01</Desert>
+				<!-- <ExtremeDesert>0.02</ExtremeDesert>				 -->
+				<BorealForest>0.01</BorealForest>
+				<!-- <Tundra>0.05</Tundra> -->
+				<!-- <ColdBog>0.05</ColdBog> -->
+			</wildBiomes>
+		</plant>
+		<specialDisplayRadius>4</specialDisplayRadius>
+		<comps>
+			<!-- <li Class="CompProperties_Glower"> -->
+				<!-- <glowRadius>2</glowRadius> -->
+				<!-- <glowColor>(154,230,255)</glowColor> -->
+			<!-- </li> -->
+		</comps>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.PlantExtension_SpiritPlant">
+				<requireSource>true</requireSource>
+				<sourceName>Qi Source</sourceName>
+				<consumeSource>true</consumeSource>
+				<radius>4</radius>
+				<destroyOnConsume>false</destroyOnConsume>
+				<sourceDamagePerTrigger>1</sourceDamagePerTrigger>
+				<allowedTags>
+					<li>Qi_Source</li>
+				</allowedTags>
+				<ignoreTemp>false</ignoreTemp>
+				<isAffectBySeason>true</isAffectBySeason>
+				<specificMonthHarvestable>
+					<li>Spring</li>
+					<li>Summer</li>
+				</specificMonthHarvestable>
+				<seasonCurves>
+					<points>
+						<li>(1,1.5)</li>
+						<li>(2,0.5)</li>
+						<li>(3,0.1)</li>
+						<li>(4,0.75)</li>
+						<li>(5,0)</li>
+						<li>(6,0)</li>
+					</points>
+				</seasonCurves>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="SpiritPlantBase">
+		<defName>CTR_FireLeaf</defName>
+		<thingClass>CultivatorOfTheRim.Plant_SpiritPlant</thingClass>
+		<label>Crimson Flower</label>
+		<description>flower plant with dense Fire Qi. growth rate is the fastest during the summer and slowest during winter \n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; \nRequire Qi source \nNo Resting Period \nOnly Harvestable during Summer and Fall</description>
+		<statBases>
+		  <MaxHitPoints>120</MaxHitPoints>
+		  <Nutrition>0.175</Nutrition>
+		</statBases>
+		<graphicData>
+		  <texPath>Things/Plants/CrimsonFlower/CrimsonFlower</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>1</drawSize>	
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible />
+		<tradeTags>
+		</tradeTags>
+		<plant>
+			<harvestedThingDef>CTR_FireFlower</harvestedThingDef>
+			<harvestYield>10</harvestYield>
+			<growMinGlow>0.8</growMinGlow>
+			<growDays>60</growDays>
+			<immatureGraphicPath>Things/Plants/CrimsonFlower/CrimsonFlower_Immature</immatureGraphicPath>    
+			<purpose>Health</purpose>
+			<visualSizeRange>0.2~1.2</visualSizeRange>
+			
+			<sowResearchPrerequisites>
+				<li>CTR_SpiritPlantCultivationIntermediate</li>
+			</sowResearchPrerequisites>
+		  
+			<wildClusterRadius>6</wildClusterRadius>
+			<wildClusterWeight>200</wildClusterWeight>
+			<wildBiomes>
+				<TemperateForest>0.01</TemperateForest>
+				<TemperateSwamp>0.01</TemperateSwamp>
+				<TropicalRainforest>0.01</TropicalRainforest>
+				<TropicalSwamp>0.01</TropicalSwamp>
+				<AridShrubland>0.05</AridShrubland>
+				<Desert>0.3</Desert>
+				<ExtremeDesert>0.3</ExtremeDesert>				
+				<!-- <BorealForest>0.02</BorealForest> -->
+				<!-- <Tundra>0.05</Tundra> -->
+				<!-- <ColdBog>0.05</ColdBog> -->
+			</wildBiomes>
+		</plant>
+		<specialDisplayRadius>4</specialDisplayRadius>
+		<comps>
+			<!-- <li Class="CompProperties_Glower"> -->
+				<!-- <glowRadius>2</glowRadius> -->
+				<!-- <glowColor>(154,230,255)</glowColor> -->
+			<!-- </li> -->
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>20</heatPerSecond>
+				<heatPushMaxTemperature>150</heatPushMaxTemperature>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.PlantExtension_SpiritPlant">
+				<requireSource>true</requireSource>
+				<sourceName>Qi Source</sourceName>
+				<consumeSource>true</consumeSource>
+				<radius>4</radius>
+				<destroyOnConsume>false</destroyOnConsume>
+				<sourceDamagePerTrigger>1</sourceDamagePerTrigger>
+				<allowedTags>
+					<li>Qi_Source</li>
+				</allowedTags>
+				<ignoreTemp>false</ignoreTemp>
+				<isAffectBySeason>true</isAffectBySeason>
+				<specificMonthHarvestable>
+					<li>PermanentSummer</li>	
+					<li>Summer</li>
+					<li>Fall</li>
+				</specificMonthHarvestable>
+				<seasonCurves>
+					<points>
+						<li>(1,0.75)</li>
+						<li>(2,1.5)</li>
+						<li>(3,0.5)</li>
+						<li>(4,0.1)</li>
+						<li>(5,2)</li>
+						<li>(6,0)</li>
+					</points>
+				</seasonCurves>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="SpiritPlantBase">
+		<defName>CTR_MetalStele</defName>
+		<thingClass>CultivatorOfTheRim.Plant_SpiritPlant</thingClass>
+		<label>Metal Totem</label>
+		<description>a strange totem with dense Metal Qi. growth rate is the fastest during the fall and slowest during summer \n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; \nRequire Qi source \nNo Resting Period \nOnly Harvestable during Fall, Spring and Winter</description>
+		<statBases>
+		  <MaxHitPoints>120</MaxHitPoints>
+		  <Nutrition>0.175</Nutrition>		  
+		</statBases>
+		<graphicData>
+		  <texPath>Things/Plants/MetalTotem/MetalTotem</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>1</drawSize>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible />
+		<tradeTags>
+		</tradeTags>
+		<plant>
+			<harvestedThingDef>CTR_MetalSteleFragment</harvestedThingDef>
+			<harvestYield>10</harvestYield>
+			<growMinGlow>0.1</growMinGlow>
+			<growDays>60</growDays>
+			<immatureGraphicPath>Things/Plants/MetalTotem/MetalTotem_Immature</immatureGraphicPath>    
+			<purpose>Health</purpose>
+			<visualSizeRange>1~1.5</visualSizeRange>
+			
+			<sowResearchPrerequisites>
+				<li>CTR_SpiritPlantCultivationIntermediate</li>
+			</sowResearchPrerequisites>
+		  
+			<wildClusterRadius>1</wildClusterRadius>
+			<wildClusterWeight>200</wildClusterWeight>
+			<wildBiomes>
+				<TemperateForest>0.01</TemperateForest>
+				<TemperateSwamp>0.01</TemperateSwamp>
+				<TropicalRainforest>0.01</TropicalRainforest>
+				<TropicalSwamp>0.01</TropicalSwamp>
+				<AridShrubland>0.01</AridShrubland>
+				<Desert>0.01</Desert>
+				<ExtremeDesert>0.01</ExtremeDesert>				
+				<BorealForest>0.01</BorealForest>
+				<Tundra>0.01</Tundra>
+				<ColdBog>0.01</ColdBog>
+			</wildBiomes>
+		</plant>
+		<specialDisplayRadius>4</specialDisplayRadius>
+		<comps>
+			<!-- <li Class="CompProperties_Glower"> -->
+				<!-- <glowRadius>2</glowRadius> -->
+				<!-- <glowColor>(154,230,255)</glowColor> -->
+			<!-- </li> -->
+		</comps>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.PlantExtension_SpiritPlant">
+				<requireSource>true</requireSource>
+				<sourceName>Qi Source</sourceName>
+				<consumeSource>true</consumeSource>
+				<radius>4</radius>
+				<destroyOnConsume>false</destroyOnConsume>
+				<sourceDamagePerTrigger>1</sourceDamagePerTrigger>
+				<allowedTags>
+					<li>Qi_Source</li>
+				</allowedTags>
+				<ignoreTemp>false</ignoreTemp>
+				<isAffectBySeason>true</isAffectBySeason>
+				<specificMonthHarvestable>
+					<li>Spring</li>
+					<li>Fall</li>
+					<li>Winter</li>
+				</specificMonthHarvestable>
+				<seasonCurves>
+					<points>
+						<li>(1,0.5)</li>
+						<li>(2,0.1)</li>
+						<li>(3,1.5)</li>
+						<li>(4,0.5)</li>
+						<li>(5,0)</li>
+						<li>(6,0)</li>
+					</points>
+				</seasonCurves>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="SpiritPlantBase">
+		<defName>CTR_ChronoStele</defName>
+		<thingClass>CultivatorOfTheRim.Plant_SpiritPlant</thingClass>
+		<label>chrono stele</label>
+		<description>A long-lasting seed that can speed up growth of nearby spirit plant, require nearby Qi Source to growth \n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; \nChrono Seed require a nearby Qi source to grow. otherwise it will slowly wither \nSpeed up nearby plant growth by 1%~3% every 2500 ticks, at the cost of damaging itself per plant affected \nRequire no plant of the same type to be in range \nOnly take effect when reaching maturity</description>
+		<statBases>
+		  <MaxHitPoints>2500</MaxHitPoints>
+		  <Nutrition>0.175</Nutrition>
+		  <Mass>100</Mass>
+		</statBases>
+		<graphicData>
+		  <texPath>Things/Plants/ChronoStele/ChronoStele</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible />
+		<tradeTags>
+			<li>Chrono_Stele</li>
+		</tradeTags>		
+		<minifiedDef>MinifiedTree</minifiedDef>
+		<plant>
+			<harvestYield>0</harvestYield> 	  
+			<growMinGlow>0.1</growMinGlow>
+			<growDays>15</growDays>
+			<sowWork>1000</sowWork>
+			<sowMinSkill>18</sowMinSkill>
+			<lifespanDaysPerGrowDays>15</lifespanDaysPerGrowDays>
+			<purpose>Health</purpose>
+			<visualSizeRange>2~2.1</visualSizeRange>
+			<blockAdjacentSow>true</blockAdjacentSow>
+			
+			<sowResearchPrerequisites>
+				<li>CTR_SpiritPlantCultivationAdvanced</li>
+			</sowResearchPrerequisites>
+			
+			<harvestTag>Wood</harvestTag>
+		</plant>
+		<specialDisplayRadius>5.9</specialDisplayRadius>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(154,230,255)</glowColor>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.PlantExtension_SpiritPlant">
+				<requireSource>true</requireSource>
+				<ignoreTemp>true</ignoreTemp>
+				<sourceName>Qi Source</sourceName>
+				<consumeSource>true</consumeSource>
+				<healSelf>false</healSelf>
+				<radius>5.9</radius>
+				<destroyOnConsume>false</destroyOnConsume>
+				<sourceDamagePerTrigger>1</sourceDamagePerTrigger>
+				<allowedTags>
+					<li>Qi_Source</li>
+				</allowedTags>
+				<speedUpNearbyPlant>true</speedUpNearbyPlant>
+				<onlyAffectSpiritPlant>true</onlyAffectSpiritPlant>
+				<soundDefOnSpeedUp>CTR_ChronoStele</soundDefOnSpeedUp>
+				<onlyWorkIfNoPlantOfSameTypeInRange>true</onlyWorkIfNoPlantOfSameTypeInRange>
+				<growthBoost>0.01~0.03</growthBoost>
+				<disallowedDef>
+					<li>CTR_ChronoStele</li>
+					<li>CTR_ChronoBeacon</li>
+				</disallowedDef>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="SpiritPlantBase">
+		<defName>CTR_ChronoBeacon</defName>
+		<thingClass>CultivatorOfTheRim.Plant_SpiritPlant</thingClass>
+		<label>chrono beacon</label>
+		<description>A long-lasting seed that can speed up growth of nearby common plant, require nearby Chrono stele in range to growth \n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; \nChrono beacon require a nearby Chrono stele to grow. otherwise it will slowly wither \nSpeed up nearby common plant growth by 1%~5% every 2500 ticks, at the cost of damaging itself per plant affected \nRequire no plant of the same type to be in range \nOnly take effect when reaching maturity</description>
+		<statBases>
+		  <MaxHitPoints>5000</MaxHitPoints>
+		  <Nutrition>0.175</Nutrition>
+		  <Mass>100</Mass>
+		</statBases>
+		<graphicData>
+		  <texPath>Things/Plants/ChronoBeacon/ChronoBeacon</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible />
+		<tradeTags>
+		</tradeTags>
+		<minifiedDef>MinifiedTree</minifiedDef>
+		<plant>
+			<harvestYield>0</harvestYield> 	  
+			<growMinGlow>0.1</growMinGlow>
+			<growDays>15</growDays>
+			<sowWork>1000</sowWork>
+			<sowMinSkill>18</sowMinSkill>
+			<lifespanDaysPerGrowDays>15</lifespanDaysPerGrowDays>
+			<purpose>Health</purpose>
+			<visualSizeRange>2~2.1</visualSizeRange>
+			<blockAdjacentSow>true</blockAdjacentSow>
+			
+			<sowResearchPrerequisites>
+				<li>CTR_SpiritPlantCultivationAdvanced</li>
+			</sowResearchPrerequisites>
+			
+			<harvestTag>Wood</harvestTag>
+			
+			<wildClusterRadius>1</wildClusterRadius>
+			<wildClusterWeight>200</wildClusterWeight>
+			<wildBiomes>
+				<TemperateForest>0.005</TemperateForest>
+				<TemperateSwamp>0.005</TemperateSwamp>
+				<TropicalRainforest>0.005</TropicalRainforest>
+				<TropicalSwamp>0.005</TropicalSwamp>
+				<AridShrubland>0.005</AridShrubland>
+				<Desert>0.005</Desert>
+				<ExtremeDesert>0.005</ExtremeDesert>				
+				<BorealForest>0.005</BorealForest>
+				<Tundra>0.005</Tundra>
+				<ColdBog>0.005</ColdBog>
+			</wildBiomes>
+		</plant>
+		<specialDisplayRadius>5.9</specialDisplayRadius>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(154,230,255)</glowColor>
+			</li>				
+		</comps>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.PlantExtension_SpiritPlant">
+				<requireSource>true</requireSource>
+				<requireSpecialSource>true</requireSpecialSource>
+				<ignoreTemp>true</ignoreTemp>
+				<sourceName>Qi Source</sourceName>
+				<specialSourceName>Time Law</specialSourceName>
+				<consumeSource>false</consumeSource>
+				<healSelf>false</healSelf>
+				<radius>5.9</radius>
+				<destroyOnConsume>false</destroyOnConsume>
+				<sourceDamagePerTrigger>1</sourceDamagePerTrigger>
+				<allowedTags>
+					<li>Qi_Source</li>
+				</allowedTags>
+				<allowedSpecialTags>
+					<li>Chrono_Stele</li>
+				</allowedSpecialTags>
+				<speedUpNearbyPlant>true</speedUpNearbyPlant>
+				<onlyAffectCommonPlant>true</onlyAffectCommonPlant>
+				<soundDefOnSpeedUp>CTR_ChronoStele</soundDefOnSpeedUp>
+				<onlyWorkIfNoPlantOfSameTypeInRange>false</onlyWorkIfNoPlantOfSameTypeInRange>
+				<soundDefOnSpeedUp>CTR_ChronoStele</soundDefOnSpeedUp>
+				<growthBoost>0.01~0.05</growthBoost>
+				<disallowedDef>
+					<li>CTR_ChronoStele</li>
+					<li>CTR_ChronoBeacon</li>
+				</disallowedDef>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="SpiritPlantBase">
+		<defName>CTR_ImmortalPlant</defName>
+		<thingClass>CultivatorOfTheRim.Plant_SpiritPlant</thingClass>
+		<label>immortal grass</label>
+		<description>a very slow growing spiritual plant, once fully matured can be harvest for spirit grass with potent immortal Qi \n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; \nImmortal Grass require a nearby Immortal Qi to grow. otherwise it will slowly wither \nRequire no of the same plant to be within 3 tile</description>
+		<statBases>
+		  <MaxHitPoints>120</MaxHitPoints>
+		  <Nutrition>0.175</Nutrition>
+		</statBases>
+		<graphicData>
+		  <texPath>Things/Plants/ImmortalGrass/ImmortalGrass</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible />
+		<tradeTags>
+		</tradeTags>
+		<plant>
+			<harvestedThingDef>CTR_ImmortalGrass</harvestedThingDef>
+			<harvestYield>5</harvestYield> 	  
+			<growMinGlow>0</growMinGlow>
+			<growDays>360</growDays>
+			<sowWork>1000</sowWork>
+			<sowMinSkill>19</sowMinSkill>
+			<immatureGraphicPath>Things/Plants/ImmortalGrass/ImmortalGrass_Immature</immatureGraphicPath>    
+			<purpose>Health</purpose>
+			<visualSizeRange>0.2~1.2</visualSizeRange>
+			<blockAdjacentSow>true</blockAdjacentSow>
+			
+			<sowResearchPrerequisites>
+				<li>CTR_SpiritPlantCultivationAdvanced</li>
+			</sowResearchPrerequisites>
+			
+			<wildClusterRadius>1</wildClusterRadius>
+			<wildClusterWeight>200</wildClusterWeight>
+			<wildBiomes>
+				<TemperateForest>0.001</TemperateForest>
+				<TemperateSwamp>0.001</TemperateSwamp>
+				<TropicalRainforest>0.001</TropicalRainforest>
+				<TropicalSwamp>0.001</TropicalSwamp>
+				<AridShrubland>0.001</AridShrubland>
+				<Desert>0.001</Desert>
+				<ExtremeDesert>0.001</ExtremeDesert>				
+				<BorealForest>0.001</BorealForest>
+				<Tundra>0.001</Tundra>
+				<ColdBog>0.001</ColdBog>
+			</wildBiomes>
+		</plant>
+		<specialDisplayRadius>5</specialDisplayRadius>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(154,230,255)</glowColor>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.PlantExtension_SpiritPlant">
+				<requireSource>true</requireSource>
+				<requireSpecialSource>true</requireSpecialSource>
+				<sourceName>Qi Source</sourceName>
+				<specialSourceName>Immortal Qi</specialSourceName>
+				<consumeSource>true</consumeSource>
+				<radius>5</radius>
+				<destroyOnConsume>false</destroyOnConsume>
+				<sourceDamagePerTrigger>1</sourceDamagePerTrigger>
+				<allowedTags>
+					<li>Qi_Source</li>
+				</allowedTags>
+				<allowedSpecialTags>
+					<li>Immortal_Qi</li>
+				</allowedSpecialTags>
+				<isStopGrowingIfThingInRange>true</isStopGrowingIfThingInRange>
+				<forbiddenRange>3</forbiddenRange>
+				<forbiddenThings>
+					<li>CTR_ImmortalPlant</li>
+				</forbiddenThings>
+				<excludedThing>
+					<li>CTR_ImmortalGrass</li>
+				</excludedThing>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+</Defs>

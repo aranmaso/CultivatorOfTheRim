@@ -1,0 +1,147 @@
+<Defs>
+
+	<ItsSorceryFramework.ProgressTrackerDef ParentName = "ProgressTrackerLevelBase">
+		<progressTrackerClass>ItsSorceryFramework.ProgressTracker_Level</progressTrackerClass>
+		<defName>CTR_ProgressTrackerRPG_XuanwuShell</defName>
+		<label>Xuanwu Shell</label>
+		<bgPath>UI/TechniqueBG/ACSBG</bgPath>
+		
+		<scaling>1.5</scaling>
+		
+		<progressHediff>CTR_ProgressTrackerRPG_Hediff_XuanwuShell</progressHediff>
+		<levelFactors>
+			<li>
+				<level>1</level>
+				<statOffsets>
+					<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+				</statOffsets>
+			</li>
+			<li>
+				<level>3</level>
+				<optionChoices>4</optionChoices>
+				<options>
+					<li>
+						<label>Sharp Armor</label>
+						<description>increase pawn sharp armor</description>
+						<statOffsets>
+							<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+						</statOffsets>
+					</li>
+					<li>
+						<label>Blunt Armor</label>
+						<description>increase pawn blunt armor</description>
+						<statOffsets>
+							<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+						</statOffsets>
+					</li>
+					<li>
+						<label>Heat Armor</label>
+						<description>increase pawn heat armor</description>
+						<statOffsets>
+							<ArmorRating_Heat>0.1</ArmorRating_Heat>
+						</statOffsets>
+					</li>
+					<li>
+						<label>Qi Armor</label>
+						<description>increase pawn qi armor</description>
+						<statOffsets>
+							<ArmorRating_Qi>0.1</ArmorRating_Qi>
+						</statOffsets>
+					</li>
+				</options>
+			</li>
+			<li>
+				<level>5</level>
+				<optionChoices>4</optionChoices>
+				<options>
+					<li>
+						<label>Sharp Armor</label>
+						<description>increase pawn sharp armor</description>
+						<statOffsets>
+							<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+						</statOffsets>
+					</li>
+					<li>
+						<label>Blunt Armor</label>
+						<description>increase pawn blunt armor</description>
+						<statOffsets>
+							<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+						</statOffsets>
+					</li>
+					<li>
+						<label>Heat Armor</label>
+						<description>increase pawn heat armor</description>
+						<statOffsets>
+							<ArmorRating_Heat>0.1</ArmorRating_Heat>
+						</statOffsets>
+					</li>
+					<li>
+						<label>Qi Armor</label>
+						<description>increase pawn qi armor</description>
+						<statOffsets>
+							<ArmorRating_Qi>0.1</ArmorRating_Qi>
+						</statOffsets>
+					</li>
+				</options>
+			</li>
+		</levelFactors>
+		<levelSpecifics>
+			<li>
+				<level>10</level>
+				<statOffsets>
+					<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.25</ArmorRating_Heat>
+					<ArmorRating_Qi>0.25</ArmorRating_Qi>
+				</statOffsets>
+			</li>
+		</levelSpecifics>
+		<levelLabels>
+			<li>
+				<level>1</level>
+				<label>beginner</label>
+			</li>
+			<li>
+				<level>3</level>
+				<label>adapt</label>
+			</li>		
+			<li>
+				<level>5</level>	
+				<label>intermediate mastery</label>
+			</li>
+			<li>
+				<level>7</level>
+				<label>profound mastery</label>
+			</li>
+			<li>
+				<level>10</level>
+				<label>peerless mastery</label>
+			</li>
+		</levelLabels>
+		<expTags>
+			<li>CTR_EXPTag_OnDamaged</li>
+			<li>CTR_EXPTag_OnKill</li>
+			<li>CTR_EXPTag_OnSkillEXP</li>
+			<li>CTR_EXPTag_UseItemSuperQi</li>
+		</expTags>
+	</ItsSorceryFramework.ProgressTrackerDef>
+	
+	<HediffDef ParentName="ProgressTrackerHediffBase"> 
+		<defName>CTR_ProgressTrackerRPG_Hediff_XuanwuShell</defName>
+		<hediffClass>ItsSorceryFramework.Hediff_ProgressLevel</hediffClass>
+		<label>Xuanwu Shell</label>
+		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor> <!-- gray color -->
+		<description>the foundation to the user Qi.</description>
+		<initialSeverity>1</initialSeverity> <!-- Severity is bound to level of implant -->
+		<minSeverity>0</minSeverity>
+		<maxSeverity>20</maxSeverity>
+		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>			
+
+</Defs>

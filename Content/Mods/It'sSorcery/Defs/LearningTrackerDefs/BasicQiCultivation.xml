@@ -1,0 +1,322 @@
+<Defs>
+
+	<!-- Qi Foundation Learning Tracker -->
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerProgress">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Progress</learningTrackerClass>
+		<defName>CTR_QiFoundationLearningProgress</defName>
+		<label>qi foundation progress</label>
+	</ItsSorceryFramework.LearningTrackerDef>
+	
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerTree">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Tree</learningTrackerClass>
+		<defName>CTR_QiFoundationLearningTree</defName>
+		<label>Qi Foundation</label>
+	</ItsSorceryFramework.LearningTrackerDef>	
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_QiFoundationLearningTree</learningTrackerDef>
+		<defName>CTR_QiFoundation</defName>
+		<label>Qi Foundation Building</label>
+		<description>foundation of qi for cultivator.</description>
+		
+		<prereqsSkills>
+			<li>
+				<mode>GreaterEqual</mode>
+				<skillReqs>
+					<li>
+						<skillDef>Intellectual</skillDef>
+						<level>3</level>
+					</li>
+				</skillReqs>
+			</li>
+		</prereqsSkills>
+		
+		<prereqsStats>
+		<li>
+			<mode>Lesser</mode>
+			<statReqs>
+				<CTR_BodyPath>1</CTR_BodyPath>
+			</statReqs>
+		</li>
+		</prereqsStats>
+		
+		<prereqsHediff>
+		<li>
+			<key>CTR_BreakthroughCounter</key>
+			<value>0</value>
+		</li>
+		</prereqsHediff>
+		
+		<statOffsets>
+			<CTR_QiPath>1</CTR_QiPath>
+			<TechniqueLearningCount>1</TechniqueLearningCount>
+			<CultivationSpeed>0.1</CultivationSpeed>
+		</statOffsets>
+		
+		<coordX>0</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_QiFoundationLearningTree</learningTrackerDef>
+		<defName>CTR_QiFoundation_QiWave</defName>
+		<label>Qi Wave</label>
+		<description>learn the method of utilizing Qi energy for attacking</description>
+		
+		<prereqs>
+			<li>CTR_QiFoundation</li>
+		</prereqs>
+		
+		<prereqsStats>
+			<li>
+				<mode>GreaterEqual</mode>
+				<statReqs>
+					<PsychicSensitivity>1</PsychicSensitivity>
+				</statReqs>
+			</li>
+		</prereqsStats>
+		
+		<abilityGain>
+			<li>CTR_LaucnhQiWave</li>
+		</abilityGain>
+		
+		<coordX>1</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_QiFoundationLearningTree</learningTrackerDef>
+		<defName>CTR_QiFoundation_BasicCirculation</defName>
+		<label>Basic Circulation</label>
+		<description>shaping Qi in one body for more efficient technique use.</description>
+		
+		<prereqs>
+			<li>CTR_QiFoundation</li>
+		</prereqs>
+		
+		<prereqsStats>
+			<li>
+				<mode>Lesser</mode>
+				<statReqs>
+					<CTR_QiPath>1</CTR_QiPath>
+				</statReqs>
+			</li>
+		</prereqsStats>
+		
+		<abilityGain>
+			<li>CTR_LaucnhQiWave</li>
+		</abilityGain>
+		
+		<statOffsets>
+			<CTR_QiEnergyRecovery>0.05</CTR_QiEnergyRecovery>
+		</statOffsets>
+		
+		<coordX>1</coordX>
+		<coordY>2</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_QiFoundationLearningTree</learningTrackerDef>
+		<defName>CTR_QiFoundation_EyeEnhancing</defName>
+		<label>Eye Enhancing</label>
+		<description>circulating Qi into user eyes. improving sight moderately</description>
+		
+		<prereqs>
+			<li>CTR_QiFoundation_BasicCirculation</li>
+		</prereqs>
+		
+		<prereqsStats>
+			<li>
+				<mode>GreaterEqual</mode>
+				<statReqs>
+					<PsychicSensitivity>1</PsychicSensitivity>
+				</statReqs>
+			</li>
+		</prereqsStats>
+		
+		<capMods>
+		<li>
+			<capacity>Sight</capacity>
+			<offset>0.20</offset>
+		</li>
+	</capMods>
+		
+		<coordX>2</coordX>
+		<coordY>2</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_QiFoundationLearningTree</learningTrackerDef>
+		<defName>CTR_QiFoundation_DantianDefense</defName>
+		<label>Dantian Fortifying</label>
+		<description>enhancing user defense in dantian area</description>
+		
+		<prereqs>
+			<li>CTR_QiFoundation_QiWave</li>
+		</prereqs>
+		
+		<prereqsStats>
+			<li>
+				<mode>GreaterEqual</mode>
+				<statReqs>
+					<PsychicSensitivity>1</PsychicSensitivity>
+				</statReqs>
+			</li>
+		</prereqsStats>
+		
+		<statOffsets>
+			<CTR_DantianDamageChance>-0.05</CTR_DantianDamageChance>
+		</statOffsets>
+		
+		<coordX>2</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_QiFoundationLearningTree</learningTrackerDef>
+		<defName>CTR_QiFoundation_IntermediateQiFoundation</defName>
+		<label>Intermediate Qi Foundation</label>
+		<description>prerequisite for learning technique in Intermediate tier.</description>
+		
+		<prereqs>
+			<li>CTR_QiFoundation_DantianDefense</li>
+			<li>CTR_QiFoundation_EyeEnhancing</li>
+		</prereqs>
+		<prereqMode>All</prereqMode>
+		
+		<prereqsStats>
+			<li>
+				<mode>GreaterEqual</mode>
+				<statReqs>
+					<PsychicSensitivity>1</PsychicSensitivity>
+				</statReqs>
+			</li>
+		</prereqsStats>
+		
+		<coordX>3</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_QiFoundationLearningTree</learningTrackerDef>
+		<defName>CTR_QiFoundation_EnhancedQiCirculation</defName>
+		<label>Enhanced Qi Circulation</label>
+		<description>enhancing user qi Circulation even more. further improving cultivation speed</description>
+		
+		<prereqs>
+			<li>CTR_QiFoundation_IntermediateQiFoundation</li>
+		</prereqs>
+		
+		<prereqsStats>
+			<li>
+				<mode>GreaterEqual</mode>
+				<statReqs>
+					<PsychicSensitivity>1</PsychicSensitivity>
+				</statReqs>
+			</li>
+		</prereqsStats>
+		
+		<statOffsets>
+			<CultivationSpeed>0.1</CultivationSpeed>
+		</statOffsets>
+		
+		<coordX>4</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_QiFoundationLearningTree</learningTrackerDef>
+		<defName>CTR_QiFoundation_AdvancedQiAbsorption</defName>
+		<label>Advanced Qi Absorption</label>
+		<description>enhancing user qi absorption even more. further improving Qi recovery speed</description>
+		
+		<prereqs>
+			<li>CTR_QiFoundation_IntermediateQiFoundation</li>
+		</prereqs>
+		
+		<prereqsStats>
+			<li>
+				<mode>GreaterEqual</mode>
+				<statReqs>
+					<PsychicSensitivity>1</PsychicSensitivity>
+				</statReqs>
+			</li>
+		</prereqsStats>
+		
+		<statOffsets>
+			<CTR_QiEnergyRecovery>0.1</CTR_QiEnergyRecovery>
+		</statOffsets>
+		
+		<coordX>4</coordX>
+		<coordY>2</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_QiFoundationLearningTree</learningTrackerDef>
+		<defName>CTR_QiFoundation_AcupointInjection</defName>
+		<label>Qi Acupoint Injection</label>
+		<description>enhancing user qi absorption even more. further improving Qi recovery speed</description>
+		
+		<prereqs>
+			<li>CTR_QiFoundation_IntermediateQiFoundation</li>
+		</prereqs>
+		
+		<prereqsStats>
+			<li>
+				<mode>GreaterEqual</mode>
+				<statReqs>
+					<PsychicSensitivity>1</PsychicSensitivity>
+				</statReqs>
+			</li>
+		</prereqsStats>
+		
+		<abilityGain>
+			<li>CTR_AcupointInjection</li>
+		</abilityGain>
+		
+		<statOffsets>
+			<CTR_QiEnergyRecovery>0.1</CTR_QiEnergyRecovery>
+		</statOffsets>
+		
+		<coordX>5</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_QiFoundationLearningTree</learningTrackerDef>
+		<defName>CTR_QiFoundation_MuscleAdaption</defName>
+		<label>Mucle Acupoint Adaption</label>
+		<description>adapt user body to open up a path for Body Cultivation</description>
+		
+		<prereqs>
+			<li>CTR_QiFoundation_AdvancedQiAbsorption</li>
+		</prereqs>
+		
+		<prereqsStats>
+			<li>
+				<mode>GreaterEqual</mode>
+				<statReqs>
+					<PsychicSensitivity>1</PsychicSensitivity>
+				</statReqs>
+			</li>
+		</prereqsStats>
+		
+		<statOffsets>
+			<CTR_QiPath>-0.2</CTR_QiPath>
+		</statOffsets>
+		
+		<coordX>5</coordX>
+		<coordY>2</coordY>
+		<pointReq>3</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+
+</Defs>

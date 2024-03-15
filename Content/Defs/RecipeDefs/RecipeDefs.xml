@@ -1,0 +1,481 @@
+<Defs>
+
+	<RecipeDef>
+		<defName>CTR_MakeQiCondensingPill</defName>
+		<label>make Qi Condensing Pill</label>
+		<description>make Qi Condensing Pill</description>
+		<workerClass>CultivatorOfTheRim.RecipeWorker_Alchemy</workerClass>
+		<jobString>doing alchemy</jobString>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Drug</soundWorking>
+		<!-- <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef> -->
+		<workAmount>1000</workAmount>
+		<workSkill>Intellectual</workSkill>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<recipeUsers>
+			<li>CTR_AlchemyFurnace_Basic</li>
+			<li>CTR_AlchemyFurnace_Intermediate</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Qi_Condensing_Ingredient</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Qi_Source</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<tradeTagsToAllow>
+				<li>Qi_Source</li>
+			</tradeTagsToAllow>		
+		</fixedIngredientFilter>
+		<products />
+		<skillRequirements>
+			<Intellectual>10</Intellectual>
+   		 </skillRequirements>
+		<researchPrerequisite>CTR_QiCondensingPillMaking</researchPrerequisite>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.RecipeExtension_Alchemy">
+				<allowedCultivationLevel>
+					<li>CTR_Qi_GatheringOrAbove</li>
+				</allowedCultivationLevel>
+				<successfulProduct>CTR_QiCondensingPill</successfulProduct>
+				<failedProduct>CTR_JunkPill</failedProduct>
+				<count>1~6</count>
+			</li>		
+		</modExtensions>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>CTR_MakeNascentQiPill</defName>
+		<label>make Nascent Qi Pill</label>
+		<description>make Nascent Qi Pill, require 15 of ingredient with "Qi Condensing Ingredient" tag. and 5 item with "Nascent Qi" tag</description>
+		<workerClass>CultivatorOfTheRim.RecipeWorker_Alchemy</workerClass>
+		<jobString>doing alchemy</jobString>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Drug</soundWorking>
+		<!-- <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef> -->
+		<workAmount>1000</workAmount>
+		<workSkill>Intellectual</workSkill>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<recipeUsers>
+			<li>CTR_AlchemyFurnace_Basic</li>
+			<li>CTR_AlchemyFurnace_Intermediate</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Qi_Condensing_Ingredient</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>15</count>
+			</li>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Nascent_Qi</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>
+			<tradeTagsToAllow>
+				<li>Nascent_Qi</li>
+			</tradeTagsToAllow>		
+		</fixedIngredientFilter>
+		<products>
+			<!-- <CTR_QiCondensingPill>1</CTR_QiCondensingPill> -->
+		</products>
+		<skillRequirements>
+			<Intellectual>10</Intellectual>
+   		 </skillRequirements>
+		<researchPrerequisite>CTR_NascentQiPillMaking</researchPrerequisite>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.RecipeExtension_Alchemy">
+				<allowedCultivationLevel>
+					<li>CTR_GoldenCoreOrAbove</li>
+				</allowedCultivationLevel>
+				<successfulProduct>CTR_NascentQiPill</successfulProduct>
+				<failedProduct>CTR_JunkPill</failedProduct>
+				<count>1~6</count>
+			</li>		
+		</modExtensions>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>CTR_MakeSaintQiPill</defName>
+		<label>make Saint Qi Pill</label>
+		<description>make Saint Qi Pill. require 15 of ingredient with "Qi Condensing Ingredient" tag. and 5 item with "Saint Qi" tag</description>
+		<workerClass>CultivatorOfTheRim.RecipeWorker_Alchemy</workerClass>
+		<jobString>doing alchemy</jobString>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Drug</soundWorking>
+		<!-- <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef> -->
+		<workAmount>1000</workAmount>
+		<workSkill>Intellectual</workSkill>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<recipeUsers>
+			<li>CTR_AlchemyFurnace_Basic</li>
+			<li>CTR_AlchemyFurnace_Intermediate</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Qi_Condensing_Ingredient</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>15</count>
+			</li>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Saint_Qi</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<tradeTagsToAllow>
+				<li>Saint_Qi</li>
+			</tradeTagsToAllow>		
+		</fixedIngredientFilter>
+		<products>
+			<!-- <CTR_QiCondensingPill>1</CTR_QiCondensingPill> -->
+		</products>
+		<skillRequirements>
+			<Intellectual>10</Intellectual>
+   		 </skillRequirements>
+		<researchPrerequisite>CTR_SaintQiPillMaking</researchPrerequisite>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.RecipeExtension_Alchemy">
+				<allowedCultivationLevel>
+					<li>CTR_TranscendentOrAbove</li>
+					<li>CTR_HalfStep_SaintOrAbove</li>
+				</allowedCultivationLevel>
+				<successfulProduct>CTR_SaintQiPill</successfulProduct>
+				<failedProduct>CTR_JunkPill</failedProduct>
+				<count>1~6</count>
+			</li>		
+		</modExtensions>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>CTR_MakeImmortalQiPill</defName>
+		<label>make Immortal Qi Pill</label>
+		<description>make Immortal Qi Pill. require 15 of ingredient with "Qi Condensing Ingredient" tag. and 5 item with "Immortal Qi" tag</description>
+		<workerClass>CultivatorOfTheRim.RecipeWorker_Alchemy</workerClass>
+		<jobString>doing alchemy</jobString>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Drug</soundWorking>
+		<!-- <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef> -->
+		<workAmount>1000</workAmount>
+		<workSkill>Intellectual</workSkill>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<recipeUsers>
+			<li>CTR_AlchemyFurnace_Basic</li>
+			<li>CTR_AlchemyFurnace_Intermediate</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Qi_Condensing_Ingredient</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>15</count>
+			</li>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Immortal_Qi</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<tradeTagsToAllow>
+				<li>Immortal_Qi</li>
+			</tradeTagsToAllow>		
+		</fixedIngredientFilter>
+		<products>
+			<!-- <CTR_QiCondensingPill>1</CTR_QiCondensingPill> -->
+		</products>
+		<skillRequirements>
+			<Intellectual>10</Intellectual>
+   		 </skillRequirements>
+		<researchPrerequisite>CTR_ImmortalQiPillMaking</researchPrerequisite>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.RecipeExtension_Alchemy">
+				<allowedCultivationLevel>
+					<li>CTR_SaintKingOrAbove</li>
+				</allowedCultivationLevel>
+				<successfulProduct>CTR_ImmortalQiPill</successfulProduct>
+				<failedProduct>CTR_JunkPill</failedProduct>
+				<count>1~6</count>
+			</li>		
+		</modExtensions>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>CTR_MakeTalisman</defName>
+		<label>make Talisman</label>
+		<description>making talisman require \n5 of Raw Resource or Cultivation Resource, \n5 of Spiritual Plant, \n1 blank talisman paper. \n\nthe outcome depend on the combination of first ingredient and Spiritual Plant. invalid combination will return a ruined paper.</description>
+		<workerClass>CultivatorOfTheRim.RecipeWorker_MixingIngredient</workerClass>
+		<jobString>drawing talisman</jobString>
+		<effectWorking>Sculpt</effectWorking>
+		<soundWorking>Recipe_Drug</soundWorking>
+		<workAmount>1000</workAmount>
+		<workSkill>Intellectual</workSkill>
+		<recipeUsers>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Cultivation_Resource</li>
+						<li>Cultivation_Pill</li>
+						<li>Medicine</li>
+						<li>ResourcesRaw</li>
+					</categories>
+					<!-- <thingDefs> -->
+						<!-- <li>Steel</li> -->
+						<!-- <li>Plasteel</li> -->
+						<!-- <li>Uranium</li> -->
+						<!-- <li>WoodLog</li> -->
+					<!-- </thingDefs> -->
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>Spirit_PlantProduct</li>
+					</categories>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CTR_TalismanPaper</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Cultivation_Resource</li>
+				<li>Medicine</li>
+				<li>ResourcesRaw</li>
+				<li>Spirit_PlantProduct</li>
+			</categories>		
+		</fixedIngredientFilter>
+		<products>
+			<!-- <CTR_QiCondensingPill>1</CTR_QiCondensingPill> -->
+		</products>
+		<skillRequirements>
+			<Intellectual>10</Intellectual>
+   		 </skillRequirements>
+		<researchPrerequisite>CTR_TalismanMaking</researchPrerequisite>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.RecipeExtension_MixingIngredient">
+				<allowedCultivationLevel>
+					<li>CTR_CoreShapingOrAbove</li>
+				</allowedCultivationLevel>
+				<failedProduct>CTR_RuinedTalismanPaper</failedProduct>
+				<count>1</count>
+				<combinations>
+					<li>
+						<firstTag>Metal_Qi</firstTag>
+						<secondTag>Earth_Qi</secondTag>
+						<result>CTR_TalismanShield</result>
+					</li>
+					<li>
+						<firstTag>Fire_Qi</firstTag>
+						<secondTag>Fire_Qi</secondTag>
+						<result>CTR_TalismanFireSpew</result>
+					</li>
+					<li>
+						<firstTag>Healing_Item</firstTag>
+						<secondTag>Qi_Condensing_Ingredient</secondTag>
+						<result>CTR_TalismanImmunity</result>
+					</li>
+					<li>
+						<firstTag>Neutral_Qi</firstTag>
+						<secondTag>Fire_Qi</secondTag>
+						<result>CTR_TalismanSpeed</result>
+					</li>
+					<li>
+						<firstTag>Nascent_Qi</firstTag>
+						<secondTag>Yang_Qi</secondTag>
+						<result>CTR_TalismanSmart</result>
+					</li>
+					<li>
+						<firstTag>Fire_Qi</firstTag>
+						<secondTag>Yang_Qi</secondTag>
+						<result>CTR_TalismanJoy</result>
+					</li>
+					<li>
+						<firstTag>Cold_Qi</firstTag>
+						<secondTag>Yin_Qi</secondTag>
+						<result>CTR_TalismanInvisibility</result>
+					</li>
+					<li>
+						<firstTag>Wood_Qi</firstTag>
+						<secondTag>Yang_Qi</secondTag>
+						<result>CTR_TalismanCurer</result>
+					</li>
+					<li>
+						<firstTag>Neutral_Qi</firstTag>
+						<secondTag>Wood_Qi</secondTag>
+						<result>CTR_TalismanForeseer</result>
+					</li>
+					<li>
+						<firstTag>Wood_Qi</firstTag>
+						<secondTag>Water_Qi</secondTag>
+						<result>CTR_TalismanFasting</result>
+					</li>
+					<li>
+						<firstTag>Yang_Qi</firstTag>
+						<secondTag>Metal_Qi</secondTag>
+						<result>CTR_TalismanWorkspeed</result>
+					</li>
+					<li>
+						<firstTag>Yang_Qi</firstTag>
+						<secondTag>Yin_Qi</secondTag>
+						<result>CTR_TalismanCultivationSpeed</result>
+					</li>
+				</combinations>
+			</li>		
+		</modExtensions>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>CTR_MakeAlchemy</defName>
+		<label>do alchemy</label>
+		<description>doing unspecified alchemy require \n15 of Raw Resource or Cultivation Resource, \n15 of Spiritual Plant \n\nthe outcome depend on the combination of first ingredient and second ingredient. invalid combination will return a junk pill.</description>
+		<workerClass>CultivatorOfTheRim.RecipeWorker_MixingIngredient</workerClass>
+		<jobString>mixing alchemy</jobString>
+		<effectWorking>Sculpt</effectWorking>
+		<soundWorking>Recipe_Drug</soundWorking>
+		<workAmount>1000</workAmount>
+		<workSkill>Intellectual</workSkill>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<recipeUsers>
+			<li>CTR_AlchemyFurnace_Basic</li>
+			<li>CTR_AlchemyFurnace_Intermediate</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Cultivation_Resource</li>
+						<li>Medicine</li>
+						<li>ResourcesRaw</li>
+					</categories>
+				</filter>
+				<count>15</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>Spirit_PlantProduct</li>
+					</categories>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Cultivation_Resource</li>
+				<li>Medicine</li>
+				<li>ResourcesRaw</li>
+				<li>Spirit_PlantProduct</li>
+			</categories>		
+		</fixedIngredientFilter>
+		<products />
+		<skillRequirements>
+			<Intellectual>10</Intellectual>
+   		 </skillRequirements>
+		<researchPrerequisite>DrugProduction</researchPrerequisite>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.RecipeExtension_MixingIngredient">
+				<allowedCultivationLevel>
+					<li>CTR_CoreShapingOrAbove</li>
+				</allowedCultivationLevel>
+				<failedProduct>CTR_JunkPill</failedProduct>
+				<count>1~10</count>
+				<combinations>
+					<li>
+						<firstTag>Healing_Item</firstTag>
+						<secondTag>Qi_Condensing_Ingredient</secondTag>
+						<result>CTR_HealingPill</result>
+					</li>
+					<li>
+						<firstTag>Immortal_Qi</firstTag>
+						<secondTag>Qi_Condensing_Ingredient</secondTag>
+						<result>CTR_DantianRepairPill</result>
+					</li>
+					<li>
+						<firstTag>Neutral_Qi</firstTag>
+						<secondTag>Cold_Qi</secondTag>
+						<result>CTR_ColdResistPill</result>
+					</li>
+					<li>
+						<firstTag>Neutral_Qi</firstTag>
+						<secondTag>Fire_Qi</secondTag>
+						<result>CTR_HeatResistPill</result>
+					</li>
+					<li>
+						<firstTag>Qi_Source</firstTag>
+						<secondTag>Qi_Condensing_Ingredient</secondTag>
+						<result>CTR_ImproveAbsorptionPill</result>
+					</li>
+					<li>
+						<firstTag>Fire_Qi</firstTag>
+						<secondTag>Metal_Qi</secondTag>
+						<result>CTR_ImproveReflexPill</result>
+					</li>
+					<li>
+						<firstTag>Metal_Qi</firstTag>
+						<secondTag>Fire_Qi</secondTag>
+						<result>CTR_ImproveGWSPill</result>
+					</li>
+					<li>
+						<firstTag>Divine</firstTag>
+						<secondTag>Immortal_Qi</secondTag>
+						<result>CTR_LifeSpanPill</result>
+					</li>
+					<li>
+						<firstTag>Earth_Qi</firstTag>
+						<secondTag>Earth_Qi</secondTag>
+						<result>CTR_StoneSkinPill</result>
+					</li>
+					<li>
+						<firstTag>Healing_Item</firstTag>
+						<secondTag>Yin_Qi</secondTag>
+						<result>CTR_FertilityPill</result>
+					</li>
+				</combinations>
+			</li>		
+		</modExtensions>
+	</RecipeDef>
+
+</Defs>

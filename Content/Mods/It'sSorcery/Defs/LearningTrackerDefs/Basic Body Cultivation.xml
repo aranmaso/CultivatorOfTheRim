@@ -1,0 +1,360 @@
+<Defs>
+
+	<!-- Basic Body Training Learning Tracker -->
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerProgress">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Progress</learningTrackerClass>
+		<defName>CTR_BasicBodyTechniqueLearningProgress</defName>
+		<label>body cultivating progress</label>
+	</ItsSorceryFramework.LearningTrackerDef>
+	
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerTree">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Tree</learningTrackerClass>
+		<defName>CTR_BasicBodyTechniqueLearningTree</defName>
+		<label>Body Cultivation</label>
+	</ItsSorceryFramework.LearningTrackerDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_BasicBodyTechniqueLearningTree</learningTrackerDef>
+		<defName>Body_Cultivating_Basic</defName>
+		<label>Body Cultivation Foundation</label>
+		<description>foundation of body cultivation for cultivator who aimed toward body building.</description>
+		
+		<prereqsSkills>
+			<li>
+				<mode>GreaterEqual</mode>
+				<skillReqs>
+					<li>
+						<skillDef>Melee</skillDef>
+						<level>5</level>
+					</li>
+				</skillReqs>
+			</li>
+		</prereqsSkills>
+		
+		<prereqsStats>
+		<li>
+			<mode>Lesser</mode>
+			<statReqs>
+				<CTR_QiPath>1</CTR_QiPath>
+			</statReqs>
+		</li>
+		</prereqsStats>
+		
+		<prereqsHediff>
+		<li>
+			<key>CTR_BreakthroughCounter</key>
+			<value>0</value>
+		</li>
+		</prereqsHediff>
+		
+		<statOffsets>
+			<CTR_BodyPath>1</CTR_BodyPath>
+			<TechniqueLearningCount>1</TechniqueLearningCount>
+		</statOffsets>
+		
+		<coordX>0</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_BasicBodyTechniqueLearningTree</learningTrackerDef>
+		<defName>Body_Cultivating_MuscleShaping</defName>
+		<label>Muscle Shaping</label>
+		<description>train user muscle to be more resistance against damage</description>
+		
+		<prereqs>
+			<li>Body_Cultivating_Basic</li>
+		</prereqs>
+		
+		<prereqsSkills>
+			<li>
+				<mode>GreaterEqual</mode>
+				<skillReqs>
+					<li>
+						<skillDef>Melee</skillDef>
+						<level>7</level>
+					</li>
+				</skillReqs>
+			</li>
+		</prereqsSkills>
+		
+		<statOffsets>
+			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.15</ArmorRating_Heat>
+			<ArmorRating_Qi>0.15</ArmorRating_Qi>
+		</statOffsets>
+		
+		<coordX>1</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_BasicBodyTechniqueLearningTree</learningTrackerDef>
+		<defName>Body_Cultivating_BoneShaping</defName>
+		<label>Bone Shaping</label>
+		<description>enhancing user bone. reducing incoming damage. and increase melee damage done.</description>
+		
+		<prereqs>
+			<li>Body_Cultivating_Basic</li>
+		</prereqs>
+		
+		<prereqsSkills>
+			<li>
+				<mode>GreaterEqual</mode>
+				<skillReqs>
+					<li>
+						<skillDef>Melee</skillDef>
+						<level>7</level>
+					</li>
+				</skillReqs>
+			</li>
+		</prereqsSkills>
+		
+		<statFactors>
+			<IncomingDamageFactor>-0.15</IncomingDamageFactor>
+			<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">0.25</MeleeDamageFactor>
+		</statFactors>
+		
+		<coordX>1</coordX>
+		<coordY>2</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_BasicBodyTechniqueLearningTree</learningTrackerDef>
+		<defName>Body_Cultivating_BloodVessel</defName>
+		<label>Blood Improving</label>
+		<description>improve user blood, increase in metabolism and blood circulation</description>
+		
+		<prereqs>
+			<li>Body_Cultivating_MuscleShaping</li>
+		</prereqs>
+		
+		<prereqsSkills>
+			<li>
+				<mode>GreaterEqual</mode>
+				<skillReqs>
+					<li>
+						<skillDef>Melee</skillDef>
+						<level>10</level>
+					</li>
+				</skillReqs>
+			</li>
+		</prereqsSkills>
+		
+		<capMods>
+		<li>
+			<capacity>BloodPumping</capacity>
+			<offset>0.25</offset>
+		</li>
+		<li>
+			<capacity>BloodFiltration</capacity>
+			<offset>0.25</offset>
+		</li>
+		<li>
+			<capacity>Metabolism</capacity>
+			<offset>0.25</offset>
+		</li>
+		</capMods>
+		
+		<coordX>2</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_BasicBodyTechniqueLearningTree</learningTrackerDef>
+		<defName>Body_Cultivating_Reflex</defName>
+		<label>Improving Reflex</label>
+		<description>improve user reflex ability. incraese their dodge chance in melee</description>
+		
+		<prereqs>
+			<li>Body_Cultivating_BoneShaping</li>
+		</prereqs>
+		
+		<prereqsSkills>
+			<li>
+				<mode>GreaterEqual</mode>
+				<skillReqs>
+					<li>
+						<skillDef>Melee</skillDef>
+						<level>10</level>
+					</li>
+				</skillReqs>
+			</li>
+		</prereqsSkills>
+		
+		<statOffsets>		
+			<MeleeDodgeChance>0.25</MeleeDodgeChance>
+			<PawnTrapSpringChance>-0.25</PawnTrapSpringChance>
+		</statOffsets>
+		
+		<coordX>2</coordX>
+		<coordY>2</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_BasicBodyTechniqueLearningTree</learningTrackerDef>
+		<defName>Body_Cultivating_Intermediate</defName>
+		<label>Intermediate Body Cultivation</label>
+		<description>Intermediate tier of body cultivation.</description>
+		
+		<prereqs>
+			<li>Body_Cultivating_BloodVessel</li>
+			<li>Body_Cultivating_Reflex</li>
+		</prereqs>
+		
+		<prereqsSkills>
+			<li>
+				<mode>GreaterEqual</mode>
+				<skillReqs>
+					<li>
+						<skillDef>Melee</skillDef>
+						<level>10</level>
+					</li>
+				</skillReqs>
+			</li>
+		</prereqsSkills>
+		
+		<statOffsets>		
+		</statOffsets>
+		
+		<coordX>3</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_BasicBodyTechniqueLearningTree</learningTrackerDef>
+		<defName>Body_Cultivating_Intermediate_AdvanceMelee</defName>
+		<label>Advance Melee</label>
+		<description>Advance melee fighting method. improve melee dodge chance.</description>
+		
+		<prereqs>
+			<li>Body_Cultivating_Intermediate</li>
+		</prereqs>
+		
+		<prereqsSkills>
+			<li>
+				<mode>GreaterEqual</mode>
+				<skillReqs>
+					<li>
+						<skillDef>Melee</skillDef>
+						<level>15</level>
+					</li>
+				</skillReqs>
+			</li>
+		</prereqsSkills>
+		
+		<statOffsets>	
+			<MeleeDodgeChance>0.3</MeleeDodgeChance>
+			<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">0.25</MeleeDamageFactor>
+		</statOffsets>
+		
+		<coordX>4</coordX>
+		<coordY>1</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_BasicBodyTechniqueLearningTree</learningTrackerDef>
+		<defName>Body_Cultivating_Intermediate_QiCoatedSkin</defName>
+		<label>Qi Coated skin</label>
+		<description>Coat user skin in a thin layer of Qi for defense.</description>
+		
+		<prereqs>
+			<li>Body_Cultivating_Intermediate</li>
+		</prereqs>
+		
+		<prereqsSkills>
+			<li>
+				<mode>GreaterEqual</mode>
+				<skillReqs>
+					<li>
+						<skillDef>Melee</skillDef>
+						<level>15</level>
+					</li>
+				</skillReqs>
+			</li>
+		</prereqsSkills>
+		
+		<statOffsets>	
+			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.15</ArmorRating_Heat>
+			<ArmorRating_Qi>0.15</ArmorRating_Qi>
+		</statOffsets>
+		
+		<coordX>4</coordX>
+		<coordY>2</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_BasicBodyTechniqueLearningTree</learningTrackerDef>
+		<defName>Body_Cultivating_Intermediate_AdvanceStamina</defName>
+		<label>Advance Stamina improvement</label>
+		<description>improve user stamina capability drastically</description>
+		
+		<prereqs>
+			<li>Body_Cultivating_Intermediate_AdvanceMelee</li>
+		</prereqs>
+		
+		<prereqsSkills>
+			<li>
+				<mode>GreaterEqual</mode>
+				<skillReqs>
+					<li>
+						<skillDef>Melee</skillDef>
+						<level>15</level>
+					</li>
+				</skillReqs>
+			</li>
+		</prereqsSkills>
+		
+		<statOffsets>	
+			<CTR_StaminaEnergyMax>25</CTR_StaminaEnergyMax>
+			<CTR_StaminaEnergyRecovery>0.25</CTR_StaminaEnergyRecovery>
+		</statOffsets>
+		
+		<coordX>5</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_BasicBodyTechniqueLearningTree</learningTrackerDef>
+		<defName>Body_Cultivating_Intermediate_QiCirculation</defName>
+		<label>Qi Integration</label>
+		<description>integrated Qi into user body cultivation. open up a way to practice a technique in Qi path.</description>
+		
+		<prereqs>
+			<li>Body_Cultivating_Intermediate_QiCoatedSkin</li>
+		</prereqs>
+		
+		<prereqsSkills>
+			<li>
+				<mode>GreaterEqual</mode>
+				<skillReqs>
+					<li>
+						<skillDef>Melee</skillDef>
+						<level>15</level>
+					</li>
+				</skillReqs>
+			</li>
+		</prereqsSkills>
+		
+		<statOffsets>
+			<CTR_BodyPath>-0.2</CTR_BodyPath>
+		</statOffsets>
+		
+		<coordX>5</coordX>
+		<coordY>2</coordY>
+		<pointReq>3</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+
+</Defs>

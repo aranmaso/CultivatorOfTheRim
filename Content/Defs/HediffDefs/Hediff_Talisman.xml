@@ -1,0 +1,235 @@
+<Defs>
+
+	<HediffDef Name="TalismanBuffBase" Abstract="True">
+		<description>a special effect granted by wearing talisman.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
+		<initialSeverity>0.001</initialSeverity>
+		<minSeverity>0.001</minSeverity>
+		<tags>
+			<li>Talisman_Buff</li>
+		</tags>
+		<isBad>false</isBad>
+		<comps>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="TalismanBuffBase">
+		<defName>CTR_SmartTalisman</defName>
+		<label>Knowledge Talisman</label>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<comps />
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<statOffsets>		
+					<ResearchSpeed>0.5</ResearchSpeed>
+					<GlobalLearningFactor>0.5</GlobalLearningFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="TalismanBuffBase">
+		<defName>CTR_FastTalisman</defName>
+		<label>Speed Talisman</label>
+		<!-- <description>. . .</description> -->
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<comps />
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<statOffsets>		
+					<MoveSpeed>0.5</MoveSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="TalismanBuffBase">
+		<defName>CTR_ImmunityTalisman</defName>
+		<label>Immunity Talisman</label>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<comps />
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<statOffsets>
+					<ImmunityGainSpeed>0.5</ImmunityGainSpeed>
+				</statOffsets>
+				<makeImmuneTo>
+					<li>Malaria</li>
+					<li>SleepingSickness</li>
+					<li>Plague</li>
+				</makeImmuneTo>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="TalismanBuffBase">
+		<defName>CTR_FireSpewTalisman</defName>
+		<label>FireSpew Talisman</label>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_GiveAbility">				
+				<abilityDef>CTR_Talisman_FireSpew</abilityDef>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="TalismanBuffBase">
+		<defName>CTR_JoyTalisman</defName>
+		<label>Joy Talisman</label>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<comps />
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<statFactors>
+					<MentalBreakThreshold>0.5</MentalBreakThreshold>
+				</statFactors>
+				<!-- <makeImmuneTo> -->
+					<!-- <li>Malaria</li> -->
+					<!-- <li>SleepingSickness</li> -->
+					<!-- <li>Plague</li> -->
+				<!-- </makeImmuneTo> -->
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="TalismanBuffBase">
+		<defName>CTR_InvisibilityTalisman</defName>
+		<label>Hiding Talisman</label>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<comps>		
+			<li Class="HediffCompProperties">
+				<compClass>HediffComp_Invisibility</compClass>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<capMods>
+				<li>
+					<capacity>Talking</capacity>
+					<postFactor>0</postFactor>
+				</li>
+				</capMods>
+				<statFactors>
+					<TradePriceImprovement>0.25</TradePriceImprovement>
+					<NegotiationAbility>0.25</NegotiationAbility>
+					<PawnBeauty>0</PawnBeauty>
+					<SocialImpact>0.25</SocialImpact>
+				</statFactors>
+				</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="TalismanBuffBase">
+		<defName>CTR_CurerTalisman</defName>
+		<label>Medical Talisman</label>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<comps />
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<statFactors>
+					<MedicalTendSpeed>1.25</MedicalTendSpeed>
+					<MedicalTendQuality>1.25</MedicalTendQuality>
+					<MedicalOperationSpeed>1.25</MedicalOperationSpeed>
+				</statFactors>
+				</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="TalismanBuffBase">
+		<defName>CTR_ForeseerTalisman</defName>
+		<label>Foreseer Talisman</label>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<comps />
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<capMods>
+				<li>
+					<capacity>Sight</capacity>
+					<postFactor>1.5</postFactor>
+				</li>
+				</capMods>
+				</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="TalismanBuffBase">
+		<defName>CTR_FastingTalisman</defName>
+		<label>Fasting Talisman</label>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<comps />
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<statFactors>
+					<MaxNutrition>1.5</MaxNutrition>				
+				</statFactors>
+				</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="TalismanBuffBase">
+		<defName>CTR_WorkspeedTalisman</defName>
+		<label>Workspeed Talisman</label>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<comps />
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<statFactors>
+					<WorkSpeedGlobal>1.5</WorkSpeedGlobal>				
+				</statFactors>
+				</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="TalismanBuffBase">
+		<defName>CTR_CultivationTalisman</defName>
+		<label>Cultivation Talisman</label>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<comps />
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<statFactors>
+					<CultivationSpeed>1.5</CultivationSpeed>				
+				</statFactors>
+				</li>
+		</stages>
+	</HediffDef>
+	
+</Defs>

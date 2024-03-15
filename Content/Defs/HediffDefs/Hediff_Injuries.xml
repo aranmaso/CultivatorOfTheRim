@@ -1,0 +1,116 @@
+<Defs>
+	
+	<HediffDef ParentName="InjuryBase">
+    <defName>Qi_Burn</defName>
+    <label>qi burn</label>
+    <labelNoun>a qi injury</labelNoun>
+    <description>A qi injury.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>treated</labelTendedWell>
+        <labelTendedWellInner>stabilized</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.15</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>qi scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.06</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Burned off</destroyedLabel>
+      <destroyedOutLabel>Burned out</destroyedOutLabel>
+    </injuryProps>
+	</HediffDef>
+  
+	<HediffDef ParentName="RealmBase">
+		<defName>CTR_DantianDamage</defName>
+		<label>dantian damage</label>
+		<description>damage in the pawn's dantian, severely reduce cultivation speed</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
+		<tags Inherit="false">
+			<li>CTR_DantianDamage</li>
+		</tags>
+		<initialSeverity>0.1</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<tendable>true</tendable>
+		<comps>		
+		<li Class="HediffCompProperties_TendDuration">
+			<labelTendedWell>treated</labelTendedWell>
+			<labelTendedWellInner>stabilized</labelTendedWellInner>
+			<labelSolidTendedWell>set</labelSolidTendedWell>
+			<severityPerDayTended>-0.0333333333333333</severityPerDayTended>
+		</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0.1</minSeverity>				
+				<statFactors>
+					<CultivationSpeed>0.9</CultivationSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.2</minSeverity>								
+				<statFactors>
+					<CultivationSpeed>0.8</CultivationSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.3</minSeverity>					
+				<statFactors>
+					<CultivationSpeed>0.7</CultivationSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.4</minSeverity>					
+				<statFactors>
+					<CultivationSpeed>0.6</CultivationSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>				
+				<statFactors>
+					<CultivationSpeed>0.5</CultivationSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.6</minSeverity>								
+				<statFactors>
+					<CultivationSpeed>0.4</CultivationSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.7</minSeverity>								
+				<statFactors>
+					<CultivationSpeed>0.3</CultivationSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.8</minSeverity>								
+				<statFactors>
+					<CultivationSpeed>0.2</CultivationSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.9</minSeverity>								
+				<statFactors>
+					<CultivationSpeed>0.1</CultivationSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>1</minSeverity>								
+				<statFactors>
+					<CultivationSpeed>0</CultivationSpeed>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	
+</Defs>

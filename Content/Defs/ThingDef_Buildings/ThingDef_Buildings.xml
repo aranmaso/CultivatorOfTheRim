@@ -1,0 +1,398 @@
+<Defs>
+
+	<DesignationCategoryDef>
+		<defName>CultivatorOfTheRim</defName>
+		<label>Cultivation</label>
+		<description>All Makai buildings show up here once researched.</description>
+		<order>451</order>
+		<specialDesignatorClasses>
+			<li>Designator_Cancel</li>
+			<li>Designator_Deconstruct</li>
+		</specialDesignatorClasses>
+	</DesignationCategoryDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>CTR_AuctionHouse</defName>
+		<label>auction console</label>
+		<description>Allows recieve notification and participating in auction hosted by Global Auction House. when bidding on item, make sure you have enough payment of your choice near trade beacon.</description>
+		<thingClass>Building</thingClass>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Buildings/auctionconsoleGold</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4.5,4.5)</drawSize>
+			<drawOffset>(0,0.5,0.7)</drawOffset>
+			<damageData>
+			<!-- <rect>(0,0,3,1.8)</rect> -->
+			<cornerBL>Damage/Corner</cornerBL>
+			<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+			<shadowData>
+			<volume>(1,0.5,2)</volume>
+			</shadowData>
+		</graphicData>
+		<uiIconPath>Things/Buildings/auctionconsole</uiIconPath>
+		<rotatable>false</rotatable>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>false</castEdgeShadows>
+		<fillPercent>0.5</fillPercent>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+		  <MaxHitPoints>250</MaxHitPoints>
+		  <WorkToBuild>2200</WorkToBuild>
+		  <Flammability>0.6</Flammability>
+		</statBases>
+		<size>(2,2)</size>
+		<building>
+		  <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<costList>
+		  <Steel>120</Steel>
+		  <ComponentIndustrial>4</ComponentIndustrial>
+		  <ComponentSpacer>1</ComponentSpacer>
+		  <CTR_SpiritStone>250</CTR_SpiritStone>
+		</costList>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<!-- <interactionCellOffset>(1,0,-1)</interactionCellOffset> -->
+		<!-- <hasInteractionCell>true</hasInteractionCell> -->
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<designationCategory>CultivatorOfTheRim</designationCategory>
+		<uiOrder>2100</uiOrder>
+		<comps>
+			<li Class="CultivatorOfTheRim.CompProperties_AuctionHouse">
+				<paymentOption>
+					<li>Silver</li>
+					<li>Gold</li>
+					<li>CTR_SpiritStone</li>
+					<li>CTR_SpiritStone_Condensed_2X</li>
+					<li>CTR_SpiritStone_Condensed_3X</li>
+					<li>CTR_SpiritStone_Condensed_4X</li>
+					<li>CTR_SpiritStone_Condensed_5X</li>
+					<li>CTR_SpiritStone_Condensed_6X</li>
+					<li>CTR_QiCondensingPill</li>
+					<li>CTR_NascentQiPill</li>
+					<li>CTR_SaintQiPill</li>
+					<li>CTR_ImmortalQiPill</li>
+					<li MayRequire="aranmaho.makai">Makai_Ingot</li>
+				</paymentOption>
+				<uiIcon>UI/Auction/RaisebidTwo</uiIcon>
+				<uiIconGiveup>UI/Auction/GiveUp</uiIconGiveup>
+				
+				<tickDelayForNPCBidder>200~250</tickDelayForNPCBidder>
+				
+				<chanceOne>1.0</chanceOne> <!-- 100% -->
+				
+				<firstThreshold>1.5</firstThreshold> 		
+				<chanceTwo>0.3</chanceTwo> <!-- 30% -->
+				
+				<secondThreshold>1.75</secondThreshold>
+				<chanceThree>0.15</chanceThree> <!-- 15% -->
+				
+				
+				<thirdThreshold>2.0</thirdThreshold>
+				<chanceFour>0.1</chanceFour> <!-- 10% -->
+				
+				
+				<fourthThreshold>3.0</fourthThreshold>
+				<chanceFive>0.05</chanceFive> <!-- 5% -->
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>4</glowRadius>
+				<glowColor>(107,148,94)</glowColor>
+			</li>
+			<!-- <li Class="VanillaFurnitureExpanded.CompProperties_RandomBuildingGraphic"> -->
+				<!-- <randomGraphics> -->
+					<!-- <li>Things/Buildings/auctionconsole</li> -->
+					<!-- <li>Things/Buildings/auctionconsoleGold</li> -->
+				<!-- </randomGraphics> -->
+			<!-- </li> -->
+		</comps>
+		<designationHotKey>Misc3</designationHotKey>
+		<placeWorkers>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>MicroelectronicsBasics</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+	</ThingDef>
+	
+	<!-- ThingDef ParentName="BuildingBase">
+		<defName>CTR_QiCrystal</defName>
+		<label>Qi crystal</label>
+		<description>Allows to store qi from spiritual item. \n\nTags:Qi Source Tier 1, Neutral Qi,Unlimited Source</description>
+		<thingClass>Building</thingClass>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Buildings/auctionconsole</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+			<drawOffset>(0,0.5,0)</drawOffset>
+			<shadowData>
+			<volume>(0.5,0.5,0.5)</volume>
+			</shadowData>
+		</graphicData>
+		<uiIconPath>Things/Buildings/auctionconsole</uiIconPath>
+		<rotatable>false</rotatable>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>false</castEdgeShadows>
+		<fillPercent>0.5</fillPercent>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+		  <MaxHitPoints>1200</MaxHitPoints>
+		  <WorkToBuild>2200</WorkToBuild>
+		  <Flammability>0.1</Flammability>
+		  <Mass>20</Mass>
+		</statBases>
+		<size>(1,1)</size>
+		<building>
+		  <destroySound>BuildingDestroyed_Stone_Big</destroySound>
+		</building>
+		<costList>
+		  <CTR_SpiritStone>500</CTR_SpiritStone>
+		  <ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<designationCategory>CultivatorOfTheRim</designationCategory>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<tradeTags>
+			<li>Qi_Source_Crystal</li>
+			<li>Qi_Source_Tier1</li>
+			<li>Unlimited_Source</li>
+		</tradeTags>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>4</glowRadius>
+				<glowColor>(107,148,94)</glowColor>
+			</li>
+			<li	Class="CultivatorOfTheRim.CompProperties_QiStorage">
+				<maxStorage>2500</maxStorage>
+				<usageMultiplier>1</usageMultiplier>
+			</li>
+		</comps>
+		<designationHotKey>Misc3</designationHotKey>
+		<placeWorkers />
+		<researchPrerequisites>
+			<li>MicroelectronicsBasics</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>		
+	</ThingDef>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>CTR_QiCrystalTierTwo</defName>
+		<label>Qi crystal Tier 2</label>
+		<description>Allows to store qi from spiritual item. 25% more efficience than the previous tier \n\nTags:Qi Source Tier 2, Neutral Qi,Unlimited Source</description>
+		<thingClass>Building</thingClass>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Buildings/auctionconsole</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+			<drawOffset>(0,0.5,0)</drawOffset>
+			<shadowData>
+			<volume>(0.5,0.5,0.5)</volume>
+			</shadowData>
+		</graphicData>
+		<uiIconPath>Things/Buildings/auctionconsole</uiIconPath>
+		<rotatable>false</rotatable>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>false</castEdgeShadows>
+		<fillPercent>0.5</fillPercent>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+		  <MaxHitPoints>1200</MaxHitPoints>
+		  <WorkToBuild>2200</WorkToBuild>
+		  <Flammability>0.1</Flammability>
+		  <Mass>20</Mass>
+		</statBases>
+		<size>(1,1)</size>
+		<building>
+		  <destroySound>BuildingDestroyed_Stone_Big</destroySound>
+		</building>
+		<costList>
+		  <CTR_SpiritStone>500</CTR_SpiritStone>
+		  <ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<designationCategory>CultivatorOfTheRim</designationCategory>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<tradeTags>
+			<li>Qi_Source_Crystal</li>
+			<li>Qi_Source_Tier2</li>
+			<li>Unlimited_Source</li>
+		</tradeTags>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>4</glowRadius>
+				<glowColor>(107,148,94)</glowColor>
+			</li>
+			<li	Class="CultivatorOfTheRim.CompProperties_QiStorage">
+				<maxStorage>2500</maxStorage>
+				<usageMultiplier>0.75</usageMultiplier>
+			</li>
+			<li	Class="CultivatorOfTheRim.CompProperties_GetNearbyPawn">
+				<checkInterval>60</checkInterval>
+				<radius>5</radius>
+			</li>
+		</comps>
+		<designationHotKey>Misc3</designationHotKey>
+		<placeWorkers />
+		<researchPrerequisites>
+			<li>MicroelectronicsBasics</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>		
+	</ThingDef -->
+	
+	<ThingDef ParentName="BenchBase">
+		<defName>CTR_AlchemyFurnace_Basic</defName>
+		<label>Basic Alchemy Furnace</label>
+		<description>A work bench equipped with containers, heaters, and measurement devices for producing various drugs.</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<graphicData>
+			<texPath>Things/Buildings/AlchemyFurnace_Basic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.5,1.5)</drawSize>
+			<!-- <drawOffset>(0,0.5,0)</drawOffset> -->
+		</graphicData>
+		<castEdgeShadows>false</castEdgeShadows>
+		<!-- <staticSunShadowHeight>0.20</staticSunShadowHeight> -->
+		<costStuffCount>50</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+			<li>Woody</li>
+		</stuffCategories>
+		<costList>
+			<Steel>75</Steel>
+			<CTR_SpiritStone>250</CTR_SpiritStone>
+			<CTR_FireStone>100</CTR_FireStone>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToBuild>3500</WorkToBuild>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<AlchemyFurnaceQuality>0.50</AlchemyFurnaceQuality>
+		</statBases>
+		<size>(1,1)</size>
+		<designationCategory>CultivatorOfTheRim</designationCategory>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>		
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<paintable>false</paintable>
+		</building>
+		<tradeTags>
+			<li>Alchemy_Furnace</li>
+		</tradeTags>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>CTR_BasicAlchemy</li>
+		</researchPrerequisites>
+	</ThingDef>
+	
+	<ThingDef ParentName="BenchBase">
+		<defName>CTR_AlchemyFurnace_Intermediate</defName>
+		<label>Intermediate Alchemy Furnace</label>
+		<description>A work bench equipped with containers, heaters, and measurement devices for producing various drugs.</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<graphicData>
+			<texPath>Things/Buildings/AlchemyFurnace_Intermediate</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,4)</drawSize>
+			<drawOffset>(0,0.5,0)</drawOffset>
+		</graphicData>
+		<castEdgeShadows>false</castEdgeShadows>
+		<!-- <staticSunShadowHeight>0.20</staticSunShadowHeight> -->
+		<costStuffCount>50</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costList>
+			<Steel>75</Steel>
+			<CTR_SpiritStone>500</CTR_SpiritStone>
+			<CTR_FireStone>200</CTR_FireStone>
+			<ComponentIndustrial>10</ComponentIndustrial>
+		</costList>
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToBuild>3500</WorkToBuild>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<AlchemyFurnaceQuality>0.80</AlchemyFurnaceQuality>
+		</statBases>
+		<size>(3,3)</size>
+		<designationCategory>CultivatorOfTheRim</designationCategory>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>		
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<paintable>false</paintable>
+		</building>
+		<tradeTags>
+			<li>Alchemy_Furnace</li>
+		</tradeTags>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>CTR_IntermediateAlchemy</li>
+		</researchPrerequisites>
+	</ThingDef>		
+	
+</Defs>

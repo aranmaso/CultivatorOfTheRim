@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchTabDef>
+		<defName>CTR_Alchemy_ResearchTab</defName>
+		<label>Cultivation - Alchemy</label>
+	</ResearchTabDef>
+	
+	<ResearchTabDef>
+		<defName>CTR_Cultivation_ResearchTab</defName>
+		<label>Cultivation - Main</label>
+	</ResearchTabDef>
+
+</Defs>

@@ -1,0 +1,442 @@
+<Defs>
+
+	<RecipeDef Name="GeneralPillRecipeBase" Abstract="True">
+		<workerClass>CultivatorOfTheRim.RecipeWorker_Alchemy</workerClass>
+		<jobString>doing alchemy</jobString>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Drug</soundWorking>
+		<workAmount>500</workAmount>
+		<workSkill>Intellectual</workSkill>
+		<!-- <workSpeedStat>DrugCookingSpeed</workSpeedStat> -->
+		<recipeUsers>
+			<li>CTR_AlchemyFurnace_Basic</li>
+			<li>CTR_AlchemyFurnace_Intermediate</li>
+		</recipeUsers>
+		<ingredients />
+		<fixedIngredientFilter />
+		<products />
+		<skillRequirements>
+			<Intellectual>10</Intellectual>
+   		 </skillRequirements>
+		<modExtensions />
+	</RecipeDef>
+	
+	<RecipeDef ParentName="GeneralPillRecipeBase">
+		<defName>CTR_MakeCTR_HealingPill</defName>
+		<label>make flesh healing Pill</label>
+		<description>make flesh healing Pill.</description>		
+		<workAmount>500</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Healing_Item</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Qi_Condensing_Ingredient</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<tradeTagsToAllow>
+				<li>Healing_Item</li>
+				<li>Qi_Condensing_Ingredient</li>
+			</tradeTagsToAllow>		
+		</fixedIngredientFilter>
+		<researchPrerequisite>CTR_FleshHealingPillMaking</researchPrerequisite>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.RecipeExtension_Alchemy">
+				<allowedCultivationLevel>
+					<li>CTR_Qi_GatheringOrAbove</li>
+				</allowedCultivationLevel>
+				<successfulProduct>CTR_HealingPill</successfulProduct>
+				<failedProduct>CTR_JunkPill</failedProduct>
+				<count>1~10</count>
+			</li>		
+		</modExtensions>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="GeneralPillRecipeBase">
+		<defName>CTR_MakeCTR_ColdResistPill</defName>
+		<label>make Cold-resistance Pill</label>
+		<description>make Cold Resistance Pill.</description>		
+		<workAmount>500</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Neutral_Qi</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Cold_Qi</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<tradeTagsToAllow>
+				<li>Neutral_Qi</li>
+				<li>Cold_Qi</li>
+			</tradeTagsToAllow>		
+		</fixedIngredientFilter>
+		<researchPrerequisite>CTR_ColdResistPillMaking</researchPrerequisite>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.RecipeExtension_Alchemy">
+				<allowedCultivationLevel>
+					<li>CTR_Qi_GatheringOrAbove</li>
+				</allowedCultivationLevel>
+				<successfulProduct>CTR_ColdResistPill</successfulProduct>
+				<failedProduct>CTR_JunkPill</failedProduct>
+				<count>1~10</count>
+			</li>		
+		</modExtensions>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="GeneralPillRecipeBase">
+		<defName>CTR_MakeCTR_HeatResistPill</defName>
+		<label>make Heat-resistance Pill</label>
+		<description>make Heat-resistance Pill.</description>		
+		<workAmount>500</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Neutral_Qi</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Fire_Qi</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<tradeTagsToAllow>
+				<li>Neutral_Qi</li>
+				<li>Fire_Qi</li>
+			</tradeTagsToAllow>		
+		</fixedIngredientFilter>
+		<researchPrerequisite>CTR_HeatResistPillMaking</researchPrerequisite>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.RecipeExtension_Alchemy">
+				<allowedCultivationLevel>
+					<li>CTR_Qi_GatheringOrAbove</li>
+				</allowedCultivationLevel>
+				<successfulProduct>CTR_HeatResistPill</successfulProduct>
+				<failedProduct>CTR_JunkPill</failedProduct>
+				<count>1~10</count>
+			</li>		
+		</modExtensions>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="GeneralPillRecipeBase">
+		<defName>CTR_MakeCTR_DantianRepairPill</defName>
+		<label>make Dantian Repair Pill</label>
+		<description>make Dantian Repair Pill.</description>		
+		<workAmount>500</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Immortal_Qi</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Qi_Condensing_Ingredient</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<tradeTagsToAllow>
+				<li>Immortal_Qi</li>
+				<li>Qi_Condensing_Ingredient</li>
+			</tradeTagsToAllow>		
+		</fixedIngredientFilter>
+		<researchPrerequisite>CTR_DantianRepairPillMaking</researchPrerequisite>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.RecipeExtension_Alchemy">
+				<allowedCultivationLevel>
+					<li>CTR_NascentSoulOrAbove</li>
+				</allowedCultivationLevel>
+				<successfulProduct>CTR_DantianRepairPill</successfulProduct>
+				<failedProduct>CTR_JunkPill</failedProduct>
+				<count>1~10</count>
+			</li>		
+		</modExtensions>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="GeneralPillRecipeBase">
+		<defName>CTR_MakeCTR_ImproveAbsorptionPill</defName>
+		<label>make Qi Absorption Pill</label>
+		<description>make Qi Absorption Pill.</description>		
+		<workAmount>500</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Qi_Source</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Qi_Condensing_Ingredient</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<tradeTagsToAllow>
+				<li>Qi_Source</li>
+				<li>Qi_Condensing_Ingredient</li>
+			</tradeTagsToAllow>		
+		</fixedIngredientFilter>
+		<researchPrerequisite>CTR_ImproveAbsorptionPillMaking</researchPrerequisite>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.RecipeExtension_Alchemy">
+				<allowedCultivationLevel>
+					<li>CTR_Qi_GatheringOrAbove</li>
+				</allowedCultivationLevel>
+				<successfulProduct>CTR_ImproveAbsorptionPill</successfulProduct>
+				<failedProduct>CTR_JunkPill</failedProduct>
+				<count>1~10</count>
+			</li>		
+		</modExtensions>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="GeneralPillRecipeBase">
+		<defName>CTR_MakeCTR_ImproveReflexPill</defName>
+		<label>make Improve Reflex Pill</label>
+		<description>make Improve Reflex Pill.</description>		
+		<workAmount>500</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Fire_Qi</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Metal_Qi</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<tradeTagsToAllow>
+				<li>Fire_Qi</li>
+				<li>Metal_Qi</li>
+			</tradeTagsToAllow>		
+		</fixedIngredientFilter>
+		<researchPrerequisite>CTR_ImproveReflexPillMaking</researchPrerequisite>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.RecipeExtension_Alchemy">
+				<allowedCultivationLevel>
+					<li>CTR_NascentSoulOrAbove</li>
+				</allowedCultivationLevel>
+				<successfulProduct>CTR_ImproveReflexPill</successfulProduct>
+				<failedProduct>CTR_JunkPill</failedProduct>
+				<count>1~10</count>
+			</li>		
+		</modExtensions>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="GeneralPillRecipeBase">
+		<defName>CTR_MakeCTR_ImproveGWSPill</defName>
+		<label>make Improve Workspeed Pill</label>
+		<description>make Improve Workspeed Pill.</description>		
+		<workAmount>500</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Metal_Qi</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Fire_Qi</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<tradeTagsToAllow>
+				<li>Metal_Qi</li>
+				<li>Fire_Qi</li>
+			</tradeTagsToAllow>		
+		</fixedIngredientFilter>
+		<researchPrerequisite>CTR_ImproveGWSPillMaking</researchPrerequisite>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.RecipeExtension_Alchemy">
+				<allowedCultivationLevel>
+					<li>CTR_Qi_GatheringOrAbove</li>
+				</allowedCultivationLevel>
+				<successfulProduct>CTR_ImproveGWSPill</successfulProduct>
+				<failedProduct>CTR_JunkPill</failedProduct>
+				<count>1~10</count>
+			</li>		
+		</modExtensions>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="GeneralPillRecipeBase">
+		<defName>CTR_MakeCTR_LifeSpanPill</defName>
+		<label>make Life Extending Pill</label>
+		<description>make Life Extending Pill.</description>		
+		<workAmount>500</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Divine</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Immortal_Qi</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<tradeTagsToAllow>
+				<li>Divine</li>
+				<li>Immortal_Qi</li>
+			</tradeTagsToAllow>		
+		</fixedIngredientFilter>
+		<researchPrerequisite>CTR_LifeSpanPillMaking</researchPrerequisite>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.RecipeExtension_Alchemy">
+				<allowedCultivationLevel>
+					<li>CTR_HalfStep_SaintOrAbove</li>
+				</allowedCultivationLevel>
+				<successfulProduct>CTR_LifeSpanPill</successfulProduct>
+				<failedProduct>CTR_JunkPill</failedProduct>
+				<count>1~10</count>
+			</li>		
+		</modExtensions>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="GeneralPillRecipeBase">
+		<defName>CTR_MakeCTR_StoneSkinPill</defName>
+		<label>make Stoneskin Pill</label>
+		<description>make Stoneskin Pill.</description>		
+		<workAmount>500</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Earth_Qi</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Earth_Qi</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<tradeTagsToAllow>
+				<li>Earth_Qi</li>
+			</tradeTagsToAllow>		
+		</fixedIngredientFilter>
+		<researchPrerequisite>CTR_StoneSkinPillMaking</researchPrerequisite>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.RecipeExtension_Alchemy">
+				<allowedCultivationLevel>
+					<li>CTR_Qi_GatheringOrAbove</li>
+				</allowedCultivationLevel>
+				<successfulProduct>CTR_StoneSkinPill</successfulProduct>
+				<failedProduct>CTR_JunkPill</failedProduct>
+				<count>1~10</count>
+			</li>		
+		</modExtensions>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="GeneralPillRecipeBase">
+		<defName>CTR_MakeCTR_FertilityPill</defName>
+		<label>make Fertility Pill</label>
+		<description>make Fertility Pill.</description>		
+		<workAmount>500</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Healing_Item</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<tradeTagsToAllow>
+						<li>Yin_Qi</li>
+					</tradeTagsToAllow>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<tradeTagsToAllow>
+				<li>Earth_Qi</li>
+			</tradeTagsToAllow>		
+		</fixedIngredientFilter>
+		<researchPrerequisite>CTR_StoneSkinPillMaking</researchPrerequisite>
+		<modExtensions>
+			<li Class="CultivatorOfTheRim.RecipeExtension_Alchemy">
+				<allowedCultivationLevel>
+					<li>CTR_Qi_GatheringOrAbove</li>
+				</allowedCultivationLevel>
+				<successfulProduct>CTR_FertilityPill</successfulProduct>
+				<failedProduct>CTR_JunkPill</failedProduct>
+				<count>1~10</count>
+			</li>		
+		</modExtensions>
+	</RecipeDef>
+
+</Defs>

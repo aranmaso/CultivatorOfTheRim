@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- CompItemGrade -->
+	<GradeInt>Grade: {0}</GradeInt>
+	<GradeLabel> ({0})</GradeLabel>
+	<ItemGrade_Mortal>&lt;color=#734647&gt;Mortal&lt;/color&gt;</ItemGrade_Mortal>
+	<ItemGrade_Ordinary>&lt;color=#FFFFFF&gt;Ordinary&lt;/color&gt;</ItemGrade_Ordinary>
+	<ItemGrade_Earth>&lt;color=#7FD4E3&gt;Earth&lt;/color&gt;</ItemGrade_Earth>
+	<ItemGrade_Heaven>&lt;color=#3E43C4&gt;Heaven&lt;/color&gt;</ItemGrade_Heaven>
+	<ItemGrade_Mysterious>&lt;color=#9E72DD&gt;Mysterious&lt;/color&gt;</ItemGrade_Mysterious>
+	<ItemGrade_Divine>&lt;color=#6900FF&gt;Divine&lt;/color&gt;</ItemGrade_Divine>
+	<ItemGrade_Emperor>&lt;color=#FF9400&gt;Emperor&lt;/color&gt;</ItemGrade_Emperor>
+	<ItemGrade_Dao>&lt;color=#F6FF3A&gt;Dao&lt;/color&gt;</ItemGrade_Dao>
+	
+	<!-- CompPillGrade -->
+	<PillInt>Grade: {0}</PillInt>
+	<PillLabel> ({0})</PillLabel>
+	<PillGrade_Spirit>Spirit</PillGrade_Spirit>
+	<PillGrade_Earth>Earth</PillGrade_Earth>
+	<PillGrade_Heaven>Heaven</PillGrade_Heaven>
+	<PillGrade_Mysterious>Mysterious</PillGrade_Mysterious>
+	<PillGrade_Divine>Divine</PillGrade_Divine>
+	<PillGrade_Emperor>Emperor</PillGrade_Emperor>
+	
+	<!-- Scenario -->
+	<ConfigurableRealmStage>stage range: {0}</ConfigurableRealmStage>
+	<ScenPart_PawnsHaveCultivation>{0} have a {1} chance to start with cultivation in {2} to {3}.</ScenPart_PawnsHaveCultivation>
+	
+	<!-- Plant -->
+	<PermanentSummerDisabledGrow>permanent summer, plant without the corresponding element can't grow</PermanentSummerDisabledGrow>
+	<PermanentWinterDisabledGrow>permanent winter, plant without the corresponding element can't grow</PermanentWinterDisabledGrow>
+	
+	<!-- EnergyTracker -->
+	<CTR_QiTracker>Qi Energy</CTR_QiTracker>
+	<CTR_QiTrackerDisabledReason>Pawn doesn't have enough Qi to use</CTR_QiTrackerDisabledReason>
+	
+	<CTR_StaminaTracker>Stamina</CTR_StaminaTracker>
+	<CTR_StaminaTrackerDisabledReason>Pawn doesn't have enough Stamina to use</CTR_StaminaTrackerDisabledReason>
+
+
+</LanguageData>

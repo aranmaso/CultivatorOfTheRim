@@ -1,0 +1,280 @@
+<Defs>
+
+	<StatCategoryDef>
+		<defName>CTR_PawnCultivationTechnique</defName>
+		<label>Technique</label>
+		<displayOrder>106</displayOrder>
+		<displayAllByDefault>false</displayAllByDefault>
+	</StatCategoryDef>
+
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>TechniqueEfficiency</defName>
+		<label>technique efficiency</label>
+		<description>the efficiency at which pawn circulating inner energy and using technique, learning too many technique is not always a good thing.</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<!-- <alwaysHide>true</alwaysHide> -->
+		<minValue>0</minValue>
+		<displayPriorityInCategory>3400</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<statFactors>
+			<li>TechniqueLearningCount</li>
+		</statFactors>
+		<cacheable>true</cacheable>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>TechniqueLearningCount</defName>
+		<label>technique learned</label>
+		<description>the amount of technique learned by this pawn. by default. 100% mean pawn have never learn any technique before</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<toStringStyle>FloatTwo</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<!-- <alwaysHide>true</alwaysHide> -->
+		<minValue>0</minValue>
+		<displayPriorityInCategory>3400</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<postProcessCurve>
+		  <points>
+			<li>(1, 1.00)</li>
+			<li>(2, 0.9)</li>
+			<li>(5, 0.75)</li>
+			<li>(10, 0.25)</li>
+		  </points>
+		</postProcessCurve>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_QiPath</defName>
+		<label>Qi path</label>
+		<description>pawn has choose to embark on the path of Qi cultivating</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<toStringStyle>FloatOne</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<displayPriorityInCategory>3300</displayPriorityInCategory>
+		<cacheable>true</cacheable>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_BodyPath</defName>
+		<label>Body path</label>
+		<description>pawn has choose to embark on the path of Body cultivating</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<toStringStyle>FloatOne</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<displayPriorityInCategory>3300</displayPriorityInCategory>
+		<cacheable>true</cacheable>
+	</StatDef>
+	
+	<!-- <StatDef ParentName="CultivationBaseStat"> -->
+		<!-- <defName>CTR_RighteousPath</defName> -->
+		<!-- <label>Righteous path</label> -->
+		<!-- <description>pawn has choose to embark on the path of Body cultivating</description> -->
+		<!-- <category>CTR_PawnCultivation</category> -->
+		<!-- <defaultBaseValue>0</defaultBaseValue> -->
+		<!-- <toStringStyle>FloatOne</toStringStyle> -->
+		<!-- <showOnAnimals>false</showOnAnimals> -->
+		<!-- <minValue>0</minValue> -->
+		<!-- <displayPriorityInCategory>3250</displayPriorityInCategory> -->
+		<!-- <cacheable>true</cacheable>  -->
+	<!-- </StatDef> -->
+	
+	<!-- <StatDef ParentName="CultivationBaseStat"> -->
+		<!-- <defName>CTR_Evilpath</defName> -->
+		<!-- <label>Evil path</label> -->
+		<!-- <description>pawn has choose to embark on the path of Body cultivating</description> -->
+		<!-- <category>CTR_PawnCultivation</category> -->
+		<!-- <defaultBaseValue>0</defaultBaseValue> -->
+		<!-- <toStringStyle>FloatOne</toStringStyle> -->
+		<!-- <showOnAnimals>false</showOnAnimals> -->
+		<!-- <minValue>0</minValue> -->
+		<!-- <displayPriorityInCategory>3250</displayPriorityInCategory> -->
+		<!-- <cacheable>true</cacheable>  -->
+	<!-- </StatDef> -->
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_YangPath</defName>
+		<label>yang path</label>
+		<description>pawn has choose to embark on the path of Yang cultivating</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<toStringStyle>FloatOne</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<displayPriorityInCategory>3240</displayPriorityInCategory>
+		<cacheable>true</cacheable> 
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_YinPath</defName>
+		<label>Yin path</label>
+		<description>pawn has choose to embark on the path of Yin cultivating</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<toStringStyle>FloatOne</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<displayPriorityInCategory>3240</displayPriorityInCategory>
+		<cacheable>true</cacheable> 
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_QiEnergyCost</defName>
+		<label>qi cost</label>
+		<category>Sorcery_ISF</category>
+		<description>The default amount of qi energy a technique requires to cast.</description>
+		<defaultBaseValue>10</defaultBaseValue>
+		<showIfUndefined>false</showIfUndefined>
+		<displayPriorityInCategory>1</displayPriorityInCategory>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_QiEnergyMax</defName>
+		<label>maximum Qi energy</label>
+		<description>The maximum Qi energy normally availible to a cultivator.</description>
+		<category>Sorcery_ISF</category>
+		<defaultBaseValue>100</defaultBaseValue>
+		<minValue>0</minValue>
+		<toStringStyle>FloatTwo</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<alwaysHide>true</alwaysHide>
+		<displayPriorityInCategory>3499</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<statFactors>
+			<li>TechniqueEfficiency</li>
+			<li>CTR_QiEnergyFactor</li>
+		</statFactors>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_QiEnergyMin</defName>
+		<label>minimum Qi energy</label>
+		<description>The minimum Qi energy a cultivator can have.</description>
+		<category>Sorcery_ISF</category>
+		<maxValue>0</maxValue>
+		<defaultBaseValue>0</defaultBaseValue>
+		<toStringStyle>FloatTwo</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<alwaysHide>true</alwaysHide>
+		<displayPriorityInCategory>3498</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<statFactors>
+			<li>TechniqueEfficiency</li>
+		</statFactors>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_QiEnergyRecovery</defName>
+		<label>Qi recovery rate</label>
+		<description>The rate at which a cultivator recovers Qi per second.</description>
+		<category>Sorcery_ISF</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>FloatTwo</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<alwaysHide>true</alwaysHide>
+		<displayPriorityInCategory>3496</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<statFactors>
+			<li>TechniqueEfficiency</li>
+			<li>CTR_QiEnergyFactor</li>
+		</statFactors>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_QiEnergyFactor</defName>
+		<label>Qi factor</label>
+		<description>A multiplier on energy recovery and maximum energy.</description>
+		<category>Sorcery_ISF</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>FloatTwo</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<alwaysHide>true</alwaysHide>
+		<minValue>0</minValue>
+		<displayPriorityInCategory>3495</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_StaminaEnergyCost</defName>
+		<label>stamina cost</label>
+		<category>Sorcery_ISF</category>
+		<description>The default amount of stamina energy a technique requires to cast.</description>
+		<defaultBaseValue>10</defaultBaseValue>
+		<showIfUndefined>false</showIfUndefined>
+		<displayPriorityInCategory>1</displayPriorityInCategory>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_StaminaEnergyMax</defName>
+		<label>maximum Stamina energy</label>
+		<description>The maximum Stamina energy normally availible to a cultivator.</description>
+		<category>Sorcery_ISF</category>
+		<defaultBaseValue>100</defaultBaseValue>
+		<minValue>0</minValue>
+		<toStringStyle>FloatTwo</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<alwaysHide>true</alwaysHide>
+		<displayPriorityInCategory>3499</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<statFactors>
+			<li>TechniqueEfficiency</li>
+			<li>CTR_StaminaEnergyFactor</li>
+		</statFactors>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_StaminaEnergyMin</defName>
+		<label>minimum Stamina energy</label>
+		<description>The minimum Stamina energy a cultivator can have.</description>
+		<category>Sorcery_ISF</category>
+		<maxValue>0</maxValue>
+		<defaultBaseValue>0</defaultBaseValue>
+		<toStringStyle>FloatTwo</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<alwaysHide>true</alwaysHide>
+		<displayPriorityInCategory>3498</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<statFactors>
+			<li>TechniqueEfficiency</li>
+		</statFactors>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_StaminaEnergyRecovery</defName>
+		<label>Stamina recovery rate</label>
+		<description>The rate at which a cultivator recovers Stamina per second.</description>
+		<category>Sorcery_ISF</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>FloatTwo</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<alwaysHide>true</alwaysHide>
+		<displayPriorityInCategory>3496</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<statFactors>
+			<li>TechniqueEfficiency</li>
+			<li>CTR_StaminaEnergyFactor</li>
+		</statFactors>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_StaminaEnergyFactor</defName>
+		<label>Stamina factor</label>
+		<description>A multiplier on energy recovery and maximum energy.</description>
+		<category>Sorcery_ISF</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>FloatTwo</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<alwaysHide>true</alwaysHide>
+		<minValue>0</minValue>
+		<displayPriorityInCategory>3495</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+	</StatDef>
+
+</Defs>

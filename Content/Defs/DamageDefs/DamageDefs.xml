@@ -1,0 +1,85 @@
+<Defs>
+	<DamageDef>
+		<defName>CTR_TribulationLightning</defName>
+		<label>Lightning Burn</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been slain by heaven</deathMessage>
+		<hediff>Burn</hediff>
+		<hediffSolid>Crush</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>Heat</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<isRanged>false</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+		<isExplosive>true</isExplosive>
+		<explosionCellFleck>BlastEMP</explosionCellFleck>
+		<explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
+		<explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
+		<soundExplosion>Explosion_EMP</soundExplosion>
+		<combatLogRules>Damage_EMP</combatLogRules>
+	</DamageDef>
+	
+	<DamageDef>
+		<defName>CTR_Qi_Injury</defName>
+		<label>Qi Injury</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has injured by Qi to death</deathMessage>
+		<hediff>Qi_Burn</hediff>
+		<hediffSolid>Crush</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<additionalHediffs />
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>CTR_Qi</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<isRanged>false</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+	
+	<DamageDef>
+    <defName>CTR_Qi_Injury_Explosion</defName>
+		<label>Qi Injury</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has injured by Qi to death</deathMessage>
+		<hediff>Qi_Burn</hediff>
+		<hediffSolid>Crush</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<additionalHediffs />
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>CTR_Qi</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<isRanged>false</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+		<isExplosive>true</isExplosive>
+		<explosionCellFleck>BlastDry</explosionCellFleck>
+		<explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
+		<explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
+		<soundExplosion>Explosion_Bomb</soundExplosion>
+  </DamageDef>
+	
+	<DamageDef>
+    <defName>CTR_Qi_Injury_Explosion_ElectricSound</defName>
+		<label>Qi Injury</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has injured by Qi to death</deathMessage>
+		<hediff>Qi_Burn</hediff>
+		<hediffSolid>Crush</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<additionalHediffs />
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>CTR_Qi</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<isRanged>false</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+		<isExplosive>true</isExplosive>
+		<explosionCellFleck>BlastEMP</explosionCellFleck>
+		<explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
+		<explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
+		<soundExplosion>Explosion_EMP</soundExplosion>
+  </DamageDef>
+
+</Defs>

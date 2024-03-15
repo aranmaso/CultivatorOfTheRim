@@ -1,0 +1,478 @@
+<Defs>
+
+	<ThingCategoryDef>
+      <defName>Cultivation_Root</defName>
+      <label>cultivation resource</label>
+      <parent>Root</parent>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+      <iconPath>UI/Icons/ThingCategories/Drugs</iconPath>
+    </ThingCategoryDef>
+	
+	<ThingCategoryDef>
+      <defName>Cultivation_Resource</defName>
+      <label>cultivation material</label>
+      <parent>Cultivation_Root</parent>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+      <iconPath>UI/Icons/ThingCategories/Drugs</iconPath>
+    </ThingCategoryDef>
+	
+	<ThingCategoryDef>
+      <defName>Cultivation_Pill</defName>
+      <label>pill</label>
+      <parent>Cultivation_Root</parent>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+      <iconPath>UI/Icons/ThingCategories/Drugs</iconPath>
+    </ThingCategoryDef>
+	
+	<ThingCategoryDef>
+      <defName>Spirit_PlantProduct</defName>
+      <label>spiritual plant</label>
+      <parent>Cultivation_Root</parent>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+      <iconPath>UI/Icons/ThingCategories/Drugs</iconPath>
+    </ThingCategoryDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>CTR_SpiritStone</defName>
+		<label>spirit stone</label>
+		<description>spirit stone, used as both main currency for cultivator and as cultivation resource. cultivator can absorb Qi from spirit stone to help boost their cultivation. \n\nTags:Qi Source, Neutral Qi</description>
+		<graphicData>
+			<texPath>Things/Items/Resources/SpiritStone</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>		
+		<stackLimit>500</stackLimit>
+		<smallVolume>true</smallVolume>
+		<deepCommonality>0.50</deepCommonality>
+		<deepCountPerPortion>120</deepCountPerPortion>
+		<deepLumpSizeRange>5~10</deepLumpSizeRange>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MarketValue>5</MarketValue>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Mass>0.1</Mass>
+			<Flammability>0</Flammability>
+			<Nutrition>0.01</Nutrition>
+			<DeteriorationRate>0</DeteriorationRate>
+			<StuffPower_Armor_Sharp>0.20</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.20</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.50</StuffPower_Armor_Heat>
+			<StuffPower_Armor_Qi>0.50</StuffPower_Armor_Qi>
+			<StuffPower_Insulation_Cold>-25</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>25</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>0.1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.1</BluntDamageMultiplier>
+			<CTR_QiDamageMultiplier>0.5</CTR_QiDamageMultiplier>
+		</statBases>
+		<generateCommonality>0.15</generateCommonality>
+		<stuffProps>
+			<categories>
+				<li>Stony</li>
+			</categories>
+			<color>(0,164,255)</color>
+			<commonality>0.02</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<statOffsets>
+				<Beauty>1</Beauty>
+				<AlchemyFurnaceQuality>0.25</AlchemyFurnaceQuality>
+			</statOffsets>
+			<statFactors>
+				<MaxHitPoints>0.7</MaxHitPoints>
+				<Flammability>0.01</Flammability>
+				<Beauty>2</Beauty>
+			</statFactors>
+		</stuffProps>
+		<thingCategories>
+			<li>Cultivation_Resource</li>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<baseIngestTicks>120</baseIngestTicks>
+			<ingestSound>Ingest_Pill</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+				  <offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Take {0}</ingestCommandString>
+			<ingestReportString>Taking {0}.</ingestReportString>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+			<chairSearchRadius>0</chairSearchRadius>
+			<drugCategory>None</drugCategory>		  
+			<preferability>NeverForNutrition</preferability>
+			<outcomeDoers>
+				<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_GiveQi">
+				<minimumCultivationLevel>
+					<li>CTR_Qi_GatheringOrAbove</li>
+				</minimumCultivationLevel>
+				<notForMortal>true</notForMortal>
+				<severity>1~5</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>1</glowRadius>
+				<glowColor>(0,164,255)</glowColor>
+			</li>
+			<!-- <li Class="CompProperties_Drug"> -->
+				<!-- <listOrder>200</listOrder> -->
+			<!-- </li> -->
+		</comps>
+		<tradeTags>
+			<li>ExoticMisc</li>
+			<li>Qi_Source</li>
+			<li>Qi_Source_Tier1</li>
+			<li>Neutral_Qi</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>CTR_AzureFragment</defName>
+		<label>azure fragment</label>
+		<description>a mysterious fragment emitting azure aura, contain a huge amount of Immortal Qi. said to be feather of a higher entity in outer space. make for a great material when used for creating weapon and armor  
+		\n\nTags:Qi Source Tier 6, Neutral Qi, Immortal Qi, Divine, Heavenly Qi</description>
+		<graphicData>
+			<texPath>Things/Items/Resources/AzureFragment</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>		
+		<stackLimit>25</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<useHitPoints>false</useHitPoints>
+		<deepCommonality>0.01</deepCommonality>
+		<deepCountPerPortion>1</deepCountPerPortion>
+		<deepLumpSizeRange>1~2</deepLumpSizeRange>
+		<statBases>
+			<MarketValue>42.045</MarketValue>
+			<!-- <MaxHitPoints>2500</MaxHitPoints> -->
+			<Mass>1</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+			<StuffPower_Armor_Sharp>2.25</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>2.25</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>6</StuffPower_Armor_Heat>
+			<StuffPower_Armor_Qi>3.00</StuffPower_Armor_Qi>
+			<StuffPower_Insulation_Cold>-250</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>250</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>3.5</SharpDamageMultiplier>
+			<BluntDamageMultiplier>2.5</BluntDamageMultiplier>
+			<CTR_QiDamageMultiplier>2.5</CTR_QiDamageMultiplier>
+		</statBases>
+		<generateCommonality>0.01</generateCommonality>
+		<stuffProps>
+			<categories>
+				<li>Stony</li>
+			</categories>
+			<color>(0,100,255)</color>
+			<commonality>0.02</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<statOffsets>
+				<Beauty>1</Beauty>
+				<AlchemyFurnaceQuality>1</AlchemyFurnaceQuality>
+			</statOffsets>
+			<statFactors>
+				<MaxHitPoints>4.2045</MaxHitPoints>
+				<Flammability>0</Flammability>
+				<Beauty>5</Beauty>
+			</statFactors>
+		</stuffProps>
+		<thingCategories>
+			<li>Cultivation_Resource</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(0,100,255)</glowColor>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>ExoticMisc</li>
+			<li>Qi_Source</li>
+			<li>Qi_Source_Tier6</li>
+			<li>Neutral_Qi</li>
+			<li>Immortal_Qi</li>
+			<li>Divine</li>	
+			<li>Heavenly_Qi</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>CTR_FireStone</defName>
+		<label>fire stone</label>
+		<description>a stone with heavy fire element within. \n\nTags:Fire Qi, Yang Qi</description>
+		<graphicData>
+			<texPath>Things/Items/Resources/FireStone</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>		
+		<stackLimit>100</stackLimit>
+		<useHitPoints>true</useHitPoints>
+		<deepCommonality>0.20</deepCommonality>
+		<deepCountPerPortion>100</deepCountPerPortion>
+		<deepLumpSizeRange>5~10</deepLumpSizeRange>
+		
+		<statBases>
+			<MarketValue>1.5</MarketValue>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Mass>0.5</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+			<StuffPower_Armor_Heat>1.50</StuffPower_Armor_Heat>
+			<StuffPower_Armor_Qi>0.50</StuffPower_Armor_Qi>
+			<StuffPower_Insulation_Cold>25</StuffPower_Insulation_Cold>
+			<CTR_QiDamageMultiplier>1.25</CTR_QiDamageMultiplier>
+		</statBases>
+		<generateCommonality>0.10</generateCommonality>
+		<stuffProps>
+			<categories>
+				<li>Stony</li>
+			</categories>
+			<color>(238,142,0)</color>
+			<commonality>0.02</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<statOffsets>
+				<AlchemyFurnaceQuality>0.5</AlchemyFurnaceQuality>
+				<Beauty>2</Beauty>
+			</statOffsets>
+			<statFactors>
+				<MaxHitPoints>1.25</MaxHitPoints>
+				<Flammability>0.01</Flammability>				
+			</statFactors>
+		</stuffProps>
+		
+		<thingCategories>
+			<li>Cultivation_Resource</li>
+		</thingCategories>
+		<comps />
+		<tradeTags>
+			<li>ExoticMisc</li>
+			<li>Fire_Qi</li>
+			<li>Yang_Qi</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>CTR_MoonStone</defName>
+		<label>moon stone</label>
+		<description>a mysterious stone with cold aura. with a hint of Divine and Heaven Qi within. \n\nTags:Cold Qi, Yin Qi, Divine, Heavenly Qi</description>
+		<graphicData>
+			<texPath>Things/Items/Resources/MoonStone</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>		
+		<stackLimit>100</stackLimit>
+		<useHitPoints>true</useHitPoints>
+		<!-- <deepCommonality>0.20</deepCommonality> -->
+		<!-- <deepCountPerPortion>25</deepCountPerPortion> -->
+		<!-- <deepLumpSizeRange>5~10</deepLumpSizeRange> -->
+		<statBases>
+			<MarketValue>1.5</MarketValue>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Mass>0.5</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0.01</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>Cultivation_Resource</li>
+		</thingCategories>
+		<comps />
+		<tradeTags>
+			<li>ExoticMisc</li>
+			<li>Cold_Qi</li>
+			<li>Yin_Qi</li>
+			<li>Divine</li>
+			<li>Heavenly_Qi</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>CTR_YinCrystal</defName>
+		<label>yin crystal</label>
+		<description>crystal formed by pure Yin energy. \n\nTags: Yin Qi, Cold Qi.</description>
+		<graphicData>
+			<texPath>Things/Items/Resources/YinCrystal</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>		
+		<stackLimit>100</stackLimit>
+		<useHitPoints>true</useHitPoints>
+		<deepCommonality>0.20</deepCommonality>
+		<deepCountPerPortion>25</deepCountPerPortion>
+		<deepLumpSizeRange>5~10</deepLumpSizeRange>
+		<statBases>
+			<MarketValue>1.5</MarketValue>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Mass>0.5</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0.01</DeteriorationRate>
+			<StuffPower_Armor_Qi>1.25</StuffPower_Armor_Qi>
+			<CTR_QiDamageMultiplier>1.25</CTR_QiDamageMultiplier>
+		</statBases>
+		
+		<generateCommonality>0.02</generateCommonality>
+		
+		<stuffProps>
+			<categories>
+				<li>Stony</li>
+			</categories>
+			<color>(46,46,46)</color>
+			<commonality>0.02</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<statOffsets>
+				<AlchemyFurnaceQuality>0.5</AlchemyFurnaceQuality>
+				<Beauty>5</Beauty>
+			</statOffsets>
+			<statFactors>
+				<MaxHitPoints>1.25</MaxHitPoints>
+				<Flammability>0.01</Flammability>				
+			</statFactors>
+		</stuffProps>
+		
+		<thingCategories>
+			<li>Cultivation_Resource</li>
+		</thingCategories>
+		<comps />
+		<tradeTags>
+			<li>ExoticMisc</li>
+			<li>Cold_Qi</li>
+			<li>Yin_Qi</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>CTR_YangCrystal</defName>
+		<label>yang crystal</label>
+		<description>crystal formed by pure Yang energy. \n\nTags: Yang Qi</description>
+		<graphicData>
+			<texPath>Things/Items/Resources/YangCrystal</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>		
+		<stackLimit>100</stackLimit>
+		<useHitPoints>true</useHitPoints>
+		<deepCommonality>0.20</deepCommonality>
+		<deepCountPerPortion>25</deepCountPerPortion>
+		<deepLumpSizeRange>5~10</deepLumpSizeRange>
+		<statBases>
+			<MarketValue>1.5</MarketValue>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Mass>0.5</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0.01</DeteriorationRate>
+			<StuffPower_Armor_Qi>1.25</StuffPower_Armor_Qi>
+			<CTR_QiDamageMultiplier>1.25</CTR_QiDamageMultiplier>
+		</statBases>
+		
+		<generateCommonality>0.02</generateCommonality>
+		
+		<stuffProps>
+			<categories>
+				<li>Stony</li>
+			</categories>
+			<color>(46,46,46)</color>
+			<commonality>0.02</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<statOffsets>
+				<AlchemyFurnaceQuality>0.5</AlchemyFurnaceQuality>
+				<Beauty>5</Beauty>
+			</statOffsets>
+			<statFactors>
+				<MaxHitPoints>1.25</MaxHitPoints>
+				<Flammability>0.01</Flammability>				
+			</statFactors>
+		</stuffProps>
+		
+		<thingCategories>
+			<li>Cultivation_Resource</li>
+		</thingCategories>
+		<comps />
+		<tradeTags>
+			<li>ExoticMisc</li>
+			<li>Yang_Qi</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>CTR_TalismanPaper</defName>
+		<label>blank talisman paper</label>
+		<description>a blank talisman paper \n\nTags:ExoticMisc</description>
+		<graphicData>
+			<texPath>Things/Items/Talismans/BlankTalismans</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>		
+		<stackLimit>25</stackLimit>
+		<healthAffectsPrice>true</healthAffectsPrice>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MarketValue>0.5</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>0.005</Mass>
+			<Flammability>1</Flammability>
+			<DeteriorationRate>0.01</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>Cultivation_Resource</li>
+			<li>Manufactured</li>
+		</thingCategories>
+		<comps />
+		<tradeTags>
+			<li>Cultivation_Resource</li>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>CTR_RuinedTalismanPaper</defName>
+		<label>ruined talisman paper</label>
+		<description>a ruined talisman paper \n\nTags:Impure Qi</description>
+		<graphicData>
+			<texPath>Things/Items/Talismans/talisman</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>		
+		<stackLimit>25</stackLimit>
+		<healthAffectsPrice>true</healthAffectsPrice>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MarketValue>0.5</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>0.005</Mass>
+			<Flammability>1</Flammability>
+			<DeteriorationRate>0.01</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>Cultivation_Resource</li>
+			<li>Manufactured</li>
+		</thingCategories>
+		<comps />
+		<tradeTags>
+			<li>Impure_Qi</li>
+		</tradeTags>
+	</ThingDef>
+
+</Defs>

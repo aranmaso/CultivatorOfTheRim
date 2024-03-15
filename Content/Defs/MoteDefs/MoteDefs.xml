@@ -1,0 +1,166 @@
+<Defs>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>Mote_BlackQiEnergyOrb</defName>
+		<graphicData>
+			<texPath>Effects/BlackQiEnergyOrb</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>0.50</drawSize>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<drawOffscreen>true</drawOffscreen>
+		<mote>
+			<fadeInTime>0</fadeInTime>
+			<solidTime>0.5</solidTime>
+			<fadeOutTime>0.2</fadeOutTime>
+			<growthRate>2</growthRate>
+		</mote>
+	</ThingDef>
+	
+	<ThingDef ParentName="MoteBase">
+		<defName>Mote_BlackRing</defName>
+		<graphicData>
+			<texPath>Effects/BlackSunRingOuter</texPath>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<drawOffscreen>true</drawOffscreen>
+		<mote>
+			<rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+			<fadeInTime>0</fadeInTime>
+			<solidTime>0.2</solidTime>
+			<fadeOutTime>0.1</fadeOutTime>
+			<growthRate>80</growthRate>
+		</mote>
+	</ThingDef>
+	
+	<ThingDef ParentName="MoteBase">
+		<defName>Mote_WaveOfFlame</defName>
+		<graphicData>
+			<texPath>Effects/BlackSunRingInner</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>0.5</drawSize>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<drawOffscreen>true</drawOffscreen>
+		<mote>
+			<rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+			<fadeInTime>0.1</fadeInTime>
+			<solidTime>0.4</solidTime>
+			<fadeOutTime>0.1</fadeOutTime>
+			<growthRate>30</growthRate>
+		</mote>
+	</ThingDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>CTR_AbsorbQiOrb</defName>
+		<thingClass>CultivatorOfTheRim.MoteMovingToPoint</thingClass>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<drawOffscreen>true</drawOffscreen>
+		<graphicData>
+			<texPath>Effects/QiOrb</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<mote>
+			<fadeInTime>0.5</fadeInTime>
+			<fadeOutTime>0.25</fadeOutTime>
+			<solidTime>1.9</solidTime>
+			<growthRate>-0.25</growthRate>
+			<speedPerTime>0.5</speedPerTime>
+		</mote>
+	</ThingDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>CTR_AbsorbQiOrbPure</defName>
+		<graphicData>
+			<texPath>Effects/QiOrb</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>1</fadeInTime>
+		<solidTime>0.25</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>-0.25</growthRate>
+		<speedPerTime>-1</speedPerTime>
+	</FleckDef>	
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>CTR_AbsorbQiOrbMetal</defName>
+		<graphicData>
+			<texPath>Effects/QiOrbMetal</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>1</fadeInTime>
+		<solidTime>0.25</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>-0.25</growthRate>
+		<speedPerTime>-1</speedPerTime>
+	</FleckDef>	
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>CTR_AbsorbQiOrbWater</defName>
+		<graphicData>
+			<texPath>Effects/QiOrbWater</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>1</fadeInTime>
+		<solidTime>0.25</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>-0.25</growthRate>
+		<speedPerTime>-1</speedPerTime>
+	</FleckDef>	
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>CTR_AbsorbQiOrbWood</defName>
+		<graphicData>
+			<texPath>Effects/QiOrbWood</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>1</fadeInTime>
+		<solidTime>0.25</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>-0.25</growthRate>
+		<speedPerTime>-1</speedPerTime>
+	</FleckDef>	
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>CTR_AbsorbQiOrbFire</defName>
+		<graphicData>
+			<texPath>Effects/QiOrbFire</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>1</fadeInTime>
+		<solidTime>0.25</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>-0.25</growthRate>
+		<speedPerTime>-1</speedPerTime>
+	</FleckDef>	
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>CTR_AbsorbQiOrbEarth</defName>
+		<graphicData>
+			<texPath>Effects/QiOrbEarth</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>1</fadeInTime>
+		<solidTime>0.25</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>-0.25</growthRate>
+		<speedPerTime>-1</speedPerTime>
+	</FleckDef>	
+
+</Defs>

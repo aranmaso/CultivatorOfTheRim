@@ -1,0 +1,302 @@
+<Defs>
+
+	<ThingDef ParentName="ResourceBase" Name="CondensedItemBase" Abstract="True">		
+		<tradeTags>
+			<li>Infused_Cultivation_Resource</li>	
+			<li>Qi_Source</li>	
+		</tradeTags>
+		<recipeMaker>
+            <!-- <unfinishedThingDef>UnfinishedPack</unfinishedThingDef> -->
+            <researchPrerequisite>CTR_MaterialCondensation</researchPrerequisite>
+            <recipeUsers>
+                <li>CTR_AlchemyFurnace_Basic</li>
+                <li>CTR_AlchemyFurnace_Intermediate</li>
+            </recipeUsers>
+            <workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <skillRequirements>
+                <Crafting>10</Crafting>
+			</skillRequirements>
+        </recipeMaker>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(154,230,255)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="CondensedItemBase" Name="CondensedSpiritStoneBase" Abstract="True">
+		<graphicData>
+			<texPath>Things/Items/Resources/SpiritStone</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>		
+		<stackLimit>500</stackLimit>
+		<smallVolume>true</smallVolume>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<useHitPoints>true</useHitPoints>
+		
+		<costList>
+        </costList>
+		
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Mass>0.1</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+			<StuffPower_Armor_Sharp>0.20</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.20</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.50</StuffPower_Armor_Heat>
+			<StuffPower_Armor_Qi>0.50</StuffPower_Armor_Qi>
+			<StuffPower_Insulation_Cold>-25</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>25</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>0.1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.1</BluntDamageMultiplier>
+			<CTR_QiDamageMultiplier>0.5</CTR_QiDamageMultiplier>
+		</statBases>
+		<generateCommonality>0.15</generateCommonality>
+		<stuffProps>
+			<categories>
+				<li>Stony</li>
+			</categories>
+			<color>(0,164,255)</color>
+			<commonality>0.02</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<statOffsets>
+				<Beauty>1</Beauty>
+				<AlchemyFurnaceQuality>0.25</AlchemyFurnaceQuality>
+			</statOffsets>
+			<statFactors>
+				<MaxHitPoints>0.7</MaxHitPoints>
+				<Flammability>0.01</Flammability>
+				<Beauty>2</Beauty>
+			</statFactors>
+		</stuffProps>
+		<thingCategories>
+			<li>Cultivation_Resource</li>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>1</glowRadius>
+				<glowColor>(0,164,255)</glowColor>
+			</li>
+			<!-- <li Class="CompProperties_Drug"> -->
+				<!-- <listOrder>200</listOrder> -->
+			<!-- </li> -->
+		</comps>
+		<tradeTags>
+			<li>ExoticMisc</li>
+			<li>Qi_Source</li>
+			<li>Qi_Source_Tier2</li>
+			<li>Neutral_Qi</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="CondensedSpiritStoneBase">
+		<defName>CTR_SpiritStone_Condensed_2X</defName>
+		<label>condensed spirit stone 2x</label>
+		<description>condensed spirit stone, this spirit stone has been condensed 2 times as much. \n\nTags:Qi Source,Qi Source Tier 2, Neutral Qi</description>	
+		
+		<costList>
+            <CTR_SpiritStone>1</CTR_SpiritStone>
+        </costList>
+		
+		<statBases>
+			<MarketValue>10</MarketValue>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Mass>1</Mass>
+		</statBases>
+		<generateCommonality>0.15</generateCommonality>
+		<stuffProps>
+			<categories>
+				<li>Stony</li>
+			</categories>
+			<color>(0,164,255)</color>
+			<commonality>0.01</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<statOffsets>
+				<Beauty>1</Beauty>
+				<AlchemyFurnaceQuality>0.25</AlchemyFurnaceQuality>
+			</statOffsets>
+			<statFactors>
+				<MaxHitPoints>0.7</MaxHitPoints>
+				<Flammability>0.01</Flammability>
+				<Beauty>2</Beauty>
+			</statFactors>
+		</stuffProps>
+		<tradeTags>
+			<li>ExoticMisc</li>
+			<li>Qi_Source</li>
+			<li>Qi_Source_Tier2</li>
+			<li>Neutral_Qi</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="CondensedSpiritStoneBase">
+		<defName>CTR_SpiritStone_Condensed_3X</defName>
+		<label>condensed spirit stone 3x</label>
+		<description>condensed spirit stone, this spirit stone has been condensed 3 times as much. \n\nTags:Qi Source,Qi Source Tier 3, Neutral Qi</description>	
+		
+		<costList>
+            <CTR_SpiritStone_Condensed_2X>1</CTR_SpiritStone_Condensed_2X>
+        </costList>
+		
+		<statBases>
+			<MarketValue>20</MarketValue>
+			<MaxHitPoints>750</MaxHitPoints>
+			<Mass>10</Mass>
+		</statBases>
+		<generateCommonality>0.15</generateCommonality>
+		<stuffProps>
+			<categories>
+				<li>Stony</li>
+			</categories>
+			<color>(0,164,255)</color>
+			<commonality>0.005</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<statOffsets>
+				<Beauty>1</Beauty>
+				<AlchemyFurnaceQuality>0.25</AlchemyFurnaceQuality>
+			</statOffsets>
+			<statFactors>
+				<MaxHitPoints>0.7</MaxHitPoints>
+				<Flammability>0.01</Flammability>
+				<Beauty>2</Beauty>
+			</statFactors>
+		</stuffProps>
+		<tradeTags>
+			<li>ExoticMisc</li>
+			<li>Qi_Source</li>
+			<li>Qi_Source_Tier3</li>
+			<li>Neutral_Qi</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="CondensedSpiritStoneBase">
+		<defName>CTR_SpiritStone_Condensed_4X</defName>
+		<label>condensed spirit stone 4x</label>
+		<description>condensed spirit stone, this spirit stone has been condensed 4 times as much. \n\nTags:Qi Source,Qi Source Tier 4, Neutral Qi</description>	
+		
+		<costList>
+            <CTR_SpiritStone_Condensed_3X>1</CTR_SpiritStone_Condensed_3X>
+        </costList>
+		
+		<statBases>
+			<MarketValue>40</MarketValue>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Mass>100</Mass>
+		</statBases>
+		<generateCommonality>0.15</generateCommonality>
+		<stuffProps>
+			<categories>
+				<li>Stony</li>
+			</categories>
+			<color>(0,164,255)</color>
+			<commonality>0.002</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<statOffsets>
+				<Beauty>1</Beauty>
+				<AlchemyFurnaceQuality>0.25</AlchemyFurnaceQuality>
+			</statOffsets>
+			<statFactors>
+				<MaxHitPoints>0.7</MaxHitPoints>
+				<Flammability>0.01</Flammability>
+				<Beauty>2</Beauty>
+			</statFactors>
+		</stuffProps>
+		<tradeTags>
+			<li>ExoticMisc</li>
+			<li>Qi_Source</li>
+			<li>Qi_Source_Tier4</li>
+			<li>Neutral_Qi</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="CondensedSpiritStoneBase">
+		<defName>CTR_SpiritStone_Condensed_5X</defName>
+		<label>condensed spirit stone 5x</label>
+		<description>condensed spirit stone, this spirit stone has been condensed 5 times as much. \n\nTags:Qi Source,Qi Source Tier 5, Neutral Qi</description>		
+		
+		<costList>
+            <CTR_SpiritStone_Condensed_4X>1</CTR_SpiritStone_Condensed_4X>
+        </costList>
+		
+		<statBases>
+			<MarketValue>80</MarketValue>
+			<MaxHitPoints>1250</MaxHitPoints>
+			<Mass>1000</Mass>
+		</statBases>
+		<generateCommonality>0.15</generateCommonality>
+		<stuffProps>
+			<categories>
+				<li>Stony</li>
+			</categories>
+			<color>(0,164,255)</color>
+			<commonality>0.001</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<statOffsets>
+				<Beauty>1</Beauty>
+				<AlchemyFurnaceQuality>0.25</AlchemyFurnaceQuality>
+			</statOffsets>
+			<statFactors>
+				<MaxHitPoints>0.7</MaxHitPoints>
+				<Flammability>0.01</Flammability>
+				<Beauty>2</Beauty>
+			</statFactors>
+		</stuffProps>
+		<tradeTags>
+			<li>ExoticMisc</li>
+			<li>Qi_Source</li>
+			<li>Qi_Source_Tier5</li>
+			<li>Neutral_Qi</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="CondensedSpiritStoneBase">
+		<defName>CTR_SpiritStone_Condensed_6X</defName>
+		<label>condensed spirit stone 6x</label>
+		<description>condensed spirit stone, this spirit stone has been condensed 6 times as much. \n\nTags:Qi Source,Qi Source Tier 6, Neutral Qi</description>	
+		
+		<costList>
+            <CTR_SpiritStone_Condensed_5X>1</CTR_SpiritStone_Condensed_5X>
+        </costList>
+		
+		<statBases>
+			<MarketValue>160</MarketValue>
+			<MaxHitPoints>1500</MaxHitPoints>
+			<Mass>10000</Mass>
+		</statBases>
+		<generateCommonality>0.15</generateCommonality>
+		<stuffProps>
+			<categories>
+				<li>Stony</li>
+			</categories>
+			<color>(0,164,255)</color>
+			<commonality>0.0005</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<statOffsets>
+				<Beauty>1</Beauty>
+				<AlchemyFurnaceQuality>0.25</AlchemyFurnaceQuality>
+			</statOffsets>
+			<statFactors>
+				<MaxHitPoints>0.7</MaxHitPoints>
+				<Flammability>0.01</Flammability>
+				<Beauty>2</Beauty>
+			</statFactors>
+		</stuffProps>
+		<tradeTags>
+			<li>ExoticMisc</li>
+			<li>Qi_Source</li>
+			<li>Qi_Source_Tier6</li>
+			<li>Neutral_Qi</li>
+		</tradeTags>
+	</ThingDef>
+
+</Defs>

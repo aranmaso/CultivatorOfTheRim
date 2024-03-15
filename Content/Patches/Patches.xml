@@ -1,0 +1,83 @@
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/StatDef[defName="MarketValue"]/parts</xpath>
+		<value>
+			<li Class="CultivatorOfTheRim.StatPart_GradeWorth"/>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/FactionDef/caravanTraderKinds</xpath>
+		<value>
+			<li>Caravan_CultivationResource</li>
+			<li>Caravan_CultivationPill</li>
+			<li>Caravan_CultivationTechnique</li>
+		</value>
+	</Operation>
+	
+	<!-- <Operation Class="PatchOperationFindMod"> -->
+		<!-- <mods> -->
+			<!-- <li>MakaiTech</li> -->
+		<!-- </mods> -->
+		<!-- <match Class="PatchOperationReplace"> -->
+			<!-- <xpath>Defs/HediffDef[defName="CTR_Creation_Realm"]/comps/li[@Class="CultivatorOfTheRim.HediffCompProperties_Cultivation"]/nextLevel</xpath> -->
+			<!-- <value> -->
+				<!-- <nextLevel>CTR_OutsidetheDomain</nextLevel> -->
+			<!-- </value> -->
+		<!-- </match> -->
+	<!-- </Operation> -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>MakaiTech</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="PrimordialFrag"]/comps</xpath>
+			<value>
+				<li Class="CompProperties_Usable">
+					<useJob>UseItem</useJob>
+					<useLabel>absorb {0_label} to reach beyond the domain</useLabel>
+					<useDuration>1000</useDuration>
+				</li>
+				<li>
+					<compClass>CultivatorOfTheRim.CompUseEffect_EscapeTheDomain</compClass>
+				</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>MakaiTech</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="PrimordialFrag"]/tradeTags</xpath>
+			<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="PrimordialFrag"]</xpath>
+			<value>
+				<tradeTags />
+			</value>
+			</nomatch>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>MakaiTech</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="PrimordialFrag"]/tradeTags</xpath>
+			<value>
+				<li>Qi_Source</li>
+				<li>Qi_Source_Tier6</li>
+				<li>Neutral_Qi</li>
+				<li>Immortal_Qi</li>
+				<li>Divine</li>	
+				<li>Heavenly_Qi</li>
+			</value>
+		</match>
+	</Operation>
+	
+	
+
+</Patch>

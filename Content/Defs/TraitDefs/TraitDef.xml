@@ -1,0 +1,231 @@
+<Defs>
+
+	<TraitDef>
+		<defName>CTR_MediocreTalent</defName>
+		<commonality>1.0</commonality>
+		<degreeDatas>
+			<li>
+				<label>Mediocre Talent</label>
+				<description>{PAWN_nameDef} has mediocre talent in cultivation. not too bad. but not good either.</description>
+				<statFactors>
+					<CultivationSpeed>1</CultivationSpeed>
+				</statFactors>
+				
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>CTR_GoodTalent</li>
+			<li>CTR_CultivationProdigy</li>
+		</conflictingTraits>
+	</TraitDef>
+	
+	<TraitDef>
+		<defName>CTR_GoodTalent</defName>
+		<commonality>0.5</commonality>
+		<degreeDatas>
+			<li>
+				<label>Good Talent</label>
+				<description>{PAWN_nameDef} has good talent in cultivation. they cultivate somewhat faster than other</description>
+				<statFactors>
+					<CultivationSpeed>1</CultivationSpeed>
+				</statFactors>				
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>CTR_MediocreTalent</li>
+			<li>CTR_CultivationProdigy</li>
+		</conflictingTraits>
+	</TraitDef>
+	
+	<TraitDef>
+		<defName>CTR_CultivationProdigy</defName>
+		<commonality>0.3</commonality>
+		<degreeDatas>
+			<li>
+				<label>Cultivation Prodigy</label>
+				<description>{PAWN_nameDef} is a prodigy in cultivation, they cultivate a lot faster than other</description>
+				<statFactors>
+					<CultivationSpeed>1</CultivationSpeed>
+				</statFactors>				
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>CTR_MediocreTalent</li>
+			<li>CTR_GoodTalent</li>
+		</conflictingTraits>
+	</TraitDef>
+	
+	<TraitDef>
+		<defName>CTR_InnateAlchemistTalent</defName>
+		<commonality>0.3</commonality>
+		<degreeDatas>
+			<li>
+				<label>Alchemist Physique</label>
+				<description>{PAWN_nameDef} born with a body naturally made for alchemy. they have higher success chance in alchemy than other</description>
+				<statOffsets>
+					<AlchemySuccessChance>0.25</AlchemySuccessChance>
+				</statOffsets>		
+				<skillGains>
+				<li>
+					<key>Medicine</key>
+					<value>5</value>
+				</li>
+				</skillGains>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+		</conflictingTraits>
+	</TraitDef>
+	
+	<TraitDef>
+		<defName>CTR_AlchemyGenius</defName>
+		<commonality>0.5</commonality>
+		<degreeDatas>
+			<li>
+				<label>Genius Alchemist</label>
+				<description>{PAWN_nameDef} is a genius in alchemy. they have higher success chance in alchemy than other</description>
+				<statOffsets>
+					<AlchemySuccessChance>0.15</AlchemySuccessChance>
+				</statOffsets>				
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+		</conflictingTraits>
+	</TraitDef>
+	
+	<TraitDef>
+		<defName>CTR_AlchemyDisciple</defName>
+		<commonality>0</commonality>
+		<degreeDatas>
+			<li>
+				<label>Apprentice Alchemist</label>
+				<description>{PAWN_nameDef} is a apprentice alchemist. they have higher success chance in alchemy than other</description>
+				<statOffsets>
+					<AlchemySuccessChance>0.10</AlchemySuccessChance>
+				</statOffsets>				
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+		</conflictingTraits>
+	</TraitDef>
+	
+	<TraitDef>
+		<defName>CTR_FireQiInclined</defName>
+		<commonality>0.8</commonality>
+		<degreeDatas>
+			<li>
+				<label>Fire Qi Inclined</label>
+				<description>{PAWN_nameDef} has innate Fire element. they absorb Fire Qi better. but {PAWN_pronoun} have difficulty in absorbing Water Qi</description>
+				<statOffsets>
+					<CTR_FireQi_AbsorptionMultiplier>0.15</CTR_FireQi_AbsorptionMultiplier>
+				</statOffsets>				
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>CTR_WaterQiInclined</li>
+		</conflictingTraits>
+	</TraitDef>
+	
+	<TraitDef>
+		<defName>CTR_EarthQiInclined</defName>
+		<commonality>0.8</commonality>
+		<degreeDatas>
+			<li>
+				<label>Earth Qi Inclined</label>
+				<description>{PAWN_nameDef} has innate Earth element. they absorb Earth Qi better. but {PAWN_pronoun} have difficulty in absorbing Wood Qi</description>
+				<statOffsets>
+					<CTR_EarthQi_AbsorptionMultiplier>0.15</CTR_EarthQi_AbsorptionMultiplier>
+				</statOffsets>				
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>CTR_WoodQiInclined</li>
+		</conflictingTraits>
+	</TraitDef>
+	
+	<TraitDef>
+		<defName>CTR_MetalQiInclined</defName>
+		<commonality>0.8</commonality>
+		<degreeDatas>
+			<li>
+				<label>Metal Qi Inclined</label>
+				<description>{PAWN_nameDef} has innate Metal element. they absorb Metal Qi better. but {PAWN_pronoun} have difficulty in absorbing Fire Qi</description>
+				<statOffsets>
+					<CTR_MetalQi_AbsorptionMultiplier>0.15</CTR_MetalQi_AbsorptionMultiplier>
+				</statOffsets>				
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>CTR_FireQiInclined</li>
+		</conflictingTraits>
+	</TraitDef>
+	
+	<TraitDef>
+		<defName>CTR_WaterQiInclined</defName>
+		<commonality>0.8</commonality>
+		<degreeDatas>
+			<li>
+				<label>Water Qi Inclined</label>
+				<description>{PAWN_nameDef} has innate Water element. they absorb Water Qi better. but {PAWN_pronoun} have difficulty in absorbing Earth Qi</description>
+				<statOffsets>
+					<CTR_WaterQi_AbsorptionMultiplier>0.15</CTR_WaterQi_AbsorptionMultiplier>
+				</statOffsets>				
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>CTR_EarthQiInclined</li>
+		</conflictingTraits>
+	</TraitDef>
+	
+	<TraitDef>
+		<defName>CTR_WoodQiInclined</defName>
+		<commonality>0.8</commonality>
+		<degreeDatas>
+			<li>
+				<label>Wood Qi Inclined</label>
+				<description>{PAWN_nameDef} has innate Wood element. they absorb Wood Qi better. but {PAWN_pronoun} have difficulty in absorbing Metal Qi</description>
+				<statOffsets>
+					<CTR_WoodQi_AbsorptionMultiplier>0.15</CTR_WoodQi_AbsorptionMultiplier>
+				</statOffsets>				
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>CTR_MetalQiInclined</li>
+		</conflictingTraits>
+	</TraitDef>
+	
+	<TraitDef>
+		<defName>CTR_NaturalYangBody</defName>
+		<commonality>0.2</commonality>
+		<degreeDatas>
+			<li>
+				<label>Yang Qi Inclined</label>
+				<description>{PAWN_nameDef} has innate Wood element. they absorb Wood Qi better. but {PAWN_pronoun} have difficulty in absorbing Metal Qi</description>
+				<statOffsets>
+					<CTR_YangQi_AbsorptionMultiplier>1</CTR_YangQi_AbsorptionMultiplier>
+				</statOffsets>				
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>CTR_NaturalYinBody</li>
+		</conflictingTraits>
+	</TraitDef>
+	
+	<TraitDef>
+		<defName>CTR_NaturalYinBody</defName>
+		<commonality>0.2</commonality>
+		<degreeDatas>
+			<li>
+				<label>Yin Qi Inclined</label>
+				<description>{PAWN_nameDef} has innate Wood element. they absorb Wood Qi better. but {PAWN_pronoun} have difficulty in absorbing Metal Qi</description>
+				<statOffsets>
+					<CTR_YinQi_AbsorptionMultiplier>1</CTR_YinQi_AbsorptionMultiplier>
+				</statOffsets>				
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>CTR_NaturalYangBody</li>
+		</conflictingTraits>
+	</TraitDef>
+
+</Defs>

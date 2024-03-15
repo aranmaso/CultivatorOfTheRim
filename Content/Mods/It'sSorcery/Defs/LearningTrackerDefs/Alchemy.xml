@@ -1,0 +1,175 @@
+<Defs>
+
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerProgress">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Progress</learningTrackerClass>
+		<defName>CTR_AlchemyLearningProgress</defName>
+		<label>Alchemy learning progress</label>
+	</ItsSorceryFramework.LearningTrackerDef>
+	
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerTree">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Tree</learningTrackerClass>
+		<defName>CTR_AlchemyLearningTree</defName>
+		<label>Alchemy Technique</label>
+	</ItsSorceryFramework.LearningTrackerDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_AlchemyLearningTree</learningTrackerDef>
+		<defName>CTR_Alchemy_Introduction</defName>
+		<label>Alchemy introduction</label>
+		<description>introduction step to the method of alchemy</description>		
+		
+		<prereqsStats>
+		<li>
+			<mode>GreaterEqual</mode>
+			<statReqs>
+				<AlchemySuccessChance>0.15</AlchemySuccessChance>
+			</statReqs>
+		</li>
+		</prereqsStats>
+		
+		<prereqsHediff>
+		<li>
+			<key>CTR_BreakthroughCounter</key>
+			<value>0</value>
+		</li>
+		</prereqsHediff>
+		
+		<statOffsets>
+			<TechniqueLearningCount>1</TechniqueLearningCount>
+			<AlchemySuccessChance>0.05</AlchemySuccessChance>
+		</statOffsets>
+		
+		<coordX>0</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_AlchemyLearningTree</learningTrackerDef>
+		<defName>CTR_Alchemy_FireControl</defName>
+		<label>Fire Control technique</label>
+		<description>improve user ability to control fire during alchemy process</description>	
+
+		<prereqs>
+			<li>CTR_Alchemy_Introduction</li>
+		</prereqs>		
+		
+		<statOffsets>
+			<AlchemySuccessChance>0.05</AlchemySuccessChance>
+		</statOffsets>
+		
+		<coordX>1</coordX>
+		<coordY>1</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_AlchemyLearningTree</learningTrackerDef>
+		<defName>CTR_Alchemy_MaterialPicking</defName>
+		<label>Material Know-how</label>
+		<description>increase in knowledge about alchemy material. increase harvest yield and alchemy success chance moderately</description>	
+
+		<prereqs>
+			<li>CTR_Alchemy_Introduction</li>
+		</prereqs>		
+		
+		<statOffsets>
+			<AlchemySuccessChance>0.05</AlchemySuccessChance>
+			<PlantWorkSpeed>0.1</PlantWorkSpeed>
+			<PlantHarvestYield>0.1</PlantHarvestYield>
+		</statOffsets>
+		
+		<coordX>1</coordX>
+		<coordY>2</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_AlchemyLearningTree</learningTrackerDef>
+		<defName>CTR_Alchemy_EyeFocus</defName>
+		<label>Eye Focusing</label>
+		<description>improve user focus during alchemy process. increase success chance moderately</description>	
+
+		<prereqs>
+			<li>CTR_Alchemy_Introduction</li>
+		</prereqs>		
+		
+		<statOffsets>
+			<AlchemySuccessChance>0.05</AlchemySuccessChance>
+		</statOffsets>
+		
+		<capMods>
+			<li>
+				<capacity>Sight</capacity>
+				<offset>0.25</offset>
+			</li>
+		</capMods>
+		
+		<coordX>1</coordX>
+		<coordY>3</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_AlchemyLearningTree</learningTrackerDef>
+		<defName>CTR_Alchemy_AdvancedFireControl</defName>
+		<label>Advance Fire Manipulation</label>
+		<description>improve user fire control during alchemy process. increase success chance moderately</description>	
+
+		<prereqs>
+			<li>CTR_Alchemy_FireControl</li>
+		</prereqs>		
+		
+		<statOffsets>
+			<AlchemySuccessChance>0.1</AlchemySuccessChance>
+		</statOffsets>
+		
+		<coordX>2</coordX>
+		<coordY>1</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_AlchemyLearningTree</learningTrackerDef>
+		<defName>CTR_Alchemy_AdvancedMaterialLearning</defName>
+		<label>Advance Material Knowledge</label>
+		<description>learn the very minor detail of each material and their properties.</description>	
+
+		<prereqs>
+			<li>CTR_Alchemy_MaterialPicking</li>
+		</prereqs>		
+		
+		<statOffsets>
+			<AlchemySuccessChance>0.1</AlchemySuccessChance>
+			<PlantWorkSpeed>0.1</PlantWorkSpeed>
+			<PlantHarvestYield>0.1</PlantHarvestYield>
+		</statOffsets>
+		
+		<coordX>2</coordX>
+		<coordY>2</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_AlchemyLearningTree</learningTrackerDef>
+		<defName>CTR_Alchemy_AdvancedHandTechnique</defName>
+		<label>Advance Hand Control</label>
+		<description>lmprove hand control. able to fine-tune better during alchemy process</description>	
+
+		<prereqs>
+			<li>CTR_Alchemy_EyeFocus</li>
+		</prereqs>		
+		
+		<capMods>
+			<li>
+				<capacity>Manipulation</capacity>
+				<offset>0.50</offset>
+			</li>
+		</capMods>
+		
+		<coordX>2</coordX>
+		<coordY>3</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+
+ </Defs>

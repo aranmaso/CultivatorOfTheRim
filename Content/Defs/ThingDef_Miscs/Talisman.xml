@@ -1,0 +1,407 @@
+<Defs>
+
+	<ThingDef Abstract="True" Name="TalismanBase" ParentName="ApparelNoQualityBase">
+		<techLevel>Medieval</techLevel>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+		<costList>
+			<CTR_TalismanPaper>1</CTR_TalismanPaper>
+		</costList>
+		<apparel>
+			<scoreOffset>4</scoreOffset>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<wearPerDay>0</wearPerDay>
+			<layers>
+				<li>CTR_Talisman</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+		</apparel>
+		<thingCategories>
+			<li>ApparelUtility</li>
+		</thingCategories>
+		<tradeTags>
+			<li>ExoticMisc</li>
+			<li>CTR_Equipment</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ApparelLayerDef>
+    <defName>CTR_Talisman</defName>
+		<label>Talisman</label>
+		<drawOrder>401</drawOrder>
+	</ApparelLayerDef>
+	
+	
+	<ThingDef ParentName="TalismanBase">
+		<defName>CTR_TalismanSmart</defName>
+		<label>Knowledge Talisman</label>
+		<description>talisman with the effect of improving user thinking ability. contain  a hint of nascent qi and yang qi.</description>        
+		<graphicData>
+		  <texPath>Things/Items/Talismans/talisman_smart</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CultivatorOfTheRim.CompProperties_ApparelHediffGiver">
+				<hediffDefs>
+					<li>CTR_SmartTalisman</li>
+				</hediffDefs>
+				<severity>1</severity>
+			</li>
+		</comps>
+		<statBases>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <WorkToMake>2500</WorkToMake>
+		  <MarketValue>250</MarketValue>
+		  <Mass>0.005</Mass>
+		  <Flammability>1</Flammability>
+		  <EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets />	
+	</ThingDef>
+	
+	<ThingDef ParentName="TalismanBase">
+		<defName>CTR_TalismanSpeed</defName>
+		<label>Speed Talisman</label>
+		<description>talisman with the effect of improving user moving ability. contain a hint of neutral qi and fire qi</description>        
+		<graphicData>
+		  <texPath>Things/Items/Talismans/talisman_speed</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CultivatorOfTheRim.CompProperties_ApparelHediffGiver">
+				<hediffDefs>
+					<li>CTR_FastTalisman</li>
+				</hediffDefs>
+				<severity>1</severity>
+			</li>
+		</comps>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+			<MarketValue>250</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>1</Flammability>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets />	
+	</ThingDef>
+	
+	<ThingDef ParentName="TalismanBase">
+		<defName>CTR_TalismanImmunity</defName>
+		<label>Immunity Talisman</label>
+		<description>talisman with the effect of improving user immunity to sickness. contain a hint of healing energy and qi condensing ability</description>        
+		<graphicData>
+		  <texPath>Things/Items/Talismans/talisman_immunity</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CultivatorOfTheRim.CompProperties_ApparelHediffGiver">
+				<hediffDefs>
+					<li>CTR_ImmunityTalisman</li>
+				</hediffDefs>
+				<severity>1</severity>
+			</li>
+		</comps>
+		<apparel>
+			<wearPerDay>0.1</wearPerDay>
+		</apparel>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+			<MarketValue>250</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>1</Flammability>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets />	
+	</ThingDef>
+	
+	<ThingDef ParentName="TalismanBase">
+		<defName>CTR_TalismanFireSpew</defName>
+		<label>Firespew Talisman</label>
+		<description>talisman with the effect of giving user the fire spew ability contain potent Fire Qi</description>        
+		<graphicData>
+		  <texPath>Things/Items/Talismans/talisman_fireSpew</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CultivatorOfTheRim.CompProperties_ApparelHediffGiver">
+				<hediffDefs>
+					<li>CTR_FireSpewTalisman</li>
+				</hediffDefs>
+				<severity>1</severity>
+			</li>
+		</comps>
+		<apparel>
+			<wearPerDay>0.1</wearPerDay>
+		</apparel>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+			<MarketValue>250</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>1</Flammability>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets />	
+	</ThingDef>
+	
+	<ThingDef ParentName="TalismanBase">
+		<defName>CTR_TalismanShield</defName>
+		<label>Defense Talisman</label>
+		<description>talisman with the effect of improving user defensive capability.</description>        
+		<graphicData>
+		  <texPath>Things/Items/Talismans/talisman_shield</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<!-- <li Class="CultivatorOfTheRim.CompProperties_ApparelHediffGiver"> -->
+				<!-- <hediffDefs> -->
+					<!-- <li>CTR_FastTalisman</li> -->
+				<!-- </hediffDefs> -->
+				<!-- <severity>1</severity> -->
+			<!-- </li> -->
+			<li Class="CompProperties_Shield" />
+		</comps>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+			<MarketValue>250</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>0.5</Flammability>
+			<EnergyShieldRechargeRate>0.2</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>2.5</EnergyShieldEnergyMax>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets />	
+	</ThingDef>
+	
+	<ThingDef ParentName="TalismanBase">
+		<defName>CTR_TalismanJoy</defName>
+		<label>Joyous Talisman</label>
+		<description>talisman with the effect of giving user the spiritual joy, contain hint of Fire Qi and Yang Qi</description>        
+		<graphicData>
+		  <texPath>Things/Items/Talismans/talisman_joy</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CultivatorOfTheRim.CompProperties_ApparelHediffGiver">
+				<hediffDefs>
+					<li>CTR_JoyTalisman</li>
+				</hediffDefs>
+				<severity>1</severity>
+			</li>
+		</comps>
+		<apparel>
+			<wearPerDay>0.1</wearPerDay>
+		</apparel>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+			<MarketValue>250</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>1</Flammability>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets />	
+	</ThingDef>	
+	
+	<ThingDef ParentName="TalismanBase">
+		<defName>CTR_TalismanInvisibility</defName>
+		<label>Invisibility Talisman</label>
+		<description>talisman with the effect of giving user the Invisibility effect, but hinder user social ability. contain hint of Cold Qi and Yin Qi</description>        
+		<graphicData>
+		  <texPath>Things/Items/Talismans/talisman_invisibility</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CultivatorOfTheRim.CompProperties_ApparelHediffGiver">
+				<hediffDefs>
+					<li>CTR_InvisibilityTalisman</li>
+				</hediffDefs>
+				<severity>1</severity>
+			</li>
+		</comps>
+		<apparel>
+			<wearPerDay>0.1</wearPerDay>
+		</apparel>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+			<MarketValue>250</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>1</Flammability>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets />	
+	</ThingDef>
+	
+	<ThingDef ParentName="TalismanBase">
+		<defName>CTR_TalismanCurer</defName>
+		<label>Curer Talisman</label>
+		<description>talisman with the effect of improving user medical ability, contain hint of Wood Qi and Yang Qi</description>        
+		<graphicData>
+		  <texPath>Things/Items/Talismans/talisman_curer</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CultivatorOfTheRim.CompProperties_ApparelHediffGiver">
+				<hediffDefs>
+					<li>CTR_CurerTalisman</li>
+				</hediffDefs>
+				<severity>1</severity>
+			</li>
+		</comps>
+		<apparel>
+			<wearPerDay>0.1</wearPerDay>
+		</apparel>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+			<MarketValue>250</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>1</Flammability>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets />	
+	</ThingDef>	
+	
+	<ThingDef ParentName="TalismanBase">
+		<defName>CTR_TalismanForeseer</defName>
+		<label>Foreseer Talisman</label>
+		<description>talisman with the effect of improving user sight, contain hint of Neutral Qi and Wood Qi</description>        
+		<graphicData>
+		  <texPath>Things/Items/Talismans/talisman_foreseer</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CultivatorOfTheRim.CompProperties_ApparelHediffGiver">
+				<hediffDefs>
+					<li>CTR_ForeseerTalisman</li>
+				</hediffDefs>
+				<severity>1</severity>
+			</li>
+		</comps>
+		<apparel>
+			<wearPerDay>0.1</wearPerDay>
+		</apparel>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+			<MarketValue>250</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>1</Flammability>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets />	
+	</ThingDef>
+	
+	<ThingDef ParentName="TalismanBase">
+		<defName>CTR_TalismanFasting</defName>
+		<label>Fasting Talisman</label>
+		<description>talisman with the effect of lowering user food consumption, contain hint of Wood Qi and Yang Qi</description>        
+		<graphicData>
+		  <texPath>Things/Items/Talismans/talisman_fasting</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CultivatorOfTheRim.CompProperties_ApparelHediffGiver">
+				<hediffDefs>
+					<li>CTR_FastingTalisman</li>
+				</hediffDefs>
+				<severity>1</severity>
+			</li>
+		</comps>
+		<apparel>
+			<wearPerDay>0.1</wearPerDay>
+		</apparel>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+			<MarketValue>250</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>1</Flammability>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets />	
+	</ThingDef>	
+	
+	<ThingDef ParentName="TalismanBase">
+		<defName>CTR_TalismanWorkspeed</defName>
+		<label>Workspeed Talisman</label>
+		<description>talisman with the effect of increase user work speed, contain hint of Yang Qi and Metal Qi</description>        
+		<graphicData>
+		  <texPath>Things/Items/Talismans/talisman_workspeed</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CultivatorOfTheRim.CompProperties_ApparelHediffGiver">
+				<hediffDefs>
+					<li>CTR_WorkspeedTalisman</li>
+				</hediffDefs>
+				<severity>1</severity>
+			</li>
+		</comps>
+		<apparel>
+			<wearPerDay>0.1</wearPerDay>
+		</apparel>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+			<MarketValue>250</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>1</Flammability>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets />	
+	</ThingDef>
+	
+	<ThingDef ParentName="TalismanBase">
+		<defName>CTR_TalismanCultivationSpeed</defName>
+		<label>Cultivation Talisman</label>
+		<description>talisman with the effect of improving user cultivation speed, contain hint of Yang Qi and Yin Qi</description>        
+		<graphicData>
+		  <texPath>Things/Items/Talismans/talisman_cultivation</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CultivatorOfTheRim.CompProperties_ApparelHediffGiver">
+				<hediffDefs>
+					<li>CTR_CultivationTalisman</li>
+				</hediffDefs>
+				<severity>1</severity>
+			</li>						
+		</comps>
+		<apparel>
+			<wearPerDay>0.1</wearPerDay>
+		</apparel>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+			<MarketValue>250</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>1</Flammability>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<equippedStatOffsets />	
+	</ThingDef>				
+	
+</Defs>

@@ -1,0 +1,227 @@
+<Defs>
+
+	<StatCategoryDef>
+		<defName>CTR_PawnCultivation</defName>
+		<label>Cultivation</label>
+		<displayOrder>105</displayOrder>
+		<displayAllByDefault>false</displayAllByDefault>
+	</StatCategoryDef>
+
+	<StatDef Name="CultivationBaseStat" Abstract="True">
+		<workerClass>CultivatorOfTheRim.StatWorker_Cultivation</workerClass>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CultivationSpeed</defName>
+		<label>cultivation speed</label>
+		<description>the speed at which pawn cultivate immortality. the higher this value is the faster they can increase their cultivation. \nbe warn, if pawn breakthrough to frequently, it will increase the chance at which pawn attract Heavenly Tribulation</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<displayPriorityInCategory>300</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<cacheable>true</cacheable>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>TribulationChance</defName>
+		<label>tribulation chance</label>
+		<description>the chance at which pawn attract Heavenly Tribulation, this value increase when pawn recently made a breakthrough, and slowly going down as time pass</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<maxValue>1</maxValue>
+		<displayPriorityInCategory>290</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<cacheable>true</cacheable>
+	</StatDef>	
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>AlchemySuccessChance</defName>
+		<label>alchemy chance</label>
+		<description>the chance at which pawn can success in alchemy.</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>0.15</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<maxValue>1</maxValue>
+		<displayPriorityInCategory>290</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<cacheable>true</cacheable>
+	</StatDef>
+	
+	<StatDef>
+		<defName>AlchemyFurnaceQuality</defName>
+		<workerClass>CultivatorOfTheRim.StatWorker_AlchemyFurnaceStat</workerClass>
+		<label>alchemy furnace quality</label>
+		<description>pill making success chance is affected by this value</description>
+		<category>Building</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<minValue>0.1</minValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnNonWorkTables>false</showOnNonWorkTables>
+		<parts />
+		<displayPriorityInCategory>3000</displayPriorityInCategory>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>RefiningSuccessChance</defName>
+		<label>refining chance</label>
+		<description>the chance at which pawn can success in alchemy.</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>0.10</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<maxValue>1</maxValue>
+		<displayPriorityInCategory>290</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<cacheable>true</cacheable>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_DantianDamageChance</defName>
+		<label>dantian damage chance</label>
+		<description>chance that someone will recieve damage in the dantian with they hit in the torso</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>0.20</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<displayPriorityInCategory>260</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<cacheable>true</cacheable>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_Qi_AbsorptionMultiplier</defName>
+		<label>qi absorption efficiency</label>
+		<description>the efficiency at which pawn absorb Qi. this include all Qi type</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<displayPriorityInCategory>250</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<cacheable>true</cacheable>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_YangQi_AbsorptionMultiplier</defName>
+		<label>yang-qi absorption efficiency</label>
+		<description>the efficiency at which pawn absorb Yang Qi.</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<displayPriorityInCategory>240</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<cacheable>true</cacheable>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_YinQi_AbsorptionMultiplier</defName>
+		<label>yin-qi absorption efficiency</label>
+		<description>the efficiency at which pawn absorb Yin Qi.</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<displayPriorityInCategory>240</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<cacheable>true</cacheable>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_ColdQi_AbsorptionMultiplier</defName>
+		<label>cold-qi absorption efficiency</label>
+		<description>the efficiency at which pawn absorb Cold Qi.</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<displayPriorityInCategory>230</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<cacheable>true</cacheable>
+	</StatDef>
+
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_MetalQi_AbsorptionMultiplier</defName>
+		<label>metal-qi absorption efficiency</label>
+		<description>the efficiency at which pawn absorb Metal Qi.</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<displayPriorityInCategory>225</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<cacheable>true</cacheable>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_WaterQi_AbsorptionMultiplier</defName>
+		<label>water-qi absorption efficiency</label>
+		<description>the efficiency at which pawn absorb Water Qi.</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<displayPriorityInCategory>224</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<cacheable>true</cacheable>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_WoodQi_AbsorptionMultiplier</defName>
+		<label>wood-qi absorption efficiency</label>
+		<description>the efficiency at which pawn absorb Wood Qi.</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<displayPriorityInCategory>223</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<cacheable>true</cacheable>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_FireQi_AbsorptionMultiplier</defName>
+		<label>fire-qi absorption efficiency</label>
+		<description>the efficiency at which pawn absorb Fire Qi.</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<displayPriorityInCategory>222</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<cacheable>true</cacheable>
+	</StatDef>
+	
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_EarthQi_AbsorptionMultiplier</defName>
+		<label>earth-qi absorption efficiency</label>
+		<description>the efficiency at which pawn absorb Earth Qi.</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<minValue>0</minValue>
+		<displayPriorityInCategory>221</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<cacheable>true</cacheable>
+	</StatDef>
+
+</Defs>

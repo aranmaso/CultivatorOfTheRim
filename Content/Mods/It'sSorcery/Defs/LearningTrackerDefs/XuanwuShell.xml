@@ -1,0 +1,139 @@
+<Defs>
+
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerProgress">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Progress</learningTrackerClass>
+		<defName>CTR_XuanwuShellLearningProgress</defName>
+		<label>Xuanwu Shell progress</label>
+	</ItsSorceryFramework.LearningTrackerDef>
+	
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerTree">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Tree</learningTrackerClass>
+		<defName>CTR_XuanwuShellLearningTree</defName>
+		<label>Xuanwu Shell Technique</label>
+	</ItsSorceryFramework.LearningTrackerDef>	
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_XuanwuShellLearningTree</learningTrackerDef>
+		<defName>CTR_XuanwuShell_BlackShell</defName>
+		<label>Black Tortoise Shell</label>
+		<description>introduction step to the defensive technique of Xuanwu</description>		
+		
+		<prereqsStats>
+		<li>
+			<mode>GreaterEqual</mode>
+			<statReqs>
+				<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.3</ArmorRating_Heat>
+				<ArmorRating_Qi>0.3</ArmorRating_Qi>
+			</statReqs>
+		</li>
+		</prereqsStats>
+		
+		<prereqsHediff>
+		<li>
+			<key>CTR_BreakthroughCounter</key>
+			<value>0</value>
+		</li>
+		</prereqsHediff>
+		
+		<statOffsets>
+			<TechniqueLearningCount>1</TechniqueLearningCount>
+			<CTR_QiPath>1</CTR_QiPath>
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.25</ArmorRating_Heat>
+			<ArmorRating_Qi>0.25</ArmorRating_Qi>
+		</statOffsets>
+		
+		<coordX>0</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_XuanwuShellLearningTree</learningTrackerDef>
+		<defName>CTR_XuanwuShell_TurtleFist</defName>
+		<label>Xuanwu Fist</label>
+		<description>integrated user defensive ability into offensive.</description>	
+
+		<prereqs>
+			<li>CTR_XuanwuShell_BlackShell</li>
+		</prereqs>		
+		
+		<hediffAdd>
+			<li>
+				<hediffDef>CTR_Xuanwu_Fist</hediffDef>
+				<severity>1</severity>
+			</li>
+		</hediffAdd>
+		
+		<coordX>1</coordX>
+		<coordY>1</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_XuanwuShellLearningTree</learningTrackerDef>
+		<defName>CTR_XuanwuShell_TurtleShell</defName>
+		<label>Invincible Shell</label>
+		<description>grant a 25% chance to take no damage.</description>				
+		
+		<prereqs>
+			<li>CTR_XuanwuShell_BlackShell</li>
+		</prereqs>	
+		
+		<hediffAdd>
+			<li>
+				<hediffDef>CTR_Xuanwu_Shell</hediffDef>
+				<severity>1</severity>
+			</li>
+		</hediffAdd>
+		
+		<coordX>1</coordX>
+		<coordY>2</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_XuanwuShellLearningTree</learningTrackerDef>
+		<defName>CTR_XuanwuShell_EarthenArmor</defName>
+		<label>Earthen Armor</label>
+		<description>grant an ability to cover target in temporary armor</description>				
+		
+		<prereqs>
+			<li>CTR_XuanwuShell_TurtleFist</li>
+		</prereqs>	
+		
+		<abilityGain>
+			<li>CTR_EarthenArmor</li>
+		</abilityGain>
+		
+		<coordX>2</coordX>
+		<coordY>1</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_XuanwuShellLearningTree</learningTrackerDef>
+		<defName>CTR_XuanwuShell_MirrorShell</defName>
+		<label>Mirror Shell</label>
+		<description>cover self in reflective armor. reflect 50% of all damage taken.</description>				
+		
+		<prereqs>
+			<li>CTR_XuanwuShell_TurtleShell</li>
+		</prereqs>	
+		
+		<hediffAdd>
+			<li>
+				<hediffDef>CTR_Xuanwu_ReflectShell</hediffDef>
+				<severity>1</severity>
+			</li>
+		</hediffAdd>
+		
+		<coordX>2</coordX>
+		<coordY>2</coordY>
+		<pointReq>3</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+
+</Defs>

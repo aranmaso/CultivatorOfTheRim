@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<!-- EnergyTrackers - Qi Foundation -->
+	<ItsSorceryFramework.EnergyTrackerDef ParentName = "EnergyTrackerBaseConsumable">
+		<defName>CTR_QiEnergyTracker</defName>
+		<label>qi energy</label>
+		
+		<energyUnitStatDef>CTR_QiEnergyCost</energyUnitStatDef>
+		<energyMaxStatDef>CTR_QiEnergyMax</energyMaxStatDef>
+		<energyMinStatDef>CTR_QiEnergyMin</energyMinStatDef>
+		<energyRecoveryStatDef>CTR_QiEnergyRecovery</energyRecoveryStatDef>
+		
+		<energyLabelKey>CTR_QiTracker</energyLabelKey>
+		<disableReasonKey>CTR_QiTrackerDisabledReason</disableReasonKey>
+		<consumables>
+			<li>
+				<thingDef>CTR_QiCondensingPill</thingDef>
+				<energy>2.5</energy>
+			</li>
+			<li>
+				<thingDef>CTR_NascentQiPill</thingDef>
+				<energy>10.0</energy>
+			</li>
+			<li>
+				<thingDef>CTR_SaintQiPill</thingDef>
+				<energy>25.0</energy>
+			</li>
+			<li>
+				<thingDef>CTR_ImmortalQiPill</thingDef>
+				<energy>50.0</energy>
+			</li>
+		</consumables>
+	</ItsSorceryFramework.EnergyTrackerDef>
+	
+	<ItsSorceryFramework.EnergyTrackerDef ParentName = "EnergyTrackerBaseConsumable">
+		<defName>CTR_StaminaEnergyTracker</defName>
+		<label>stamina</label>
+		
+		<energyUnitStatDef>CTR_StaminaEnergyCost</energyUnitStatDef>
+		<energyMaxStatDef>CTR_StaminaEnergyMax</energyMaxStatDef>
+		<energyMinStatDef>CTR_StaminaEnergyMin</energyMinStatDef>
+		<energyRecoveryStatDef>CTR_StaminaEnergyRecovery</energyRecoveryStatDef>
+		
+		<energyLabelKey>CTR_StaminaTracker</energyLabelKey>
+		<disableReasonKey>CTR_StaminaTrackerDisabledReason</disableReasonKey>
+		<consumables>
+			<li>
+				<thingDef>CTR_QiCondensingPill</thingDef>
+				<energy>2.5</energy>
+			</li>
+			<li>
+				<thingDef>CTR_NascentQiPill</thingDef>
+				<energy>10.0</energy>
+			</li>
+			<li>
+				<thingDef>CTR_SaintQiPill</thingDef>
+				<energy>25.0</energy>
+			</li>
+			<li>
+				<thingDef>CTR_ImmortalQiPill</thingDef>
+				<energy>50.0</energy>
+			</li>
+		</consumables>
+	</ItsSorceryFramework.EnergyTrackerDef>
+	
+</Defs>

@@ -1,0 +1,10 @@
+
+<Defs>
+    <JobDef>
+        <defName>CTR_BreakingThrough</defName>
+        <driverClass>CultivatorOfTheRim.JobDriver_Breakthrough</driverClass>
+        <reportString>breaking throught the barrier TargetA.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>	
+	
+</Defs>

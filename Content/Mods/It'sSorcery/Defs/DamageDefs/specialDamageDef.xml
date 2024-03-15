@@ -1,0 +1,37 @@
+<Defs>
+
+	<DamageDef>
+		<defName>CTR_XuanwuFist</defName>
+		<label>Xuanwu Fist</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has injured by fist to death</deathMessage>
+		<hediff>Bruise</hediff>
+		<hediffSolid>Crush</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<additionalHediffs />
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>Blunt</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<isRanged>false</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+	</DamageDef>
+	
+	<DamageDef>
+		<defName>CTR_XuanwuReflect</defName>
+		<label>Xuanwu Reflect</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has injured by fist to death</deathMessage>
+		<hediff>Bruise</hediff>
+		<hediffSolid>Crush</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<additionalHediffs />
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>CTR_Qi</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<isRanged>false</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+	</DamageDef>
+
+</Defs>

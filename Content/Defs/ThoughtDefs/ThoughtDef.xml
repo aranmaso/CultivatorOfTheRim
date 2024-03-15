@@ -1,0 +1,17 @@
+<Defs>
+
+	<ThoughtDef>
+		<defName>CTR_Joytalisman</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>CTR_JoyTalisman</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>Spiritual Joy</label>
+				<description>such bliss. much joy.</description>
+				<baseMoodEffect>25</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

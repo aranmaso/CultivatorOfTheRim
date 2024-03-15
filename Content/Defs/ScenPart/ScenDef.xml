@@ -1,0 +1,12 @@
+<Defs>
+	
+	<ScenPartDef>
+		<defName>ForcedCultivation</defName>
+		<label>forced cultivation</label>
+		<scenPartClass>CultivatorOfTheRim.ScenPart_ForcedCultivation</scenPartClass>
+		<category>PlayerPawnModifier</category>
+		<selectionWeight>1.0</selectionWeight>
+		<summaryPriority>459</summaryPriority>
+	</ScenPartDef>
+
+</Defs>

@@ -1,0 +1,37 @@
+Total Severity : 11,560
+
+hours meditate per day : 6
+
+tick in a hour : 2500
+
+tick meditate per day : 15000
+
+tick meditate per month : = 15,000 * 15 = 225,000
+
+tick meditate per year : 900,000
+
+
+
+time to pass CTR_BodyTempering : 16 days
+time to pass CTR_MarrowCleansing : 16 days
+time to pass CTR_BoneForging : 40 days
+time to pass CTR_Qi_Gathering : 6.4 days
+time to pass CTR_FoundationEstablishment : 8.7 days
+time to pass CTR_CoreShaping : 7.2 days : 13 days
+time to pass CTR_GoldenCore : 17 days
+time to pass CTR_NascentSoul : 34 days
+time to pass CTR_Transcendent : 34 days
+time to pass CTR_HalfStep_Saint : 35 days
+time to pass CTR_SaintRealm : 30 days
+time to pass CTR_SaintKing : 40 days
+time to pass CTR_ImmortalAscension : 41 days
+time to pass CTR_TrueImmortal : 75 days
+time to pass CTR_ImmortalSaint : 115 days
+time to pass CTR_HalfStep_God : 108 day
+time to pass CTR_True_God : 99 days
+time to pass CTR_Creation_Realm : 132 days
+time to pass CTR_OutsidetheDomain : :198 days
+
+time until reach Creation Realm : 728 days / 12 in-game year
+time until reach peak Creation Realm 860 days / 14 in-game year
+time until reach peak Outsidde the Domain 1058 day / 17 year

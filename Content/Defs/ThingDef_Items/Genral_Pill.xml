@@ -1,0 +1,599 @@
+<Defs>
+	
+	<ThingDef ParentName="DrugBase" Name="GeneralPillBase" Abstract="True">
+		<rotatable>false</rotatable>
+		<thingCategories Inherit="False">
+			<li>Cultivation_Pill</li>
+		</thingCategories>
+		<tradeTags>
+			<li>CTR_Pill</li>
+		</tradeTags>
+		<techLevel>Medieval</techLevel>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<baseIngestTicks>60</baseIngestTicks>
+			<ingestSound>Ingest_Pill</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+				  <offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Take {0}</ingestCommandString>
+			<ingestReportString>Taking {0}.</ingestReportString>
+			<chairSearchRadius>0</chairSearchRadius>			
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>200</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!-- Healing Pill -->
+	<ThingDef ParentName="GeneralPillBase">
+		<defName>CTR_HealingPill</defName>
+		<label>flesh healing pill</label>
+		<description>a pill used to heal physical wounds. speed up healing process considerably. made from Healing Item and Qi Condensing Item \n\nTags: Pill, Healing Item</description>
+		<graphicData>
+		  <texPath>Things/Items/Pills/CTR_HealingPill</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<statBases>
+		  <WorkToMake>600</WorkToMake>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <MarketValue>25</MarketValue>
+		  <Mass>0.01</Mass>
+		  <Flammability>0.25</Flammability>
+		</statBases>		
+		<generateCommonality>0.5</generateCommonality>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>		  
+		  <outcomeDoers>
+			<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_AddOrRemoveHediff">
+				<hediffDef>CTR_HealingPill</hediffDef>
+				<baseDuration>10000</baseDuration>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<tradeTags>
+			<li>Healing_Item</li>
+		</tradeTags>		
+	</ThingDef>
+	
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_HealingPill</defName>
+		<label>healing pill effect</label>
+		<description>. . .</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+			<totalBleedFactor>0.75</totalBleedFactor>
+			<naturalHealingFactor>1.5</naturalHealingFactor>			
+			<statOffsets>		
+				<InjuryHealingFactor>0.5</InjuryHealingFactor>				
+			</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- Dantian repair pill -->
+	<ThingDef ParentName="GeneralPillBase">
+		<defName>CTR_DantianRepairPill</defName>
+		<label>dantian healing pill</label>
+		<description>a pill used to heal dantian injury. repair the damanged dantian by 10%. made from Immortal Qi and Qi Condensing item \n\nTags: Pill, Healing Item</description>
+		<graphicData>
+		  <texPath>Things/Items/Pills/CTR_DantianRepairPill</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<statBases>
+		  <WorkToMake>600</WorkToMake>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <MarketValue>25</MarketValue>
+		  <Mass>0.01</Mass>
+		  <Flammability>0.25</Flammability>
+		</statBases>		
+		<generateCommonality>0.5</generateCommonality>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>		  
+		  <outcomeDoers>
+			<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_AddOrRemoveHediff">
+				<hediffDefToRemove>CTR_DantianDamage</hediffDefToRemove>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<tradeTags>
+			<li>Healing_Item</li>
+		</tradeTags>		
+	</ThingDef>
+	
+	<!-- Cold-Resistance Pill -->
+	<ThingDef ParentName="GeneralPillBase">
+		<defName>CTR_ColdResistPill</defName>
+		<label>cold-resistance pill</label>
+		<description>a pill fused with fire Qi, can wand off coldness for 6 hours once consumed. made from Neutral Qi and Cold Qi \n\nTags: Pill, Utility Item</description>
+		<graphicData>
+		  <texPath>Things/Items/Pills/CTR_ColdResistPill</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<statBases>
+		  <WorkToMake>600</WorkToMake>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <MarketValue>25</MarketValue>
+		  <Mass>0.01</Mass>
+		  <Flammability>0.25</Flammability>
+		</statBases>		
+		<generateCommonality>0.5</generateCommonality>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>		  
+		  <outcomeDoers>
+			<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_AddOrRemoveHediff">
+				<hediffDef>CTR_ColdResistPill</hediffDef>
+				<baseDuration>15000</baseDuration>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<tradeTags>
+			<li>Utility_Item</li>
+		</tradeTags>		
+	</ThingDef>
+	
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_ColdResistPill</defName>
+		<label>cold-resistance effect</label>
+		<description>. . .</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>		
+			<statOffsets>		
+				<ComfyTemperatureMin>-25</ComfyTemperatureMin>				
+			</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- Heat-Resistance Pill -->
+	<ThingDef ParentName="GeneralPillBase">
+		<defName>CTR_HeatResistPill</defName>
+		<label>heat-resistance pill</label>
+		<description>a pill fused with water Qi, can wand off heat for 6 hours once consumed. made from Neutral Qi and Fire Qi \n\nTags: Pill, Utility Item</description>
+		<graphicData>
+		  <texPath>Things/Items/Pills/CTR_HeatResistPill</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<statBases>
+		  <WorkToMake>600</WorkToMake>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <MarketValue>25</MarketValue>
+		  <Mass>0.01</Mass>
+		  <Flammability>0.25</Flammability>
+		</statBases>		
+		<generateCommonality>0.5</generateCommonality>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>		  
+		  <outcomeDoers>
+			<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_AddOrRemoveHediff">
+				<hediffDef>CTR_HeatResistPill</hediffDef>
+				<baseDuration>15000</baseDuration>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<tradeTags>
+			<li>Utility_Item</li>
+		</tradeTags>		
+	</ThingDef>
+	
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_HeatResistPill</defName>
+		<label>heat-resistance effect</label>
+		<description>. . .</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>		
+			<statOffsets>		
+				<ComfyTemperatureMax>25</ComfyTemperatureMax>				
+			</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- Qi-Absorption Pill -->
+	<ThingDef ParentName="GeneralPillBase">
+		<defName>CTR_ImproveAbsorptionPill</defName>
+		<label>Qi-Absorption pill</label>
+		<description>a pill that enhance user Qi circulation, improve cultivation speed for 1 day once consumed. made from Qi Source item and Qi Condensing item \n\nTags: Pill, Cultivation Pill, Utility Item</description>
+		<graphicData>
+		  <texPath>Things/Items/Pills/CTR_ImproveAbsorptionPill</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<statBases>
+		  <WorkToMake>600</WorkToMake>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <MarketValue>25</MarketValue>
+		  <Mass>0.01</Mass>
+		  <Flammability>0.25</Flammability>
+		</statBases>		
+		<generateCommonality>0.5</generateCommonality>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>		  
+		  <outcomeDoers>
+			<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_AddOrRemoveHediff">
+				<hediffDef>CTR_ImproveAbsorptionPill</hediffDef>
+				<baseDuration>60000</baseDuration>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<tradeTags>
+			<li>Utility_Item</li>
+			<li>Cultivation_Pill</li>
+		</tradeTags>		
+	</ThingDef>
+	
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_ImproveAbsorptionPill</defName>
+		<label>improve absorption effect</label>
+		<description>. . .</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>		
+			<statOffsets>		
+				<CultivationSpeed>0.25</CultivationSpeed>				
+			</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- Reflex Pill -->
+	<ThingDef ParentName="GeneralPillBase">
+		<defName>CTR_ImproveReflexPill</defName>
+		<label>Reflex pill</label>
+		<description>a pill that enhance user reflex ability, improve dodge chance for 2 hours once consumed. made from Fire Qi and Metal Qi \n\nTags: Pill, Utility Item</description>
+		<graphicData>
+		  <texPath>Things/Items/Pills/CTR_ImproveReflexPill</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<statBases>
+		  <WorkToMake>600</WorkToMake>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <MarketValue>25</MarketValue>
+		  <Mass>0.01</Mass>
+		  <Flammability>0.25</Flammability>
+		</statBases>		
+		<generateCommonality>0.5</generateCommonality>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>		  
+		  <outcomeDoers>
+			<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_AddOrRemoveHediff">
+				<hediffDef>CTR_ImproveReflexPill</hediffDef>
+				<baseDuration>5000</baseDuration>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<tradeTags>
+			<li>Utility_Item</li>
+		</tradeTags>		
+	</ThingDef>
+	
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_ImproveReflexPill</defName>
+		<label>improve reflex effect</label>
+		<description>. . .</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>		
+			<statFactors>
+				<MeleeHitChance>1.25</MeleeHitChance>
+				<MeleeDodgeChance>1.25</MeleeDodgeChance>
+			</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- Working Pill -->
+	<ThingDef ParentName="GeneralPillBase">
+		<defName>CTR_ImproveGWSPill</defName>
+		<label>Working Speed pill</label>
+		<description>a pill that enhance user working speed ability, improve global work speed for 3 hours once consumed. made from Metal Qi and Fire Qi \n\nTags: Pill, Utility Item</description>
+		<graphicData>
+		  <texPath>Things/Items/Pills/CTR_ImproveGWSPill</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<statBases>
+		  <WorkToMake>600</WorkToMake>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <MarketValue>25</MarketValue>
+		  <Mass>0.01</Mass>
+		  <Flammability>0.25</Flammability>
+		</statBases>		
+		<generateCommonality>0.5</generateCommonality>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>		  
+		  <outcomeDoers>
+			<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_AddOrRemoveHediff">
+				<hediffDef>CTR_ImproveGWSPill</hediffDef>
+				<baseDuration>7500</baseDuration>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<tradeTags>
+			<li>Utility_Item</li>
+		</tradeTags>		
+	</ThingDef>
+	
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_ImproveGWSPill</defName>
+		<label>improve working speed effect</label>
+		<description>. . .</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>		
+			<statFactors>
+				<WorkSpeedGlobal>1.25</WorkSpeedGlobal>
+			</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- LifeSpan Pill -->
+	<ThingDef ParentName="GeneralPillBase">
+		<defName>CTR_LifeSpanPill</defName>
+		<label>Life Extending pill</label>
+		<description>a pill that increase user lifespan by 10% each time it consumed. up to a maximum of 100%. made from Divine item and Immortal Qi \n\nTags: Pill, Utility Item</description>
+		<graphicData>
+		  <texPath>Things/Items/Pills/CTR_LifeSpanPill</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<statBases>
+		  <WorkToMake>600</WorkToMake>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <MarketValue>25</MarketValue>
+		  <Mass>0.01</Mass>
+		  <Flammability>0.25</Flammability>
+		</statBases>		
+		<generateCommonality>0.05</generateCommonality>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>		  
+		  <outcomeDoers>
+			<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_AddOrRemoveHediff">
+				<hediffDef>CTR_LifeSpanPill</hediffDef>
+				<baseDuration>7500</baseDuration>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<tradeTags>
+			<li>Utility_Item</li>
+		</tradeTags>		
+	</ThingDef>
+	
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_LifeSpanPill</defName>
+		<label>life extending effect</label>
+		<description>. . .</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<!-- <initialSeverity>1</initialSeverity> -->
+		<isBad>false</isBad>
+		<comps>
+			<!-- <li Class="HediffCompProperties_Disappears"> -->
+				<!-- <showRemainingTime>true</showRemainingTime> -->
+			<!-- </li> -->
+		</comps>
+		<stages>
+			<li>		
+				<minSeverity>0.1</minSeverity>	
+				<statOffsets>
+					<LifespanFactor>0.1</LifespanFactor>
+				</statOffsets>
+			</li>
+			<li>		
+				<minSeverity>0.2</minSeverity>	
+				<statOffsets>
+					<LifespanFactor>0.2</LifespanFactor>
+				</statOffsets>
+			</li>
+			<li>		
+				<minSeverity>0.3</minSeverity>	
+				<statOffsets>
+					<LifespanFactor>0.3</LifespanFactor>
+				</statOffsets>
+			</li>
+			<li>		
+				<minSeverity>0.4</minSeverity>	
+				<statOffsets>
+					<LifespanFactor>0.4</LifespanFactor>
+				</statOffsets>
+			</li>
+			<li>		
+				<minSeverity>0.5</minSeverity>	
+				<statOffsets>
+					<LifespanFactor>0.5</LifespanFactor>
+				</statOffsets>
+			</li>
+			<li>		
+				<minSeverity>0.6</minSeverity>	
+				<statOffsets>
+					<LifespanFactor>0.6</LifespanFactor>
+				</statOffsets>
+			</li>
+			<li>		
+				<minSeverity>0.7</minSeverity>	
+				<statOffsets>
+					<LifespanFactor>0.7</LifespanFactor>
+				</statOffsets>
+			</li>
+			<li>		
+				<minSeverity>0.8</minSeverity>	
+				<statOffsets>
+					<LifespanFactor>0.8</LifespanFactor>
+				</statOffsets>
+			</li>
+			<li>		
+				<minSeverity>0.9</minSeverity>	
+				<statOffsets>
+					<LifespanFactor>0.9</LifespanFactor>
+				</statOffsets>
+			</li>
+			<li>		
+				<minSeverity>1</minSeverity>	
+				<statOffsets>
+					<LifespanFactor>1</LifespanFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- StoneSkin Pill -->
+	<ThingDef ParentName="GeneralPillBase">
+		<defName>CTR_StoneSkinPill</defName>
+		<label>Stoneskin pill</label>
+		<description>a pill that clad user body in stoneskin for 3 hours once consumed. made from two Earth Qi \n\nTags: Pill, Defense Item</description>
+		<graphicData>
+		  <texPath>Things/Items/Pills/CTR_StoneSkinPill</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<statBases>
+		  <WorkToMake>600</WorkToMake>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <MarketValue>25</MarketValue>
+		  <Mass>0.01</Mass>
+		  <Flammability>0.25</Flammability>
+		</statBases>		
+		<generateCommonality>0.5</generateCommonality>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>		  
+		  <outcomeDoers>
+			<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_AddOrRemoveHediff">
+				<hediffDef>CTR_StoneSkinPill</hediffDef>
+				<baseDuration>7500</baseDuration>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<tradeTags>
+			<li>Defense_Item</li>
+		</tradeTags>		
+	</ThingDef>
+	
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_StoneSkinPill</defName>
+		<label>stoneskin effect</label>
+		<description>. . .</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>		
+			<statOffsets>
+				<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+			</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- Fertility Pill -->
+	<ThingDef ParentName="GeneralPillBase" MayRequire="ludeon.rimworld.biotech">
+		<defName>CTR_FertilityPill</defName>
+		<label>Fertility pill</label>
+		<description>a pill that improve user fertility for 3 hours. made from Healing item and Yin Qi \n\nTags: Pill, Utility Item</description>
+		<graphicData>
+		  <texPath>Things/Items/Pills/CTR_FertilityPill</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<statBases>
+		  <WorkToMake>600</WorkToMake>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <MarketValue>25</MarketValue>
+		  <Mass>0.01</Mass>
+		  <Flammability>0.25</Flammability>
+		</statBases>		
+		<generateCommonality>0.5</generateCommonality>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>		  
+		  <outcomeDoers>
+			<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_AddOrRemoveHediff">
+				<hediffDef>CTR_FertilityPill</hediffDef>
+				<baseDuration>7500</baseDuration>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<tradeTags>
+			<li>Defense_Item</li>
+		</tradeTags>		
+	</ThingDef>
+	
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_FertilityPill</defName>
+		<label>fertility effect</label>
+		<description>. . .</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>		
+			<statOffsets>
+				<Fertility>5</Fertility>
+			</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+</Defs>

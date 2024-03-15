@@ -1,0 +1,21 @@
+<Defs>
+
+	<WorkGiverDef>
+	<defName>CTR_DoBillAlchemy</defName>
+	<label>perform alchemy</label>
+	<giverClass>WorkGiver_DoBill</giverClass>
+	<workType>Crafting</workType>
+	<priorityInType>50</priorityInType>
+	<fixedBillGiverDefs>
+		<li>CTR_AlchemyFurnace_Basic</li>
+		<li>CTR_AlchemyFurnace_Intermediate</li>
+	</fixedBillGiverDefs>
+	<verb>perform alchemy</verb>
+	<gerund>perform alchemy at</gerund>
+	<requiredCapacities>
+		<li>Manipulation</li>
+	</requiredCapacities>
+	<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	
+</Defs>

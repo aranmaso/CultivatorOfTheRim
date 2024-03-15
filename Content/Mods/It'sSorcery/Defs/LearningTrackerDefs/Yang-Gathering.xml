@@ -1,0 +1,131 @@
+<Defs>
+	
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerProgress">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Progress</learningTrackerClass>
+		<defName>CTR_YangGatheringLearningProgress</defName>
+		<label>Yang Gathering progress</label>
+	</ItsSorceryFramework.LearningTrackerDef>
+	
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerTree">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Tree</learningTrackerClass>
+		<defName>CTR_YangGatheringLearningTree</defName>
+		<label>Yang-Gathering</label>
+	</ItsSorceryFramework.LearningTrackerDef>	
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_YangGatheringLearningTree</learningTrackerDef>
+		<defName>CTR_YangGathering</defName>
+		<label>Yang-Qi Introduction</label>
+		<description>introduction step to improve user yang qi efficiency</description>		
+		
+		<prereqsStats>
+		<li>
+			<mode>GreaterEqual</mode>
+			<statReqs>
+				<CTR_YangQi_AbsorptionMultiplier>0.75</CTR_YangQi_AbsorptionMultiplier>
+			</statReqs>
+		</li>
+		</prereqsStats>
+		
+		<prereqsHediff>
+		<li>
+			<key>CTR_BreakthroughCounter</key>
+			<value>0</value>
+		</li>
+		</prereqsHediff>
+		
+		<statOffsets>
+			<CTR_YangPath>1</CTR_YangPath>
+			<CTR_QiPath>1</CTR_QiPath>
+			<TechniqueLearningCount>1</TechniqueLearningCount>
+			<CTR_YangQi_AbsorptionMultiplier>0.1</CTR_YangQi_AbsorptionMultiplier>
+		</statOffsets>
+		
+		<coordX>0</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_YangGatheringLearningTree</learningTrackerDef>
+		<defName>CTR_YangGathering_DantianFortifying</defName>
+		<label>Dantian Fortification</label>
+		<description>fortify user Dantian with a layer of defensive Qi. lowering the chance to receive Dantian damage.</description>		
+		
+		<prereqs>
+			<li>CTR_YangGathering</li>
+		</prereqs>
+		
+		<statOffsets>
+			<CTR_DantianDamageChance>-0.05</CTR_DantianDamageChance>
+		</statOffsets>
+		
+		<coordX>1</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_YangGatheringLearningTree</learningTrackerDef>
+		<defName>CTR_YangGathering_YangBarrier</defName>
+		<label>Yang Barrier</label>
+		<description>enhance user defensive ability. and improve Qi shield durability</description>		
+		
+		<prereqs>
+			<li>CTR_YangGathering</li>
+		</prereqs>
+		
+		<statOffsets>
+			<ArmorRating_Qi>0.10</ArmorRating_Qi>
+			<EnergyShieldEnergyMax>0.05</EnergyShieldEnergyMax>
+		</statOffsets>
+		
+		<coordX>1</coordX>
+		<coordY>2</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_YangGatheringLearningTree</learningTrackerDef>
+		<defName>CTR_YangGathering_SoothingPalm</defName>
+		<label>Soothing Palm</label>
+		<description>enhance user defensive ability. and improve Qi shield durability</description>		
+		
+		<prereqs>
+			<li>CTR_YangGathering_DantianFortifying</li>
+		</prereqs>
+		
+		<abilityGain>
+			<li>CTR_SoothingPalm</li>
+		</abilityGain>
+		
+		<statOffsets>
+			<ArmorRating_Qi>0.10</ArmorRating_Qi>
+			<EnergyShieldEnergyMax>0.05</EnergyShieldEnergyMax>
+		</statOffsets>
+		
+		<coordX>2</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_YangGatheringLearningTree</learningTrackerDef>
+		<defName>CTR_YangGathering_VeinHealing</defName>
+		<label>Innate Vein Healing</label>
+		<description>enhance user regeneration rate</description>		
+		
+		<prereqs>
+			<li>CTR_YangGathering_YangBarrier</li>
+		</prereqs>
+		
+		<statOffsets>
+			<InjuryHealingFactor>0.25</InjuryHealingFactor>
+		</statOffsets>
+		
+		<coordX>2</coordX>
+		<coordY>2</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+</Defs>

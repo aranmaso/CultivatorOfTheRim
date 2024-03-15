@@ -1,0 +1,51 @@
+<tags>
+
+	Cultivation_Resource
+	Qi_Condensing_Ingredient
+	
+	<!-- Plant -->
+	Spirit_Plant
+	Spirit_Plant_Product
+	
+	<!-- Talisman -->
+	CTR_Talisman
+	
+	
+	<!-- Qi -->
+	Neutral_Qi
+	Cold_Qi
+	Yin_Qi
+	Yang_Qi
+	Fire_Qi
+	Water_Qi
+	Wood_Qi
+	Earth_Qi
+	Metal_Qi
+	Pure_Qi
+	Saint_Qi
+	Immortal_Qi
+	Heavenly_Qi
+
+	<!-- Misc -->
+	Divine
+	Mysterious
+	Artificially_Made
+	
+	<!-- Qi source -->
+	Qi_Source
+	Qi_Source_Tier2
+	Qi_Source_Tier3
+	Qi_Source_Tier4
+	Qi_Source_Tier5
+	Qi_Source_Tier6
+	
+	<!-- Pill -->
+	CTR_Pill	
+	Cultivation_Pill
+
+	<!-- Item -->
+	Healing_Item
+	Utility_Item
+	Defense_Item
+
+</tags>

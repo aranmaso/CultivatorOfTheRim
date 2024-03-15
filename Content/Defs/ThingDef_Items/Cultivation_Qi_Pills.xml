@@ -1,0 +1,500 @@
+<Defs>	
+	
+	<ThingDef ParentName="DrugBase" Name="CultivationDrugBase" Abstract="True">
+		<rotatable>false</rotatable>
+		<thingCategories Inherit="False">
+			<li>Cultivation_Pill</li>
+		</thingCategories>
+		<tradeTags>
+			<li>Qi_Source</li>
+			<li>CTR_Pill</li>
+			<li>Cultivation_Pill</li>
+		</tradeTags>
+		<techLevel>Medieval</techLevel>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<baseIngestTicks>60</baseIngestTicks>
+			<ingestSound>Ingest_Pill</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+				  <offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Take {0}</ingestCommandString>
+			<ingestReportString>Taking {0}.</ingestReportString>
+			<chairSearchRadius>0</chairSearchRadius>			
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>200</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<HediffDef Name="CultivationDrugHediffBase" Abstract="True">
+		<description>. . .</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<initialSeverity>0.001</initialSeverity>
+		<minSeverity>0.001</minSeverity>
+		<tags>
+			<li>CTR_DrugHediff</li>
+		</tags>
+		<isBad>false</isBad>
+		<comps>
+		</comps>
+		<modExtensions>	
+		</modExtensions>
+	</HediffDef>
+
+	<!-- Qi-Condensing Pill -->
+	<ThingDef ParentName="CultivationDrugBase">
+		<defName>CTR_QiCondensingPill</defName>
+		<label>Qi Condensing Pill</label>
+		<description>a pill made by experienced alchemist, capable of slightly increasing one cultivation \n\nTags:Qi Source, Qi Source Tier1, Pure_Qi, Neutral Qi</description>
+		<graphicData>
+		  <texPath>Things/Items/Pills/CTR_QiCondensingPill</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>		
+		<statBases>
+		  <WorkToMake>600</WorkToMake>
+		  <MarketValue>10</MarketValue>
+		  <Mass>0.01</Mass>
+		</statBases>		
+		<generateCommonality>0.75</generateCommonality>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>		  
+		  <outcomeDoers>
+			<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_GiveQi">
+				<minimumCultivationLevel>
+					<li>CTR_Qi_GatheringOrAbove</li>
+				</minimumCultivationLevel>
+				<hediffDef>CTR_QiCondensingPillAbsorb</hediffDef>
+				<notForMortal>true</notForMortal>
+			  <!-- <severity>0.01~0.1</severity> -->
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<tradeTags>
+			<li>Pure_Qi</li>
+			<li>Qi_Source_Tier1</li>
+			<li>Neutral_Qi</li>
+		</tradeTags>		
+	</ThingDef>
+
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_QiCondensingPillAbsorb</defName>
+		<label>Qi Condensing Pill absorbing</label>
+		<description>. . .</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+				<disappearsAfterTicks>10000</disappearsAfterTicks>
+			</li>
+			
+			<li Class="CultivatorOfTheRim.HediffCompProperties_AbsorbingPill">
+				<severityAmount>0.005</severityAmount>
+				<tickInterval>60</tickInterval>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<!-- <hediffGivers> -->
+					<!-- <li Class="CultivatorOfTheRim.HediffGiver_AbsorbingPill"> -->
+						<!-- <severityAmount>0.005</severityAmount> -->
+						<!-- <tickInterval>60</tickInterval> -->
+					<!-- </li> -->
+				<!-- </hediffGivers> -->
+				<statOffsets>
+					<CultivationSpeed>0.1</CultivationSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- NascentSoul Pill -->
+	<ThingDef ParentName="CultivationDrugBase">
+		<defName>CTR_NascentQiPill</defName>
+		<label>Nascent Qi Pill</label>
+		<description>a Qi Pill that contains the Qi of Nascent Soul level. made by exceptional alchemist, capable of moderately increasing one cultivation \nOnly Golden Core Realm or above can use Nascent Qi \n\n&lt;color=#FF0000&gt;Not for mortal consumption&lt;/color&gt; \n\nTags:Qi Source, Qi Source Tier2, Nascent Qi, Neutral Qi</description>
+		<graphicData>
+		  <texPath>Things/Items/Pills/CTR_NascentQiPill</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToMake>600</WorkToMake>
+			<MarketValue>20</MarketValue>
+			<Mass>0.01</Mass>
+		</statBases>
+		<generateCommonality>0.35</generateCommonality>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>
+		  <outcomeDoers>
+			<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_GiveQi">
+				<minimumCultivationLevel>
+					<li>CTR_GoldenCoreOrAbove</li>
+				</minimumCultivationLevel>
+				<hediffDef>CTR_NascentQiPillAbsorb</hediffDef>
+				<backlashHediffDef>CTR_NascentQiPillBacklash</backlashHediffDef>
+				<notForMortal>true</notForMortal>
+			  <!-- <severity>0.01~0.1</severity> -->
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<tradeTags>
+			<li>Nascent_Qi</li>
+			<li>Neutral_Qi</li>
+			<li>Qi_Source_Tier2</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_NascentQiPillAbsorb</defName>
+		<label>Nascent Qi Pill absorbing</label>
+		<description>. . .</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+				<disappearsAfterTicks>10000</disappearsAfterTicks>
+			</li>
+			<li Class="CultivatorOfTheRim.HediffCompProperties_AbsorbingPill">
+				<severityAmount>0.0050~0.0075</severityAmount>
+				<tickInterval>60</tickInterval>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<!-- <hediffGivers> -->
+					<!-- <li Class="CultivatorOfTheRim.HediffGiver_AbsorbingPill"> -->
+					<!-- <severityAmount>0.0050~0.0075</severityAmount> -->
+					<!-- <tickInterval>60</tickInterval> -->
+					<!-- </li> -->
+				<!-- </hediffGivers> -->
+				<statOffsets>
+					<CultivationSpeed>0.25</CultivationSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_NascentQiPillBacklash</defName>
+		<label>Nascent Qi Pill backlash</label>
+		<description>this happen because pawn consuming a Qi pill way above their intended level.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
+		<initialSeverity>1</initialSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+				<disappearsAfterTicks>10000</disappearsAfterTicks>
+			</li>
+			<li Class="CultivatorOfTheRim.HediffCompProperties_AbsorbingPill">
+				<severityAmount>-0.0100~-0.0125</severityAmount>
+				<tickInterval>60</tickInterval>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<hediffGivers>
+					<!-- <li Class="CultivatorOfTheRim.HediffGiver_AbsorbingPill"> -->
+					<!-- <severityAmount>-0.0100~-0.0125</severityAmount> -->
+					<!-- <tickInterval>60</tickInterval> -->
+					<!-- </li> -->
+					<li Class="CultivatorOfTheRim.HediffGiver_PillBacklash">
+					<hediff>Burn</hediff>
+					<severityAmount>0.1~0.5</severityAmount>
+					<canAffectAnyLivePart>true</canAffectAnyLivePart>
+					<tickInterval>250</tickInterval>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- Saint Qi Pill -->
+	<ThingDef ParentName="CultivationDrugBase">
+		<defName>CTR_SaintQiPill</defName>
+		<label>Saint Qi Pill</label>
+		<description>a Qi Condensing Pill that contain an Saint Qi, made by very exceptional alchemist, capable of significantly increasing one cultivation \nOnly Trancendent Realm or above can use Saint Qi \n\n&lt;color=#FF0000&gt;lethal for mortal consumption&lt;/color&gt; \n\nTags:Qi Source, Qi Source Tier3, Saint Qi, Neutral Qi</description>
+		<graphicData>
+		  <texPath>Things/Items/Pills/CTR_SaintQiPill</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>		
+		<statBases>
+		  <WorkToMake>600</WorkToMake>
+		  <MarketValue>50</MarketValue>
+		  <Mass>0.01</Mass>
+		</statBases>		
+		<generateCommonality>0.15</generateCommonality>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>		  
+		  <outcomeDoers>
+			<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_GiveQi">
+				<minimumCultivationLevel>
+					<li>CTR_TranscendentOrAbove</li>
+					<li>CTR_HalfStep_SaintOrAbove</li>
+				</minimumCultivationLevel>
+				<hediffDef>CTR_SaintQiPillAbsorb</hediffDef>
+				<backlashHediffDef>CTR_SaintQiPillBacklash</backlashHediffDef>
+				<notForMortal>true</notForMortal>
+				<lethalForMortal>true</lethalForMortal>
+				<severity>0.5~1</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<tradeTags>
+			<li>Saint_Qi</li>
+			<li>Neutral_Qi</li>
+			<li>Qi_Source_Tier3</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_SaintQiPillAbsorb</defName>
+		<label>Saint Qi Pill absorbing</label>
+		<description>. . .</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+				<disappearsAfterTicks>10000</disappearsAfterTicks>
+			</li>
+			<li Class="CultivatorOfTheRim.HediffCompProperties_AbsorbingPill">
+				<severityAmount>0.0150~0.0175</severityAmount>
+				<tickInterval>60</tickInterval>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<statOffsets>
+					<CultivationSpeed>0.5</CultivationSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_SaintQiPillBacklash</defName>
+		<label>Saint Qi Pill backlash</label>
+		<description>this happen because pawn consuming a Qi pill way above their intended level.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
+		<initialSeverity>1</initialSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+				<disappearsAfterTicks>10000</disappearsAfterTicks>
+			</li>
+			<li Class="CultivatorOfTheRim.HediffCompProperties_AbsorbingPill">
+				<severityAmount>-0.0015~-0.0050</severityAmount>
+				<tickInterval>60</tickInterval>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<hediffGivers>
+					<li Class="CultivatorOfTheRim.HediffGiver_PillBacklash">
+					<hediff>Burn</hediff>
+					<severityAmount>0.1~0.5</severityAmount>
+					<canAffectAnyLivePart>true</canAffectAnyLivePart>
+					<tickInterval>250</tickInterval>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- Immortal Qi Pill -->
+	<ThingDef ParentName="CultivationDrugBase">
+		<defName>CTR_ImmortalQiPill</defName>
+		<label>Immortal Qi Pill</label>
+		<description>a Qi Condensing Pill that contain an Immortal Qi, made by very exceptional alchemist, capable of drastically increasing one cultivation \nOnly Saint King or above can use Immortal Qi \n\n&lt;color=#FF0000&gt;lethal for mortal consumption&lt;/color&gt; \n\nTags:Qi Source, Qi Source Tier5, Immortal Qi, Neutral Qi</description>
+		<graphicData>
+			<texPath>Things/Items/Pills/CTR_ImmortalQiPill</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>	
+		<statBases>
+			<WorkToMake>600</WorkToMake>
+			<MarketValue>100</MarketValue>
+			<Mass>0.01</Mass>
+		</statBases>	
+		<generateCommonality>0.05</generateCommonality>		
+		<ingestible>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_GiveQi">
+					<minimumCultivationLevel>
+						<li>CTR_SaintKingOrAbove</li>
+						<li>CTR_ImmortalAscensionOrAbove</li>
+					</minimumCultivationLevel>
+					<hediffDef>CTR_ImmortalQiPillAbsorb</hediffDef>
+					<backlashHediffDef>CTR_ImmortalQiPillBacklash</backlashHediffDef>
+					<notForMortal>true</notForMortal>
+					<lethalForMortal>true</lethalForMortal>
+					<severity>0.5~1</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<tradeTags>
+			<li>Immortal_Qi</li>
+			<li>Neutral_Qi</li>
+			<li>Qi_Source_Tier5</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_ImmortalQiPillAbsorb</defName>
+		<label>Immortal Qi Pill absorbing</label>
+		<description>. . .</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+				<disappearsAfterTicks>10000</disappearsAfterTicks>
+			</li>
+			<li Class="CultivatorOfTheRim.HediffCompProperties_AbsorbingPill">
+				<severityAmount>0.0250~0.0300</severityAmount>
+				<tickInterval>60</tickInterval>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<statOffsets>
+					<CultivationSpeed>1</CultivationSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_ImmortalQiPillBacklash</defName>
+		<label>Immortal Qi Pill backlash</label>
+		<description>this happen because pawn consuming a Qi pill way above their intended level.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
+		<initialSeverity>1</initialSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+				<disappearsAfterTicks>10000</disappearsAfterTicks>
+			</li>
+			<li Class="CultivatorOfTheRim.HediffCompProperties_AbsorbingPill">
+				<severityAmount>-0.0050~-0.0100</severityAmount>
+				<tickInterval>60</tickInterval>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<hediffGivers>
+					<li Class="CultivatorOfTheRim.HediffGiver_PillBacklash">
+					<hediff>Burn</hediff>
+					<severityAmount>0.5~0.750</severityAmount>
+					<canAffectAnyLivePart>true</canAffectAnyLivePart>
+					<tickInterval>250</tickInterval>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+  
+	<!-- Junk Pill -->
+	<ThingDef ParentName="DrugBase">
+		<defName>CTR_JunkPill</defName>
+		<label>Junk Pill</label>
+		<description>a fail pill made as a result of failed alchemy, either from insufficient skill or insufficiant cultivation level of alchemist</description>
+		<graphicData>
+		  <texPath>Things/Items/Pills/CTR_JunkPill</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>600</WorkToMake>
+			<MarketValue>0.1</MarketValue>
+			<Mass>0.01</Mass>
+			<Nutrition>-1</Nutrition>
+		</statBases>
+		<techLevel>Medieval</techLevel>
+		<ingestible>
+		  <drugCategory>Hard</drugCategory>
+		  <foodType>Processed</foodType>
+		  <baseIngestTicks>60</baseIngestTicks>
+		  <ingestSound>Ingest_Pill</ingestSound>
+		  <ingestHoldOffsetStanding>
+			<northDefault>
+			  <offset>(0.18,0,0)</offset>
+			</northDefault>
+		  </ingestHoldOffsetStanding>
+		  <ingestCommandString>Take {0}</ingestCommandString>
+		  <ingestReportString>Taking {0}.</ingestReportString>
+		  <chairSearchRadius>0</chairSearchRadius>
+		  <outcomeDoers>
+			<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_GiveQi">
+			  <severity>-0.01~-0.1</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>200</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Tribulation Remnant Pill -->
+	<ThingDef ParentName="CultivationDrugBase">
+		<defName>CTR_TribulationRemnantPill</defName>
+		<label>Tribulation Remnant Pill</label>
+		<description>a pill formed and left behind by lightning strike. once consumed, have a chance to start mortal into the path of cultivation \n\nTags:Qi Source, Qi Source Tier6, Immortal Qi, Neutral Qi</description>
+		<graphicData>
+		  <texPath>Things/Items/Pills/CTR_TribulationRemnantPill</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<statBases>
+		  <!-- <WorkToMake>600</WorkToMake> -->
+		  <MaxHitPoints>1000</MaxHitPoints>
+		  <MarketValue>150</MarketValue>
+		  <Mass>0.01</Mass>
+		  <Flammability>0</Flammability>
+		</statBases>		
+		<generateCommonality>0.15</generateCommonality>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>		  
+		  <outcomeDoers>
+			<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_GiveQi">
+				<Hediffchance>0.5</Hediffchance>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<tradeTags>
+			<li>Immortal_Qi</li>
+			<li>Neutral_Qi</li>
+			<li>Qi_Source_Tier6</li>
+			<li>Heavenly_Qi</li>
+		</tradeTags>		
+	</ThingDef>
+
+</Defs>
