@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <loadFolders>
-  <v1.4>
+  <v1.5>
 	<li>Common</li>
 	<li>Content</li>
-	<li>Content/Mods/It'sSorcery</li>
+	<li IfModActive="zomuro.itssorcery">Content/Mods/It'sSorcery</li>
+	<li IfModNotActive="zomuro.itssorcery">Content/Mods/No Sorcery</li>
 	<!-- IfModNotActive -->
 	<li IfModActive="aranmaho.makai">Content/Mods/Makai</li>
-  </v1.4>
+	<li IfModActive="smashphil.vehicleframework">Content/Mods/VehicleFramework</li>
+  </v1.5>
 </loadFolders>
