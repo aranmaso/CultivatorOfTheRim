@@ -10,6 +10,7 @@
 			<li>CTR_Realm</li>
 		</tags>
 		<isBad>false</isBad>
+		<priceImpact>true</priceImpact>
 		<comps>
 		  <!-- <li Class="HediffCompProperties_SeverityPerDay"> -->
 			<!-- <severityPerDay>0.001</severityPerDay> -->
@@ -84,7 +85,7 @@
 			<li>CTR_BreakingthroughProcess</li>
 		</tags>
 		<initialSeverity>1</initialSeverity>
-		<isBad>false</isBad>
+		<isBad>true</isBad>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
 				<showRemainingTime>true</showRemainingTime>
@@ -107,12 +108,13 @@
 		<hediffClass>HediffWithComps</hediffClass>
 		<isBad>false</isBad>
 		<maxSeverity>1.1</maxSeverity>
+		<tags Inherit="False" />
 		<comps>
 			<!-- <li> -->
 				<!-- <compClass>CultivatorOfTheRim.HediffComp_BreakthroughtCounter</compClass> -->
 			<!-- </li> -->
 			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>-0.0166666666666667</severityPerDay>
+				<severityPerDay>-0.0333333333333333</severityPerDay>
 				<showHoursToRecover>true</showHoursToRecover>
 			</li>
 		</comps>
@@ -209,7 +211,7 @@
 		  <li Class="CultivatorOfTheRim.HediffCompProperties_Cultivation">
 			<severityPerTriggerRange>0.001~0.005</severityPerTriggerRange>
 			<uiIcon>UI/UIicon/BreakthroughIcon</uiIcon>
-			<tickInterval>250</tickInterval>
+			<tickInterval>60</tickInterval>
 			<currentLevel>CTR_BodyTempering</currentLevel>
 			<nextLevel>CTR_MarrowCleansing</nextLevel>
 			<requireQiSource>false</requireQiSource>
@@ -231,6 +233,7 @@
 				<MeleeHitChance>0.1</MeleeHitChance>
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>10</CarryingCapacity>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -258,6 +261,7 @@
 				<MeleeHitChance>0.1</MeleeHitChance>
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>10</CarryingCapacity>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -285,6 +289,7 @@
 				<MeleeHitChance>0.1</MeleeHitChance>
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>10</CarryingCapacity>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -312,6 +317,7 @@
 				<MeleeHitChance>0.1</MeleeHitChance>
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>10</CarryingCapacity>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -339,6 +345,7 @@
 				<MeleeHitChance>0.1</MeleeHitChance>
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>15</CarryingCapacity>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -366,6 +373,7 @@
 				<MeleeHitChance>0.1</MeleeHitChance>
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>15</CarryingCapacity>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -393,6 +401,7 @@
 				<MeleeHitChance>0.1</MeleeHitChance>
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>15</CarryingCapacity>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -420,6 +429,7 @@
 				<MeleeHitChance>0.1</MeleeHitChance>
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>18</CarryingCapacity>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -447,6 +457,7 @@
 				<MeleeHitChance>0.1</MeleeHitChance>
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>20</CarryingCapacity>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -482,7 +493,7 @@
 		  <li Class="CultivatorOfTheRim.HediffCompProperties_Cultivation">
 			<severityPerTriggerRange>0.001~0.005</severityPerTriggerRange>
 			<uiIcon>UI/UIicon/BreakthroughIcon</uiIcon>
-			<tickInterval>250</tickInterval>
+			<tickInterval>60</tickInterval>
 			<currentLevel>CTR_MarrowCleansing</currentLevel>
 			<nextLevel>CTR_BoneForging</nextLevel>
 			<requireQiSource>false</requireQiSource>
@@ -509,6 +520,8 @@
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.1</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>20</CarryingCapacity>
+				<CTR_HealthMultiplier>0.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -541,6 +554,8 @@
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.12</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>20</CarryingCapacity>
+				<CTR_HealthMultiplier>0.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -573,6 +588,8 @@
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.14</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>20</CarryingCapacity>
+				<CTR_HealthMultiplier>0.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -605,6 +622,8 @@
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.1</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>20</CarryingCapacity>
+				<CTR_HealthMultiplier>0.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -637,6 +656,8 @@
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.16</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>20</CarryingCapacity>
+				<CTR_HealthMultiplier>0.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -669,6 +690,8 @@
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.18</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>20</CarryingCapacity>
+				<CTR_HealthMultiplier>0.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -701,6 +724,8 @@
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.2</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>20</CarryingCapacity>
+				<CTR_HealthMultiplier>0.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -733,6 +758,8 @@
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.22</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>20</CarryingCapacity>
+				<CTR_HealthMultiplier>0.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -765,6 +792,8 @@
 				<MeleeDodgeChance>0.1</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.25</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.05</AimingDelayFactor>
+				<CarryingCapacity>20</CarryingCapacity>
+				<CTR_HealthMultiplier>0.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -795,12 +824,12 @@
 		<tags>
 			<li>Mortal_Transforming</li>
 		</tags>
-		<maxSeverity>12</maxSeverity>
+		<maxSeverity>6</maxSeverity>
 		<comps>
 		  <li Class="CultivatorOfTheRim.HediffCompProperties_Cultivation">
 			<severityPerTriggerRange>0.005~0.0075</severityPerTriggerRange>
 			<uiIcon>UI/UIicon/BreakthroughIcon</uiIcon>
-			<tickInterval>250</tickInterval>
+			<tickInterval>60</tickInterval>
 			<currentLevel>CTR_BoneForging</currentLevel>
 			<nextLevel>CTR_Qi_Gathering</nextLevel>
 			<requireQiSource>false</requireQiSource>
@@ -817,7 +846,7 @@
 		<stages>		
 		<li>
 			<label>stage 1</label>
-			<minSeverity>1</minSeverity>
+			<minSeverity>0.6</minSeverity>
 			<totalBleedFactor>0.9</totalBleedFactor>
 			<makeImmuneTo>
 				<li>Flu</li>
@@ -829,6 +858,8 @@
 				<MeleeDodgeChance>0.12</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.25</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.07</AimingDelayFactor>
+				<CarryingCapacity>25</CarryingCapacity>
+				<CTR_HealthMultiplier>1</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -851,7 +882,7 @@
 		</li>
 		<li>
 			<label>stage 2</label>
-			<minSeverity>2</minSeverity>
+			<minSeverity>1.2</minSeverity>
 			<totalBleedFactor>0.9</totalBleedFactor>
 			<makeImmuneTo>
 				<li>Flu</li>
@@ -863,6 +894,8 @@
 				<MeleeDodgeChance>0.14</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.25</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.08</AimingDelayFactor>
+				<CarryingCapacity>30</CarryingCapacity>
+				<CTR_HealthMultiplier>1</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -885,7 +918,7 @@
 		</li>
 		<li>
 			<label>stage 3</label>
-			<minSeverity>4</minSeverity>
+			<minSeverity>1.8</minSeverity>
 			<totalBleedFactor>0.9</totalBleedFactor>
 			<makeImmuneTo>
 				<li>Flu</li>
@@ -897,6 +930,8 @@
 				<MeleeDodgeChance>0.16</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.25</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.09</AimingDelayFactor>
+				<CarryingCapacity>35</CarryingCapacity>
+				<CTR_HealthMultiplier>1</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -919,7 +954,7 @@
 		</li>
 		<li>
 			<label>stage 4</label>
-			<minSeverity>6</minSeverity>
+			<minSeverity>2.4</minSeverity>
 			<totalBleedFactor>0.9</totalBleedFactor>
 			<makeImmuneTo>
 				<li>Flu</li>
@@ -931,6 +966,8 @@
 				<MeleeDodgeChance>0.18</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.25</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.10</AimingDelayFactor>
+				<CarryingCapacity>40</CarryingCapacity>
+				<CTR_HealthMultiplier>1</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -953,7 +990,7 @@
 		</li>
 		<li>
 			<label>stage 5</label>
-			<minSeverity>7</minSeverity>
+			<minSeverity>3</minSeverity>
 			<totalBleedFactor>0.8</totalBleedFactor>
 			<makeImmuneTo>
 				<li>Flu</li>
@@ -965,6 +1002,8 @@
 				<MeleeDodgeChance>0.20</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.25</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.11</AimingDelayFactor>
+				<CarryingCapacity>45</CarryingCapacity>
+				<CTR_HealthMultiplier>1</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -987,7 +1026,7 @@
 		</li>
 		<li>
 			<label>stage 6</label>
-			<minSeverity>8</minSeverity>
+			<minSeverity>3.6</minSeverity>
 			<totalBleedFactor>0.8</totalBleedFactor>
 			<makeImmuneTo>
 				<li>Flu</li>
@@ -999,6 +1038,8 @@
 				<MeleeDodgeChance>0.22</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.25</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.12</AimingDelayFactor>
+				<CarryingCapacity>50</CarryingCapacity>
+				<CTR_HealthMultiplier>1</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -1021,7 +1062,7 @@
 		</li>
 		<li>
 			<label>stage 7</label>
-			<minSeverity>9</minSeverity>
+			<minSeverity>4.2</minSeverity>
 			<totalBleedFactor>0.8</totalBleedFactor>
 			<makeImmuneTo>
 				<li>Flu</li>
@@ -1033,6 +1074,8 @@
 				<MeleeDodgeChance>0.24</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.25</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.13</AimingDelayFactor>
+				<CarryingCapacity>55</CarryingCapacity>
+				<CTR_HealthMultiplier>1</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -1055,7 +1098,7 @@
 		</li>
 		<li>
 			<label>stage 8</label>
-			<minSeverity>10</minSeverity>
+			<minSeverity>4.8</minSeverity>
 			<totalBleedFactor>0.8</totalBleedFactor>
 			<makeImmuneTo>
 				<li>Flu</li>
@@ -1067,6 +1110,8 @@
 				<MeleeDodgeChance>0.26</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.25</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.14</AimingDelayFactor>
+				<CarryingCapacity>60</CarryingCapacity>
+				<CTR_HealthMultiplier>1</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -1089,7 +1134,7 @@
 		</li>
 		<li>
 			<label>stage 9</label>
-			<minSeverity>12</minSeverity>
+			<minSeverity>6</minSeverity>
 			<totalBleedFactor>0.7</totalBleedFactor>
 			<makeImmuneTo>
 				<li>Flu</li>
@@ -1101,6 +1146,8 @@
 				<MeleeDodgeChance>0.3</MeleeDodgeChance>
 				<ImmunityGainSpeed>0.25</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
+				<CarryingCapacity>70</CarryingCapacity>
+				<CTR_HealthMultiplier>1</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -1168,6 +1215,8 @@
 				<MeleeDodgeChance>0.3</MeleeDodgeChance>
 				<ImmunityGainSpeed>1</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
+				<CarryingCapacity>100</CarryingCapacity>
+				<CTR_HealthMultiplier>1.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -1206,6 +1255,8 @@
 				<MeleeDodgeChance>0.32</MeleeDodgeChance>
 				<ImmunityGainSpeed>1</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
+				<CarryingCapacity>120</CarryingCapacity>
+				<CTR_HealthMultiplier>1.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<capMods>
 			<li>
@@ -1244,6 +1295,8 @@
 				<MeleeDodgeChance>0.34</MeleeDodgeChance>
 				<ImmunityGainSpeed>1</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
+				<CarryingCapacity>140</CarryingCapacity>
+				<CTR_HealthMultiplier>1.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.95</IncomingDamageFactor>
@@ -1285,6 +1338,8 @@
 				<MeleeDodgeChance>0.36</MeleeDodgeChance>
 				<ImmunityGainSpeed>1</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
+				<CarryingCapacity>160</CarryingCapacity>
+				<CTR_HealthMultiplier>1.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.95</IncomingDamageFactor>
@@ -1326,6 +1381,8 @@
 				<MeleeDodgeChance>0.38</MeleeDodgeChance>
 				<ImmunityGainSpeed>1</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
+				<CarryingCapacity>180</CarryingCapacity>
+				<CTR_HealthMultiplier>1.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.95</IncomingDamageFactor>
@@ -1367,6 +1424,8 @@
 				<MeleeDodgeChance>0.4</MeleeDodgeChance>
 				<ImmunityGainSpeed>1</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
+				<CarryingCapacity>200</CarryingCapacity>
+				<CTR_HealthMultiplier>1.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.95</IncomingDamageFactor>
@@ -1408,6 +1467,8 @@
 				<MeleeDodgeChance>0.42</MeleeDodgeChance>
 				<ImmunityGainSpeed>1</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
+				<CarryingCapacity>220</CarryingCapacity>
+				<CTR_HealthMultiplier>1.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.95</IncomingDamageFactor>
@@ -1449,6 +1510,8 @@
 				<MeleeDodgeChance>0.44</MeleeDodgeChance>
 				<ImmunityGainSpeed>1</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
+				<CarryingCapacity>240</CarryingCapacity>
+				<CTR_HealthMultiplier>1.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.95</IncomingDamageFactor>
@@ -1490,6 +1553,8 @@
 				<MeleeDodgeChance>0.45</MeleeDodgeChance>
 				<ImmunityGainSpeed>1</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
+				<CarryingCapacity>300</CarryingCapacity>
+				<CTR_HealthMultiplier>1.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.95</IncomingDamageFactor>
@@ -1564,6 +1629,8 @@
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
 				<ComfyTemperatureMin>-10</ComfyTemperatureMin>
 				<ComfyTemperatureMax>10</ComfyTemperatureMax>
+				<CarryingCapacity>310</CarryingCapacity>
+				<CTR_HealthMultiplier>1.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.95</IncomingDamageFactor>
@@ -1608,6 +1675,8 @@
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
 				<ComfyTemperatureMin>-10</ComfyTemperatureMin>
 				<ComfyTemperatureMax>10</ComfyTemperatureMax>
+				<CarryingCapacity>320</CarryingCapacity>
+				<CTR_HealthMultiplier>1.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.95</IncomingDamageFactor>
@@ -1652,6 +1721,8 @@
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
 				<ComfyTemperatureMin>-10</ComfyTemperatureMin>
 				<ComfyTemperatureMax>10</ComfyTemperatureMax>
+				<CarryingCapacity>330</CarryingCapacity>
+				<CTR_HealthMultiplier>1.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.95</IncomingDamageFactor>
@@ -1696,6 +1767,8 @@
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
 				<ComfyTemperatureMin>-10</ComfyTemperatureMin>
 				<ComfyTemperatureMax>10</ComfyTemperatureMax>
+				<CarryingCapacity>340</CarryingCapacity>
+				<CTR_HealthMultiplier>1.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.95</IncomingDamageFactor>
@@ -1740,6 +1813,8 @@
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
 				<ComfyTemperatureMin>-10</ComfyTemperatureMin>
 				<ComfyTemperatureMax>10</ComfyTemperatureMax>
+				<CarryingCapacity>350</CarryingCapacity>
+				<CTR_HealthMultiplier>1.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.95</IncomingDamageFactor>
@@ -1784,6 +1859,8 @@
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
 				<ComfyTemperatureMin>-10</ComfyTemperatureMin>
 				<ComfyTemperatureMax>10</ComfyTemperatureMax>
+				<CarryingCapacity>360</CarryingCapacity>
+				<CTR_HealthMultiplier>1.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.95</IncomingDamageFactor>
@@ -1828,6 +1905,8 @@
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
 				<ComfyTemperatureMin>-10</ComfyTemperatureMin>
 				<ComfyTemperatureMax>10</ComfyTemperatureMax>
+				<CarryingCapacity>370</CarryingCapacity>
+				<CTR_HealthMultiplier>1.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.95</IncomingDamageFactor>
@@ -1872,6 +1951,8 @@
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
 				<ComfyTemperatureMin>-10</ComfyTemperatureMin>
 				<ComfyTemperatureMax>10</ComfyTemperatureMax>
+				<CarryingCapacity>380</CarryingCapacity>
+				<CTR_HealthMultiplier>1.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.95</IncomingDamageFactor>
@@ -1916,6 +1997,8 @@
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
 				<ComfyTemperatureMin>-20</ComfyTemperatureMin>
 				<ComfyTemperatureMax>20</ComfyTemperatureMax>
+				<CarryingCapacity>400</CarryingCapacity>
+				<CTR_HealthMultiplier>1.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.95</IncomingDamageFactor>
@@ -1960,7 +2043,7 @@
 			<tickInterval>60</tickInterval>
 			<currentLevel>CTR_CoreShaping</currentLevel>
 			<nextLevel>CTR_GoldenCore</nextLevel>
-			<shouldGetTribulation>false</shouldGetTribulation>
+			<shouldGetTribulation>true</shouldGetTribulation>
 			<breakingThroughDuration>2500~10000</breakingThroughDuration>
 			<curves>
 				<points>
@@ -1993,6 +2076,8 @@
 				<AimingDelayFactor>-0.15</AimingDelayFactor>
 				<ComfyTemperatureMin>-20</ComfyTemperatureMin>
 				<ComfyTemperatureMax>20</ComfyTemperatureMax>
+				<CarryingCapacity>400</CarryingCapacity>
+				<CTR_HealthMultiplier>2.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.95</IncomingDamageFactor>
@@ -2039,6 +2124,8 @@
 				<ComfyTemperatureMin>-25</ComfyTemperatureMin>
 				<ComfyTemperatureMax>25</ComfyTemperatureMax>
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
+				<CarryingCapacity>400</CarryingCapacity>
+				<CTR_HealthMultiplier>2.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -2092,6 +2179,8 @@
 				<ComfyTemperatureMin>-25</ComfyTemperatureMin>
 				<ComfyTemperatureMax>25</ComfyTemperatureMax>
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
+				<CarryingCapacity>400</CarryingCapacity>
+				<CTR_HealthMultiplier>2.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -2145,6 +2234,8 @@
 				<ComfyTemperatureMin>-25</ComfyTemperatureMin>
 				<ComfyTemperatureMax>25</ComfyTemperatureMax>
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
+				<CarryingCapacity>400</CarryingCapacity>
+				<CTR_HealthMultiplier>2.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -2198,6 +2289,8 @@
 				<ComfyTemperatureMin>-25</ComfyTemperatureMin>
 				<ComfyTemperatureMax>25</ComfyTemperatureMax>
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
+				<CarryingCapacity>400</CarryingCapacity>
+				<CTR_HealthMultiplier>2.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -2251,6 +2344,8 @@
 				<ComfyTemperatureMin>-25</ComfyTemperatureMin>
 				<ComfyTemperatureMax>25</ComfyTemperatureMax>
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
+				<CarryingCapacity>400</CarryingCapacity>
+				<CTR_HealthMultiplier>2.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -2304,6 +2399,8 @@
 				<ComfyTemperatureMin>-25</ComfyTemperatureMin>
 				<ComfyTemperatureMax>25</ComfyTemperatureMax>
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
+				<CarryingCapacity>400</CarryingCapacity>
+				<CTR_HealthMultiplier>2.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -2357,6 +2454,8 @@
 				<ComfyTemperatureMin>-25</ComfyTemperatureMin>
 				<ComfyTemperatureMax>25</ComfyTemperatureMax>
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
+				<CarryingCapacity>400</CarryingCapacity>
+				<CTR_HealthMultiplier>2.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -2410,6 +2509,8 @@
 				<ComfyTemperatureMin>-25</ComfyTemperatureMin>
 				<ComfyTemperatureMax>25</ComfyTemperatureMax>
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
+				<CarryingCapacity>400</CarryingCapacity>
+				<CTR_HealthMultiplier>2.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -2463,6 +2564,8 @@
 				<ComfyTemperatureMin>-25</ComfyTemperatureMin>
 				<ComfyTemperatureMax>25</ComfyTemperatureMax>
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
+				<CarryingCapacity>400</CarryingCapacity>
+				<CTR_HealthMultiplier>2.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -2527,11 +2630,11 @@
 			<changeToNeeds>
 				<li>
 					<needDef>Rest</needDef>
-					<minValue>0.3</minValue>
+					<minValue>0.5</minValue>
 				</li>
 				<li>
 					<needDef>Food</needDef>
-					<minValue>0.3</minValue>
+					<minValue>0.5</minValue>
 				</li>
 			</changeToNeeds>
 		  </li>
@@ -2561,6 +2664,8 @@
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
+				<CarryingCapacity>400</CarryingCapacity>
+				<CTR_HealthMultiplier>2.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -2616,6 +2721,8 @@
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
+				<CarryingCapacity>450</CarryingCapacity>
+				<CTR_HealthMultiplier>2.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -2671,6 +2778,8 @@
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
+				<CarryingCapacity>450</CarryingCapacity>
+				<CTR_HealthMultiplier>2.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -2726,6 +2835,8 @@
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
+				<CarryingCapacity>450</CarryingCapacity>
+				<CTR_HealthMultiplier>2.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -2781,6 +2892,8 @@
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
+				<CarryingCapacity>450</CarryingCapacity>
+				<CTR_HealthMultiplier>2.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -2836,6 +2949,8 @@
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
+				<CarryingCapacity>450</CarryingCapacity>
+				<CTR_HealthMultiplier>2.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -2891,6 +3006,8 @@
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
+				<CarryingCapacity>450</CarryingCapacity>
+				<CTR_HealthMultiplier>2.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -2946,6 +3063,8 @@
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
+				<CarryingCapacity>450</CarryingCapacity>
+				<CTR_HealthMultiplier>2.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -3001,6 +3120,8 @@
 				<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
+				<CarryingCapacity>450</CarryingCapacity>
+				<CTR_HealthMultiplier>2.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -3055,9 +3176,11 @@
 				<ComfyTemperatureMax>45</ComfyTemperatureMax>
 				<WorkSpeedGlobal>3</WorkSpeedGlobal>
 				<InjuryHealingFactor>1</InjuryHealingFactor>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
+				<CarryingCapacity>500</CarryingCapacity>
+				<CTR_HealthMultiplier>2.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -3123,11 +3246,11 @@
 				<changeToNeeds>
 					<li>
 						<needDef>Rest</needDef>
-						<minValue>0.3</minValue>
+						<minValue>0.5</minValue>
 					</li>
 					<li>
 						<needDef>Food</needDef>
-						<minValue>0.3</minValue>
+						<minValue>0.5</minValue>
 					</li>
 				</changeToNeeds>
 			</li>
@@ -3136,7 +3259,12 @@
 				<energyRechargeRate>0.05</energyRechargeRate>
 				<resetDelay>1000</resetDelay>
 				<energyOnReset>0.25</energyOnReset>
-				<blacklistedDamageDefs />
+				
+				<blacklistedDamageDefs>
+					<li>SurgicalCut</li>
+					<li>ExecutionCut</li>
+				</blacklistedDamageDefs>
+				
 				<blocksMeleeDamage>true</blocksMeleeDamage>
 				<energyPerDamageModifier>1</energyPerDamageModifier>
 				<shatterOn />
@@ -3186,9 +3314,11 @@
 				<ComfyTemperatureMax>45</ComfyTemperatureMax>
 				<WorkSpeedGlobal>3</WorkSpeedGlobal>
 				<InjuryHealingFactor>1</InjuryHealingFactor>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
+				<CarryingCapacity>500</CarryingCapacity>
+				<CTR_HealthMultiplier>2.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -3246,7 +3376,9 @@
 				<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>600</CarryingCapacity>
+				<CTR_HealthMultiplier>2.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -3306,7 +3438,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>600</CarryingCapacity>
+				<CTR_HealthMultiplier>2.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -3366,7 +3500,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>600</CarryingCapacity>
+				<CTR_HealthMultiplier>2.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -3426,7 +3562,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>600</CarryingCapacity>
+				<CTR_HealthMultiplier>2.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -3486,7 +3624,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>600</CarryingCapacity>
+				<CTR_HealthMultiplier>2.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -3546,7 +3686,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>600</CarryingCapacity>
+				<CTR_HealthMultiplier>2.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -3606,7 +3748,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>600</CarryingCapacity>
+				<CTR_HealthMultiplier>2.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -3666,7 +3810,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>600</CarryingCapacity>
+				<CTR_HealthMultiplier>2.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -3726,7 +3872,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.5</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>700</CarryingCapacity>
+				<CTR_HealthMultiplier>2.75</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -3794,11 +3942,11 @@
 			<changeToNeeds>
 				<li>
 					<needDef>Rest</needDef>
-					<minValue>0.3</minValue>
+					<minValue>0.5</minValue>
 				</li>
 				<li>
 					<needDef>Food</needDef>
-					<minValue>0.3</minValue>
+					<minValue>0.5</minValue>
 				</li>
 			</changeToNeeds>
 			</li>
@@ -3807,7 +3955,12 @@
 				<energyRechargeRate>0.05</energyRechargeRate>
 				<resetDelay>1000</resetDelay>
 				<energyOnReset>0.25</energyOnReset>
-				<blacklistedDamageDefs />
+				
+				<blacklistedDamageDefs>
+					<li>SurgicalCut</li>
+					<li>ExecutionCut</li>
+				</blacklistedDamageDefs>
+				
 				<blocksMeleeDamage>true</blocksMeleeDamage>
 				<energyPerDamageModifier>1</energyPerDamageModifier>
 				<shatterOn />
@@ -3861,7 +4014,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>700</CarryingCapacity>
+				<CTR_HealthMultiplier>3.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -3921,7 +4076,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>750</CarryingCapacity>
+				<CTR_HealthMultiplier>3.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -3981,7 +4138,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>750</CarryingCapacity>
+				<CTR_HealthMultiplier>3.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -4041,7 +4200,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>750</CarryingCapacity>
+				<CTR_HealthMultiplier>3.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -4101,7 +4262,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>750</CarryingCapacity>
+				<CTR_HealthMultiplier>3.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -4161,7 +4324,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>750</CarryingCapacity>
+				<CTR_HealthMultiplier>3.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -4221,7 +4386,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>750</CarryingCapacity>
+				<CTR_HealthMultiplier>3.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -4281,7 +4448,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>750</CarryingCapacity>
+				<CTR_HealthMultiplier>3.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -4341,7 +4510,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>750</CarryingCapacity>
+				<CTR_HealthMultiplier>3.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -4401,7 +4572,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>800</CarryingCapacity>
+				<CTR_HealthMultiplier>3.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -4470,11 +4643,11 @@
 			<changeToNeeds>
 				<li>
 					<needDef>Rest</needDef>
-					<minValue>0.3</minValue>
+					<minValue>0.5</minValue>
 				</li>
 				<li>
 					<needDef>Food</needDef>
-					<minValue>0.3</minValue>
+					<minValue>0.5</minValue>
 				</li>
 			</changeToNeeds>
 			</li>		
@@ -4483,7 +4656,12 @@
 				<energyRechargeRate>0.05</energyRechargeRate>
 				<resetDelay>1000</resetDelay>
 				<energyOnReset>0.25</energyOnReset>
-				<blacklistedDamageDefs />
+				
+				<blacklistedDamageDefs>
+					<li>SurgicalCut</li>
+					<li>ExecutionCut</li>
+				</blacklistedDamageDefs>
+				
 				<blocksMeleeDamage>true</blocksMeleeDamage>
 				<energyPerDamageModifier>1</energyPerDamageModifier>
 				<shatterOn />
@@ -4537,7 +4715,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>800</CarryingCapacity>
+				<CTR_HealthMultiplier>3.25</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -4597,7 +4777,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>850</CarryingCapacity>
+				<CTR_HealthMultiplier>3.25</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -4657,7 +4839,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>850</CarryingCapacity>
+				<CTR_HealthMultiplier>3.25</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -4717,7 +4901,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>850</CarryingCapacity>
+				<CTR_HealthMultiplier>3.25</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -4777,7 +4963,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>850</CarryingCapacity>
+				<CTR_HealthMultiplier>3.25</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -4837,7 +5025,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>850</CarryingCapacity>
+				<CTR_HealthMultiplier>3.25</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -4897,7 +5087,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>850</CarryingCapacity>
+				<CTR_HealthMultiplier>3.25</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -4957,7 +5149,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>850</CarryingCapacity>
+				<CTR_HealthMultiplier>3.25</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -5017,7 +5211,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>850</CarryingCapacity>
+				<CTR_HealthMultiplier>3.25</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -5077,7 +5273,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>900</CarryingCapacity>
+				<CTR_HealthMultiplier>3.25</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -5147,11 +5345,11 @@
 			<changeToNeeds>
 				<li>
 					<needDef>Rest</needDef>
-					<minValue>0.3</minValue>
+					<minValue>0.5</minValue>
 				</li>
 				<li>
 					<needDef>Food</needDef>
-					<minValue>0.3</minValue>
+					<minValue>0.5</minValue>
 				</li>
 			</changeToNeeds>
 			</li>		
@@ -5160,7 +5358,12 @@
 				<energyRechargeRate>0.05</energyRechargeRate>
 				<resetDelay>1000</resetDelay>
 				<energyOnReset>0.25</energyOnReset>
-				<blacklistedDamageDefs />
+				
+				<blacklistedDamageDefs>
+					<li>SurgicalCut</li>
+					<li>ExecutionCut</li>
+				</blacklistedDamageDefs>
+				
 				<blocksMeleeDamage>true</blocksMeleeDamage>
 				<energyPerDamageModifier>1</energyPerDamageModifier>
 				<shatterOn />
@@ -5214,7 +5417,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>900</CarryingCapacity>
+				<CTR_HealthMultiplier>3.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -5274,7 +5479,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>950</CarryingCapacity>
+				<CTR_HealthMultiplier>3.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -5334,7 +5541,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>950</CarryingCapacity>
+				<CTR_HealthMultiplier>3.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -5394,7 +5603,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>950</CarryingCapacity>
+				<CTR_HealthMultiplier>3.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -5454,7 +5665,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>950</CarryingCapacity>
+				<CTR_HealthMultiplier>3.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -5514,7 +5727,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>950</CarryingCapacity>
+				<CTR_HealthMultiplier>3.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -5574,7 +5789,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>950</CarryingCapacity>
+				<CTR_HealthMultiplier>3.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -5634,7 +5851,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>950</CarryingCapacity>
+				<CTR_HealthMultiplier>3.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -5694,7 +5913,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>950</CarryingCapacity>
+				<CTR_HealthMultiplier>3.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -5754,7 +5975,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>0.75</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1000</CarryingCapacity>
+				<CTR_HealthMultiplier>3.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -5825,11 +6048,11 @@
 			<changeToNeeds>
 				<li>
 					<needDef>Rest</needDef>
-					<minValue>0.3</minValue>
+					<minValue>0.5</minValue>
 				</li>
 				<li>
 					<needDef>Food</needDef>
-					<minValue>0.3</minValue>
+					<minValue>0.5</minValue>
 				</li>
 			</changeToNeeds>
 			</li>
@@ -5839,7 +6062,12 @@
 				<energyRechargeRate>0.05</energyRechargeRate>
 				<resetDelay>1000</resetDelay>
 				<energyOnReset>0.25</energyOnReset>
-				<blacklistedDamageDefs />
+				
+				<blacklistedDamageDefs>
+					<li>SurgicalCut</li>
+					<li>ExecutionCut</li>
+				</blacklistedDamageDefs>
+				
 				<blocksMeleeDamage>true</blocksMeleeDamage>
 				<energyPerDamageModifier>1</energyPerDamageModifier>
 				<shatterOn />
@@ -5893,7 +6121,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1000</CarryingCapacity>
+				<CTR_HealthMultiplier>4.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.90</IncomingDamageFactor>
@@ -5953,7 +6183,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1100</CarryingCapacity>
+				<CTR_HealthMultiplier>4.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -6013,7 +6245,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1100</CarryingCapacity>
+				<CTR_HealthMultiplier>4.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -6073,7 +6307,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1100</CarryingCapacity>
+				<CTR_HealthMultiplier>4.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -6133,7 +6369,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1100</CarryingCapacity>
+				<CTR_HealthMultiplier>4.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -6193,7 +6431,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1100</CarryingCapacity>
+				<CTR_HealthMultiplier>4.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -6253,7 +6493,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1100</CarryingCapacity>
+				<CTR_HealthMultiplier>4.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -6313,7 +6555,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1100</CarryingCapacity>
+				<CTR_HealthMultiplier>4.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -6373,7 +6617,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1100</CarryingCapacity>
+				<CTR_HealthMultiplier>4.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -6433,7 +6679,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1200</CarryingCapacity>
+				<CTR_HealthMultiplier>4.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -6505,11 +6753,11 @@
 			<changeToNeeds>
 				<li>
 					<needDef>Rest</needDef>
-					<minValue>0.3</minValue>
+					<minValue>0.5</minValue>
 				</li>
 				<li>
 					<needDef>Food</needDef>
-					<minValue>0.3</minValue>
+					<minValue>0.5</minValue>
 				</li>
 			</changeToNeeds>
 			</li>
@@ -6518,7 +6766,12 @@
 				<energyRechargeRate>0.05</energyRechargeRate>
 				<resetDelay>1000</resetDelay>
 				<energyOnReset>0.25</energyOnReset>
-				<blacklistedDamageDefs />
+				
+				<blacklistedDamageDefs>
+					<li>SurgicalCut</li>
+					<li>ExecutionCut</li>
+				</blacklistedDamageDefs>
+				
 				<blocksMeleeDamage>true</blocksMeleeDamage>
 				<energyPerDamageModifier>1</energyPerDamageModifier>
 				<shatterOn />
@@ -6572,7 +6825,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1200</CarryingCapacity>
+				<CTR_HealthMultiplier>5.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -6632,7 +6887,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1300</CarryingCapacity>
+				<CTR_HealthMultiplier>5.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -6692,7 +6949,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1300</CarryingCapacity>
+				<CTR_HealthMultiplier>5.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -6752,7 +7011,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1300</CarryingCapacity>
+				<CTR_HealthMultiplier>5.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -6812,7 +7073,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1300</CarryingCapacity>
+				<CTR_HealthMultiplier>5.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -6872,7 +7135,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1300</CarryingCapacity>
+				<CTR_HealthMultiplier>5.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -6932,7 +7197,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1300</CarryingCapacity>
+				<CTR_HealthMultiplier>5.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -6992,7 +7259,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1300</CarryingCapacity>
+				<CTR_HealthMultiplier>5.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -7052,7 +7321,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1300</CarryingCapacity>
+				<CTR_HealthMultiplier>5.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -7112,7 +7383,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1400</CarryingCapacity>
+				<CTR_HealthMultiplier>5.00</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -7185,11 +7458,11 @@
 			<changeToNeeds>
 				<li>
 					<needDef>Rest</needDef>
-					<minValue>0.3</minValue>
+					<minValue>0.5</minValue>
 				</li>
 				<li>
 					<needDef>Food</needDef>
-					<minValue>0.3</minValue>
+					<minValue>0.5</minValue>
 				</li>
 			</changeToNeeds>
 			</li>
@@ -7198,7 +7471,12 @@
 				<energyRechargeRate>0.05</energyRechargeRate>
 				<resetDelay>1000</resetDelay>
 				<energyOnReset>0.25</energyOnReset>
-				<blacklistedDamageDefs />
+				
+				<blacklistedDamageDefs>
+					<li>SurgicalCut</li>
+					<li>ExecutionCut</li>
+				</blacklistedDamageDefs>
+				
 				<blocksMeleeDamage>true</blocksMeleeDamage>
 				<energyPerDamageModifier>1</energyPerDamageModifier>
 				<shatterOn />
@@ -7252,7 +7530,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1400</CarryingCapacity>
+				<CTR_HealthMultiplier>6.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -7312,7 +7592,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1500</CarryingCapacity>
+				<CTR_HealthMultiplier>6.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -7372,7 +7654,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1500</CarryingCapacity>
+				<CTR_HealthMultiplier>6.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -7432,7 +7716,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1500</CarryingCapacity>
+				<CTR_HealthMultiplier>6.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -7492,7 +7778,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1500</CarryingCapacity>
+				<CTR_HealthMultiplier>6.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -7552,7 +7840,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1500</CarryingCapacity>
+				<CTR_HealthMultiplier>6.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -7612,7 +7902,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1500</CarryingCapacity>
+				<CTR_HealthMultiplier>6.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -7672,7 +7964,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1500</CarryingCapacity>
+				<CTR_HealthMultiplier>6.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -7732,7 +8026,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1500</CarryingCapacity>
+				<CTR_HealthMultiplier>6.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -7792,7 +8088,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>0.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.5</TechniqueEfficiency>
+				<CarryingCapacity>1600</CarryingCapacity>
+				<CTR_HealthMultiplier>6.50</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -7866,11 +8164,11 @@
 				<changeToNeeds>
 					<li>
 						<needDef>Rest</needDef>
-						<minValue>0.3</minValue>
+						<minValue>0.5</minValue>
 					</li>
 					<li>
 						<needDef>Food</needDef>
-						<minValue>0.3</minValue>
+						<minValue>0.5</minValue>
 					</li>
 				</changeToNeeds>
 			</li>
@@ -7879,7 +8177,12 @@
 				<energyRechargeRate>0.05</energyRechargeRate>
 				<resetDelay>1000</resetDelay>
 				<energyOnReset>0.25</energyOnReset>
-				<blacklistedDamageDefs />
+				
+				<blacklistedDamageDefs>
+					<li>SurgicalCut</li>
+					<li>ExecutionCut</li>
+				</blacklistedDamageDefs>
+				
 				<blocksMeleeDamage>true</blocksMeleeDamage>
 				<energyPerDamageModifier>1</energyPerDamageModifier>
 				<shatterOn />
@@ -7932,7 +8235,9 @@
 				<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1600</CarryingCapacity>
+				<CTR_HealthMultiplier>7.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -7991,7 +8296,9 @@
 				<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1700</CarryingCapacity>
+				<CTR_HealthMultiplier>7.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -8050,7 +8357,9 @@
 				<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1700</CarryingCapacity>
+				<CTR_HealthMultiplier>7.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -8109,7 +8418,9 @@
 				<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1700</CarryingCapacity>
+				<CTR_HealthMultiplier>7.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -8168,7 +8479,9 @@
 				<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1700</CarryingCapacity>
+				<CTR_HealthMultiplier>7.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -8227,7 +8540,9 @@
 				<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1700</CarryingCapacity>
+				<CTR_HealthMultiplier>7.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -8286,7 +8601,9 @@
 				<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1700</CarryingCapacity>
+				<CTR_HealthMultiplier>7.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -8345,7 +8662,9 @@
 				<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1700</CarryingCapacity>
+				<CTR_HealthMultiplier>7.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -8404,7 +8723,9 @@
 				<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1700</CarryingCapacity>
+				<CTR_HealthMultiplier>7.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -8463,7 +8784,9 @@
 				<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1800</CarryingCapacity>
+				<CTR_HealthMultiplier>7.5</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -8538,11 +8861,11 @@
 				<changeToNeeds>
 					<li>
 						<needDef>Rest</needDef>
-						<minValue>0.3</minValue>
+						<minValue>0.5</minValue>
 					</li>
 					<li>
 						<needDef>Food</needDef>
-						<minValue>0.3</minValue>
+						<minValue>0.5</minValue>
 					</li>
 				</changeToNeeds>
 			</li>
@@ -8551,7 +8874,12 @@
 				<energyRechargeRate>0.05</energyRechargeRate>
 				<resetDelay>1000</resetDelay>
 				<energyOnReset>0.25</energyOnReset>
-				<blacklistedDamageDefs />
+				
+				<blacklistedDamageDefs>
+					<li>SurgicalCut</li>
+					<li>ExecutionCut</li>
+				</blacklistedDamageDefs>
+				
 				<blocksMeleeDamage>true</blocksMeleeDamage>
 				<energyPerDamageModifier>1</energyPerDamageModifier>
 				<shatterOn />
@@ -8605,7 +8933,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1800</CarryingCapacity>
+				<CTR_HealthMultiplier>9</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -8665,7 +8995,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1900</CarryingCapacity>
+				<CTR_HealthMultiplier>9</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -8725,7 +9057,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1900</CarryingCapacity>
+				<CTR_HealthMultiplier>9</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -8785,7 +9119,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1900</CarryingCapacity>
+				<CTR_HealthMultiplier>9</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -8845,7 +9181,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1900</CarryingCapacity>
+				<CTR_HealthMultiplier>9</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -8905,7 +9243,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1900</CarryingCapacity>
+				<CTR_HealthMultiplier>9</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -8965,7 +9305,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1900</CarryingCapacity>
+				<CTR_HealthMultiplier>9</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -9025,7 +9367,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1900</CarryingCapacity>
+				<CTR_HealthMultiplier>9</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -9085,7 +9429,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>1900</CarryingCapacity>
+				<CTR_HealthMultiplier>9</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -9145,7 +9491,9 @@
 				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1</TechniqueEfficiency>
+				<CarryingCapacity>2000</CarryingCapacity>
+				<CTR_HealthMultiplier>9</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -9221,11 +9569,11 @@
 				<changeToNeeds>
 					<li>
 						<needDef>Rest</needDef>
-						<minValue>0.3</minValue>
+						<minValue>0.5</minValue>
 					</li>
 					<li>
 						<needDef>Food</needDef>
-						<minValue>0.3</minValue>
+						<minValue>0.5</minValue>
 					</li>
 				</changeToNeeds>
 			</li>
@@ -9234,7 +9582,12 @@
 				<energyRechargeRate>0.05</energyRechargeRate>
 				<resetDelay>1000</resetDelay>
 				<energyOnReset>0.25</energyOnReset>
-				<blacklistedDamageDefs />
+				
+				<blacklistedDamageDefs>
+					<li>SurgicalCut</li>
+					<li>ExecutionCut</li>
+				</blacklistedDamageDefs>
+				
 				<blocksMeleeDamage>true</blocksMeleeDamage>
 				<energyPerDamageModifier>1</energyPerDamageModifier>
 				<shatterOn />
@@ -9289,7 +9642,9 @@
 				<ArmorRating_Heat>0.5</ArmorRating_Heat>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1.5</TechniqueEfficiency>
+				<CarryingCapacity>2000</CarryingCapacity>
+				<CTR_HealthMultiplier>10</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -9350,7 +9705,9 @@
 				<ArmorRating_Heat>0.5</ArmorRating_Heat>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1.5</TechniqueEfficiency>
+				<CarryingCapacity>2100</CarryingCapacity>
+				<CTR_HealthMultiplier>10</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -9411,7 +9768,9 @@
 				<ArmorRating_Heat>0.5</ArmorRating_Heat>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1.5</TechniqueEfficiency>
+				<CarryingCapacity>2100</CarryingCapacity>
+				<CTR_HealthMultiplier>10</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -9472,7 +9831,9 @@
 				<ArmorRating_Heat>0.5</ArmorRating_Heat>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1.5</TechniqueEfficiency>
+				<CarryingCapacity>2100</CarryingCapacity>
+				<CTR_HealthMultiplier>10</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -9533,7 +9894,9 @@
 				<ArmorRating_Heat>0.5</ArmorRating_Heat>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1.5</TechniqueEfficiency>
+				<CarryingCapacity>2100</CarryingCapacity>
+				<CTR_HealthMultiplier>10</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -9594,7 +9957,9 @@
 				<ArmorRating_Heat>0.5</ArmorRating_Heat>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1.5</TechniqueEfficiency>
+				<CarryingCapacity>2100</CarryingCapacity>
+				<CTR_HealthMultiplier>10</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -9655,7 +10020,9 @@
 				<ArmorRating_Heat>0.5</ArmorRating_Heat>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1.5</TechniqueEfficiency>
+				<CarryingCapacity>2100</CarryingCapacity>
+				<CTR_HealthMultiplier>10</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -9716,7 +10083,9 @@
 				<ArmorRating_Heat>0.5</ArmorRating_Heat>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1.5</TechniqueEfficiency>
+				<CarryingCapacity>2100</CarryingCapacity>
+				<CTR_HealthMultiplier>10</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -9777,7 +10146,9 @@
 				<ArmorRating_Heat>0.5</ArmorRating_Heat>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1.5</TechniqueEfficiency>
+				<CarryingCapacity>2100</CarryingCapacity>
+				<CTR_HealthMultiplier>10</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -9838,7 +10209,9 @@
 				<ArmorRating_Heat>0.5</ArmorRating_Heat>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1.5</TechniqueEfficiency>
+				<CarryingCapacity>3000</CarryingCapacity>
+				<CTR_HealthMultiplier>10</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -9915,11 +10288,11 @@
 				<changeToNeeds>
 					<li>
 						<needDef>Rest</needDef>
-						<minValue>0.3</minValue>
+						<minValue>0.9</minValue>
 					</li>
 					<li>
 						<needDef>Food</needDef>
-						<minValue>0.3</minValue>
+						<minValue>0.9</minValue>
 					</li>
 				</changeToNeeds>
 			</li>
@@ -9928,7 +10301,12 @@
 				<energyRechargeRate>0.1</energyRechargeRate>
 				<resetDelay>1000</resetDelay>
 				<energyOnReset>0.25</energyOnReset>
-				<blacklistedDamageDefs />
+				
+				<blacklistedDamageDefs>
+					<li>SurgicalCut</li>
+					<li>ExecutionCut</li>
+				</blacklistedDamageDefs>
+				
 				<blocksMeleeDamage>true</blocksMeleeDamage>
 				<energyPerDamageModifier>1</energyPerDamageModifier>
 				<shatterOn />
@@ -9984,7 +10362,9 @@
 				<ArmorRating_Heat>0.5</ArmorRating_Heat>
 				<ArmorRating_Qi>0.5</ArmorRating_Qi>
 				<ToxicResistance>2.0</ToxicResistance>
-				<TechniqueEfficiency>1.5</TechniqueEfficiency>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1.5</TechniqueEfficiency>
+				<CarryingCapacity>3000</CarryingCapacity>
+				<CTR_HealthMultiplier>10</CTR_HealthMultiplier>
 			</statOffsets>
 			<statFactors>
 				<IncomingDamageFactor>0.85</IncomingDamageFactor>
@@ -10032,24 +10412,26 @@
 				<li>LungRot</li>
 			</makeImmuneTo>
 			<statOffsets>		
-				<LifespanFactor>0.1</LifespanFactor>
-				<MeleeHitChance>0.01</MeleeHitChance>
-				<MeleeDodgeChance>0.01</MeleeDodgeChance>
-				<ImmunityGainSpeed>0.01</ImmunityGainSpeed>
+				<LifespanFactor>0.25</LifespanFactor>
+				<MeleeHitChance>0.05</MeleeHitChance>
+				<MeleeDodgeChance>0.05</MeleeDodgeChance>
+				<ImmunityGainSpeed>0.03</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.01</AimingDelayFactor>
-				<ComfyTemperatureMin>-0.1</ComfyTemperatureMin>
-				<ComfyTemperatureMax>0.1</ComfyTemperatureMax>
-				<WorkSpeedGlobal>0.01</WorkSpeedGlobal>
-				<InjuryHealingFactor>0.01</InjuryHealingFactor>
+				<ComfyTemperatureMin>-2.5</ComfyTemperatureMin>
+				<ComfyTemperatureMax>2.5</ComfyTemperatureMax>
+				<WorkSpeedGlobal>0.04</WorkSpeedGlobal>
+				<InjuryHealingFactor>0.12</InjuryHealingFactor>
 				<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
 				<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
 				<ArmorRating_Heat>0.01</ArmorRating_Heat>
 				<ArmorRating_Qi>0.01</ArmorRating_Qi>
 				<ToxicResistance>0.01</ToxicResistance>
-				<TechniqueEfficiency>0.001</TechniqueEfficiency>
-				<PsychicSensitivity>0.01</PsychicSensitivity>
-				<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">0.01</MeleeDamageFactor>
-				<VEF_RangeAttackDamageFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">0.01</VEF_RangeAttackDamageFactor>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.015</TechniqueEfficiency>
+				<CarryingCapacity>30</CarryingCapacity>
+				<CTR_HealthMultiplier>0.3</CTR_HealthMultiplier>
+				<PsychicSensitivity>0.04</PsychicSensitivity>
+				<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">0.04</MeleeDamageFactor>
+				<VEF_RangeAttackDamageFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">0.03</VEF_RangeAttackDamageFactor>
 				<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">-0.01</StaggerDurationFactor>
 				<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">-0.01</RangedCooldownFactor>
 				<IncomingDamageFactor>-0.001</IncomingDamageFactor>	
@@ -10092,24 +10474,26 @@
 				<li>LungRot</li>
 			</makeImmuneTo>
 			<statOffsets>		
-				<LifespanFactor>0.1</LifespanFactor>
-				<MeleeHitChance>0.01</MeleeHitChance>
-				<MeleeDodgeChance>0.01</MeleeDodgeChance>
-				<ImmunityGainSpeed>0.01</ImmunityGainSpeed>
+				<LifespanFactor>0.25</LifespanFactor>
+				<MeleeHitChance>0.05</MeleeHitChance>
+				<MeleeDodgeChance>0.05</MeleeDodgeChance>
+				<ImmunityGainSpeed>0.03</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.01</AimingDelayFactor>
-				<ComfyTemperatureMin>-0.1</ComfyTemperatureMin>
-				<ComfyTemperatureMax>0.1</ComfyTemperatureMax>
-				<WorkSpeedGlobal>0.01</WorkSpeedGlobal>
-				<InjuryHealingFactor>0.01</InjuryHealingFactor>
+				<ComfyTemperatureMin>-2.5</ComfyTemperatureMin>
+				<ComfyTemperatureMax>2.5</ComfyTemperatureMax>
+				<WorkSpeedGlobal>0.04</WorkSpeedGlobal>
+				<InjuryHealingFactor>0.12</InjuryHealingFactor>
 				<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
 				<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
 				<ArmorRating_Heat>0.01</ArmorRating_Heat>
 				<ArmorRating_Qi>0.01</ArmorRating_Qi>
 				<ToxicResistance>0.01</ToxicResistance>
-				<TechniqueEfficiency>0.001</TechniqueEfficiency>
-				<PsychicSensitivity>0.01</PsychicSensitivity>
-				<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">0.01</MeleeDamageFactor>
-				<VEF_RangeAttackDamageFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">0.01</VEF_RangeAttackDamageFactor>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.015</TechniqueEfficiency>
+				<CarryingCapacity>30</CarryingCapacity>
+				<CTR_HealthMultiplier>0.3</CTR_HealthMultiplier>
+				<PsychicSensitivity>0.04</PsychicSensitivity>
+				<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">0.04</MeleeDamageFactor>
+				<VEF_RangeAttackDamageFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">0.03</VEF_RangeAttackDamageFactor>
 				<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">-0.01</StaggerDurationFactor>
 				<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">-0.01</RangedCooldownFactor>
 				<IncomingDamageFactor>-0.001</IncomingDamageFactor>	
@@ -10182,11 +10566,11 @@
 				<changeToNeeds>
 					<li>
 						<needDef>Rest</needDef>
-						<minValue>0.3</minValue>
+						<minValue>0.9</minValue>
 					</li>
 					<li>
 						<needDef>Food</needDef>
-						<minValue>0.3</minValue>
+						<minValue>0.9</minValue>
 					</li>
 				</changeToNeeds>
 			</li>
@@ -10195,7 +10579,12 @@
 				<energyRechargeRate>1</energyRechargeRate>
 				<resetDelay>1000</resetDelay>
 				<energyOnReset>0.25</energyOnReset>
-				<blacklistedDamageDefs />
+				
+				<blacklistedDamageDefs>
+					<li>SurgicalCut</li>
+					<li>ExecutionCut</li>
+				</blacklistedDamageDefs>
+				
 				<blocksMeleeDamage>true</blocksMeleeDamage>
 				<energyPerDamageModifier>1</energyPerDamageModifier>
 				<shatterOn />
@@ -10224,8 +10613,8 @@
 		<stages>
 		<li>
 			<label>initial</label>
-			<minSeverity>0</minSeverity>
-			<multiplyStatChangesBySeverity>true</multiplyStatChangesBySeverity>
+			<minSeverity>0.001</minSeverity>
+			<!-- <multiplyStatChangesBySeverity>true</multiplyStatChangesBySeverity> -->
 			<totalBleedFactor>0.5</totalBleedFactor>
 			<naturalHealingFactor>12</naturalHealingFactor>
 			<makeImmuneTo>
@@ -10237,47 +10626,52 @@
 				<li>LungRot</li>
 			</makeImmuneTo>
 			<statOffsets>		
-				<LifespanFactor>0.1</LifespanFactor>
-				<MeleeHitChance>0.01</MeleeHitChance>
-				<MeleeDodgeChance>0.01</MeleeDodgeChance>
-				<ImmunityGainSpeed>0.01</ImmunityGainSpeed>
-				<AimingDelayFactor>-0.01</AimingDelayFactor>
-				<ComfyTemperatureMin>-0.1</ComfyTemperatureMin>
-				<ComfyTemperatureMax>0.1</ComfyTemperatureMax>
-				<WorkSpeedGlobal>0.01</WorkSpeedGlobal>
-				<InjuryHealingFactor>0.01</InjuryHealingFactor>
-				<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
-				<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
-				<ArmorRating_Heat>0.01</ArmorRating_Heat>
-				<ArmorRating_Qi>0.01</ArmorRating_Qi>
-				<TechniqueEfficiency>0.001</TechniqueEfficiency>
-				<PsychicSensitivity>0.01</PsychicSensitivity>
-				<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">0.01</MeleeDamageFactor>
-				<VEF_RangeAttackDamageFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">0.01</VEF_RangeAttackDamageFactor>
-				<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">-0.01</StaggerDurationFactor>
-				<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">-0.01</RangedCooldownFactor>
-				<IncomingDamageFactor>-0.001</IncomingDamageFactor>	
+				<LifespanFactor>25</LifespanFactor>
+				<MeleeHitChance>5</MeleeHitChance>
+				<MeleeDodgeChance>5</MeleeDodgeChance>
+				<ImmunityGainSpeed>3</ImmunityGainSpeed>
+				<AimingDelayFactor>-0.25</AimingDelayFactor>
+				<ComfyTemperatureMin>-250</ComfyTemperatureMin>
+				<ComfyTemperatureMax>250</ComfyTemperatureMax>
+				<WorkSpeedGlobal>4</WorkSpeedGlobal>
+				<InjuryHealingFactor>12</InjuryHealingFactor>
+				<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.5</ArmorRating_Heat>
+				<ArmorRating_Qi>0.5</ArmorRating_Qi>
+				<ToxicResistance>2.0</ToxicResistance>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">1.5</TechniqueEfficiency>
+				<CarryingCapacity>3000</CarryingCapacity>
+				<CTR_HealthMultiplier>10</CTR_HealthMultiplier>
 			</statOffsets>
+			<statFactors>
+				<IncomingDamageFactor>0.85</IncomingDamageFactor>
+				<PsychicSensitivity>4</PsychicSensitivity>
+				<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">4</MeleeDamageFactor>
+				<VEF_RangeAttackDamageFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">3</VEF_RangeAttackDamageFactor>
+				<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">0.5</StaggerDurationFactor>
+				<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">0.5</RangedCooldownFactor>
+			</statFactors>
 			<capMods>
 			<li>
 				<capacity>Consciousness</capacity>
-				<postFactor>1.5</postFactor>
+				<postFactor>1.10</postFactor>
 			</li>
 			<li>
 				<capacity>Moving</capacity>
-				<postFactor>20.0</postFactor>
+				<postFactor>12.0</postFactor>
 			</li>
 			<li>
 				<capacity>Sight</capacity>
-				<postFactor>20.0</postFactor>
+				<postFactor>12.0</postFactor>
 			</li>
 			<li>
 				<capacity>Manipulation</capacity>
-				<postFactor>20.0</postFactor>
+				<postFactor>12.0</postFactor>
 			</li>
 			<li>
 				<capacity>Metabolism</capacity>
-				<postFactor>10</postFactor>
+				<postFactor>5</postFactor>
 			</li>
 			</capMods>
 		</li>
@@ -10296,26 +10690,29 @@
 				<li>LungRot</li>
 			</makeImmuneTo>
 			<statOffsets>		
-				<LifespanFactor>0.1</LifespanFactor>
-				<MeleeHitChance>0.01</MeleeHitChance>
-				<MeleeDodgeChance>0.01</MeleeDodgeChance>
-				<ImmunityGainSpeed>0.01</ImmunityGainSpeed>
+				<LifespanFactor>0.25</LifespanFactor>
+				<MeleeHitChance>0.05</MeleeHitChance>
+				<MeleeDodgeChance>0.05</MeleeDodgeChance>
+				<ImmunityGainSpeed>0.03</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.01</AimingDelayFactor>
-				<ComfyTemperatureMin>-0.1</ComfyTemperatureMin>
-				<ComfyTemperatureMax>0.1</ComfyTemperatureMax>
-				<WorkSpeedGlobal>0.01</WorkSpeedGlobal>
-				<InjuryHealingFactor>0.01</InjuryHealingFactor>
+				<ComfyTemperatureMin>-2.5</ComfyTemperatureMin>
+				<ComfyTemperatureMax>2.5</ComfyTemperatureMax>
+				<WorkSpeedGlobal>0.04</WorkSpeedGlobal>
+				<InjuryHealingFactor>0.12</InjuryHealingFactor>
 				<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
 				<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
 				<ArmorRating_Heat>0.01</ArmorRating_Heat>
 				<ArmorRating_Qi>0.01</ArmorRating_Qi>
-				<TechniqueEfficiency>0.001</TechniqueEfficiency>
-				<PsychicSensitivity>0.01</PsychicSensitivity>
-				<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">0.01</MeleeDamageFactor>
-				<VEF_RangeAttackDamageFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">0.01</VEF_RangeAttackDamageFactor>
+				<ToxicResistance>0.01</ToxicResistance>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.015</TechniqueEfficiency>
+				<CarryingCapacity>30</CarryingCapacity>
+				<CTR_HealthMultiplier>0.3</CTR_HealthMultiplier>
+				<PsychicSensitivity>0.04</PsychicSensitivity>
+				<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">0.04</MeleeDamageFactor>
+				<VEF_RangeAttackDamageFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">0.03</VEF_RangeAttackDamageFactor>
 				<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">-0.01</StaggerDurationFactor>
 				<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">-0.01</RangedCooldownFactor>
-				<IncomingDamageFactor>-0.001</IncomingDamageFactor>		
+				<IncomingDamageFactor>-0.01</IncomingDamageFactor>	
 			</statOffsets>
 			<capMods>
 			<li>
@@ -10355,26 +10752,29 @@
 				<li>LungRot</li>
 			</makeImmuneTo>
 			<statOffsets>		
-				<LifespanFactor>0.1</LifespanFactor>
-				<MeleeHitChance>0.01</MeleeHitChance>
-				<MeleeDodgeChance>0.01</MeleeDodgeChance>
-				<ImmunityGainSpeed>0.01</ImmunityGainSpeed>
+				<LifespanFactor>0.25</LifespanFactor>
+				<MeleeHitChance>0.05</MeleeHitChance>
+				<MeleeDodgeChance>0.05</MeleeDodgeChance>
+				<ImmunityGainSpeed>0.03</ImmunityGainSpeed>
 				<AimingDelayFactor>-0.01</AimingDelayFactor>
-				<ComfyTemperatureMin>-0.1</ComfyTemperatureMin>
-				<ComfyTemperatureMax>0.1</ComfyTemperatureMax>
-				<WorkSpeedGlobal>0.01</WorkSpeedGlobal>
-				<InjuryHealingFactor>0.01</InjuryHealingFactor>
+				<ComfyTemperatureMin>-2.5</ComfyTemperatureMin>
+				<ComfyTemperatureMax>2.5</ComfyTemperatureMax>
+				<WorkSpeedGlobal>0.04</WorkSpeedGlobal>
+				<InjuryHealingFactor>0.12</InjuryHealingFactor>
 				<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
 				<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
 				<ArmorRating_Heat>0.01</ArmorRating_Heat>
 				<ArmorRating_Qi>0.01</ArmorRating_Qi>
-				<TechniqueEfficiency>0.001</TechniqueEfficiency>
-				<PsychicSensitivity>0.01</PsychicSensitivity>
-				<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">0.01</MeleeDamageFactor>
-				<VEF_RangeAttackDamageFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">0.01</VEF_RangeAttackDamageFactor>
+				<ToxicResistance>0.01</ToxicResistance>
+				<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.015</TechniqueEfficiency>
+				<CarryingCapacity>30</CarryingCapacity>
+				<CTR_HealthMultiplier>0.3</CTR_HealthMultiplier>
+				<PsychicSensitivity>0.04</PsychicSensitivity>
+				<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">0.04</MeleeDamageFactor>
+				<VEF_RangeAttackDamageFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">0.03</VEF_RangeAttackDamageFactor>
 				<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">-0.01</StaggerDurationFactor>
 				<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">-0.01</RangedCooldownFactor>
-				<IncomingDamageFactor>-0.001</IncomingDamageFactor>	
+				<IncomingDamageFactor>-0.01</IncomingDamageFactor>	
 			</statOffsets>
 			<capMods>
 			<li>

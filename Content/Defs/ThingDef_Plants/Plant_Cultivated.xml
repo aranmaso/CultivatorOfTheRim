@@ -165,9 +165,6 @@
 				</allowedTags>
 				<isNightPlant>true</isNightPlant>
 				<onlyHarvestableAtNight>true</onlyHarvestableAtNight>
-				<allowedTags>
-					<li>Qi_Source</li>
-				</allowedTags>
 				<ignoreTemp>true</ignoreTemp>
 			</li>
 		</modExtensions>
@@ -258,6 +255,7 @@
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <drawSize>1</drawSize>
 		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
 		<selectable>true</selectable>
 		<pathCost>14</pathCost>
 		<ingestible />
@@ -339,6 +337,7 @@
 		  <texPath>Things/Plants/WaterTree/WaterTree</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
 		<selectable>true</selectable>
 		<pathCost>14</pathCost>
 		<ingestible />
@@ -429,7 +428,9 @@
 		<graphicData>
 		  <texPath>Things/Plants/AncientTree/AncientTree</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawOffset>(0,0.5,0)</drawOffset>
 		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
 		<selectable>true</selectable>
 		<pathCost>14</pathCost>
 		<ingestible />
@@ -608,6 +609,7 @@
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <drawSize>1</drawSize>
 		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
 		<selectable>true</selectable>
 		<pathCost>14</pathCost>
 		<ingestible />
@@ -694,6 +696,7 @@
 		  <texPath>Things/Plants/ChronoStele/ChronoStele</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
 		<selectable>true</selectable>
 		<pathCost>14</pathCost>
 		<ingestible />
@@ -765,6 +768,7 @@
 		  <texPath>Things/Plants/ChronoBeacon/ChronoBeacon</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
 		<selectable>true</selectable>
 		<pathCost>14</pathCost>
 		<ingestible />
@@ -832,7 +836,6 @@
 				<onlyAffectCommonPlant>true</onlyAffectCommonPlant>
 				<soundDefOnSpeedUp>CTR_ChronoStele</soundDefOnSpeedUp>
 				<onlyWorkIfNoPlantOfSameTypeInRange>false</onlyWorkIfNoPlantOfSameTypeInRange>
-				<soundDefOnSpeedUp>CTR_ChronoStele</soundDefOnSpeedUp>
 				<growthBoost>0.01~0.05</growthBoost>
 				<disallowedDef>
 					<li>CTR_ChronoStele</li>
@@ -855,6 +858,7 @@
 		  <texPath>Things/Plants/ImmortalGrass/ImmortalGrass</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
 		<selectable>true</selectable>
 		<pathCost>14</pathCost>
 		<ingestible />

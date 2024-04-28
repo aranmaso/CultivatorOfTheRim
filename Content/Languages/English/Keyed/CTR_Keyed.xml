@@ -25,7 +25,9 @@
 	
 	<!-- Scenario -->
 	<ConfigurableRealmStage>stage range: {0}</ConfigurableRealmStage>
-	<ScenPart_PawnsHaveCultivation>{0} have a {1} chance to start with cultivation in {2} to {3}.</ScenPart_PawnsHaveCultivation>
+	<ScenPart_PawnsHaveCultivation>{0} {1} {2} have a {3} chance to start with cultivation in {4} to {5}.</ScenPart_PawnsHaveCultivation>
+	<!-- <ScenPart_PawnsHaveCultivationAnimal>{0} and animal have a {1} chance to start with cultivation in {2} to {3}.</ScenPart_PawnsHaveCultivationAnimal> -->
+	<!-- <ScenPart_PawnsHaveCultivationAnimalOnly>all animal have a {1} chance to start with cultivation in {2} to {3}.</ScenPart_PawnsHaveCultivationAnimalOnly> -->
 	
 	<!-- Plant -->
 	<PermanentSummerDisabledGrow>permanent summer, plant without the corresponding element can't grow</PermanentSummerDisabledGrow>
@@ -37,6 +39,8 @@
 	
 	<CTR_StaminaTracker>Stamina</CTR_StaminaTracker>
 	<CTR_StaminaTrackerDisabledReason>Pawn doesn't have enough Stamina to use</CTR_StaminaTrackerDisabledReason>
+	
+	<AlreadyLearned>{USER_labelShort} already learned {1}</AlreadyLearned>
 
 
 </LanguageData>

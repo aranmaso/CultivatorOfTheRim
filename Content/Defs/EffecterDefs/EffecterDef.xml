@@ -194,5 +194,77 @@
 		</children>
 		<offsetTowardsTarget><min>0.0</min><max>0.0</max></offsetTowardsTarget>
 	</EffecterDef>
+	
+	<EffecterDef>
+    <defName>CTR_BeamImpact</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>SparkFlash</fleckDef>
+        <positionLerpFactor>0.6</positionLerpFactor>
+        <chancePerTick>0.2</chancePerTick>
+        <scale>
+          <min>2.5</min>
+          <max>4.5</max>
+        </scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+	  <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>CTR_Mote_YellowGlow</moteDef>
+        <positionLerpFactor>0.6</positionLerpFactor>
+        <chancePerTick>0.2</chancePerTick>
+        <scale>
+          <min>12</min>
+          <max>12</max>
+        </scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+	  <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>CTR_Mote_YellowRing</moteDef>
+        <positionLerpFactor>0.6</positionLerpFactor>
+        <chancePerTick>0.2</chancePerTick>
+        <scale>
+          <min>3</min>
+          <max>4</max>
+        </scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+	  <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <moteDef>Mote_PsychicEmanatorEffect</moteDef>
+        <scale>1~1</scale>
+		<spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+    <offsetTowardsTarget><min>0.0</min><max>0.0</max></offsetTowardsTarget>
+  </EffecterDef>
+  
+  <EffecterDef>
+    <defName>CTR_LivingImpact</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <positionRadius>0.2</positionRadius>
+        <fleckDef>AirPuff</fleckDef>
+        <burstCount>
+          <min>4</min>
+          <max>5</max>
+        </burstCount>
+        <speed>
+          <min>0.4</min>
+          <max>0.8</max>
+        </speed>
+        <scale>
+          <min>0.5</min>
+          <max>0.8</max>
+        </scale>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+    <offsetTowardsTarget><min>0.0</min><max>0.0</max></offsetTowardsTarget>
+    <positionRadius>0.3</positionRadius>
+  </EffecterDef>
 
 </Defs>

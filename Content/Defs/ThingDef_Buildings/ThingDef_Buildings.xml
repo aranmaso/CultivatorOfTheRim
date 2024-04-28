@@ -118,7 +118,7 @@
 			<li>MicroelectronicsBasics</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
-	</ThingDef>
+	</ThingDef>	
 	
 	<!-- ThingDef ParentName="BuildingBase">
 		<defName>CTR_QiCrystal</defName>
@@ -265,11 +265,12 @@
 		<thingClass>Building_WorkTable</thingClass>
 		<graphicData>
 			<texPath>Things/Buildings/AlchemyFurnace_Basic</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>(1.5,1.5)</drawSize>
 			<!-- <drawOffset>(0,0.5,0)</drawOffset> -->
 		</graphicData>
+		<!-- <rotatable>false</rotatable> -->
 		<castEdgeShadows>false</castEdgeShadows>
 		<!-- <staticSunShadowHeight>0.20</staticSunShadowHeight> -->
 		<costStuffCount>50</costStuffCount>
@@ -334,11 +335,12 @@
 		<thingClass>Building_WorkTable</thingClass>
 		<graphicData>
 			<texPath>Things/Buildings/AlchemyFurnace_Intermediate</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>(4,4)</drawSize>
 			<drawOffset>(0,0.5,0)</drawOffset>
 		</graphicData>
+		<!-- <rotatable>false</rotatable> -->
 		<castEdgeShadows>false</castEdgeShadows>
 		<!-- <staticSunShadowHeight>0.20</staticSunShadowHeight> -->
 		<costStuffCount>50</costStuffCount>
@@ -393,6 +395,6 @@
 		<researchPrerequisites>
 			<li>CTR_IntermediateAlchemy</li>
 		</researchPrerequisites>
-	</ThingDef>		
+	</ThingDef>
 	
 </Defs>

@@ -26,6 +26,7 @@
 				<excludedThingDefs>
 					<li>CTR_RuinedTalismanPaper</li>
 					<li>CTR_TalismanPaper</li>
+					<li>CTR_BeastCore</li>
 				</excludedThingDefs>
 			</li>
 			

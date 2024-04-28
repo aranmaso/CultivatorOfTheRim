@@ -113,4 +113,84 @@
 		</stages>
 	</HediffDef>
 	
+	<HediffDef>
+		<defName>CTR_QiOverload</defName>
+		<label>qi-poisoning buildup</label>
+		<description>intake of spirit item can cause a poison residua to buildup. too much excess of spirit item residua can be life-threatening</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+		<lethalSeverity>1</lethalSeverity>
+		<makesSickThought>true</makesSickThought>
+		<comps>
+		  <li Class="HediffCompProperties_Immunizable">
+			<compClass>HediffComp_ImmunizableToxic</compClass>
+			<severityPerDayNotImmune>-0.5</severityPerDayNotImmune>
+		  </li>
+		</comps>
+		<stages>
+		  <li>
+			<label>initial</label>
+			<becomeVisible>false</becomeVisible>
+		  </li>
+		  
+		  <li>
+			<label>initial</label>
+			<minSeverity>0.04</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.05</offset>
+			  </li>
+			</capMods>
+		  </li>
+		  
+		  <li>
+			<label>minor</label>
+			<minSeverity>0.2</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.10</offset>
+			  </li>
+			</capMods>
+		  </li>
+		  
+		  <li>
+			<label>moderate</label>
+			<minSeverity>0.40</minSeverity>
+			<vomitMtbDays>5</vomitMtbDays>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.15</offset>
+			  </li>
+			</capMods>
+		  </li>
+		  
+		  <li>
+			<label>serious</label>
+			<minSeverity>0.60</minSeverity>
+			<vomitMtbDays>1</vomitMtbDays>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.25</offset>
+			  </li>
+			</capMods>
+		  </li>
+		  
+		  <li>
+			<label>extreme</label>
+			<minSeverity>0.80</minSeverity>
+			<vomitMtbDays>0.5</vomitMtbDays>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<setMax>0.10</setMax>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+  </HediffDef>
+	
 </Defs>

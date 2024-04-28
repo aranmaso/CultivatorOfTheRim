@@ -51,7 +51,7 @@
 			<StuffPower_Armor_Blunt>0.20</StuffPower_Armor_Blunt>
 			<StuffPower_Armor_Heat>0.50</StuffPower_Armor_Heat>
 			<StuffPower_Armor_Qi>0.50</StuffPower_Armor_Qi>
-			<StuffPower_Insulation_Cold>-25</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Cold>25</StuffPower_Insulation_Cold>
 			<StuffPower_Insulation_Heat>25</StuffPower_Insulation_Heat>
 			<SharpDamageMultiplier>0.1</SharpDamageMultiplier>
 			<BluntDamageMultiplier>0.1</BluntDamageMultiplier>
@@ -91,8 +91,8 @@
 		<tradeTags>
 			<li>ExoticMisc</li>
 			<li>Qi_Source</li>
-			<li>Qi_Source_Tier2</li>
 			<li>Neutral_Qi</li>
+			<li>SpiritStone</li>
 		</tradeTags>
 		<thingSetMakerTags>
 			<!-- <li>RewardStandardMidFreq</li> -->
@@ -112,6 +112,15 @@
 			<MarketValue>10</MarketValue>
 			<MaxHitPoints>500</MaxHitPoints>
 			<Mass>1</Mass>
+			<StuffPower_Armor_Sharp>0.40</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.40</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.70</StuffPower_Armor_Heat>
+			<StuffPower_Armor_Qi>0.70</StuffPower_Armor_Qi>
+			<StuffPower_Insulation_Cold>50</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>50</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>0.2</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.2</BluntDamageMultiplier>
+			<CTR_QiDamageMultiplier>0.6</CTR_QiDamageMultiplier>
 		</statBases>
 		<generateCommonality>0.15</generateCommonality>
 		<stuffProps>
@@ -132,10 +141,7 @@
 			</statFactors>
 		</stuffProps>
 		<tradeTags>
-			<li>ExoticMisc</li>
-			<li>Qi_Source</li>
 			<li>Qi_Source_Tier2</li>
-			<li>Neutral_Qi</li>
 		</tradeTags>
 	</ThingDef>
 	
@@ -152,6 +158,15 @@
 			<MarketValue>20</MarketValue>
 			<MaxHitPoints>750</MaxHitPoints>
 			<Mass>10</Mass>
+			<StuffPower_Armor_Sharp>0.60</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.60</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.90</StuffPower_Armor_Heat>
+			<StuffPower_Armor_Qi>0.90</StuffPower_Armor_Qi>
+			<StuffPower_Insulation_Cold>70</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>70</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>0.4</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.4</BluntDamageMultiplier>
+			<CTR_QiDamageMultiplier>0.8</CTR_QiDamageMultiplier>
 		</statBases>
 		<generateCommonality>0.15</generateCommonality>
 		<stuffProps>
@@ -172,10 +187,7 @@
 			</statFactors>
 		</stuffProps>
 		<tradeTags>
-			<li>ExoticMisc</li>
-			<li>Qi_Source</li>
 			<li>Qi_Source_Tier3</li>
-			<li>Neutral_Qi</li>
 		</tradeTags>
 	</ThingDef>
 	
@@ -192,6 +204,15 @@
 			<MarketValue>40</MarketValue>
 			<MaxHitPoints>1000</MaxHitPoints>
 			<Mass>100</Mass>
+			<StuffPower_Armor_Sharp>0.80</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.80</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>1.10</StuffPower_Armor_Heat>
+			<StuffPower_Armor_Qi>1.10</StuffPower_Armor_Qi>
+			<StuffPower_Insulation_Cold>90</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>90</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>0.6</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.6</BluntDamageMultiplier>
+			<CTR_QiDamageMultiplier>1.0</CTR_QiDamageMultiplier>
 		</statBases>
 		<generateCommonality>0.15</generateCommonality>
 		<stuffProps>
@@ -212,10 +233,7 @@
 			</statFactors>
 		</stuffProps>
 		<tradeTags>
-			<li>ExoticMisc</li>
-			<li>Qi_Source</li>
 			<li>Qi_Source_Tier4</li>
-			<li>Neutral_Qi</li>
 		</tradeTags>
 	</ThingDef>
 	
@@ -232,6 +250,15 @@
 			<MarketValue>80</MarketValue>
 			<MaxHitPoints>1250</MaxHitPoints>
 			<Mass>1000</Mass>
+			<StuffPower_Armor_Sharp>1.00</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>1.00</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>1.30</StuffPower_Armor_Heat>
+			<StuffPower_Armor_Qi>1.30</StuffPower_Armor_Qi>
+			<StuffPower_Insulation_Cold>110</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>110</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>0.8</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.8</BluntDamageMultiplier>
+			<CTR_QiDamageMultiplier>1.2</CTR_QiDamageMultiplier>
 		</statBases>
 		<generateCommonality>0.15</generateCommonality>
 		<stuffProps>
@@ -252,10 +279,7 @@
 			</statFactors>
 		</stuffProps>
 		<tradeTags>
-			<li>ExoticMisc</li>
-			<li>Qi_Source</li>
 			<li>Qi_Source_Tier5</li>
-			<li>Neutral_Qi</li>
 		</tradeTags>
 	</ThingDef>
 	
@@ -272,6 +296,15 @@
 			<MarketValue>160</MarketValue>
 			<MaxHitPoints>1500</MaxHitPoints>
 			<Mass>10000</Mass>
+			<StuffPower_Armor_Sharp>1.20</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>1.20</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>1.50</StuffPower_Armor_Heat>
+			<StuffPower_Armor_Qi>1.50</StuffPower_Armor_Qi>
+			<StuffPower_Insulation_Cold>130</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>130</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1.0</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1.0</BluntDamageMultiplier>
+			<CTR_QiDamageMultiplier>1.4</CTR_QiDamageMultiplier>
 		</statBases>
 		<generateCommonality>0.15</generateCommonality>
 		<stuffProps>
@@ -292,10 +325,7 @@
 			</statFactors>
 		</stuffProps>
 		<tradeTags>
-			<li>ExoticMisc</li>
-			<li>Qi_Source</li>
 			<li>Qi_Source_Tier6</li>
-			<li>Neutral_Qi</li>
 		</tradeTags>
 	</ThingDef>
 

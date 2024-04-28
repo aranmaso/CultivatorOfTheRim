@@ -13,7 +13,7 @@
       <label>cultivation material</label>
       <parent>Cultivation_Root</parent>
       <resourceReadoutRoot>true</resourceReadoutRoot>
-      <iconPath>UI/Icons/ThingCategories/Drugs</iconPath>
+      <iconPath>Things/Items/Resources/SpiritStone/SpiritStone_02</iconPath>
     </ThingCategoryDef>
 	
 	<ThingCategoryDef>
@@ -21,7 +21,7 @@
       <label>pill</label>
       <parent>Cultivation_Root</parent>
       <resourceReadoutRoot>true</resourceReadoutRoot>
-      <iconPath>UI/Icons/ThingCategories/Drugs</iconPath>
+      <iconPath>Things/Items/Pills/CTR_HealingPill</iconPath>
     </ThingCategoryDef>
 	
 	<ThingCategoryDef>
@@ -29,7 +29,7 @@
       <label>spiritual plant</label>
       <parent>Cultivation_Root</parent>
       <resourceReadoutRoot>true</resourceReadoutRoot>
-      <iconPath>UI/Icons/ThingCategories/Drugs</iconPath>
+      <iconPath>Things/Items/Plants/SpiritGrassBundle</iconPath>
     </ThingCategoryDef>
 
 	<ThingDef ParentName="ResourceBase">
@@ -59,7 +59,7 @@
 			<StuffPower_Armor_Blunt>0.20</StuffPower_Armor_Blunt>
 			<StuffPower_Armor_Heat>0.50</StuffPower_Armor_Heat>
 			<StuffPower_Armor_Qi>0.50</StuffPower_Armor_Qi>
-			<StuffPower_Insulation_Cold>-25</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Cold>25</StuffPower_Insulation_Cold>
 			<StuffPower_Insulation_Heat>25</StuffPower_Insulation_Heat>
 			<SharpDamageMultiplier>0.1</SharpDamageMultiplier>
 			<BluntDamageMultiplier>0.1</BluntDamageMultiplier>
@@ -104,11 +104,16 @@
 			<preferability>NeverForNutrition</preferability>
 			<outcomeDoers>
 				<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_GiveQi">
-				<minimumCultivationLevel>
-					<li>CTR_Qi_GatheringOrAbove</li>
-				</minimumCultivationLevel>
-				<notForMortal>true</notForMortal>
-				<severity>1~5</severity>
+					<minimumCultivationLevel>
+						<li>CTR_Qi_GatheringOrAbove</li>
+					</minimumCultivationLevel>
+					<hediffDef>CTR_SpiritStoneAbsorb</hediffDef>
+					<notForMortal>true</notForMortal>
+					<severity>0.1~0.5</severity>
+				</li>
+				<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_AddOrRemoveHediff">
+					<hediffDef>CTR_QiOverload</hediffDef>
+					<severity>0.05~0.1</severity>
 				</li>
 			</outcomeDoers>
 		</ingestible>
@@ -126,11 +131,41 @@
 			<li>Qi_Source</li>
 			<li>Qi_Source_Tier1</li>
 			<li>Neutral_Qi</li>
+			<li>SpiritStone</li>
 		</tradeTags>
 		<thingSetMakerTags>
 			<li>RewardStandardMidFreq</li>
 		</thingSetMakerTags>
 	</ThingDef>
+	
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_SpiritStoneAbsorb</defName>
+		<label>Qi Condensing Pill absorbing</label>
+		<description>. . .</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!-- <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor> -->
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+				<disappearsAfterTicks>10000</disappearsAfterTicks>
+			</li>
+			
+			<li Class="CultivatorOfTheRim.HediffCompProperties_AbsorbingPill">
+				<severityAmount>0.01</severityAmount>
+				<tickInterval>60</tickInterval>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<statOffsets>
+					<CultivationSpeed>0.1</CultivationSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
 	
 	<ThingDef ParentName="ResourceBase">
 		<defName>CTR_AzureFragment</defName>
@@ -158,7 +193,7 @@
 			<StuffPower_Armor_Blunt>2.25</StuffPower_Armor_Blunt>
 			<StuffPower_Armor_Heat>6</StuffPower_Armor_Heat>
 			<StuffPower_Armor_Qi>3.00</StuffPower_Armor_Qi>
-			<StuffPower_Insulation_Cold>-250</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Cold>250</StuffPower_Insulation_Cold>
 			<StuffPower_Insulation_Heat>250</StuffPower_Insulation_Heat>
 			<SharpDamageMultiplier>3.5</SharpDamageMultiplier>
 			<BluntDamageMultiplier>2.5</BluntDamageMultiplier>
@@ -266,7 +301,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>CTR_MoonStone</defName>
 		<label>moon stone</label>
-		<description>a mysterious stone with cold aura. with a hint of Divine and Heaven Qi within. \n\nTags:Cold Qi, Yin Qi, Divine, Heavenly Qi</description>
+		<description>a mysterious stone with cold aura. with a hint of Divine and Heaven Qi within. \n\nTags:Cold Qi, Yin Qi, Divine, Nascent Qi</description>
 		<graphicData>
 			<texPath>Things/Items/Resources/MoonStone</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -293,7 +328,7 @@
 			<li>Cold_Qi</li>
 			<li>Yin_Qi</li>
 			<li>Divine</li>
-			<li>Heavenly_Qi</li>
+			<li>Nascent_Qi</li>
 		</tradeTags>
 		<thingSetMakerTags>
 			<li>RewardStandardMidFreq</li>
@@ -303,7 +338,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>CTR_YinCrystal</defName>
 		<label>yin crystal</label>
-		<description>crystal formed by pure Yin energy. \n\nTags: Yin Qi, Cold Qi.</description>
+		<description>crystal formed by pure Yin energy. \n\nTags: Yin Qi, Cold Qi, Saint Qi.</description>
 		<graphicData>
 			<texPath>Things/Items/Resources/YinCrystal</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -351,6 +386,7 @@
 			<li>ExoticMisc</li>
 			<li>Cold_Qi</li>
 			<li>Yin_Qi</li>
+			<li>Saint_Qi</li>
 		</tradeTags>
 		<thingSetMakerTags>
 			<li>RewardStandardMidFreq</li>
@@ -360,7 +396,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>CTR_YangCrystal</defName>
 		<label>yang crystal</label>
-		<description>crystal formed by pure Yang energy. \n\nTags: Yang Qi</description>
+		<description>crystal formed by pure Yang energy. \n\nTags: Yang Qi, Saint Qi.</description>
 		<graphicData>
 			<texPath>Things/Items/Resources/YangCrystal</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -407,6 +443,7 @@
 		<tradeTags>
 			<li>ExoticMisc</li>
 			<li>Yang_Qi</li>
+			<li>Saint_Qi</li>
 		</tradeTags>
 		<thingSetMakerTags>
 			<li>RewardStandardMidFreq</li>
@@ -432,6 +469,24 @@
 			<Flammability>1</Flammability>
 			<DeteriorationRate>0.01</DeteriorationRate>
 		</statBases>
+		<costList>
+            <WoodLog>1</WoodLog>
+        </costList>
+		<recipeMaker>
+            <researchPrerequisite>CTR_TalismanMaking</researchPrerequisite>
+            <recipeUsers>
+                <li>CraftingSpot</li>
+                <li>CTR_AlchemyFurnace_Basic</li>
+                <li>CTR_AlchemyFurnace_Intermediate</li>
+            </recipeUsers>
+            <workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <soundWorking>Recipe_Tailor</soundWorking>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+			</skillRequirements>
+			<productCount>5</productCount>
+        </recipeMaker>
 		<thingCategories>
 			<li>Cultivation_Resource</li>
 			<li>Manufactured</li>
@@ -473,6 +528,63 @@
 		<tradeTags>
 			<li>Impure_Qi</li>
 		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>CTR_BeastCore</defName>
+		<label>Beast Core</label>
+		<description>a mysterious stone harvested from animal with sufficient cultivation level.</description>
+		<graphicData>
+			<texPath>Effects/BlackQiEnergyOrb</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.5</drawSize>
+		</graphicData>		
+		<stackLimit>10</stackLimit>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MarketValue>500</MarketValue>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Mass>5</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0.01</DeteriorationRate>
+		</statBases>		
+		<ingestible>
+			<foodType>Processed</foodType>
+			<baseIngestTicks>120</baseIngestTicks>
+			<ingestSound>Ingest_Pill</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+				  <offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Consume {0}</ingestCommandString>
+			<ingestReportString>Consume {0}.</ingestReportString>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+			<chairSearchRadius>0</chairSearchRadius>
+			<drugCategory>None</drugCategory>		  
+			<preferability>NeverForNutrition</preferability>
+			<outcomeDoers>
+				<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_BeastCoreAbsorption">
+				</li>
+				<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_AddOrRemoveHediff">
+					<hediffDef>CTR_QiOverload</hediffDef>
+					<severity>0.05~0.1</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<thingCategories>
+			<li>Cultivation_Resource</li>
+		</thingCategories>
+		<comps>
+			<li>
+				<compClass>CultivatorOfTheRim.CompBeastCore</compClass>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+		</thingSetMakerTags>
 	</ThingDef>
 
 </Defs>

@@ -242,7 +242,9 @@
 		<workAmount>1000</workAmount>
 		<workSkill>Intellectual</workSkill>
 		<recipeUsers>
-			<li>DrugLab</li>
+			<li>CTR_AlchemyFurnace_Basic</li>
+			<li>CTR_AlchemyFurnace_Intermediate</li>
+			<li>CraftingSpot</li>
 		</recipeUsers>
 		<ingredients>
 			<li>
@@ -414,7 +416,7 @@
 		<skillRequirements>
 			<Intellectual>10</Intellectual>
    		 </skillRequirements>
-		<researchPrerequisite>DrugProduction</researchPrerequisite>
+		<researchPrerequisite>CTR_BasicAlchemy</researchPrerequisite>
 		<modExtensions>
 			<li Class="CultivatorOfTheRim.RecipeExtension_MixingIngredient">
 				<allowedCultivationLevel>

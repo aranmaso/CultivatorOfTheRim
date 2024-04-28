@@ -69,7 +69,7 @@
 					<li>CTR_Qi_GatheringOrAbove</li>
 				</minimumCultivationLevel>
 				<hediffDef>CTR_QiCondensingPillAbsorb</hediffDef>
-				<notForMortal>true</notForMortal>
+				<notForMortal>false</notForMortal>
 			  <!-- <severity>0.01~0.1</severity> -->
 			</li>
 		  </outcomeDoers>
@@ -455,6 +455,11 @@
 			<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_GiveQi">
 			  <severity>-0.01~-0.1</severity>
 			</li>
+			<li Class="CultivatorOfTheRim.IngestionOutcomeDoer_AddOrRemoveHediff">
+				<hediffDef>CTR_BackPain</hediffDef>
+				<severity>1</severity>
+				<baseDuration>5000</baseDuration>
+			</li>
 		  </outcomeDoers>
 		</ingestible>
 		<comps>
@@ -463,6 +468,34 @@
 			</li>
 		</comps>
 	</ThingDef>
+	
+	<HediffDef ParentName="ChronicDiseaseBase">
+		<defName>CTR_BackPain</defName>
+		<label>back pain</label>
+		<labelNoun>a bad back</labelNoun>
+		<description>by consuming Junk pill. you have get the worst kind of pain, back pain. enjoy.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+				<disappearsAfterTicks>60000</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.30</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
 	
 	<!-- Tribulation Remnant Pill -->
 	<ThingDef ParentName="CultivationDrugBase">

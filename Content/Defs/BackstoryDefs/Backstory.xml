@@ -6,19 +6,17 @@
 		<titleShort>Sect Genius</titleShort>
 		<defName>CTR_GeniusChild</defName>
 		<!-- <titleShort>Saint</titleShort> -->
-		<baseDesc>[PAWN_nameDef] was a genius hail from a famous sect in their childhood, [PAWN_pronoun] stand out among their peer. tho [PAWN_pronoun] is subject to the envy of many so [PAWN_nameDef] has trouble communicating with other.</baseDesc>
+		<description>[PAWN_nameDef] was a genius hail from a famous sect in their childhood, [PAWN_pronoun] stand out among their peer. tho [PAWN_pronoun] is subject to the envy of many so [PAWN_nameDef] has trouble communicating with other.</description>
 		<spawnCategories>
 			<li>MedievalRoyal</li>
 			<li>Outlander</li>
+			<li>Offworld</li>
 			<li>CTR_Backstories</li>
 		</spawnCategories>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<skillGains>
-		<li>
-			<key>Social</key>
-			<value>-1</value>
-		</li>
+			<Social>-1</Social>
 		</skillGains>
 		<workDisables>
 		<li></li>
@@ -26,6 +24,7 @@
 		<disallowedTraits>
 		</disallowedTraits>
 		<forcedTraits>
+			<CTR_InnateAlchemistTalent />
 		</forcedTraits>
 	</BackstoryDef>
 
@@ -35,7 +34,7 @@
 		<titleShort>Natural Yang Physique</titleShort>
 		<defName>CTR_YangChild</defName>
 		<!-- <titleShort>Saint</titleShort> -->
-		<baseDesc>[PAWN_nameDef] born with a natural Yang Physique, [PAWN_possessive] body can absorb Yang Qi twice as effective</baseDesc>
+		<description>[PAWN_nameDef] born with a natural Yang Physique, [PAWN_possessive] body can absorb Yang Qi twice as effective</description>
 		<spawnCategories>
 			<li>Outlander</li>
 			<li>Offworld</li>
@@ -47,6 +46,9 @@
 		</spawnCategories>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
+		<possessions>
+			<CTR_YangCrystal>4</CTR_YangCrystal>
+		</possessions>
 		<skillGains>
 		</skillGains>
 		<workDisables>
@@ -65,7 +67,7 @@
 		<titleShort>Immortal Reincanation</titleShort>
 		<defName>CTR_ImmortalChild</defName>
 		<!-- <titleShort>Saint</titleShort> -->
-		<baseDesc>[PAWN_nameDef] born with a memory of his previous live, [PAWN_nameDef] was once a renown immortal cultivator in the distant past.</baseDesc>
+		<description>[PAWN_nameDef] born with a memory of [PAWN_possessive] previous live, [PAWN_nameDef] was once a renown immortal cultivator in the distant past.</description>
 		<spawnCategories>
 			<li>Outlander</li>
 			<li>Offworld</li>
@@ -77,7 +79,13 @@
 		</spawnCategories>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
+		<possessions>
+			<CTR_AzureFragment>1</CTR_AzureFragment>
+		</possessions>
 		<skillGains>
+			<Social>5</Social>
+			<Melee>5</Melee>
+			<Shooting>5</Shooting>
 		</skillGains>
 		<workDisables>
 		<li></li>
@@ -85,6 +93,40 @@
 		<disallowedTraits>
 		</disallowedTraits>
 		<forcedTraits>
+			<CTR_CultivationProdigy />
+			<CTR_InnateAlchemistTalent />
+		</forcedTraits>
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<slot>Childhood</slot>
+		<title>Goldenspoon</title>
+		<titleShort>Young Master</titleShort>
+		<defName>CTR_ArrogantYoungMaster</defName>
+		<description>[PAWN_nameDef] was born in a wealthy family. with a golden spoon in his mouth. this cause [PAWN_objective] to be extremely arrogant and greedy </description>
+		<spawnCategories>
+			<li>Outlander</li>
+			<li>Offworld</li>
+			<li>Outsider</li>
+			<li>ImperialCommon</li>
+			<li>ImperialFighter</li>
+			<li>MedievalCommon</li>
+			<li>CTR_Backstories</li>
+		</spawnCategories>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<possessions>
+			<CTR_SpiritStone>500</CTR_SpiritStone>
+		</possessions>
+		<skillGains>
+		</skillGains>
+		<workDisables>ManualDumb</workDisables>
+		<disallowedTraits>
+		</disallowedTraits>
+		<forcedTraits>
+			<Jealous />
+			<Greedy />
+			<VTE_Insatiable MayRequire="vanillaexpanded.vanillatraitsexpanded" />
 		</forcedTraits>
 	</BackstoryDef>
 
@@ -94,7 +136,7 @@
 		<titleShort>Natural Yin Physique</titleShort>
 		<defName>CTR_YinChild</defName>
 		<!-- <titleShort>Saint</titleShort> -->
-		<baseDesc>[PAWN_nameDef] born with a natural Yin Physique, [PAWN_possessive] body can absorb Yin Qi twice as effective</baseDesc>
+		<description>[PAWN_nameDef] born with a natural Yin Physique, [PAWN_possessive] body can absorb Yin Qi twice as effective</description>
 		<spawnCategories>
 			<li>Outlander</li>
 			<li>Offworld</li>
@@ -106,6 +148,9 @@
 		</spawnCategories>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
+		<possessions>
+			<CTR_YinCrystal>4</CTR_YinCrystal>
+		</possessions>
 		<skillGains>
 		</skillGains>
 		<workDisables>
@@ -123,7 +168,7 @@
 		<title>Saintess</title>
 		<defName>CTR_Saintess</defName>
 		<titleShort>Saint</titleShort>
-		<baseDesc>[PAWN_nameDef] was the Saintess of a famous Sect, [PAWN_pronoun] is a genius in cultivation</baseDesc>
+		<description>[PAWN_nameDef] was the Saintess of a famous Sect, [PAWN_pronoun] is a genius in cultivation</description>
 		<spawnCategories>
 			<li>Outlander</li>
 			<li>Offworld</li>
@@ -134,10 +179,7 @@
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<bodyTypeMale>Female</bodyTypeMale>
 		<skillGains>
-		<li>
-			<key>Melee</key>
-			<value>5</value>
-		</li>
+			<Melee>5</Melee>
 		</skillGains>
 		<workDisables>
 		<li></li>
@@ -155,7 +197,7 @@
 		<title>Inner Disciple</title>
 		<titleShort>Inner Disciple</titleShort>
 		<defName>CTR_InnerDis</defName>
-		<baseDesc>[PAWN_nameDef] was an inner disciple of a certain Sect.</baseDesc>
+		<description>[PAWN_nameDef] was an inner disciple of a certain Sect.</description>
 		<spawnCategories>
 			<li>Outlander</li>
 			<li>Offworld</li>
@@ -168,14 +210,8 @@
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<skillGains>
-		<li>
-			<key>Melee</key>
-			<value>3</value>
-		</li>
-		<li>
-			<key>Shooting</key>
-			<value>3</value>
-		</li>
+			<Melee>3</Melee>
+			<Shooting>3</Shooting>
 		</skillGains>
 		<workDisables>
 		<li></li>
@@ -191,7 +227,7 @@
 		<title>Outer Disciple</title>
 		<titleShort>Outer Disciple</titleShort>
 		<defName>CTR_OuterDis</defName>
-		<baseDesc>[PAWN_nameDef] was an outer disciple of a certain Sect.</baseDesc>
+		<description>[PAWN_nameDef] was an outer disciple of a certain Sect.</description>
 		<spawnCategories>
 			<li>Outlander</li>
 			<li>Offworld</li>
@@ -204,14 +240,8 @@
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<skillGains>
-		<li>
-			<key>Melee</key>
-			<value>1</value>
-		</li>
-		<li>
-			<key>Shooting</key>
-			<value>1</value>
-		</li>
+			<Melee>1</Melee>
+			<Shooting>1</Shooting>
 		</skillGains>
 		<workDisables>
 		<li></li>
@@ -227,7 +257,7 @@
 		<title>Exiled Disciple</title>
 		<titleShort>Exiled Disciple</titleShort>
 		<defName>CTR_ExiledDis</defName>
-		<baseDesc>[PAWN_nameDef] was once a disciple of a certain sect. but due to a crime they commit. they were exiled</baseDesc>
+		<description>[PAWN_nameDef] was once a disciple of a certain sect. but due to a crime they commit. they were exiled</description>
 		<spawnCategories>
 			<li>Outlander</li>
 			<li>Offworld</li>
@@ -240,14 +270,8 @@
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<skillGains>
-		<li>
-			<key>Melee</key>
-			<value>1</value>
-		</li>
-		<li>
-			<key>Shooting</key>
-			<value>1</value>
-		</li>
+			<Melee>1</Melee>
+			<Shooting>1</Shooting>
 		</skillGains>
 		<workDisables>
 		<li></li>
@@ -263,7 +287,7 @@
 		<title>Alchemy Disciple</title>
 		<titleShort>Alchemy Disciple</titleShort>
 		<defName>CTR_AlchemyDis</defName>
-		<baseDesc>[PAWN_nameDef] was once a disciple of a certain sect. but due to a crime they commit. they were exiled</baseDesc>
+		<description>[PAWN_nameDef] was once a disciple of a certain sect. but due to a crime they commit. they were exiled</description>
 		<spawnCategories>
 			<li>Outlander</li>
 			<li>Offworld</li>
@@ -292,7 +316,7 @@
 		<title>Demonic Disciple</title>
 		<titleShort>Demonic Disciple</titleShort>
 		<defName>CTR_DemonDis</defName>
-		<baseDesc>[PAWN_nameDef] was once a disciple of a certain demonic sect.</baseDesc>
+		<description>[PAWN_nameDef] was once a disciple of a certain demonic sect.</description>
 		<spawnCategories>
 			<li>Outlander</li>
 			<li>Offworld</li>
@@ -320,7 +344,7 @@
 		<title>Sect Master</title>
 		<titleShort>Sect Master</titleShort>
 		<defName>CTR_SectMaster</defName>
-		<baseDesc>[PAWN_nameDef] was once a sect master of a certain sect.</baseDesc>
+		<description>[PAWN_nameDef] was once a sect master of a certain sect.</description>
 		<spawnCategories>
 			<li>Outlander</li>
 			<li>Offworld</li>
@@ -333,14 +357,8 @@
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<skillGains>
-		<li>
-			<key>Melee</key>
-			<value>10</value>
-		</li>
-		<li>
-			<key>Shooting</key>
-			<value>10</value>
-		</li>
+			<Melee>10</Melee>
+			<Shooting>10</Shooting>
 		</skillGains>
 		<workDisables>
 		<li></li>
@@ -356,7 +374,7 @@
 		<title>Sect Elder</title>
 		<titleShort>Sect Elder</titleShort>
 		<defName>CTR_SectElder</defName>
-		<baseDesc>[PAWN_nameDef] was once a elder of a certain sect.</baseDesc>
+		<description>[PAWN_nameDef] was once a elder of a certain sect.</description>
 		<spawnCategories>
 			<li>Outlander</li>
 			<li>Offworld</li>
@@ -369,14 +387,8 @@
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<skillGains>
-		<li>
-			<key>Melee</key>
-			<value>5</value>
-		</li>
-		<li>
-			<key>Shooting</key>
-			<value>5</value>
-		</li>
+			<Melee>5</Melee>
+			<Shooting>5</Shooting>
 		</skillGains>
 		<workDisables>
 		<li></li>

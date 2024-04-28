@@ -191,9 +191,7 @@
 		<stages>
 			<li>
 				<minSeverity>1</minSeverity>
-				<statFactors>
-					<MaxNutrition>1.5</MaxNutrition>				
-				</statFactors>
+				<hungerRateFactor>0.5</hungerRateFactor>
 				</li>
 		</stages>
 	</HediffDef>

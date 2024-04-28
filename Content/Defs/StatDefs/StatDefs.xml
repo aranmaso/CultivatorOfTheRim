@@ -23,6 +23,24 @@
 		<displayPriorityInCategory>300</displayPriorityInCategory>
 		<scenarioRandomizable>true</scenarioRandomizable>
 		<cacheable>true</cacheable>
+		<statFactors>
+			<li MayRequire="zomuro.itssorcery">TechniqueEfficiency</li>
+			<!-- <li>PsychicSensitivity</li> -->
+		</statFactors>
+	</StatDef>
+
+	<StatDef ParentName="CultivationBaseStat">
+		<defName>CTR_HealthMultiplier</defName>
+		<label>health multiplier</label>
+		<description>multiplier for pawn bodypart hp. as pawn cultivate, they gain more bodypart hp.</description>
+		<category>CTR_PawnCultivation</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>true</showOnAnimals>
+		<minValue>0.01</minValue>
+		<displayPriorityInCategory>300</displayPriorityInCategory>
+		<scenarioRandomizable>true</scenarioRandomizable>
+		<cacheable>true</cacheable>
 	</StatDef>
 	
 	<StatDef ParentName="CultivationBaseStat">

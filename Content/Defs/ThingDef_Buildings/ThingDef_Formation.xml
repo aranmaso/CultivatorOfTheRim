@@ -1,0 +1,488 @@
+<Defs>
+	<DesignatorDropdownGroupDef>
+		<defName>CTR_Formation</defName>
+		<label>Formation</label>
+	</DesignatorDropdownGroupDef>
+	<ThingDef Name="FormationBase" ParentName="BuildingBase" Abstract="true">
+		<thingClass>Building</thingClass>
+		<tickerType>Normal</tickerType>
+		<rotatable>true</rotatable>
+		<altitudeLayer>Floor</altitudeLayer>
+		<designatorDropdown>CTR_Formation</designatorDropdown>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<WorkToBuild>10000</WorkToBuild>
+			<Flammability>0.1</Flammability>
+			<Mass>1</Mass>
+		</statBases>
+		<passability>Standable</passability>
+		<pathCost>10</pathCost>
+		<blockWind>false</blockWind>
+		<castEdgeShadows>false</castEdgeShadows>
+		<building>
+			<destroySound>BuildingDestroyed_Stone_Big</destroySound>
+			<isEdifice>false</isEdifice>
+		</building>
+		<fillPercent>0</fillPercent>
+		<canOverlapZones>true</canOverlapZones>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>CultivatorOfTheRim</designationCategory>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<tradeTags>
+			<li>Formation</li>
+			<li>Cultivator_Building</li>
+		</tradeTags>
+		<researchPrerequisites>
+			<li>CTR_FormationMaking</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<ThingDef ParentName="FormationBase">
+		<defName>CTR_QiCondensingFormation</defName>
+		<label>Qi Absorbing Formation</label>
+		<description>a formation that help cultivator in absorbing Qi</description>
+		<graphicData>
+			<texPath>Things/Buildings/Formation/PatternB</texPath>
+			<graphicClass>Graphic_Indexed</graphicClass>
+			<drawSize>(5,5)</drawSize>
+			<drawOffset>(0,0,0)</drawOffset>
+		</graphicData>
+		<uiIconPath>Things/Buildings/Formation/PatternB/PatternB_A</uiIconPath>
+		<size>(5,5)</size>
+		<costList>
+			<CTR_SpiritStone>100</CTR_SpiritStone>
+			<CTR_QiCondensingPill>10</CTR_QiCondensingPill>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>4</glowRadius>
+				<glowColor>(0,164,255)</glowColor>
+			</li>
+			<li Class="CultivatorOfTheRim.CompProperties_Formation">
+				<heddiffDef>CTR_QiCondensingPillAbsorb</heddiffDef>
+				<effecterDef>QiOrbExplosion_Pure</effecterDef>
+				<radius>2.9</radius>
+				<checkInterval>120</checkInterval>
+				<totalDuration>5000</totalDuration>
+				<spiritStoneCost>10</spiritStoneCost>
+				<uiIcon>Things/Buildings/Formation/PatternB/PatternB_A</uiIcon>
+			</li>
+		</comps>
+		<placeWorkers/>
+		<specialDisplayRadius>2.9</specialDisplayRadius>
+		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+	</ThingDef>
+	<ThingDef ParentName="FormationBase">
+		<defName>CTR_QiCondensingFormation_Advanced</defName>
+		<label>Advanced Qi Absorbing Formation</label>
+		<description>a formation that help cultivator in absorbing Qi</description>
+		<graphicData>
+			<texPath>Things/Buildings/Formation/PatternA</texPath>
+			<graphicClass>Graphic_Indexed</graphicClass>
+			<drawSize>(5,5)</drawSize>
+			<drawOffset>(0,0,0)</drawOffset>
+		</graphicData>
+		<uiIconPath>Things/Buildings/Formation/PatternA/PatternA_A</uiIconPath>
+		<size>(5,5)</size>
+		<costList>
+			<CTR_SpiritStone>100</CTR_SpiritStone>
+			<CTR_NascentQiPill>10</CTR_NascentQiPill>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>4</glowRadius>
+				<glowColor>(0,164,255)</glowColor>
+			</li>
+			<li Class="CultivatorOfTheRim.CompProperties_Formation">
+				<heddiffDef>CTR_NascentQiPillAbsorb</heddiffDef>
+				<effecterDef>QiOrbExplosion_Pure</effecterDef>
+				<radius>2.9</radius>
+				<checkInterval>120</checkInterval>
+				<totalDuration>5000</totalDuration>
+				<spiritStoneCost>10</spiritStoneCost>
+				<uiIcon>Things/Buildings/Formation/PatternA/PatternA_A</uiIcon>
+			</li>
+		</comps>
+		<placeWorkers/>
+		<specialDisplayRadius>2.9</specialDisplayRadius>
+		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+	</ThingDef>
+	<ThingDef ParentName="FormationBase">
+		<defName>CTR_FlameFormation</defName>
+		<label>Flame Formation</label>
+		<description>a formation that spray high intensity flame at hostile pawn. high risk of fire hazard.</description>
+		<graphicData>
+			<texPath>Things/Buildings/Formation/PatternC</texPath>
+			<graphicClass>Graphic_Indexed</graphicClass>
+			<drawSize>(3,3)</drawSize>
+			<drawOffset>(0,0,0)</drawOffset>
+		</graphicData>
+		<uiIconPath>Things/Buildings/Formation/PatternC/PatternC_A</uiIconPath>
+		<size>(3,3)</size>
+		<costList>
+			<CTR_SpiritStone>100</CTR_SpiritStone>
+			<CTR_FireFlower>50</CTR_FireFlower>
+			<CTR_FireStone>50</CTR_FireStone>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(238,142,0)</glowColor>
+			</li>
+			<li Class="CultivatorOfTheRim.CompProperties_Formation">
+				<isShootingProjectile>true</isShootingProjectile>
+				<projectile>CTR_Bullet_Flamer</projectile>
+				<targetLimit>3</targetLimit>
+				<radius>19.9</radius>
+				<checkInterval>120</checkInterval>
+				<totalDuration>5000</totalDuration>
+				<spiritStoneCost>10</spiritStoneCost>
+				<uiIcon>Things/Buildings/Formation/PatternC/PatternC_A</uiIcon>
+			</li>
+		</comps>
+		<placeWorkers/>
+		<specialDisplayRadius>19.9</specialDisplayRadius>
+		<constructionSkillPrerequisite>13</constructionSkillPrerequisite>
+	</ThingDef>
+	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
+		<defName>CTR_Bullet_Flamer</defName>
+		<label>heavy flamer shot</label>
+		<thingClass>VFECore.FlamethrowProjectile</thingClass>
+		<graphicData>
+			<texPath>Things/Projectiles/Flamer</texPath>
+			<texPathFadeOut>Things/Projectiles/Flamer</texPathFadeOut>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>Flame</damageDef>
+			<speed>45</speed>
+			<damageAmountBase>12</damageAmountBase>
+		</projectile>
+		<drawOffscreen>true</drawOffscreen>
+		<lifeTimeDuration>50</lifeTimeDuration>
+		<widthScaleFactor>0.85</widthScaleFactor>
+		<heightScaleFactor>1</heightScaleFactor>
+		<startingPositionOffset>(0, 0, -1)</startingPositionOffset>
+		<totalSizeScale>1.15</totalSizeScale>
+		<tickFrameRate>2</tickFrameRate>
+		<finalTickFrameRate>5</finalTickFrameRate>
+		<tickDamageRate>20</tickDamageRate>
+		<dealsDamageOnce>true</dealsDamageOnce>
+		<minDistanceToAffect>2</minDistanceToAffect>
+	</VFECore.ExpandableProjectileDef>
+	<ThingDef ParentName="FormationBase" MayRequire="aranmaho.makai">
+		<defName>CTR_StardustFormation</defName>
+		<label>Stardust Formation</label>
+		<description>a formation that gather power from the star, fire 3 high damaging beam of stardust at hostile pawn.</description>
+		<graphicData>
+			<texPath>Things/Buildings/Formation/PatternH</texPath>
+			<graphicClass>Graphic_Indexed</graphicClass>
+			<drawSize>(3,3)</drawSize>
+			<drawOffset>(0,0,0)</drawOffset>
+		</graphicData>
+		<uiIconPath>Things/Buildings/Formation/PatternH/PatternH_A</uiIconPath>
+		<size>(3,3)</size>
+		<costList>
+			<CTR_SpiritStone>100</CTR_SpiritStone>
+			<CTR_MoonStone>100</CTR_MoonStone>
+			<CTR_MoonLeaf>50</CTR_MoonLeaf>
+			<CTR_AzureFragment>1</CTR_AzureFragment>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(238,142,0)</glowColor>
+			</li>
+			<li Class="CultivatorOfTheRim.CompProperties_Formation">
+				<isShootingProjectile>true</isShootingProjectile>
+				<projectile>CTR_BeamFormation</projectile>
+				<targetLimit>3</targetLimit>
+				<radius>29.9</radius>
+				<checkInterval>120</checkInterval>
+				<totalDuration>5000</totalDuration>
+				<spiritStoneCost>10</spiritStoneCost>
+				<uiIcon>Things/Buildings/Formation/PatternH/PatternH_A</uiIcon>
+			</li>
+		</comps>
+		<placeWorkers/>
+		<specialDisplayRadius>29.9</specialDisplayRadius>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+	</ThingDef>
+	<ThingDef>
+		<defName>CTRBeamGraphic</defName>
+		<thingClass>VanillaWeaponsExpandedLaser.LaserBeamGraphic</thingClass>
+		<drawOffscreen>true</drawOffscreen>
+		<label>stardust beam</label>
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+	</ThingDef>
+	<ThingDef Abstract="True" Name="CTR_BulletLaserBase" ParentName="BaseBullet">
+		<thingClass>VanillaWeaponsExpandedLaser.LaserBeam</thingClass>
+		<drawOffscreen>true</drawOffscreen>
+		<beamGraphic>CTRBeamGraphic</beamGraphic>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Projectile/Charge_Small</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<!-- <explosionEffect>Ring_ExpandY</explosionEffect> -->
+		<hitLivingEffect>CTR_LivingImpact</hitLivingEffect>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<speed>10000</speed>
+		</projectile>
+		<seam>0.25</seam>
+	</ThingDef>
+	<ThingDef ParentName="CTR_BulletLaserBase" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
+		<defName>CTR_BeamFormation</defName>
+		<label>Stardust Formation</label>
+		<description>a beam of stardust particle</description>
+		<textures>
+			<li>Things/Projectiles/y_beam</li>
+		</textures>
+		<seam>0</seam>
+		<canExplode>true</canExplode>
+		<shieldDamageMultiplier>2</shieldDamageMultiplier>
+		<causefireChance>0</causefireChance>
+		<beamWidth>3</beamWidth>
+		<lifetime>120</lifetime>
+		<explosionEffect>CTR_BeamImpact</explosionEffect>
+		<hitLivingEffect>CTR_LivingImpact</hitLivingEffect>
+		<projectile>
+			<damageDef>CTR_Qi_Injury_Explosion</damageDef>
+			<damageAmountBase>50</damageAmountBase>
+			<armorPenetrationBase>1</armorPenetrationBase>
+			<stoppingPower>5</stoppingPower>
+			<explosionRadius>3.0</explosionRadius>
+		</projectile>
+	</ThingDef>
+	<ThingDef ParentName="FormationBase">
+		<defName>CTR_HealingFormation</defName>
+		<label>Flesh Healing Formation</label>
+		<description>a formation that help organic being regenerate their flesh</description>
+		<graphicData>
+			<texPath>Things/Buildings/Formation/PatternD</texPath>
+			<graphicClass>Graphic_Indexed</graphicClass>
+			<drawSize>(3,3)</drawSize>
+			<drawOffset>(0,0,0)</drawOffset>
+		</graphicData>
+		<uiIconPath>Things/Buildings/Formation/PatternD/PatternD_A</uiIconPath>
+		<size>(3,3)</size>
+		<costList>
+			<CTR_SpiritStone>100</CTR_SpiritStone>
+			<CTR_HealingPill>10</CTR_HealingPill>
+			<CTR_YangCrystal>25</CTR_YangCrystal>
+			<CTR_YangFlower>25</CTR_YangFlower>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(0,164,255)</glowColor>
+			</li>
+			<li Class="CultivatorOfTheRim.CompProperties_Formation">
+				<heddiffDef>CTR_FormationHealing</heddiffDef>
+				<effecterDef>QiOrbExplosion_Pure</effecterDef>
+				<isOnlyTargetFriendly>true</isOnlyTargetFriendly>
+				<radius>10</radius>
+				<checkInterval>120</checkInterval>
+				<totalDuration>20000</totalDuration>
+				<spiritStoneCost>10</spiritStoneCost>
+				<uiIcon>Things/Buildings/Formation/PatternD/PatternD_A</uiIcon>
+			</li>
+		</comps>
+		<placeWorkers/>
+		<specialDisplayRadius>10</specialDisplayRadius>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+	</ThingDef>
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_FormationHealing</defName>
+		<label>healing formation</label>
+		<description>recieve healing from Healing Formation</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<totalBleedFactor>0.5</totalBleedFactor>
+				<regeneration>100</regeneration>
+				<naturalHealingFactor>1.5</naturalHealingFactor>
+				<statOffsets>					
+			</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	<ThingDef ParentName="FormationBase">
+		<defName>CTR_WorkspeedFormation</defName>
+		<label>Productivity Formation</label>
+		<description>a formation that increase surrounding pawn productivity</description>
+		<graphicData>
+			<texPath>Things/Buildings/Formation/PatternE</texPath>
+			<graphicClass>Graphic_Indexed</graphicClass>
+			<drawSize>(3,3)</drawSize>
+			<drawOffset>(0,0,0)</drawOffset>
+		</graphicData>
+		<uiIconPath>Things/Buildings/Formation/PatternE/PatternE_A</uiIconPath>
+		<size>(3,3)</size>
+		<costList>
+			<CTR_SpiritStone>100</CTR_SpiritStone>
+			<CTR_YangCrystal>10</CTR_YangCrystal>
+			<CTR_FireFlower>50</CTR_FireFlower>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(0,164,255)</glowColor>
+			</li>
+			<li Class="CultivatorOfTheRim.CompProperties_Formation">
+				<heddiffDef>CTR_FormationProductivity</heddiffDef>
+				<hediffDuration>5000</hediffDuration>
+				<effecterDef>QiOrbExplosion_Pure</effecterDef>
+				<isOnlyTargetFriendly>true</isOnlyTargetFriendly>
+				<radius>10</radius>
+				<checkInterval>120</checkInterval>
+				<totalDuration>5000</totalDuration>
+				<spiritStoneCost>10</spiritStoneCost>
+				<uiIcon>Things/Buildings/Formation/PatternE/PatternE_A</uiIcon>
+			</li>
+		</comps>
+		<placeWorkers/>
+		<specialDisplayRadius>10</specialDisplayRadius>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+	</ThingDef>
+	<HediffDef ParentName="CultivationDrugHediffBase">
+		<defName>CTR_FormationProductivity</defName>
+		<label>improve working speed effect</label>
+		<description>recieve a boost in workspeed from productivity formation</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	<ThingDef ParentName="FormationBase">
+		<defName>CTR_PlantFertilityFormation</defName>
+		<label>Plant Fertility Formation</label>
+		<description>a formation that speed up nearby plant growth, can't affect spirit plant. \n if living being were to step into the radius of the formation, there 10% chance to will age up by a day. per trigger.</description>
+		<graphicData>
+			<texPath>Things/Buildings/Formation/PatternF</texPath>
+			<graphicClass>Graphic_Indexed</graphicClass>
+			<drawSize>(3,3)</drawSize>
+			<drawOffset>(0,0,0)</drawOffset>
+		</graphicData>
+		<uiIconPath>Things/Buildings/Formation/PatternF/PatternF_A</uiIconPath>
+		<size>(3,3)</size>
+		<costList>
+			<CTR_SpiritStone>100</CTR_SpiritStone>
+			<CTR_ImmortalGrass>10</CTR_ImmortalGrass>
+			<CTR_FertilityPill>10</CTR_FertilityPill>
+			<CTR_TalismanPaper>1</CTR_TalismanPaper>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(0,164,255)</glowColor>
+			</li>
+			<li Class="CultivatorOfTheRim.CompProperties_Formation">
+				<isSpeedUpPlant>true</isSpeedUpPlant>
+				<speedUpPercent>0.01~0.05</speedUpPercent>
+				<isPlayingEffector>true</isPlayingEffector>
+				<effecterDef>QiOrbExplosion_Pure</effecterDef>
+				<radius>20</radius>
+				<checkInterval>250</checkInterval>
+				<totalDuration>5000</totalDuration>
+				<spiritStoneCost>10</spiritStoneCost>
+				<uiIcon>Things/Buildings/Formation/PatternF/PatternF_A</uiIcon>
+			</li>
+		</comps>
+		<placeWorkers/>
+		<specialDisplayRadius>20</specialDisplayRadius>
+		<researchPrerequisites>
+			<li>CTR_SpiritPlantCultivationAdvanced</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+	</ThingDef>
+	<ThingDef ParentName="FormationBase">
+		<defName>CTR_SwordFormation</defName>
+		<label>Sword Formation</label>
+		<description>a formation consist of 7 swords, will send a flying sword toward up to 7 enemies at once.</description>
+		<graphicData>
+			<texPath>Things/Buildings/Formation/PatternG</texPath>
+			<graphicClass>Graphic_Indexed</graphicClass>
+			<drawSize>(5,5)</drawSize>
+			<drawOffset>(0,0,0)</drawOffset>
+		</graphicData>
+		<uiIconPath>Things/Buildings/Formation/PatternG/PatternG_A</uiIconPath>
+		<size>(5,5)</size>
+		<costList>
+			<CTR_SpiritStone>100</CTR_SpiritStone>
+			<CTR_FireStone>50</CTR_FireStone>
+			<MeleeWeapon_LongSword>7</MeleeWeapon_LongSword>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(238,142,0)</glowColor>
+			</li>
+			<li Class="CultivatorOfTheRim.CompProperties_Formation">
+				<isShootingProjectile>true</isShootingProjectile>
+				<projectile>CTR_SwordFormationAttack</projectile>
+				<shootingSound>CTR_SwordSlice</shootingSound>
+				<randomSpawnPosition>true</randomSpawnPosition>
+				<targetLimit>7</targetLimit>
+				<radius>39.9</radius>
+				<checkInterval>120</checkInterval>
+				<totalDuration>5000</totalDuration>
+				<spiritStoneCost>10</spiritStoneCost>
+				<uiIcon>Things/Buildings/Formation/PatternG/PatternG_A</uiIcon>
+			</li>
+		</comps>
+		<placeWorkers/>
+		<specialDisplayRadius>39.9</specialDisplayRadius>
+		<constructionSkillPrerequisite>13</constructionSkillPrerequisite>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>CTR_SwordFormationAttack</defName>
+		<label>Sword</label>
+		<description>sword</description>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectiles/swordProjectile</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Cutout</shaderType>
+			<drawSize>2.5</drawSize>
+		</graphicData>
+		<drawOffscreen>true</drawOffscreen>
+		<projectile>
+			<damageDef>CTR_Qi_Injury_Explosion</damageDef>
+			<damageAmountBase>25</damageAmountBase>
+			<armorPenetrationBase>1</armorPenetrationBase>
+			<explosionRadius>3</explosionRadius>
+			<speed>60</speed>
+			<!-- <shadowSize>0.4</shadowSize> -->
+			<explosionEffect>CTR_BeamImpact</explosionEffect>
+		</projectile>
+	</ThingDef>
+</Defs>

@@ -3,17 +3,62 @@
 		<xpath>Defs/StatDef[defName="MarketValue"]/parts</xpath>
 		<value>
 			<li Class="CultivatorOfTheRim.StatPart_GradeWorth"/>
+			<li Class="CultivatorOfTheRim.StatPart_BeastCore"/>
 		</value>
 	</Operation>
 	
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/FactionDef/caravanTraderKinds</xpath>
-		<value>
-			<li>Caravan_CultivationResource</li>
-			<li>Caravan_CultivationPill</li>
-			<li>Caravan_CultivationTechnique</li>
-		</value>
-	</Operation>
+	<!-- <Operation Class="PatchOperationAdd"> -->
+		<!-- <xpath>Defs/FactionDef/caravanTraderKinds</xpath> -->
+		<!-- <value> -->
+			<!-- <li>Caravan_CultivationResource</li> -->
+			<!-- <li>Caravan_CultivationPill</li> -->
+			<!-- <li>Caravan_CultivationTechnique</li> -->
+		<!-- </value> -->
+	<!-- </Operation> -->
+	
+	<!-- <Operation Class="PatchOperationConditional"> -->
+		<!-- <xpath>Defs/FactionDef/caravanTraderKinds</xpath> -->
+		<!-- <nomatch Class="PatchOperationAdd"> -->
+			<!-- <xpath>Defs/FactionDef</xpath> -->
+			<!-- <value> -->
+				<!-- <caravanTraderKinds> -->
+					<!-- <li>Caravan_CultivationResource</li> -->
+					<!-- <li>Caravan_CultivationPill</li> -->
+					<!-- <li>Caravan_CultivationTechnique</li> -->
+				<!-- </caravanTraderKinds> -->
+			<!-- </value> -->
+		<!-- </nomatch> -->
+		<!-- <match Class="PatchOperationAdd"> -->
+			<!-- <xpath>Defs/FactionDef/caravanTraderKinds</xpath> -->
+			<!-- <value> -->
+				<!-- <li>Caravan_CultivationResource</li> -->
+				<!-- <li>Caravan_CultivationPill</li> -->
+				<!-- <li>Caravan_CultivationTechnique</li> -->
+			<!-- </value> -->
+		<!-- </match> -->
+	<!-- </Operation> -->
+	
+	<!-- <Operation Class="PatchOperationConditional"> -->
+		<!-- <xpath>Defs/FactionDef/baseTraderKinds</xpath> -->
+		<!-- <nomatch Class="PatchOperationAdd"> -->
+			<!-- <xpath>Defs/FactionDef</xpath> -->
+			<!-- <value> -->
+				<!-- <baseTraderKinds> -->
+					<!-- <li>Caravan_CultivationResource</li> -->
+					<!-- <li>Caravan_CultivationPill</li> -->
+					<!-- <li>Caravan_CultivationTechnique</li> -->
+				<!-- </baseTraderKinds> -->
+			<!-- </value> -->
+		<!-- </nomatch> -->
+		<!-- <match Class="PatchOperationAdd"> -->
+			<!-- <xpath>Defs/FactionDef/baseTraderKinds</xpath> -->
+			<!-- <value> -->
+				<!-- <li>Caravan_CultivationResource</li> -->
+				<!-- <li>Caravan_CultivationPill</li> -->
+				<!-- <li>Caravan_CultivationTechnique</li> -->
+			<!-- </value> -->
+		<!-- </match> -->
+	<!-- </Operation> -->
 	
 	<!-- <Operation Class="PatchOperationFindMod"> -->
 		<!-- <mods> -->
@@ -76,6 +121,14 @@
 				<li>Heavenly_Qi</li>
 			</value>
 		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Schematic"]/comps/li[@Class="CompProperties_Book"]/doers/li[@Class="BookOutcomeProperties_GainResearch"]/tabs</xpath>
+		<value>
+			<CTR_Alchemy_ResearchTab />
+			<CTR_Cultivation_ResearchTab />
+		</value>
 	</Operation>
 	
 	

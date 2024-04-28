@@ -5,13 +5,13 @@
 	<ResearchProjectDef>
 		<defName>CTR_BasicAlchemy</defName>
 		<label>Basic of Alchemy</label>
-		<description>. . .</description>
+		<description>the basic of pill making, mixing various ingredient into extraordinary pills.</description>
 		<baseCost>2000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
 		<requiredResearchFacilities />
 		<prerequisites>
-			<li>DrugProduction</li>
+			<!-- <li>DrugProduction</li> -->
 		</prerequisites>
 		<tab>CTR_Alchemy_ResearchTab</tab>
 		<researchViewX>0.00</researchViewX>
@@ -22,7 +22,7 @@
 	<ResearchProjectDef>
 		<defName>CTR_QiCondensingPillMaking</defName>
 		<label>Alchemy - Qi Condensing Pills</label>
-		<description>. . .</description>
+		<description>making a pill that directly give Qi into cultivator body</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
@@ -38,7 +38,7 @@
 	<ResearchProjectDef>
 		<defName>CTR_ImproveAbsorptionPillMaking</defName>
 		<label>Alchemy - Qi Absorption Pills</label>
-		<description>. . .</description>
+		<description>making pill to boost the speed of cultivation.</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
@@ -54,7 +54,7 @@
 	<ResearchProjectDef>	
 		<defName>CTR_FleshHealingPillMaking</defName>
 		<label>Alchemy - Flesh Healing Pills</label>
-		<description>. . .</description>
+		<description>concoct a flesh healing pill, fixing damaged body part.</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
@@ -70,7 +70,7 @@
 	<ResearchProjectDef>	
 		<defName>CTR_ColdResistPillMaking</defName>
 		<label>Alchemy - Cold-Resistance Pills</label>
-		<description>. . .</description>
+		<description>concoct a solution against cold enviaronment</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
@@ -86,7 +86,7 @@
 	<ResearchProjectDef>	
 		<defName>CTR_HeatResistPillMaking</defName>
 		<label>Alchemy - Heat-Resistance Pills</label>
-		<description>. . .</description>
+		<description>concoct a solution against hot enviaronment</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
@@ -102,7 +102,7 @@
 	<ResearchProjectDef>	
 		<defName>CTR_ImproveGWSPillMaking</defName>
 		<label>Alchemy - Work Speed Pills</label>
-		<description>. . .</description>
+		<description>a solution for your everyday working need, finish twice the work in the time someone finish one</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
@@ -118,7 +118,7 @@
 	<ResearchProjectDef>	
 		<defName>CTR_StoneSkinPillMaking</defName>
 		<label>Alchemy - Stoneskin Pills</label>
-		<description>. . .</description>
+		<description>protect the skin with Earth element material</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
@@ -134,7 +134,7 @@
 	<ResearchProjectDef>	
 		<defName>CTR_FertilityPillMaking</defName>
 		<label>Alchemy - Fertility Pills</label>
-		<description>. . .</description>
+		<description>boost the fertility for whoever consuming this pill</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
@@ -153,7 +153,7 @@
 	<ResearchProjectDef>
 		<defName>CTR_IntermediateAlchemy</defName>
 		<label>Intermediate Alchemy</label>
-		<description>. . .</description>
+		<description>a more advanced recipe combination</description>
 		<baseCost>2000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
@@ -170,7 +170,7 @@
 	<ResearchProjectDef>
 		<defName>CTR_NascentQiPillMaking</defName>
 		<label>Alchemy - Nascent Qi Pills</label>
-		<description>. . .</description>
+		<description>concoct a pill to inject Nascent Qi into user</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
@@ -186,7 +186,7 @@
 	<ResearchProjectDef>	
 		<defName>CTR_DantianRepairPillMaking</defName>
 		<label>Alchemy - Dantian Repair Pills</label>
-		<description>. . .</description>
+		<description>damaged dantian is big problem for cultivator. it better to heal it as soon as possible</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
@@ -202,7 +202,7 @@
 	<ResearchProjectDef>	
 		<defName>CTR_ImproveReflexPillMaking</defName>
 		<label>Alchemy - Reflex Improvement Pills</label>
-		<description>. . .</description>
+		<description>reflex is vital in combat between cultivator, this pill would increase the likelyhood of one victory</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
@@ -219,7 +219,7 @@
 	<ResearchProjectDef>
 		<defName>CTR_AdvancedAlchemy</defName>
 		<label>Advanced Alchemy</label>
-		<description>. . .</description>
+		<description>the highest form of alchemy, concoct the highest tier of pill, with legendary effect.</description>
 		<baseCost>5000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
@@ -235,7 +235,7 @@
 	<ResearchProjectDef>	
 		<defName>CTR_SaintQiPillMaking</defName>
 		<label>Alchemy - Saint Qi Pills</label>
-		<description>. . .</description>
+		<description>a pill to inject Saint Qi into cultivator body. the higher the realm, the more Qi they need.</description>
 		<baseCost>5000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
@@ -251,7 +251,7 @@
 	<ResearchProjectDef>	
 		<defName>CTR_ImmortalQiPillMaking</defName>
 		<label>Alchemy - Immortal Qi Pills</label>
-		<description>. . .</description>
+		<description>once one reach the realm of Heaven Ascending,the amount of Qi they need is unreal, thus the Immortal Qi pill is a must in aiding their cultivation.</description>
 		<baseCost>7500</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
@@ -267,8 +267,8 @@
 	<ResearchProjectDef>	
 		<defName>CTR_LifeSpanPillMaking</defName>
 		<label>Alchemy - Lifespan Extending Pills</label>
-		<description>. . .</description>
-		<baseCost>2000</baseCost>
+		<description>mortal life is limiting, one would try their best to prolong their end. even if just a bit longer</description>
+		<baseCost>5000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
 		<requiredResearchFacilities />
@@ -285,7 +285,7 @@
 	<ResearchProjectDef>
 		<defName>CTR_TalismanMaking</defName>
 		<label>Basic of Talisman</label>
-		<description>. . .</description>
+		<description>learn the basic of drawing and infusing Qi into talisman, which can be made into talisman of various effect.</description>
 		<baseCost>1000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
@@ -295,6 +295,38 @@
 		</prerequisites>
 		<tab>CTR_Cultivation_ResearchTab</tab>
 		<researchViewX>0.00</researchViewX>
+		<researchViewY>0.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>CTR_FormationMaking</defName>
+		<label>Knowledge of Formation</label>
+		<description>making formation from various material. grant different effect ranging from some support buff to offensive ability.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_TalismanMaking</li>
+		</prerequisites>
+		<tab>CTR_Cultivation_ResearchTab</tab>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>0.40</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef MayRequire="smashphil.vehicleframework">
+		<defName>CTR_FlyingSwordMaking</defName>
+		<label>flying sword engraving</label>
+		<description>engraving spiritual pattern into a sword, make it into a flying sword. aiding cultivator in long distant travel</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<!-- <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding> -->
+		<requiredResearchFacilities />
+		<prerequisites>
+			<li>CTR_FormationMaking</li>
+		</prerequisites>
+		<tab>CTR_Cultivation_ResearchTab</tab>
+		<researchViewX>2.00</researchViewX>
 		<researchViewY>0.40</researchViewY>
 	</ResearchProjectDef>
 	

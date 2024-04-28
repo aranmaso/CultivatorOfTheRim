@@ -8,7 +8,8 @@
 				<label>Mediocre Talent</label>
 				<description>{PAWN_nameDef} has mediocre talent in cultivation. not too bad. but not good either.</description>
 				<statFactors>
-					<CultivationSpeed>1</CultivationSpeed>
+					<CultivationSpeed>0.9</CultivationSpeed>
+					<TechniqueEfficiency MayRequire="zomuro.itssorcery">0.9</TechniqueEfficiency>
 				</statFactors>
 				
 			</li>
@@ -27,7 +28,8 @@
 				<label>Good Talent</label>
 				<description>{PAWN_nameDef} has good talent in cultivation. they cultivate somewhat faster than other</description>
 				<statFactors>
-					<CultivationSpeed>1</CultivationSpeed>
+					<CultivationSpeed>1.1</CultivationSpeed>
+					<TechniqueEfficiency MayRequire="zomuro.itssorcery">1.1</TechniqueEfficiency>
 				</statFactors>				
 			</li>
 		</degreeDatas>
@@ -45,7 +47,8 @@
 				<label>Cultivation Prodigy</label>
 				<description>{PAWN_nameDef} is a prodigy in cultivation, they cultivate a lot faster than other</description>
 				<statFactors>
-					<CultivationSpeed>1</CultivationSpeed>
+					<CultivationSpeed>1.25</CultivationSpeed>
+					<TechniqueEfficiency MayRequire="zomuro.itssorcery">1.25</TechniqueEfficiency>
 				</statFactors>				
 			</li>
 		</degreeDatas>
@@ -66,10 +69,7 @@
 					<AlchemySuccessChance>0.25</AlchemySuccessChance>
 				</statOffsets>		
 				<skillGains>
-				<li>
-					<key>Medicine</key>
-					<value>5</value>
-				</li>
+				<Medicine>5</Medicine>
 				</skillGains>
 			</li>
 		</degreeDatas>
@@ -118,6 +118,7 @@
 				<description>{PAWN_nameDef} has innate Fire element. they absorb Fire Qi better. but {PAWN_pronoun} have difficulty in absorbing Water Qi</description>
 				<statOffsets>
 					<CTR_FireQi_AbsorptionMultiplier>0.15</CTR_FireQi_AbsorptionMultiplier>
+					<CTR_WaterQi_AbsorptionMultiplier>-0.15</CTR_WaterQi_AbsorptionMultiplier>
 				</statOffsets>				
 			</li>
 		</degreeDatas>
@@ -135,6 +136,7 @@
 				<description>{PAWN_nameDef} has innate Earth element. they absorb Earth Qi better. but {PAWN_pronoun} have difficulty in absorbing Wood Qi</description>
 				<statOffsets>
 					<CTR_EarthQi_AbsorptionMultiplier>0.15</CTR_EarthQi_AbsorptionMultiplier>
+					<CTR_WoodQi_AbsorptionMultiplier>-0.15</CTR_WoodQi_AbsorptionMultiplier>
 				</statOffsets>				
 			</li>
 		</degreeDatas>
@@ -152,6 +154,7 @@
 				<description>{PAWN_nameDef} has innate Metal element. they absorb Metal Qi better. but {PAWN_pronoun} have difficulty in absorbing Fire Qi</description>
 				<statOffsets>
 					<CTR_MetalQi_AbsorptionMultiplier>0.15</CTR_MetalQi_AbsorptionMultiplier>
+					<CTR_FireQi_AbsorptionMultiplier>-0.15</CTR_FireQi_AbsorptionMultiplier>
 				</statOffsets>				
 			</li>
 		</degreeDatas>
@@ -169,6 +172,7 @@
 				<description>{PAWN_nameDef} has innate Water element. they absorb Water Qi better. but {PAWN_pronoun} have difficulty in absorbing Earth Qi</description>
 				<statOffsets>
 					<CTR_WaterQi_AbsorptionMultiplier>0.15</CTR_WaterQi_AbsorptionMultiplier>
+					<CTR_EarthQi_AbsorptionMultiplier>-0.15</CTR_EarthQi_AbsorptionMultiplier>
 				</statOffsets>				
 			</li>
 		</degreeDatas>
@@ -186,6 +190,7 @@
 				<description>{PAWN_nameDef} has innate Wood element. they absorb Wood Qi better. but {PAWN_pronoun} have difficulty in absorbing Metal Qi</description>
 				<statOffsets>
 					<CTR_WoodQi_AbsorptionMultiplier>0.15</CTR_WoodQi_AbsorptionMultiplier>
+					<CTR_MetalQi_AbsorptionMultiplier>-0.15</CTR_MetalQi_AbsorptionMultiplier>
 				</statOffsets>				
 			</li>
 		</degreeDatas>
@@ -200,9 +205,10 @@
 		<degreeDatas>
 			<li>
 				<label>Yang Qi Inclined</label>
-				<description>{PAWN_nameDef} has innate Wood element. they absorb Wood Qi better. but {PAWN_pronoun} have difficulty in absorbing Metal Qi</description>
+				<description>{PAWN_nameDef} has innate Yang body. they absorb Yang Qi better. but {PAWN_pronoun} have difficulty in absorbing Yin Qi</description>
 				<statOffsets>
 					<CTR_YangQi_AbsorptionMultiplier>1</CTR_YangQi_AbsorptionMultiplier>
+					<CTR_YinQi_AbsorptionMultiplier>-0.5</CTR_YinQi_AbsorptionMultiplier>
 				</statOffsets>				
 			</li>
 		</degreeDatas>
@@ -217,9 +223,10 @@
 		<degreeDatas>
 			<li>
 				<label>Yin Qi Inclined</label>
-				<description>{PAWN_nameDef} has innate Wood element. they absorb Wood Qi better. but {PAWN_pronoun} have difficulty in absorbing Metal Qi</description>
+				<description>{PAWN_nameDef} has innate Yin element. they absorb Yin Qi better. but {PAWN_pronoun} have difficulty in absorbing Yang Qi</description>
 				<statOffsets>
 					<CTR_YinQi_AbsorptionMultiplier>1</CTR_YinQi_AbsorptionMultiplier>
+					<CTR_YangQi_AbsorptionMultiplier>-0.5</CTR_YangQi_AbsorptionMultiplier>
 				</statOffsets>				
 			</li>
 		</degreeDatas>

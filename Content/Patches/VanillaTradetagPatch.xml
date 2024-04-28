@@ -1,5 +1,48 @@
 <Patch>
 
+	<!-- Anima -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Plant_TreeAnima"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Plant_TreeAnima"]</xpath>
+			<value>
+				<tradeTags />
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Plant_TreeAnima"]/tradeTags</xpath>
+		<value>
+			<li>Neutral_Qi</li>
+			<li>Qi_Source</li>
+			<li>Qi_Source_Tier3</li>
+			<li>Unlimited_Source</li>
+		</value>
+	</Operation>
+	
+	<!-- Gauranlen -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Plant_TreeGauranlen"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Plant_TreeGauranlen"]</xpath>
+			<value>
+				<tradeTags />
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Plant_TreeGauranlen"]/tradeTags</xpath>
+		<value>
+			<li>Neutral_Qi</li>
+			<li>Qi_Source</li>
+			<li>Qi_Source_Tier3</li>
+			<li>Unlimited_Source</li>
+		</value>
+	</Operation>
+	
+	
 	<!-- Steel -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>Defs/ThingDef[defName="Steel"]/tradeTags</xpath>

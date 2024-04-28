@@ -9,7 +9,7 @@
 		<hediffSolid>Crush</hediffSolid>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<impactSoundType>Slice</impactSoundType>
-		<armorCategory>Heat</armorCategory>
+		<armorCategory>CTR_Qi</armorCategory>
 		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
 		<isRanged>false</isRanged>
 		<makesAnimalsFlee>true</makesAnimalsFlee>

@@ -73,6 +73,43 @@
 		</mote>
 	</ThingDef>
 	
+	<ThingDef ParentName="MoteBase">
+		<defName>CTR_Mote_YellowGlow</defName>
+		<graphicData>
+			<texPath>Effects/Mote_MakaiYellow</texPath>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<drawOffscreen>true</drawOffscreen>
+		<mote>
+			<rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+			<fadeInTime>0.01</fadeInTime>
+			<solidTime>0.5</solidTime>
+			<fadeOutTime>0.4</fadeOutTime>
+			<growthRate>5</growthRate>
+		</mote>
+	</ThingDef>
+  
+	<ThingDef ParentName="MoteBase">
+		<defName>CTR_Mote_YellowRing</defName>
+		<graphicData>
+			<texPath>Effects/Mote_RingYellow</texPath>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<drawOffscreen>true</drawOffscreen>
+		<mote>
+			<rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+			<fadeInTime>0</fadeInTime>
+			<solidTime>0.2</solidTime>
+			<fadeOutTime>0.1</fadeOutTime>
+			<growthRate>15</growthRate>
+			<speedPerTime>-0.12</speedPerTime>
+		</mote>
+	</ThingDef>
+	
 	<FleckDef ParentName="FleckBase_Thrown">
 		<defName>CTR_AbsorbQiOrbPure</defName>
 		<graphicData>
@@ -162,5 +199,6 @@
 		<growthRate>-0.25</growthRate>
 		<speedPerTime>-1</speedPerTime>
 	</FleckDef>	
-
+	
+	
 </Defs>
