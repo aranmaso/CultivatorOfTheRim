@@ -35,8 +35,7 @@
     <defName>CTR_Talisman</defName>
 		<label>Talisman</label>
 		<drawOrder>401</drawOrder>
-	</ApparelLayerDef>
-	
+	</ApparelLayerDef>	
 	
 	<ThingDef ParentName="TalismanBase">
 		<defName>CTR_TalismanSmart</defName>
@@ -172,7 +171,9 @@
 				<!-- </hediffDefs> -->
 				<!-- <severity>1</severity> -->
 			<!-- </li> -->
-			<li Class="CompProperties_Shield" />
+			<li Class="CompProperties_Shield">
+				<blocksRangedWeapons>false</blocksRangedWeapons>
+			</li>
 		</comps>
 		<statBases>
 			<MaxHitPoints>500</MaxHitPoints>

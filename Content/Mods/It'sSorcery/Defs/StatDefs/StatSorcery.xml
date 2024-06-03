@@ -39,6 +39,7 @@
 		<scenarioRandomizable>true</scenarioRandomizable>
 		<postProcessCurve>
 		  <points>
+			<li>(0, 1.00)</li>
 			<li>(1, 1.00)</li>
 			<li>(2, 0.9)</li>
 			<li>(5, 0.75)</li>
@@ -128,7 +129,7 @@
 	<StatDef ParentName="CultivationBaseStat">
 		<defName>CTR_QiEnergyCost</defName>
 		<label>qi cost</label>
-		<category>Sorcery_ISF</category>
+		<category>ISF_Sorcery</category>
 		<description>The default amount of qi energy a technique requires to cast.</description>
 		<defaultBaseValue>10</defaultBaseValue>
 		<showIfUndefined>false</showIfUndefined>
@@ -139,7 +140,7 @@
 		<defName>CTR_QiEnergyMax</defName>
 		<label>maximum Qi energy</label>
 		<description>The maximum Qi energy normally availible to a cultivator.</description>
-		<category>Sorcery_ISF</category>
+		<category>ISF_Sorcery</category>
 		<defaultBaseValue>100</defaultBaseValue>
 		<minValue>0</minValue>
 		<toStringStyle>FloatTwo</toStringStyle>
@@ -157,7 +158,7 @@
 		<defName>CTR_QiEnergyMin</defName>
 		<label>minimum Qi energy</label>
 		<description>The minimum Qi energy a cultivator can have.</description>
-		<category>Sorcery_ISF</category>
+		<category>ISF_Sorcery</category>
 		<maxValue>0</maxValue>
 		<defaultBaseValue>0</defaultBaseValue>
 		<toStringStyle>FloatTwo</toStringStyle>
@@ -174,7 +175,7 @@
 		<defName>CTR_QiEnergyRecovery</defName>
 		<label>Qi recovery rate</label>
 		<description>The rate at which a cultivator recovers Qi per second.</description>
-		<category>Sorcery_ISF</category>
+		<category>ISF_Sorcery</category>
 		<defaultBaseValue>1</defaultBaseValue>
 		<toStringStyle>FloatTwo</toStringStyle>
 		<showOnAnimals>false</showOnAnimals>
@@ -191,7 +192,7 @@
 		<defName>CTR_QiEnergyFactor</defName>
 		<label>Qi factor</label>
 		<description>A multiplier on energy recovery and maximum energy.</description>
-		<category>Sorcery_ISF</category>
+		<category>ISF_Sorcery</category>
 		<defaultBaseValue>1</defaultBaseValue>
 		<toStringStyle>FloatTwo</toStringStyle>
 		<showOnAnimals>false</showOnAnimals>
@@ -204,7 +205,7 @@
 	<StatDef ParentName="CultivationBaseStat">
 		<defName>CTR_StaminaEnergyCost</defName>
 		<label>stamina cost</label>
-		<category>Sorcery_ISF</category>
+		<category>ISF_Sorcery</category>
 		<description>The default amount of stamina energy a technique requires to cast.</description>
 		<defaultBaseValue>10</defaultBaseValue>
 		<showIfUndefined>false</showIfUndefined>
@@ -215,7 +216,7 @@
 		<defName>CTR_StaminaEnergyMax</defName>
 		<label>maximum Stamina energy</label>
 		<description>The maximum Stamina energy normally availible to a cultivator.</description>
-		<category>Sorcery_ISF</category>
+		<category>ISF_Sorcery</category>
 		<defaultBaseValue>100</defaultBaseValue>
 		<minValue>0</minValue>
 		<toStringStyle>FloatTwo</toStringStyle>
@@ -233,7 +234,7 @@
 		<defName>CTR_StaminaEnergyMin</defName>
 		<label>minimum Stamina energy</label>
 		<description>The minimum Stamina energy a cultivator can have.</description>
-		<category>Sorcery_ISF</category>
+		<category>ISF_Sorcery</category>
 		<maxValue>0</maxValue>
 		<defaultBaseValue>0</defaultBaseValue>
 		<toStringStyle>FloatTwo</toStringStyle>
@@ -250,7 +251,7 @@
 		<defName>CTR_StaminaEnergyRecovery</defName>
 		<label>Stamina recovery rate</label>
 		<description>The rate at which a cultivator recovers Stamina per second.</description>
-		<category>Sorcery_ISF</category>
+		<category>ISF_Sorcery</category>
 		<defaultBaseValue>1</defaultBaseValue>
 		<toStringStyle>FloatTwo</toStringStyle>
 		<showOnAnimals>false</showOnAnimals>
@@ -267,7 +268,7 @@
 		<defName>CTR_StaminaEnergyFactor</defName>
 		<label>Stamina factor</label>
 		<description>A multiplier on energy recovery and maximum energy.</description>
-		<category>Sorcery_ISF</category>
+		<category>ISF_Sorcery</category>
 		<defaultBaseValue>1</defaultBaseValue>
 		<toStringStyle>FloatTwo</toStringStyle>
 		<showOnAnimals>false</showOnAnimals>

@@ -1,0 +1,15 @@
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="BookcaseBase"]/building/fixedStorageSettings/filter/categories</xpath>
+		<value>
+			<li>Cultivation_SkillBook</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="BookcaseBase"]/building/defaultStorageSettings/filter/categories</xpath>
+		<value>
+			<li>Cultivation_SkillBook</li>
+		</value>
+	</Operation>
+</Patch>

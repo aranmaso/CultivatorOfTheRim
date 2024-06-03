@@ -1,0 +1,136 @@
+<Defs>
+
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerProgress">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Progress</learningTrackerClass>
+		<defName>CTR_RedFlameFistLearningProgress</defName>
+		<label>Red Flame Fist progress</label>
+	</ItsSorceryFramework.LearningTrackerDef>
+	
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerTree">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Tree</learningTrackerClass>
+		<defName>CTR_RedFlameFistLearningTree</defName>
+		<label>Red Flame Fist Technique</label>
+	</ItsSorceryFramework.LearningTrackerDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_RedFlameFistLearningTree</learningTrackerDef>
+		<defName>CTR_RedFlameFist_FireAdapting</defName>
+		<label>Flame Adapting</label>
+		<description>introduction step to the method of Red Flame Fist</description>		
+		
+		<prereqsSkills>
+			<li>
+				<mode>GreaterEqual</mode>
+				<skillReqs>
+					<li>
+						<skillDef>Melee</skillDef>
+						<level>5</level>
+					</li>
+				</skillReqs>
+			</li>
+		</prereqsSkills>
+		
+		<prereqsHediff>
+		<li>
+			<key>CTR_BreakthroughCounter</key>
+			<value>0</value>
+		</li>
+		</prereqsHediff>
+		
+		<statOffsets>
+			<TechniqueLearningCount>1</TechniqueLearningCount>
+			<CTR_BodyPath>1</CTR_BodyPath>
+			<CTR_FireQi_AbsorptionMultiplier>0.05</CTR_FireQi_AbsorptionMultiplier>
+		</statOffsets>
+		
+		<coordX>0</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+			
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_RedFlameFistLearningTree</learningTrackerDef>
+		<defName>CTR_RedFlameFist_CleansingFlame</defName>
+		<label>Cleansing Flame</label>
+		<description>when attacking unarmed, add 25% of the damage as Burn damage.</description>	
+
+		<prereqs>
+			<li>CTR_RedFlameFist_FireAdapting</li>
+		</prereqs>		
+		
+		<hediffAdd>
+			<li>
+				<hediffDef>CTR_RedFlameFist_CleansingFlame</hediffDef>
+				<severity>1</severity>
+			</li>
+		</hediffAdd>
+		
+		<coordX>1</coordX>
+		<coordY>1</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+			
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_RedFlameFistLearningTree</learningTrackerDef>
+		<defName>CTR_RedFlameFist_FireSkin</defName>
+		<label>Fire Coated Skin</label>
+		<description>coat user skin in layer of fire. deal 2-5 burn damage to melee attacker</description>	
+
+		<prereqs>
+			<li>CTR_RedFlameFist_FireAdapting</li>
+		</prereqs>		
+		
+		<hediffAdd>
+			<li>
+				<hediffDef>CTR_RedFlameFist_FireSkin</hediffDef>
+				<severity>1</severity>
+			</li>
+		</hediffAdd>
+		
+		<coordX>1</coordX>
+		<coordY>2</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+			
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_RedFlameFistLearningTree</learningTrackerDef>
+		<defName>CTR_RedFlameFist_CometFist</defName>
+		<label>Comet Fist</label>
+		<description>when attacking, 50% chance for 1-3 comet to fall from sky toward target area.</description>	
+
+		<prereqs>
+			<li>CTR_RedFlameFist_CleansingFlame</li>
+		</prereqs>		
+		
+		<hediffAdd>
+			<li>
+				<hediffDef>CTR_RedFlameFist_CometFist</hediffDef>
+				<severity>1</severity>
+			</li>
+		</hediffAdd>
+		
+		<coordX>2</coordX>
+		<coordY>1</coordY>
+		<pointReq>3</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+			
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_RedFlameFistLearningTree</learningTrackerDef>
+		<defName>CTR_RedFlameFist_WaveOfFlame</defName>
+		<label>Wave of Flame</label>
+		<description>give user the ability to cover themselve in flame. emitting damaging aura every 5 second for 60 second.</description>	
+
+		<prereqs>
+			<li>CTR_RedFlameFist_FireSkin</li>
+		</prereqs>		
+		
+		<abilityGain>
+			<li>CTR_WaveOfFire</li>
+		</abilityGain>
+		
+		<coordX>2</coordX>
+		<coordY>2</coordY>
+		<pointReq>3</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+
+</Defs>

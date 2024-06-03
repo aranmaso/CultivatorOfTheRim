@@ -207,9 +207,9 @@
 				<spawnOnUser>true</spawnOnUser>
 				<randomRadius>3</randomRadius>
 				<spawnOffset>(0,0,1)</spawnOffset>
-				<sorcerySchemaDef>CTR_SuzakuNirvanaTechnique</sorcerySchemaDef>
-				<energyStat>CTR_QiEnergyCost</energyStat>
-				<energyCost>10</energyCost>
+				<!-- <sorcerySchemaDef>CTR_QiTechnique</sorcerySchemaDef> -->
+				<!-- <energyStat>CTR_QiEnergyCost</energyStat> -->
+				<!-- <energyCost>10</energyCost> -->
 			</li>
 		</comps>
 		<stages>				
@@ -246,12 +246,13 @@
 			<li Class="CultivatorOfTheRim.HediffCompProperties_AdditionalEffectOnTrigger">
 				<onAttack>true</onAttack>
 				<onlyUnarmed>true</onlyUnarmed>
+				<onlyMelee>true</onlyMelee>
 				<bonusDamageDef>Burn</bonusDamageDef>
 				<damageAmount>3</damageAmount>
 				<armorPenetration>1</armorPenetration>
-				<sorcerySchemaDef>CTR_RedFlameFistTechnique</sorcerySchemaDef>
-				<energyStat>CTR_StaminaEnergyCost</energyStat>
-				<energyCost>10</energyCost>
+				<!-- <sorcerySchemaDef>CTR_BasicBodyTechnique</sorcerySchemaDef> -->
+				<!-- <energyStat>CTR_StaminaEnergyCost</energyStat> -->
+				<!-- <energyCost>10</energyCost> -->
 				<cooldown>60</cooldown>
 			</li>
 		</comps>
@@ -273,9 +274,9 @@
 				<bonusDamageDef>Burn</bonusDamageDef>
 				<damageAmount>2~5</damageAmount>
 				<armorPenetration>1</armorPenetration>
-				<sorcerySchemaDef>CTR_RedFlameFistTechnique</sorcerySchemaDef>
-				<energyStat>CTR_StaminaEnergyCost</energyStat>
-				<energyCost>10</energyCost>
+				<!-- <sorcerySchemaDef>CTR_BasicBodyTechnique</sorcerySchemaDef> -->
+				<!-- <energyStat>CTR_StaminaEnergyCost</energyStat> -->
+				<!-- <energyCost>10</energyCost> -->
 				<cooldown>120</cooldown>
 			</li>
 		</comps>
@@ -301,9 +302,9 @@
 				<spawnOnTarget>true</spawnOnTarget>
 				<randomRadius>3</randomRadius>
 				<spawnOffset>(-2,0,8)</spawnOffset>
-				<sorcerySchemaDef>CTR_RedFlameFistTechnique</sorcerySchemaDef>
-				<energyStat>CTR_StaminaEnergyCost</energyStat>
-				<energyCost>20</energyCost>
+				<!-- <sorcerySchemaDef>CTR_BasicBodyTechnique</sorcerySchemaDef> -->
+				<!-- <energyStat>CTR_StaminaEnergyCost</energyStat> -->
+				<!-- <energyCost>20</energyCost> -->
 			</li>
 		</comps>
 		<stages>				
@@ -333,6 +334,169 @@
 			</li>
 		</comps>
 		<stages>				
+		</stages>
+		<modExtensions>
+		</modExtensions>
+	</HediffDef>
+	
+	<HediffDef ParentName="TechniqueHediffBase"> 
+		<defName>CTR_StarCaller_NightAbsorption</defName>
+		<label>Star Adapting</label>
+		<description>increase Cultivation Speed and regeneration during night time</description>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<minSeverity>0.001</minSeverity>
+		<comps>
+			<li Class="CultivatorOfTheRim.HediffCompProperties_TimeOfDayEffect">
+				<severityAtDay>1</severityAtDay>
+				<severityAtNight>2</severityAtNight>
+			</li>			
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0.1</minSeverity>
+			</li>
+			<li>
+				<minSeverity>2</minSeverity>
+				<regeneration>10</regeneration>
+				<statOffsets>
+					<CultivationSpeed>0.1</CultivationSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+		<modExtensions>
+		</modExtensions>
+	</HediffDef>
+	
+	<HediffDef ParentName="TechniqueHediffBase"> 
+		<defName>CTR_StarCaller_FallingStar</defName>
+		<label>Falling Star Strike</label>
+		<description>collection of firery feather ready to attack. 50% trigger chance and has 2 second cooldown.</description>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<minSeverity>0.001</minSeverity>
+		<comps>
+			<li Class="CultivatorOfTheRim.HediffCompProperties_AdditionalEffectOnTrigger">
+				<projectileDef>CTR_FallingStar</projectileDef>
+				<projectileCount>1~3</projectileCount>
+				<onAttack>true</onAttack>
+				<chance>0.25</chance>
+				<spawnOnTarget>true</spawnOnTarget>
+				<cooldown>120</cooldown>
+				<randomRadius>3</randomRadius>
+				<spawnOffset>(0,0,1)</spawnOffset>
+				<!-- <sorcerySchemaDef>CTR_QiTechnique</sorcerySchemaDef> -->
+				<!-- <energyStat>CTR_QiEnergyCost</energyStat> -->
+				<!-- <energyCost>10</energyCost> -->
+			</li>
+		</comps>
+		<stages>				
+		</stages>
+		<modExtensions>
+		</modExtensions>
+	</HediffDef>
+	
+	<HediffDef ParentName="TechniqueHediffBase"> 
+		<defName>CTR_StarCaller_NightAffinity</defName>
+		<label>Night Affinity</label>
+		<description>increase consciousness during night time</description>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<minSeverity>0.001</minSeverity>
+		<comps>
+			<li Class="CultivatorOfTheRim.HediffCompProperties_TimeOfDayEffect">
+				<severityAtDay>1</severityAtDay>
+				<severityAtNight>2</severityAtNight>
+			</li>			
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0.1</minSeverity>
+			</li>
+			<li>
+				<minSeverity>2</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<postFactor>1.25</postFactor>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<modExtensions>
+		</modExtensions>
+	</HediffDef>
+	
+	<HediffDef ParentName="TechniqueHediffBase"> 
+		<defName>CTR_StarCaller_NightWarlord</defName>
+		<label>Night Warlord</label>
+		<description>increase combat capability during night time</description>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<minSeverity>0.001</minSeverity>
+		<comps>
+			<li Class="CultivatorOfTheRim.HediffCompProperties_TimeOfDayEffect">
+				<severityAtDay>1</severityAtDay>
+				<severityAtNight>2</severityAtNight>
+			</li>			
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0.1</minSeverity>
+			</li>
+			<li>
+				<minSeverity>2</minSeverity>
+				<statFactors>		
+					<MeleeHitChance>1.25</MeleeHitChance>
+					<MeleeDodgeChance>1.25</MeleeDodgeChance>
+					<AimingDelayFactor>0.75</AimingDelayFactor>
+					<InjuryHealingFactor>1.25</InjuryHealingFactor>
+					<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.25</ArmorRating_Blunt>
+					<ArmorRating_Heat>1.25</ArmorRating_Heat>
+					<ArmorRating_Qi>1.25</ArmorRating_Qi>
+					<ToxicResistance>1.25</ToxicResistance>
+					<MeleeDamageFactor MayRequire="ludeon.rimworld.biotech">1.25</MeleeDamageFactor>
+					<VEF_RangeAttackDamageFactor MayRequire="oskarpotocki.vanillafactionsexpanded.core">1.25</VEF_RangeAttackDamageFactor>
+					<StaggerDurationFactor MayRequire="ludeon.rimworld.biotech">0.75</StaggerDurationFactor>
+					<RangedCooldownFactor MayRequire="ludeon.rimworld.biotech">0.75</RangedCooldownFactor>
+					<IncomingDamageFactor>0.75</IncomingDamageFactor>	
+				</statFactors>
+			</li>
+		</stages>
+		<modExtensions>
+		</modExtensions>
+	</HediffDef>
+	
+	<HediffDef ParentName="TechniqueHediffBase"> 
+		<defName>CTR_StarCaller_LordOfTheNight</defName>
+		<label>Lord of the Night</label>
+		<description>greatly increase regeneration and immunity during night time</description>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<minSeverity>0.001</minSeverity>
+		<comps>
+			<li Class="CultivatorOfTheRim.HediffCompProperties_TimeOfDayEffect">
+				<severityAtDay>1</severityAtDay>
+				<severityAtNight>2</severityAtNight>
+			</li>			
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0.1</minSeverity>
+			</li>
+			<li>
+				<minSeverity>2</minSeverity>
+				<regeneration>200</regeneration>
+				<naturalHealingFactor>2</naturalHealingFactor>
+				<makeImmuneTo>
+					<li>Flu</li>
+					<li>Plague</li>
+					<li>Malaria</li>
+					<li>SleepingSickness</li>
+					<li>LungRotExposure</li>
+					<li>LungRot</li>
+				</makeImmuneTo>
+				<statOffsets>
+					<ImmunityGainSpeed>0.03</ImmunityGainSpeed>
+					<InjuryHealingFactor>0.12</InjuryHealingFactor>
+				</statOffsets>
+			</li>			
 		</stages>
 		<modExtensions>
 		</modExtensions>

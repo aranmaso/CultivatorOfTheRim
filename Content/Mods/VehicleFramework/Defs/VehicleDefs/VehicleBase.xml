@@ -1,0 +1,37 @@
+<Defs>
+
+	<Vehicles.VehicleDef Name = "CTR_VehiclePawn_Sword" ParentName = "BaseVehiclePawn" Abstract = "True">
+		<properties>
+			<worldSpeedMultiplier>1</worldSpeedMultiplier>
+		</properties>
+		
+		<vehicleStats>
+			<AccelerationRate>0.03</AccelerationRate>
+		</vehicleStats>
+		
+		<comps>
+		</comps>
+	</Vehicles.VehicleDef>
+	
+	<Vehicles.VehicleDef Name = "CTR_VehiclePawn_SwordCombat" ParentName = "CTR_VehiclePawn_Sword" Abstract = "True">
+		<soundOneShotsOnEvent Inherit = "False" MayRequire="oskarpotocki.vanillavehiclesexpanded">
+			<li>
+				<key>PawnEntered</key>
+				<value>VVE_VehicleEnterArmored</value>
+			</li>
+			<li>
+				<key>PawnExited</key>
+				<value>VVE_VehicleEnterArmored</value>
+			</li>
+			<li>
+				<key>IgnitionOn</key>
+				<value>VVE_VehicleStart</value>
+			</li>
+			<li>
+				<key>IgnitionOff</key>
+				<value>VVE_VehicleStart</value>
+			</li>
+		</soundOneShotsOnEvent>
+	</Vehicles.VehicleDef>
+
+</Defs>

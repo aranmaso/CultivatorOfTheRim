@@ -55,8 +55,8 @@
 						</statOffsets>
 					</li>
 					<li>
-						<label>Qi Armor</label>
-						<description>increase pawn qi armor</description>
+						<label>Cultivation</label>
+						<description>increase pawn cultivation speed</description>
 						<statOffsets>
 							<CultivationSpeed>0.1</CultivationSpeed>
 						</statOffsets>

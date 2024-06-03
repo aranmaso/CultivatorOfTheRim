@@ -39,6 +39,7 @@
 		</tags>
 		<initialSeverity>0.1</initialSeverity>
 		<maxSeverity>1.0</maxSeverity>
+		<minSeverity Inherit="False" />
 		<isBad>false</isBad>
 		<tendable>true</tendable>
 		<comps>		

@@ -1,0 +1,125 @@
+<Defs>
+
+	<ItsSorceryFramework.ProgressTrackerDef ParentName = "ProgressTrackerLevelBase">
+		<progressTrackerClass>ItsSorceryFramework.ProgressTracker_Level</progressTrackerClass>
+		<defName>CTR_ProgressTrackerRPG_StarCaller</defName>
+		<label>Star Caller</label>
+		<bgPath>UI/TechniqueBG/ACSBG</bgPath>
+		
+		<scaling>1.5</scaling>
+		
+		<progressHediff>CTR_ProgressTrackerRPG_Hediff_StarCaller</progressHediff>
+		<levelFactors>
+			<li>
+				<level>1</level>
+				<statOffsets>
+					<CTR_YinQi_AbsorptionMultiplier>0.01</CTR_YinQi_AbsorptionMultiplier>
+				</statOffsets>
+			</li>
+			<li>
+				<level>3</level>
+				<optionChoices>2</optionChoices>
+				<options>
+					<li>
+						<label>Cultivation</label>
+						<description>increase pawn cultivation speed</description>
+						<statOffsets>
+							<CultivationSpeed>0.05</CultivationSpeed>
+						</statOffsets>
+					</li>
+					<li>
+						<label>Qi Armor</label>
+						<description>increase pawn qi armor</description>
+						<statOffsets>
+							<ArmorRating_Qi>0.1</ArmorRating_Qi>
+						</statOffsets>
+					</li>
+				</options>
+			</li>
+			<li>
+				<level>5</level>
+				<optionChoices>3</optionChoices>
+				<options>
+					<li>
+						<label>Hiding</label>
+						<description>lowering the chance at which user attract Heavenly Tribulation</description>
+						<statFactorOffsets>
+							<TribulationChance>-0.01</TribulationChance>
+						</statFactorOffsets>
+					</li>
+					<li>
+						<label>Yin Qi Absorption</label>
+						<description>increase pawn Yin Qi absorption</description>
+						<statOffsets>
+							<CTR_YinQi_AbsorptionMultiplier>0.1</CTR_YinQi_AbsorptionMultiplier>
+						</statOffsets>
+					</li>
+					<li>
+						<label>Cultivation</label>
+						<description>increase pawn cultivation speed</description>
+						<statOffsets>
+							<CultivationSpeed>0.1</CultivationSpeed>
+						</statOffsets>
+					</li>
+				</options>
+			</li>
+		</levelFactors>
+		<levelSpecifics>
+			<li>
+				<level>10</level>
+				<statOffsets>
+					<CultivationSpeed>0.25</CultivationSpeed>
+					<CTR_YinQi_AbsorptionMultiplier>0.25</CTR_YinQi_AbsorptionMultiplier>
+				</statOffsets>
+			</li>
+		</levelSpecifics>
+		<levelLabels>
+			<li>
+				<level>1</level>
+				<label>beginner</label>
+			</li>
+			<li>
+				<level>3</level>
+				<label>adapt</label>
+			</li>		
+			<li>
+				<level>5</level>	
+				<label>intermediate mastery</label>
+			</li>
+			<li>
+				<level>7</level>
+				<label>profound mastery</label>
+			</li>
+			<li>
+				<level>10</level>
+				<label>peerless mastery</label>
+			</li>
+		</levelLabels>
+		<expTags>
+			<li>CTR_EXPTag_OnDamage</li>
+			<li>CTR_EXPTag_OnKill</li>
+			<li>CTR_EXPTag_OnSkillEXP</li>
+			<li>CTR_EXPTag_UseItemSuperQi</li>
+			<li>CTR_EXPTag_DuringJob</li>
+		</expTags>
+	</ItsSorceryFramework.ProgressTrackerDef>
+	
+	<HediffDef ParentName="ProgressTrackerHediffBase"> 
+		<defName>CTR_ProgressTrackerRPG_Hediff_StarCaller</defName>
+		<hediffClass>ItsSorceryFramework.Hediff_ProgressLevel</hediffClass>
+		<label>Star Caller</label>
+		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor> <!-- gray color -->
+		<description>the foundation to the user Star Caller Technique.</description>
+		<initialSeverity>1</initialSeverity> <!-- Severity is bound to level of implant -->
+		<minSeverity>0</minSeverity>
+		<maxSeverity>20</maxSeverity>
+		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>			
+
+</Defs>

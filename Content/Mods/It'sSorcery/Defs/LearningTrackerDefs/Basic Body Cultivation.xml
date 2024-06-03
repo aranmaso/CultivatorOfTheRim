@@ -4,7 +4,7 @@
 	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerProgress">
 		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Progress</learningTrackerClass>
 		<defName>CTR_BasicBodyTechniqueLearningProgress</defName>
-		<label>body cultivating progress</label>
+		<label>Body cultivating progress</label>
 	</ItsSorceryFramework.LearningTrackerDef>
 	
 	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerTree">

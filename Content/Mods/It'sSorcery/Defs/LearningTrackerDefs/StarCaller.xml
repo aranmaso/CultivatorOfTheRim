@@ -1,0 +1,148 @@
+<Defs>
+
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerProgress">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Progress</learningTrackerClass>
+		<defName>CTR_StarCallerLearningProgress</defName>
+		<label>Refining learning progress</label>
+	</ItsSorceryFramework.LearningTrackerDef>
+	
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerTree">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Tree</learningTrackerClass>
+		<defName>CTR_StarCallerearningTree</defName>
+		<label>Star Caller Technique</label>
+		<defaultLocked>true</defaultLocked>
+		<lockedLabel>Unknown</lockedLabel>
+		<unlockTip>Learn about this technique through discovering technique manual</unlockTip>
+	</ItsSorceryFramework.LearningTrackerDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_StarCallerearningTree</learningTrackerDef>
+		<defName>CTR_StarCaller_Introduction</defName>
+		<label>Star Caller introduction</label>
+		<description>introduction step to the energy of the star</description>		
+		
+		<prereqsSkills>
+			<li>
+				<mode>GreaterEqual</mode>
+				<skillReqs>
+					<li>
+						<skillDef>Intellectual</skillDef>
+						<level>10</level>
+					</li>
+				</skillReqs>
+			</li>
+		</prereqsSkills>
+		
+		<prereqsHediff>
+		<li>
+			<key>CTR_BreakthroughCounter</key>
+			<value>0</value>
+		</li>
+		</prereqsHediff>
+		
+		<hediffAdd>
+			<li>
+				<hediffDef>CTR_StarCaller_NightAbsorption</hediffDef>
+				<severity>1</severity>
+			</li>
+		</hediffAdd>
+		
+		<statOffsets>
+			<TechniqueLearningCount>1</TechniqueLearningCount>
+			<CTR_YinQi_AbsorptionMultiplier>0.1</CTR_YinQi_AbsorptionMultiplier>
+		</statOffsets>
+		
+		<coordX>0</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_StarCallerearningTree</learningTrackerDef>
+		<defName>CTR_StarCaller_StarFall</defName>
+		<label>Falling Star</label>
+		<description>cause a falling star to fall toward target upon attacking</description>				
+		
+		<prereqs>
+			<li>CTR_StarCaller_Introduction</li>
+		</prereqs>	
+		
+		<hediffAdd>
+			<li>
+				<hediffDef>CTR_StarCaller_FallingStar</hediffDef>
+				<severity>1</severity>
+			</li>
+		</hediffAdd>		
+		
+		<coordX>1</coordX>
+		<coordY>1</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_StarCallerearningTree</learningTrackerDef>
+		<defName>CTR_StarCaller_NightAfiinity</defName>
+		<label>Night Affinity</label>
+		<description>improve user consciousness during night time</description>				
+		
+		<prereqs>
+			<li>CTR_StarCaller_Introduction</li>
+		</prereqs>	
+		
+		<hediffAdd>
+			<li>
+				<hediffDef>CTR_StarCaller_NightAffinity</hediffDef>
+				<severity>1</severity>
+			</li>
+		</hediffAdd>		
+		
+		<coordX>1</coordX>
+		<coordY>2</coordY>
+		<pointReq>3</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_StarCallerearningTree</learningTrackerDef>
+		<defName>CTR_StarCaller_NightWarlord</defName>
+		<label>Night Warlord</label>
+		<description>improve user combat ability during night time</description>				
+		
+		<prereqs>
+			<li>CTR_StarCaller_StarFall</li>
+		</prereqs>	
+		
+		<hediffAdd>
+			<li>
+				<hediffDef>CTR_StarCaller_NightWarlord</hediffDef>
+				<severity>1</severity>
+			</li>
+		</hediffAdd>		
+		
+		<coordX>2</coordX>
+		<coordY>1</coordY>
+		<pointReq>5</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_StarCallerearningTree</learningTrackerDef>
+		<defName>CTR_StarCaller_LordOfTheNight</defName>
+		<label>Lord of the Night</label>
+		<description>Greatly improve regeneration and immunity during the night</description>				
+		
+		<prereqs>
+			<li>CTR_StarCaller_NightAfiinity</li>
+		</prereqs>	
+		
+		<hediffAdd>
+			<li>
+				<hediffDef>CTR_StarCaller_LordOfTheNight</hediffDef>
+				<severity>1</severity>
+			</li>
+		</hediffAdd>		
+		
+		<coordX>2</coordX>
+		<coordY>2</coordY>
+		<pointReq>7</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+
+</Defs>

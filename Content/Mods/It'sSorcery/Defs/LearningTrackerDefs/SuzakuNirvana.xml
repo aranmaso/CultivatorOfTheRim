@@ -10,6 +10,9 @@
 		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Tree</learningTrackerClass>
 		<defName>CTR_SuzakuNirvanaLearningTree</defName>
 		<label>Suzaku Nirvana Technique</label>
+		<defaultLocked>true</defaultLocked>
+		<lockedLabel>Unknown</lockedLabel>
+		<unlockTip>Learn about this technique through discovering technique manual</unlockTip>
 	</ItsSorceryFramework.LearningTrackerDef>
 	
 	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">

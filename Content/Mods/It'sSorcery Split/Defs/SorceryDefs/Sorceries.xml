@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<ItsSorceryFramework.SorceryDef ParentName="SorceryBase">
+		<sorcerySchema>CTR_QiTechnique</sorcerySchema>
+		<defName>CTR_LaucnhQiWave</defName>
+		<label>Qi Wave</label>
+		<description>launch a wave of qi energy</description>
+		<level>1</level>
+		<iconPath>UI/UIicon/QiWave</iconPath>
+		<warmupSound>CTR_PaperFlip</warmupSound>
+		<aiCanUse>true</aiCanUse>
+		<cooldownTicksRange>200</cooldownTicksRange>
+		
+		<statBases>
+			<CTR_QiEnergyCost>25</CTR_QiEnergyCost>
+			<!-- <Ability_Duration>60</Ability_Duration> -->
+		</statBases>
+		<verbProperties>		
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>15</range>
+			<requireLineOfSight>True</requireLineOfSight>
+			<warmupTime>0.5</warmupTime>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		
+		<comps>
+			<li Class="CompProperties_AbilityLaunchProjectile">
+				<projectileDef>CTR_BasicQiProjectile</projectileDef>
+			</li>
+		</comps>
+	</ItsSorceryFramework.SorceryDef>		
+	
+	<ItsSorceryFramework.SorceryDef ParentName="SorceryBase">
+		<sorcerySchema>CTR_QiTechnique</sorcerySchema>
+		<defName>CTR_AcupointInjection</defName>
+		<label>Acupoint Injection</label>
+		<description>lnject Qi into target acupoint. stop all bleeding temporary</description>
+		<level>1</level>
+		<iconPath>UI/UIicon/hea</iconPath>
+		<warmupSound>CTR_PaperFlip</warmupSound>
+		<aiCanUse>true</aiCanUse>
+		<cooldownTicksRange>500</cooldownTicksRange>
+		
+		<statBases>
+			<CTR_QiEnergyCost>25</CTR_QiEnergyCost>
+			<Ability_Duration>60</Ability_Duration>
+		</statBases>
+		<verbProperties>		
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>10</range>
+			<!-- <requireLineOfSight>True</requireLineOfSight> -->
+			<warmupTime>2</warmupTime>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		
+		<comps>
+			<li Class="CultivatorOfTheRim.CompProperties_GiveHediffTechnique">
+				<hediffDef>CTR_AcupointStopBleeding</hediffDef>
+				<duration>5000</duration>
+				<severity>1.00</severity>
+			</li>
+			<li Class="CompProperties_AbilityFleckOnTarget">
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+			</li>
+		</comps>
+	</ItsSorceryFramework.SorceryDef>	
+	
+	<ItsSorceryFramework.SorceryDef ParentName="SorceryBase">
+		<sorcerySchema>CTR_YangGatheringTechnique</sorcerySchema>
+		<defName>CTR_SoothingPalm</defName>
+		<label>Soothing Palm</label>
+		<description>a palm technique focused on healing target. has half the effect on pawn that pratice Yin path.</description>
+		<level>1</level>
+		<iconPath>UI/UIicon/SoothingPalm</iconPath>
+		<warmupSound>CTR_PaperFlip</warmupSound>
+		<aiCanUse>true</aiCanUse>
+		<cooldownTicksRange>500</cooldownTicksRange>
+		
+		<statBases>
+			<CTR_QiEnergyCost>40</CTR_QiEnergyCost>
+		</statBases>
+		<verbProperties>		
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>10</range>
+			<!-- <requireLineOfSight>True</requireLineOfSight> -->
+			<warmupTime>2</warmupTime>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		
+		<comps>
+			<li Class="CultivatorOfTheRim.CompProperties_GiveHediffTechnique">
+				<hediffDef>CTR_SoothingPalm</hediffDef>
+				<duration>5000</duration>
+				<severity>2.0</severity>
+				<havePenaltyStat>True</havePenaltyStat>
+				<penaltyStat>CTR_YinPath</penaltyStat>
+				<penaltyThreshold>0.5</penaltyThreshold>
+				<penaltySeverity>1.0</penaltySeverity>
+			</li>
+			<li Class="CompProperties_AbilityFleckOnTarget">
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+			</li>
+		</comps>
+	</ItsSorceryFramework.SorceryDef>
+	
+	<ItsSorceryFramework.SorceryDef ParentName="SorceryBase">
+		<sorcerySchema>CTR_YinGatheringTechnique</sorcerySchema>
+		<defName>CTR_ViciousPalm</defName>
+		<label>Vicious Palm</label>
+		<description>a palm technique focused on improve target moving speed. have half the effect on pawn that pratice Yang path.</description>
+		<level>1</level>
+		<iconPath>UI/UIicon/CTR_ViciousPalm</iconPath>
+		<warmupSound>CTR_PaperFlip</warmupSound>
+		<aiCanUse>true</aiCanUse>
+		<cooldownTicksRange>500</cooldownTicksRange>
+		
+		<statBases>
+			<CTR_QiEnergyCost>40</CTR_QiEnergyCost>
+		</statBases>
+		<verbProperties>		
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>10</range>
+			<!-- <requireLineOfSight>True</requireLineOfSight> -->
+			<warmupTime>2</warmupTime>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		
+		<comps>
+			<li Class="CultivatorOfTheRim.CompProperties_GiveHediffTechnique">
+				<hediffDef>CTR_ViciousPalm</hediffDef>
+				<duration>5000</duration>
+				<severity>2.0</severity>
+				<havePenaltyStat>True</havePenaltyStat>
+				<penaltyStat>CTR_YangPath</penaltyStat>
+				<penaltyThreshold>0.5</penaltyThreshold>
+				<penaltySeverity>1.0</penaltySeverity>
+			</li>
+			<li Class="CompProperties_AbilityFleckOnTarget">
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+			</li>
+		</comps>
+	</ItsSorceryFramework.SorceryDef>	
+	
+	<ItsSorceryFramework.SorceryDef ParentName="SorceryBase">
+		<sorcerySchema>CTR_XuanwuShellTechnique</sorcerySchema>
+		<defName>CTR_EarthenArmor</defName>
+		<label>Earthen Armor</label>
+		<description>cover target in temporary layer of armor</description>
+		<level>1</level>
+		<iconPath>UI/UIicon/EarthenArmor</iconPath>
+		<warmupSound>CTR_PaperFlip</warmupSound>
+		<aiCanUse>true</aiCanUse>
+		<cooldownTicksRange>500</cooldownTicksRange>
+		
+		<statBases>
+			<CTR_QiEnergyCost>40</CTR_QiEnergyCost>
+		</statBases>
+		<verbProperties>		
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>5</range>
+			<!-- <requireLineOfSight>True</requireLineOfSight> -->
+			<warmupTime>2</warmupTime>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		
+		<comps>
+			<li Class="CultivatorOfTheRim.CompProperties_GiveHediffTechnique">
+				<hediffDef>CTR_EarthenArmor</hediffDef>
+				<duration>2500</duration>
+				<severity>1.0</severity>
+			</li>
+			<li Class="CompProperties_AbilityFleckOnTarget">
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+			</li>
+		</comps>
+	</ItsSorceryFramework.SorceryDef>	
+	
+	<ItsSorceryFramework.SorceryDef ParentName="SorceryBase">
+		<sorcerySchema>CTR_RedFlameFistTechnique</sorcerySchema>
+		<defName>CTR_WaveOfFire</defName>
+		<label>Wave of Fire</label>
+		<description>cover target in temporary layer of armor</description>
+		<level>1</level>
+		<iconPath>UI/UIicon/CTR_WaveOfFire</iconPath>
+		<warmupSound>CTR_PaperFlip</warmupSound>
+		<aiCanUse>true</aiCanUse>
+		<cooldownTicksRange>500</cooldownTicksRange>
+		
+		<statBases>
+			<CTR_QiEnergyCost>40</CTR_QiEnergyCost>
+		</statBases>
+		<verbProperties>		
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>0</range>
+			<!-- <requireLineOfSight>True</requireLineOfSight> -->
+			<warmupTime>2</warmupTime>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetPawns>true</canTargetPawns>
+			</targetParams>
+		</verbProperties>
+		
+		<comps>
+			<li Class="CultivatorOfTheRim.CompProperties_GiveHediffTechnique">
+				<hediffDef>CTR_RedFlameFist_WaveOfFire</hediffDef>
+				<duration>2500</duration>
+				<severity>1.0</severity>
+			</li>
+			<li Class="CompProperties_AbilityFleckOnTarget">
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+			</li>
+		</comps>
+	</ItsSorceryFramework.SorceryDef>	
+  
+</Defs>

@@ -12,6 +12,16 @@
 		<learningTrackerDefs>
 			<li>CTR_QiFoundationLearningProgress</li>
 			<li>CTR_QiFoundationLearningTree</li>
+			
+			<li>CTR_YangGatheringLearningTree</li>
+						
+			<li>CTR_YinGatheringLearningTree</li>
+			
+			<li>CTR_XuanwuShellLearningTree</li>
+			
+			<li>CTR_SuzakuNirvanaLearningTree</li>
+						
+			<li>CTR_StarCallerearningTree</li>
 		</learningTrackerDefs>
 		<progressTrackerDef>CTR_ProgressTrackerRPG_QiFoundation</progressTrackerDef>
 	</ItsSorceryFramework.SorcerySchemaDef>
@@ -27,84 +37,87 @@
 		<learningTrackerDefs>
 			<li>CTR_BasicBodyTechniqueLearningProgress</li>
 			<li>CTR_BasicBodyTechniqueLearningTree</li>
+						
+			<!-- <li>CTR_RedFlameFistLearningProgress</li> -->
+			<li>CTR_RedFlameFistLearningTree</li>
 		</learningTrackerDefs>
 		<progressTrackerDef>CTR_ProgressTrackerRPG_BodyCultivation</progressTrackerDef>
 	</ItsSorceryFramework.SorcerySchemaDef>
 	
-	<ItsSorceryFramework.SorcerySchemaDef ParentName = "SorcerySchemaBase">
-		<defName>CTR_YangGatheringTechnique</defName>
-		<label>Yang-Gathering technique</label>
-		<description>a set of cultivation exercise focused on Yang attribute.</description>
+	<!-- <ItsSorceryFramework.SorcerySchemaDef ParentName = "SorcerySchemaBase"> -->
+		<!-- <defName>CTR_YangGatheringTechnique</defName> -->
+		<!-- <label>Yang-Gathering technique</label> -->
+		<!-- <description>a set of cultivation exercise focused on Yang attribute.</description> -->
 	
-		<energyTrackerDefs>
-			<li>CTR_QiEnergyTracker</li>
-		</energyTrackerDefs>
-		<learningTrackerDefs>
-			<li>CTR_YangGatheringLearningProgress</li>
-			<li>CTR_YangGatheringLearningTree</li>
-		</learningTrackerDefs>
-		<progressTrackerDef>CTR_ProgressTrackerRPG_YangGathering</progressTrackerDef>
-	</ItsSorceryFramework.SorcerySchemaDef>
+		<!-- <energyTrackerDefs> -->
+			<!-- <li>CTR_QiEnergyTracker</li> -->
+		<!-- </energyTrackerDefs> -->
+		<!-- <learningTrackerDefs> -->
+			<!-- <li>CTR_YangGatheringLearningProgress</li> -->
+			<!-- <li>CTR_YangGatheringLearningTree</li> -->
+		<!-- </learningTrackerDefs> -->
+		<!-- <progressTrackerDef>CTR_ProgressTrackerRPG_YangGathering</progressTrackerDef> -->
+	<!-- </ItsSorceryFramework.SorcerySchemaDef> -->
 	
-	<ItsSorceryFramework.SorcerySchemaDef ParentName = "SorcerySchemaBase">
-		<defName>CTR_YinGatheringTechnique</defName>
-		<label>Yin-Gathering technique</label>
-		<description>a set of cultivation exercise focused on Yang attribute.</description>
+	<!-- <ItsSorceryFramework.SorcerySchemaDef ParentName = "SorcerySchemaBase"> -->
+		<!-- <defName>CTR_YinGatheringTechnique</defName> -->
+		<!-- <label>Yin-Gathering technique</label> -->
+		<!-- <description>a set of cultivation exercise focused on Yang attribute.</description> -->
 	
-		<energyTrackerDefs>
-			<li>CTR_QiEnergyTracker</li>
-		</energyTrackerDefs>
-		<learningTrackerDefs>
-			<li>CTR_YinGatheringLearningProgress</li>
-			<li>CTR_YinGatheringLearningTree</li>
-		</learningTrackerDefs>
-		<progressTrackerDef>CTR_ProgressTrackerRPG_YinGathering</progressTrackerDef>
-	</ItsSorceryFramework.SorcerySchemaDef>
+		<!-- <energyTrackerDefs> -->
+			<!-- <li>CTR_QiEnergyTracker</li> -->
+		<!-- </energyTrackerDefs> -->
+		<!-- <learningTrackerDefs> -->
+			<!-- <li>CTR_YinGatheringLearningProgress</li> -->
+			<!-- <li>CTR_YinGatheringLearningTree</li> -->
+		<!-- </learningTrackerDefs> -->
+		<!-- <progressTrackerDef>CTR_ProgressTrackerRPG_YinGathering</progressTrackerDef> -->
+	<!-- </ItsSorceryFramework.SorcerySchemaDef> -->
 	
-	<ItsSorceryFramework.SorcerySchemaDef ParentName = "SorcerySchemaBase">
-		<defName>CTR_XuanwuShellTechnique</defName>
-		<label>Xuanwu Shell technique</label>
-		<description>a set of cultivation exercise focused on defensive element of Xuanwu</description>
+	<!-- <ItsSorceryFramework.SorcerySchemaDef ParentName = "SorcerySchemaBase"> -->
+		<!-- <defName>CTR_XuanwuShellTechnique</defName> -->
+		<!-- <label>Xuanwu Shell technique</label> -->
+		<!-- <description>a set of cultivation exercise focused on defensive element of Xuanwu</description> -->
 	
-		<energyTrackerDefs>
-			<li>CTR_QiEnergyTracker</li>
-		</energyTrackerDefs>
-		<learningTrackerDefs>
-			<li>CTR_XuanwuShellLearningProgress</li>
-			<li>CTR_XuanwuShellLearningTree</li>
-		</learningTrackerDefs>
-		<progressTrackerDef>CTR_ProgressTrackerRPG_XuanwuShell</progressTrackerDef>
-	</ItsSorceryFramework.SorcerySchemaDef>
+		<!-- <energyTrackerDefs> -->
+			<!-- <li>CTR_QiEnergyTracker</li> -->
+		<!-- </energyTrackerDefs> -->
+		<!-- <learningTrackerDefs> -->
+			<!-- <li>CTR_XuanwuShellLearningProgress</li> -->
+			<!-- <li>CTR_XuanwuShellLearningTree</li> -->
+		<!-- </learningTrackerDefs> -->
+		<!-- <progressTrackerDef>CTR_ProgressTrackerRPG_XuanwuShell</progressTrackerDef> -->
+	<!-- </ItsSorceryFramework.SorcerySchemaDef> -->
 	
-	<ItsSorceryFramework.SorcerySchemaDef ParentName = "SorcerySchemaBase">
-		<defName>CTR_SuzakuNirvanaTechnique</defName>
-		<label>Suzaku Nirvana technique</label>
-		<description>a set of cultivation exercise focused on offensive element of Suzaku</description>
+	<!-- <ItsSorceryFramework.SorcerySchemaDef ParentName = "SorcerySchemaBase"> -->
+		<!-- <defName>CTR_SuzakuNirvanaTechnique</defName> -->
+		<!-- <label>Suzaku Nirvana technique</label> -->
+		<!-- <description>a set of cultivation exercise focused on offensive element of Suzaku</description> -->
 	
-		<energyTrackerDefs>
-			<li>CTR_QiEnergyTracker</li>
-		</energyTrackerDefs>
-		<learningTrackerDefs>
-			<li>CTR_SuzakuNirvanaLearningProgress</li>
-			<li>CTR_SuzakuNirvanaLearningTree</li>
-		</learningTrackerDefs>
-		<progressTrackerDef>CTR_ProgressTrackerRPG_SuzakuNirvana</progressTrackerDef>
-	</ItsSorceryFramework.SorcerySchemaDef>
+		<!-- <energyTrackerDefs> -->
+			<!-- <li>CTR_QiEnergyTracker</li> -->
+		<!-- </energyTrackerDefs> -->
+		<!-- <learningTrackerDefs> -->
+			<!-- <li>CTR_SuzakuNirvanaLearningProgress</li> -->
+			<!-- <li>CTR_SuzakuNirvanaLearningTree</li> -->
+		<!-- </learningTrackerDefs> -->
+		<!-- <progressTrackerDef>CTR_ProgressTrackerRPG_SuzakuNirvana</progressTrackerDef> -->
+	<!-- </ItsSorceryFramework.SorcerySchemaDef> -->
 	
-	<ItsSorceryFramework.SorcerySchemaDef ParentName = "SorcerySchemaBase">
-		<defName>CTR_RedFlameFistTechnique</defName>
-		<label>Red Flame Fist technique</label>
-		<description>a set of cultivation exercise focused on utilizing a crimson colored flame.</description>
+	<!-- <ItsSorceryFramework.SorcerySchemaDef ParentName = "SorcerySchemaBase"> -->
+		<!-- <defName>CTR_RedFlameFistTechnique</defName> -->
+		<!-- <label>Red Flame Fist technique</label> -->
+		<!-- <description>a set of cultivation exercise focused on utilizing a crimson colored flame.</description> -->
 	
-		<energyTrackerDefs>
-			<li>CTR_StaminaEnergyTracker</li>
-		</energyTrackerDefs>
-		<learningTrackerDefs>
-			<li>CTR_RedFlameFistLearningProgress</li>
-			<li>CTR_RedFlameFistLearningTree</li>
-		</learningTrackerDefs>
-		<progressTrackerDef>CTR_ProgressTrackerRPG_RedFlameFist</progressTrackerDef>
-	</ItsSorceryFramework.SorcerySchemaDef>
+		<!-- <energyTrackerDefs> -->
+			<!-- <li>CTR_StaminaEnergyTracker</li> -->
+		<!-- </energyTrackerDefs> -->
+		<!-- <learningTrackerDefs> -->
+			<!-- <li>CTR_RedFlameFistLearningProgress</li> -->
+			<!-- <li>CTR_RedFlameFistLearningTree</li> -->
+		<!-- </learningTrackerDefs> -->
+		<!-- <progressTrackerDef>CTR_ProgressTrackerRPG_RedFlameFist</progressTrackerDef> -->
+	<!-- </ItsSorceryFramework.SorcerySchemaDef> -->
 	
 	<ItsSorceryFramework.SorcerySchemaDef ParentName = "SorcerySchemaBase">
 		<defName>CTR_AlchemyTechnique</defName>
@@ -112,7 +125,7 @@
 		<description>a set of cultivation exercise focused on teaching the way of alchemy.</description>
 	
 		<energyTrackerDefs>
-			<li>CTR_QiEnergyTracker</li>
+			<!-- <li>CTR_QiEnergyTracker</li> -->
 		</energyTrackerDefs>
 		<learningTrackerDefs>
 			<li>CTR_AlchemyLearningProgress</li>
@@ -120,5 +133,35 @@
 		</learningTrackerDefs>
 		<progressTrackerDef>CTR_ProgressTrackerRPG_Alchemy</progressTrackerDef>
 	</ItsSorceryFramework.SorcerySchemaDef>
+	
+	<ItsSorceryFramework.SorcerySchemaDef ParentName = "SorcerySchemaBase">
+		<defName>CTR_RefiningTechnique</defName>
+		<label>Refining technique</label>
+		<description>a set of cultivation exercise focused on teaching the way of refining.</description>
+	
+		<energyTrackerDefs>
+			<!-- <li>CTR_QiEnergyTracker</li> -->
+		</energyTrackerDefs>
+		<learningTrackerDefs>
+			<li>CTR_RefiningLearningProgress</li>
+			<li>CTR_RefiningLearningTree</li>
+		</learningTrackerDefs>
+		<progressTrackerDef>CTR_ProgressTrackerRPG_Refining</progressTrackerDef>
+	</ItsSorceryFramework.SorcerySchemaDef>
+	
+	<!-- <ItsSorceryFramework.SorcerySchemaDef ParentName = "SorcerySchemaBase"> -->
+		<!-- <defName>CTR_StarCallerTechnique</defName> -->
+		<!-- <label>Star Caller technique</label> -->
+		<!-- <description>a set of cultivation exercise focused on teaching the way of star.</description> -->
+	
+		<!-- <energyTrackerDefs> -->
+			<!-- <li>CTR_QiEnergyTracker</li> -->
+		<!-- </energyTrackerDefs> -->
+		<!-- <learningTrackerDefs> -->
+			<!-- <li>CTR_StarCallerLearningProgress</li> -->
+			<!-- <li>CTR_StarCallerearningTree</li> -->
+		<!-- </learningTrackerDefs> -->
+		<!-- <progressTrackerDef>CTR_ProgressTrackerRPG_StarCaller</progressTrackerDef> -->
+	<!-- </ItsSorceryFramework.SorcerySchemaDef> -->
 	
 </Defs>

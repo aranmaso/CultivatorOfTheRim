@@ -1,0 +1,146 @@
+<Defs>
+
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerProgress">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Progress</learningTrackerClass>
+		<defName>CTR_SuzakuNirvanaLearningProgress</defName>
+		<label>Suzaku Nirvana progress</label>
+	</ItsSorceryFramework.LearningTrackerDef>
+	
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerTree">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Tree</learningTrackerClass>
+		<defName>CTR_SuzakuNirvanaLearningTree</defName>
+		<label>Suzaku Nirvana Technique</label>
+	</ItsSorceryFramework.LearningTrackerDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_SuzakuNirvanaLearningTree</learningTrackerDef>
+		<defName>CTR_SuzakuNirvana_FeatherShield</defName>
+		<label>Suzaku Feather Shield</label>
+		<description>introduction step to the defensive technique of Suzaku</description>		
+		
+		<prereqsStats>
+		<li>
+			<mode>GreaterEqual</mode>
+			<statReqs>
+				<ArmorRating_Heat>0.3</ArmorRating_Heat>
+			</statReqs>
+		</li>
+		</prereqsStats>
+		
+		<prereqsHediff>
+		<li>
+			<key>CTR_BreakthroughCounter</key>
+			<value>0</value>
+		</li>
+		</prereqsHediff>
+		
+		<statOffsets>
+			<TechniqueLearningCount>1</TechniqueLearningCount>
+			<CTR_QiPath>1</CTR_QiPath>
+			<ArmorRating_Heat>0.5</ArmorRating_Heat>
+			<ComfyTemperatureMax>50</ComfyTemperatureMax>
+		</statOffsets>
+		
+		<coordX>0</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+			
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_SuzakuNirvanaLearningTree</learningTrackerDef>
+		<defName>CTR_SuzakuNirvana_FireFeather</defName>
+		<label>Fire Feather Strike</label>
+		<description>gave user the ability to launch 1-3 firery projectile along side their normal attack.</description>	
+
+		<prereqs>
+			<li>CTR_SuzakuNirvana_FeatherShield</li>
+		</prereqs>		
+		
+		<hediffAdd>
+			<li>
+				<hediffDef>CTR_Suzaku_FireFeather</hediffDef>
+				<severity>1</severity>
+			</li>
+		</hediffAdd>
+		
+		<coordX>1</coordX>
+		<coordY>1</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+			
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_SuzakuNirvanaLearningTree</learningTrackerDef>
+		<defName>CTR_SuzakuNirvana_BurningVein</defName>
+		<label>Burning Vein</label>
+		<description>cleanse user vein with fire qi. improve immunity gain speed moderately</description>	
+
+		<prereqs>
+			<li>CTR_SuzakuNirvana_FeatherShield</li>
+		</prereqs>		
+		
+		<statOffsets>
+			<ImmunityGainSpeed>0.25</ImmunityGainSpeed>
+		</statOffsets>
+		
+		<capMods>
+			<li>
+				<capacity>BloodPumping</capacity>
+				<offset>0.25</offset>
+			</li>
+			<li>
+				<capacity>BloodFiltration</capacity>
+				<offset>0.25</offset>
+			</li>
+			<li>
+				<capacity>Metabolism</capacity>
+				<offset>0.25</offset>
+			</li>
+		</capMods>
+		
+		<coordX>1</coordX>
+		<coordY>2</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+			
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_SuzakuNirvanaLearningTree</learningTrackerDef>
+		<defName>CTR_SuzakuNirvana_FireQiAdapting</defName>
+		<label>Fire Qi Adapting</label>
+		<description>improve user efficiency in absorbing Fire Qi.</description>	
+
+		<prereqs>
+			<li>CTR_SuzakuNirvana_FireFeather</li>
+		</prereqs>		
+		
+		<statOffsets>
+			<CTR_FireQi_AbsorptionMultiplier>0.25</CTR_FireQi_AbsorptionMultiplier>
+		</statOffsets>
+		
+		<coordX>2</coordX>
+		<coordY>1</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+			
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_SuzakuNirvanaLearningTree</learningTrackerDef>
+		<defName>CTR_SuzakuNirvana_FlameOfRebirth</defName>
+		<label>Flame of Rebirth</label>
+		<description>embrace the cycle of life and death. give user the ability to self-resurrect after dead once every 1 Quaddrum</description>	
+
+		<prereqs>
+			<li>CTR_SuzakuNirvana_BurningVein</li>
+		</prereqs>		
+		
+		<hediffAdd>
+			<li>
+				<hediffDef>CTR_Suzaku_FireOfRebirth</hediffDef>
+				<severity>1</severity>
+			</li>
+		</hediffAdd>
+		
+		<coordX>2</coordX>
+		<coordY>2</coordY>
+		<pointReq>5</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+
+</Defs>

@@ -7,7 +7,8 @@
 		<label>Qi System</label>
 		<bgPath>UI/TechniqueBG/ACSBG</bgPath>
 		
-		<scaling>1.5</scaling>
+		<baseEXP>1000</baseEXP>
+		<scaling>1.1</scaling>
 		
 		<progressHediff>CTR_ProgressTrackerRPG_Hediff_QiFoundation</progressHediff>
 		<levelFactors>
@@ -19,7 +20,7 @@
 			</li>
 			<li>
 				<level>3</level>
-				<optionChoices>2</optionChoices>
+				<optionChoices>8</optionChoices>
 				<options>
 					<li>
 						<label>Cultvating</label>
@@ -29,11 +30,53 @@
 						</statOffsets>
 					</li>
 					<li>
+						<label>Yin Absorption</label>
+						<description>increase in Yin Qi absorption efficiency</description>
+						<statOffsets>
+							<CTR_YinQi_AbsorptionMultiplier>0.1</CTR_YinQi_AbsorptionMultiplier>
+						</statOffsets>
+					</li>
+					<li>
+						<label>Yang Absorption</label>
+						<description>increase in Yang Qi absorption efficiency</description>
+						<statOffsets>
+							<CTR_YangQi_AbsorptionMultiplier>0.1</CTR_YangQi_AbsorptionMultiplier>
+						</statOffsets>
+					</li>
+					<li>
 						<label>max Qi</label>
 						<description>increase the max amount of Qi energy pawn can hold</description>
 						<statFactorOffsets>
 							<CTR_QiEnergyMax>0.1</CTR_QiEnergyMax>
 						</statFactorOffsets>
+					</li>
+					<li>
+						<label>Sharp Armor</label>
+						<description>increase pawn sharp armor</description>
+						<statOffsets>
+							<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+						</statOffsets>
+					</li>
+					<li>
+						<label>Blunt Armor</label>
+						<description>increase pawn blunt armor</description>
+						<statOffsets>
+							<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+						</statOffsets>
+					</li>
+					<li>
+						<label>Heat Armor</label>
+						<description>increase pawn heat armor</description>
+						<statOffsets>
+							<ArmorRating_Heat>0.1</ArmorRating_Heat>
+						</statOffsets>
+					</li>
+					<li>
+						<label>Qi Armor</label>
+						<description>increase pawn qi armor</description>
+						<statOffsets>
+							<ArmorRating_Qi>0.1</ArmorRating_Qi>
+						</statOffsets>
 					</li>
 				</options>
 			</li>
@@ -104,6 +147,87 @@
 					</li>
 				</capMods>
 			</li>
+			<li>
+				<level>20</level>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<level>30</level>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<level>40</level>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<level>50</level>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<level>60</level>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<level>70</level>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<level>80</level>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<level>90</level>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<level>100</level>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
 		</levelSpecifics>
 		<levelLabels>
 			<li>
@@ -111,19 +235,19 @@
 				<label>beginner</label>
 			</li>
 			<li>
-				<level>3</level>
+				<level>10</level>
 				<label>adapt</label>
 			</li>		
 			<li>
-				<level>5</level>	
+				<level>25</level>	
 				<label>intermediate mastery</label>
 			</li>
 			<li>
-				<level>7</level>
+				<level>50</level>
 				<label>profound mastery</label>
 			</li>
 			<li>
-				<level>10</level>
+				<level>100</level>
 				<label>peerless mastery</label>
 			</li>
 		</levelLabels>
@@ -146,7 +270,8 @@
 		<description>the foundation to the user Qi.</description>
 		<initialSeverity>1</initialSeverity> <!-- Severity is bound to level of implant -->
 		<minSeverity>0</minSeverity>
-		<maxSeverity>20</maxSeverity>
+		<maxSeverity>200</maxSeverity>
+		<isBad>false</isBad>
 		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
 		<stages>	
 		</stages>

@@ -3,6 +3,7 @@
 	<TraderKindDef>
 		<defName>Caravan_CultivationResource</defName>
 		<label>cultivation resource trader</label>
+		<commonality>0.5</commonality>
 		
 		<stockGenerators>
 			<li Class="StockGenerator_SingleDef">
@@ -45,8 +46,8 @@
 			
 			<li Class="StockGenerator_MarketValue">
 				<tradeTag>CTR_Equipment</tradeTag>
-				<!-- <countRange>1~3</countRange> -->
-				<totalPriceRange>1000~2500</totalPriceRange>
+				<countRange>1~3</countRange>
+				<!-- <totalPriceRange>1000~2500</totalPriceRange> -->
 			</li>
 			
 			<!-- Weapons -->
@@ -80,6 +81,7 @@
 	<TraderKindDef>
 		<defName>Caravan_CultivationPill</defName>
 		<label>cultivation pill trader</label>
+		<commonality>0.5</commonality>
 		
 		<stockGenerators>
 			<li Class="StockGenerator_SingleDef">
@@ -118,6 +120,7 @@
 	<TraderKindDef>
 		<defName>Caravan_CultivationTechnique</defName>
 		<label>martial technique parvilion</label>
+		<commonality>0.5</commonality>
 		
 		<stockGenerators>
 			<li Class="StockGenerator_SingleDef">

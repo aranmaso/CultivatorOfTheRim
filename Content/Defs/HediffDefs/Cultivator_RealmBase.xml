@@ -37,6 +37,7 @@
 			<li>CTR_Tribulation</li>
 		</tags>
 		<initialSeverity>1</initialSeverity>
+		<minSeverity>1</minSeverity>
 		<maxSeverity>6</maxSeverity>
 		<isBad>true</isBad>
 		<comps>
@@ -108,7 +109,9 @@
 		<hediffClass>HediffWithComps</hediffClass>
 		<isBad>false</isBad>
 		<maxSeverity>1.1</maxSeverity>
-		<tags Inherit="False" />
+		<tags Inherit="False">
+			<li>CTR_BreakthroughCounter</li>
+		</tags>
 		<comps>
 			<!-- <li> -->
 				<!-- <compClass>CultivatorOfTheRim.HediffComp_BreakthroughtCounter</compClass> -->

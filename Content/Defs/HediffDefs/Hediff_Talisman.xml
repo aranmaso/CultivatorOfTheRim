@@ -119,8 +119,10 @@
 		<maxSeverity>1</maxSeverity>
 		<isBad>false</isBad>
 		<comps>		
-			<li Class="HediffCompProperties">
-				<compClass>HediffComp_Invisibility</compClass>
+			<li Class="HediffCompProperties_Invisibility">
+				<visibleToPlayer>true</visibleToPlayer>
+				<fadeDurationTicks>60</fadeDurationTicks>
+				<affectedByDisruptor>false</affectedByDisruptor>
 			</li>
 		</comps>
 		<stages>

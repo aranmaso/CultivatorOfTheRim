@@ -7,7 +7,8 @@
 		<label>Body System</label>
 		<bgPath>UI/TechniqueBG/ACSBG</bgPath>
 		
-		<scaling>1.5</scaling>
+		<baseEXP>1000</baseEXP>
+		<scaling>1.1</scaling>
 		
 		<progressHediff>CTR_ProgressTrackerRPG_Hediff_BodyCultivation</progressHediff>
 		<levelFactors>
@@ -153,10 +154,11 @@
 		<hediffClass>ItsSorceryFramework.Hediff_ProgressLevel</hediffClass>
 		<label>Body Cultivation</label>
 		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor> <!-- gray color -->
-		<description>the foundation to the user Qi.</description>
+		<description>the foundation to the user body.</description>
 		<initialSeverity>1</initialSeverity> <!-- Severity is bound to level of implant -->
 		<minSeverity>0</minSeverity>
-		<maxSeverity>20</maxSeverity>
+		<maxSeverity>40</maxSeverity>
+		<isBad>false</isBad>
 		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
 		<stages>	
 		</stages>

@@ -1,0 +1,128 @@
+<Defs>
+
+	<ItsSorceryFramework.ProgressTrackerDef ParentName = "ProgressTrackerLevelBase">
+		<progressTrackerClass>ItsSorceryFramework.ProgressTracker_Level</progressTrackerClass>
+		<defName>CTR_ProgressTrackerRPG_Alchemy</defName>
+		<label>Alchemy Controling Technique</label>
+		<bgPath>UI/TechniqueBG/ACSBG</bgPath>
+		
+		<scaling>1.5</scaling>
+		
+		<progressHediff>CTR_ProgressTrackerRPG_Hediff_Alchemy</progressHediff>
+		<levelFactors>
+			<li>
+				<level>1</level>
+				<statOffsets>
+					<AlchemySuccessChance>0.001</AlchemySuccessChance>
+				</statOffsets>
+			</li>
+			<li>
+				<level>5</level>
+				<optionChoices>3</optionChoices>
+				<options>
+					<li>
+						<label>Cultvating</label>
+						<description>a more solid foundation allow for more steady cultiavtion</description>
+						<statOffsets>
+							<CultivationSpeed>0.1</CultivationSpeed>
+						</statOffsets>
+					</li>
+					<li>
+						<label>alchemy success chance</label>
+						<description>increase chance to succeed in alchemy</description>
+						<statOffsets>
+							<AlchemySuccessChance>0.1</AlchemySuccessChance>
+						</statOffsets>
+					</li>
+					<li>
+						<label>hand and eye training</label>
+						<description>improve manipulation and sight</description>
+						<capMods>
+							<li>
+								<capacity>Sight</capacity>
+								<offset>0.2</offset>
+							</li>
+							<li>
+								<capacity>Manipulation</capacity>
+								<offset>0.2</offset>
+							</li>
+						</capMods>
+					</li>
+				</options>
+			</li>
+		</levelFactors>
+		<levelSpecifics>
+			<li>
+				<level>10</level>
+				<statOffsets>
+					<CultivationSpeed>0.1</CultivationSpeed>
+				</statOffsets>
+			</li>
+			<li>
+				<level>20</level>
+				<statOffsets>
+					<CultivationSpeed>0.1</CultivationSpeed>
+				</statOffsets>
+			</li>
+			<li>
+				<level>30</level>
+				<statOffsets>
+					<CultivationSpeed>0.1</CultivationSpeed>
+				</statOffsets>
+			</li>
+			<li>
+				<level>40</level>
+				<statOffsets>
+					<CultivationSpeed>0.1</CultivationSpeed>
+				</statOffsets>
+			</li>
+		</levelSpecifics>
+		<levelLabels>
+			<li>
+				<level>1</level>
+				<label>beginner</label>
+			</li>
+			<li>
+				<level>5</level>
+				<label>adapt</label>
+			</li>		
+			<li>
+				<level>10</level>	
+				<label>intermediate mastery</label>
+			</li>
+			<li>
+				<level>20</level>
+				<label>profound mastery</label>
+			</li>
+			<li>
+				<level>40</level>
+				<label>peerless mastery</label>
+			</li>
+		</levelLabels>
+		<expTags>
+			<li>CTR_EXPTag_DuringJob</li>
+			<li>CTR_EXPTag_DuringJobAlchemy</li>
+			<li>CTR_EXPTag_OnSkillEXPCraftingAndIntellect</li>
+			<li>CTR_EXPTag_UseItemSuperQi</li>
+		</expTags>
+	</ItsSorceryFramework.ProgressTrackerDef>
+	
+	<HediffDef ParentName="ProgressTrackerHediffBase"> 
+		<defName>CTR_ProgressTrackerRPG_Hediff_Alchemy</defName>
+		<hediffClass>ItsSorceryFramework.Hediff_ProgressLevel</hediffClass>
+		<label>Alchemy Training</label>
+		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor> <!-- gray color -->
+		<description>the foundation to the user Red Flame Fist Technique.</description>
+		<initialSeverity>1</initialSeverity> <!-- Severity is bound to level of implant -->
+		<minSeverity>0</minSeverity>
+		<maxSeverity>40</maxSeverity>
+		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>			
+
+</Defs>

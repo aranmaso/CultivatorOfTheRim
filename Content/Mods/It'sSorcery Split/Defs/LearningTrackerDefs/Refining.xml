@@ -1,0 +1,175 @@
+<Defs>
+
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerProgress">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Progress</learningTrackerClass>
+		<defName>CTR_RefiningLearningProgress</defName>
+		<label>Refining learning progress</label>
+	</ItsSorceryFramework.LearningTrackerDef>
+	
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerTree">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Tree</learningTrackerClass>
+		<defName>CTR_RefiningLearningTree</defName>
+		<label>Refining Technique</label>
+	</ItsSorceryFramework.LearningTrackerDef>
+
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_RefiningLearningTree</learningTrackerDef>
+		<defName>CTR_Refining_Introduction</defName>
+		<label>Refining introduction</label>
+		<description>introduction step to the method of Refining</description>		
+		
+		<prereqsStats>
+		<li>
+			<mode>GreaterEqual</mode>
+			<statReqs>
+				<RefiningSuccessChance>0.15</RefiningSuccessChance>
+			</statReqs>
+		</li>
+		</prereqsStats>
+		
+		<prereqsHediff>
+		<li>
+			<key>CTR_BreakthroughCounter</key>
+			<value>0</value>
+		</li>
+		</prereqsHediff>
+		
+		<statOffsets>
+			<TechniqueLearningCount>1</TechniqueLearningCount>
+			<RefiningSuccessChance>0.05</RefiningSuccessChance>
+		</statOffsets>
+		
+		<coordX>0</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_RefiningLearningTree</learningTrackerDef>
+		<defName>CTR_Refining_FlameControl</defName>
+		<label>Flame Control</label>
+		<description>refining item need to use a strong Qi flame. and a suitable technique is needed to control one.</description>		
+
+		<prereqs>
+			<li>CTR_Refining_Introduction</li>
+		</prereqs>	
+		
+		<statOffsets>
+			<RefiningSuccessChance>0.05</RefiningSuccessChance>
+		</statOffsets>
+		
+		<coordX>1</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_RefiningLearningTree</learningTrackerDef>
+		<defName>CTR_Refining_MaterialPicking</defName>
+		<label>Material Know-how</label>
+		<description>increase in knowledge about refinement material. increase mining yield and refinement success chance moderately</description>	
+
+		<prereqs>
+			<li>CTR_Refining_Introduction</li>
+		</prereqs>		
+		
+		<statOffsets>
+			<RefiningSuccessChance>0.05</RefiningSuccessChance>
+			<MiningSpeed>0.1</MiningSpeed>
+			<MiningYield>0.1</MiningYield>
+		</statOffsets>
+		
+		<coordX>1</coordX>
+		<coordY>2</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_RefiningLearningTree</learningTrackerDef>
+		<defName>CTR_Refining_EyeFocus</defName>
+		<label>Eye Focusing</label>
+		<description>improve user focus during Refining process. increase success chance moderately</description>	
+
+		<prereqs>
+			<li>CTR_Refining_Introduction</li>
+		</prereqs>		
+		
+		<statOffsets>
+			<RefiningSuccessChance>0.05</RefiningSuccessChance>
+		</statOffsets>
+		
+		<capMods>
+			<li>
+				<capacity>Sight</capacity>
+				<offset>0.25</offset>
+			</li>
+		</capMods>
+		
+		<coordX>1</coordX>
+		<coordY>3</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_RefiningLearningTree</learningTrackerDef>
+		<defName>CTR_Refining_AdvancedFireControl</defName>
+		<label>Advance Fire Manipulation</label>
+		<description>improve user fire control during Refining process. increase success chance moderately</description>	
+
+		<prereqs>
+			<li>CTR_Refining_FlameControl</li>
+		</prereqs>		
+		
+		<statOffsets>
+			<RefiningSuccessChance>0.1</RefiningSuccessChance>
+		</statOffsets>
+		
+		<coordX>2</coordX>
+		<coordY>1</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_RefiningLearningTree</learningTrackerDef>
+		<defName>CTR_Refining_AdvancedMaterialLearning</defName>
+		<label>Advance Material Knowledge</label>
+		<description>learn the very minor detail of each material and their properties.</description>	
+
+		<prereqs>
+			<li>CTR_Refining_MaterialPicking</li>
+		</prereqs>		
+		
+		<statOffsets>
+			<RefiningSuccessChance>0.1</RefiningSuccessChance>
+			<MiningSpeed>0.1</MiningSpeed>
+			<MiningYield>0.1</MiningYield>
+		</statOffsets>
+		
+		<coordX>2</coordX>
+		<coordY>2</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_RefiningLearningTree</learningTrackerDef>
+		<defName>CTR_Refining_AdvancedHandTechnique</defName>
+		<label>Advance Hand Control</label>
+		<description>lmprove hand control. able to fine-tune better during Refining process</description>	
+
+		<prereqs>
+			<li>CTR_Refining_EyeFocus</li>
+		</prereqs>		
+		
+		<capMods>
+			<li>
+				<capacity>Manipulation</capacity>
+				<offset>0.50</offset>
+			</li>
+		</capMods>
+		
+		<coordX>2</coordX>
+		<coordY>3</coordY>
+		<pointReq>2</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+
+</Defs>

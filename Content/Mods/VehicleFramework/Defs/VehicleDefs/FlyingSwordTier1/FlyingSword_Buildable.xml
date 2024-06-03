@@ -1,0 +1,33 @@
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>CTR_FlyingSword_TierOne_Blueprint</defName>
+		<label>intermediate flying sword</label>
+		<description>intermediete flying sword, use Spirit Stone as fuel</description>
+		<designationCategory>VF_Vehicles</designationCategory>
+		<designatorDropdown>CTR_FlyingSword</designatorDropdown>
+		<uiIconPath>Things/Vehicles/flyingSword_tier1_east</uiIconPath>
+		<graphicData>
+			<texPath>Things/Vehicles/flyingSword_tier1</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,3)</drawSize>
+			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>3500</WorkToBuild>
+			<Flammability>0.05</Flammability>
+		</statBases>
+		<size>(1,3)</size>
+		<researchPrerequisites>
+			<li>CTR_FlyingSwordMaking</li>
+		</researchPrerequisites>
+		<costList>
+			<CTR_SpiritStone>250</CTR_SpiritStone>
+			<CTR_FireStone>100</CTR_FireStone>
+			<MeleeWeapon_LongSword>1</MeleeWeapon_LongSword>
+		</costList>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<thingToSpawn>CTR_FlyingSword_TierOne</thingToSpawn>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+</Defs>

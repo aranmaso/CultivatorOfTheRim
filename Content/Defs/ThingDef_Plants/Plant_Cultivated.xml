@@ -45,6 +45,7 @@
 		<ingestible />
 		<tradeTags>			
 			<li>Neutral_Qi</li>
+			<li>Pure_Qi</li>
 			<li>Qi_Source</li>
 			<li>Qi_Source_Tier1</li>
 		</tradeTags>

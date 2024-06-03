@@ -9,4 +9,13 @@
 		</products>
 	</RecipeDef>
 
+	<RecipeDef ParentName="MakaiPrimoForgeCraftBaseRawResource">
+		<defName>Makai_Manifest_CTR_AzureFragment</defName>
+		<label>Materialize Azure Fragment</label>
+		<description>Materialize Azure Fragment from Primordial Forge</description>
+		<products>
+			<CTR_AzureFragment>1</CTR_AzureFragment>
+		</products>
+	</RecipeDef>
+
 </Defs>

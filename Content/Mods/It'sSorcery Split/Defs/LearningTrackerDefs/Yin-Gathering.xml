@@ -1,0 +1,131 @@
+<Defs>
+
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerProgress">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Progress</learningTrackerClass>
+		<defName>CTR_YinGatheringLearningProgress</defName>
+		<label>Yin Gathering progress</label>
+	</ItsSorceryFramework.LearningTrackerDef>
+	
+	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerTree">
+		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Tree</learningTrackerClass>
+		<defName>CTR_YinGatheringLearningTree</defName>
+		<label>Yin-Gathering</label>
+	</ItsSorceryFramework.LearningTrackerDef>	
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_YinGatheringLearningTree</learningTrackerDef>
+		<defName>CTR_YinGathering</defName>
+		<label>Yin-Qi Introduction</label>
+		<description>introduction step to improve user yang qi efficiency</description>		
+		
+		<prereqsStats>
+		<li>
+			<mode>GreaterEqual</mode>
+			<statReqs>
+				<CTR_YinQi_AbsorptionMultiplier>0.75</CTR_YinQi_AbsorptionMultiplier>
+			</statReqs>
+		</li>
+		</prereqsStats>
+		
+		<prereqsHediff>
+		<li>
+			<key>CTR_BreakthroughCounter</key>
+			<value>0</value>
+		</li>
+		</prereqsHediff>
+		
+		<statOffsets>
+			<CTR_YinPath>1</CTR_YinPath>
+			<CTR_QiPath>1</CTR_QiPath>
+			<TechniqueLearningCount>1</TechniqueLearningCount>
+			<CTR_YinQi_AbsorptionMultiplier>0.1</CTR_YinQi_AbsorptionMultiplier>
+		</statOffsets>
+		
+		<coordX>0</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_YinGatheringLearningTree</learningTrackerDef>
+		<defName>CTR_YinGathering_DantianFortifying</defName>
+		<label>Dantian Fortification</label>
+		<description>fortify user Dantian with a layer of defensive Qi. lowering the chance to receive Dantian damage.</description>		
+		
+		<prereqs>
+			<li>CTR_YinGathering</li>
+		</prereqs>
+		
+		<statOffsets>
+			<CTR_DantianDamageChance>-0.05</CTR_DantianDamageChance>
+		</statOffsets>
+		
+		<coordX>1</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_YinGatheringLearningTree</learningTrackerDef>
+		<defName>CTR_YinGathering_YinBarrier</defName>
+		<label>Yin Barrier</label>
+		<description>enhance user defensive ability. and improve Qi shield durability</description>		
+		
+		<prereqs>
+			<li>CTR_YinGathering</li>
+		</prereqs>
+		
+		<statOffsets>
+			<ArmorRating_Qi>0.10</ArmorRating_Qi>
+			<EnergyShieldEnergyMax>0.05</EnergyShieldEnergyMax>
+		</statOffsets>
+		
+		<coordX>1</coordX>
+		<coordY>2</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_YinGatheringLearningTree</learningTrackerDef>
+		<defName>CTR_YinGathering_ViciousPalm</defName>
+		<label>Vicious Palm</label>
+		<description>enhance user defensive ability. and improve Qi shield durability</description>		
+		
+		<prereqs>
+			<li>CTR_YinGathering_DantianFortifying</li>
+		</prereqs>
+		
+		<abilityGain>
+			<li>CTR_ViciousPalm</li>
+		</abilityGain>
+		
+		<statOffsets>
+			<ArmorRating_Qi>0.10</ArmorRating_Qi>
+			<EnergyShieldEnergyMax>0.05</EnergyShieldEnergyMax>
+		</statOffsets>
+		
+		<coordX>2</coordX>
+		<coordY>1</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+	
+	<ItsSorceryFramework.LearningTreeNodeDef ParentName = "LearningTreeNodeBase">
+		<learningTrackerDef>CTR_YinGatheringLearningTree</learningTrackerDef>
+		<defName>CTR_YinGathering_ColdTolerant</defName>
+		<label>Innate Cold Tolerant</label>
+		<description>enhance user regeneration rate</description>		
+		
+		<prereqs>
+			<li>CTR_YinGathering_YinBarrier</li>
+		</prereqs>
+		
+		<statOffsets>
+			<ComfyTemperatureMin>-25</ComfyTemperatureMin>
+		</statOffsets>
+		
+		<coordX>2</coordX>
+		<coordY>2</coordY>
+		<pointReq>1</pointReq>
+	</ItsSorceryFramework.LearningTreeNodeDef>
+
+</Defs>

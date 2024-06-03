@@ -1,0 +1,5 @@
+It'sSorcery is the current loaded version of Technique.
+
+It'sSorcery Split is the one with split technique. before the merging. if your save have pawn with split schema(technique)
+
+rename "It'sSorcery" to something else. then change "It'sSorcery Split" to just "It'sSorcery"

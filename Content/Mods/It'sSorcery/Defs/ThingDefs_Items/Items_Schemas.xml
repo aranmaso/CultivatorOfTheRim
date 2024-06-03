@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="SchemaItemBase">
+	<ThingDef ParentName="ISF_SchemaItemBase">
 		<defName>CTR_TechniqueManual_QiFoundation</defName>
 		<label>Qi Foundation Manual</label>
 		<description>A item meant to create a system in your mind to organize martial knowledge.</description>
@@ -35,7 +35,7 @@
 	</ThingDef>	
   
 
-	<ThingDef ParentName="SchemaItemBase">
+	<ThingDef ParentName="ISF_SchemaItemBase">
 		<defName>CTR_TechniqueManual_BodyCultivation</defName>
 		<label>Body Foundation Manual</label>
 		<description>A item meant to create a system in your mind to organize martial knowledge.</description>
@@ -69,7 +69,7 @@
 	</ThingDef>	
   
 
-	<ThingDef ParentName="SchemaItemBase">
+	<ThingDef ParentName="ISF_LearningTreeItemBase">
 		<defName>CTR_TechniqueManual_YangGathering</defName>
 		<label>Yang-Gathering Manual</label>
 		<description>A item meant to create a system in your mind to organize martial knowledge.</description>
@@ -79,7 +79,7 @@
 		</graphicData>
 		<tradeTags>
 			<li>Technique_Manual</li>
-			<li>Cultivation_Technique</li>
+			<li>Cultivation_Technique</li>	
 			<li>Yang_Path</li>
 			<li>Qi_Path</li>
 		</tradeTags> 
@@ -87,15 +87,16 @@
 			<li>RewardStandardMidFreq</li>
 		</thingSetMakerTags>
 		<comps>
-			<li Class="ItsSorceryFramework.CompProperties_SchemaItem">
-				<compClass>ItsSorceryFramework.CompSchemaItem</compClass>
+			<li Class="ItsSorceryFramework.CompProperties_LearningTreeItem">
+				<compClass>ItsSorceryFramework.CompLearningTreeItem</compClass>
 				<useJob>UseItem</useJob>
 				<useLabel>Learn {0}</useLabel>
-				<schemaDef>CTR_YangGatheringTechnique</schemaDef>
+				<schemaDef>CTR_QiTechnique</schemaDef>
+				<learningTrackerDef>CTR_YangGatheringLearningTree</learningTrackerDef>
 			</li>
-			<li Class="ItsSorceryFramework.CompProperties_UseEffectSchema">
-				<compClass>ItsSorceryFramework.CompUseEffect_Schema</compClass>
-				<schemaDef>CTR_YangGatheringTechnique</schemaDef>
+			<li Class="ItsSorceryFramework.CompProperties_UseLearningTree">
+				<schemaDef>CTR_QiTechnique</schemaDef>
+				<learningTrackerDef>CTR_YangGatheringLearningTree</learningTrackerDef>
 			</li>
 			<li Class="CompProperties_UseEffectArtifact">
 				<sound>PsychicAnimalPulserCast</sound>
@@ -104,7 +105,7 @@
 	</ThingDef>	
   
 
-	<ThingDef ParentName="SchemaItemBase">
+	<ThingDef ParentName="ISF_LearningTreeItemBase">
 		<defName>CTR_TechniqueManual_YinGathering</defName>
 		<label>Yin-Gathering Manual</label>
 		<description>A item meant to create a system in your mind to organize martial knowledge.</description>
@@ -122,15 +123,16 @@
 			<li>RewardStandardMidFreq</li>
 		</thingSetMakerTags>
 		<comps>
-			<li Class="ItsSorceryFramework.CompProperties_SchemaItem">
-				<compClass>ItsSorceryFramework.CompSchemaItem</compClass>
+			<li Class="ItsSorceryFramework.CompProperties_LearningTreeItem">
+				<compClass>ItsSorceryFramework.CompLearningTreeItem</compClass>
 				<useJob>UseItem</useJob>
 				<useLabel>Learn {0}</useLabel>
-				<schemaDef>CTR_YinGatheringTechnique</schemaDef>
+				<schemaDef>CTR_QiTechnique</schemaDef>
+				<learningTrackerDef>CTR_YinGatheringLearningTree</learningTrackerDef>
 			</li>
-			<li Class="ItsSorceryFramework.CompProperties_UseEffectSchema">
-				<compClass>ItsSorceryFramework.CompUseEffect_Schema</compClass>
-				<schemaDef>CTR_YinGatheringTechnique</schemaDef>
+			<li Class="ItsSorceryFramework.CompProperties_UseLearningTree">
+				<schemaDef>CTR_QiTechnique</schemaDef>
+				<learningTrackerDef>CTR_YinGatheringLearningTree</learningTrackerDef>
 			</li>
 			<li Class="CompProperties_UseEffectArtifact">
 				<sound>PsychicAnimalPulserCast</sound>
@@ -139,7 +141,7 @@
 	</ThingDef>	
   
 
-	<ThingDef ParentName="SchemaItemBase">
+	<ThingDef ParentName="ISF_LearningTreeItemBase">
 		<defName>CTR_TechniqueManual_XuanwuShell</defName>
 		<label>Xuanwu Shell Manual</label>
 		<description>A item meant to create a system in your mind to organize martial knowledge.</description>
@@ -156,15 +158,16 @@
 			<li>RewardStandardMidFreq</li>
 		</thingSetMakerTags>
 		<comps>
-			<li Class="ItsSorceryFramework.CompProperties_SchemaItem">
-				<compClass>ItsSorceryFramework.CompSchemaItem</compClass>
+			<li Class="ItsSorceryFramework.CompProperties_LearningTreeItem">
+				<compClass>ItsSorceryFramework.CompLearningTreeItem</compClass>
 				<useJob>UseItem</useJob>
 				<useLabel>Learn {0}</useLabel>
-				<schemaDef>CTR_XuanwuShellTechnique</schemaDef>
+				<schemaDef>CTR_QiTechnique</schemaDef>
+				<learningTrackerDef>CTR_XuanwuShellLearningTree</learningTrackerDef>
 			</li>
-			<li Class="ItsSorceryFramework.CompProperties_UseEffectSchema">
-				<compClass>ItsSorceryFramework.CompUseEffect_Schema</compClass>
-				<schemaDef>CTR_XuanwuShellTechnique</schemaDef>
+			<li Class="ItsSorceryFramework.CompProperties_UseLearningTree">
+				<schemaDef>CTR_QiTechnique</schemaDef>
+				<learningTrackerDef>CTR_XuanwuShellLearningTree</learningTrackerDef>
 			</li>
 			<li Class="CompProperties_UseEffectArtifact">
 				<sound>PsychicAnimalPulserCast</sound>
@@ -173,7 +176,7 @@
 	</ThingDef>	
   
 
-	<ThingDef ParentName="SchemaItemBase">
+	<ThingDef ParentName="ISF_LearningTreeItemBase">
 		<defName>CTR_TechniqueManual_SuzakuNirvana</defName>
 		<label>Suzaku Nirvana Manual</label>
 		<description>A item meant to create a system in your mind to organize martial knowledge.</description>
@@ -190,15 +193,16 @@
 			<li>RewardStandardMidFreq</li>
 		</thingSetMakerTags>
 		<comps>
-			<li Class="ItsSorceryFramework.CompProperties_SchemaItem">
-				<compClass>ItsSorceryFramework.CompSchemaItem</compClass>
+			<li Class="ItsSorceryFramework.CompProperties_LearningTreeItem">
+				<compClass>ItsSorceryFramework.CompLearningTreeItem</compClass>
 				<useJob>UseItem</useJob>
 				<useLabel>Learn {0}</useLabel>
-				<schemaDef>CTR_SuzakuNirvanaTechnique</schemaDef>
+				<schemaDef>CTR_QiTechnique</schemaDef>
+				<learningTrackerDef>CTR_SuzakuNirvanaLearningTree</learningTrackerDef>
 			</li>
-			<li Class="ItsSorceryFramework.CompProperties_UseEffectSchema">
-				<compClass>ItsSorceryFramework.CompUseEffect_Schema</compClass>
-				<schemaDef>CTR_SuzakuNirvanaTechnique</schemaDef>
+			<li Class="ItsSorceryFramework.CompProperties_UseLearningTree">
+				<schemaDef>CTR_QiTechnique</schemaDef>
+				<learningTrackerDef>CTR_SuzakuNirvanaLearningTree</learningTrackerDef>
 			</li>
 			<li Class="CompProperties_UseEffectArtifact">
 				<sound>PsychicAnimalPulserCast</sound>
@@ -207,7 +211,7 @@
 	</ThingDef>	
   
 
-	<ThingDef ParentName="SchemaItemBase">
+	<ThingDef ParentName="ISF_LearningTreeItemBase">
 		<defName>CTR_TechniqueManual_RedFlameFist</defName>
 		<label>Red Flame Manual</label>
 		<description>A item meant to create a system in your mind to organize martial knowledge.</description>
@@ -224,15 +228,16 @@
 			<li>RewardStandardMidFreq</li>
 		</thingSetMakerTags>
 		<comps>
-			<li Class="ItsSorceryFramework.CompProperties_SchemaItem">
-				<compClass>ItsSorceryFramework.CompSchemaItem</compClass>
+			<li Class="ItsSorceryFramework.CompProperties_LearningTreeItem">
+				<compClass>ItsSorceryFramework.CompLearningTreeItem</compClass>
 				<useJob>UseItem</useJob>
 				<useLabel>Learn {0}</useLabel>
-				<schemaDef>CTR_RedFlameFistTechnique</schemaDef>
+				<schemaDef>CTR_BasicBodyTechnique</schemaDef>
+				<learningTrackerDef>CTR_RedFlameFistLearningTree</learningTrackerDef>
 			</li>
-			<li Class="ItsSorceryFramework.CompProperties_UseEffectSchema">
-				<compClass>ItsSorceryFramework.CompUseEffect_Schema</compClass>
-				<schemaDef>CTR_RedFlameFistTechnique</schemaDef>
+			<li Class="ItsSorceryFramework.CompProperties_UseLearningTree">
+				<schemaDef>CTR_BasicBodyTechnique</schemaDef>
+				<learningTrackerDef>CTR_RedFlameFistLearningTree</learningTrackerDef>
 			</li>
 			<li Class="CompProperties_UseEffectArtifact">
 				<sound>PsychicAnimalPulserCast</sound>
@@ -241,9 +246,9 @@
 	</ThingDef>	
   
 
-	<ThingDef ParentName="SchemaItemBase">
+	<ThingDef ParentName="ISF_SchemaItemBase">
 		<defName>CTR_TechniqueManual_AlchemyTraining</defName>
-		<label>Alchemy Traning Manual</label>
+		<label>Alchemy Training Manual</label>
 		<description>A item meant to create a system in your mind to organize martial knowledge.</description>
 		<graphicData>
 			<texPath>Things/Items/Manual/ManualBook_Qi</texPath>
@@ -266,6 +271,74 @@
 			<li Class="ItsSorceryFramework.CompProperties_UseEffectSchema">
 				<compClass>ItsSorceryFramework.CompUseEffect_Schema</compClass>
 				<schemaDef>CTR_AlchemyTechnique</schemaDef>
+			</li>
+			<li Class="CompProperties_UseEffectArtifact">
+				<sound>PsychicAnimalPulserCast</sound>
+			</li>
+		</comps>
+	</ThingDef>	
+  
+
+	<ThingDef ParentName="ISF_SchemaItemBase">
+		<defName>CTR_TechniqueManual_RefiningTraining</defName>
+		<label>Refining Training Manual</label>
+		<description>A item meant to create a system in your mind to organize martial knowledge.</description>
+		<graphicData>
+			<texPath>Things/Items/Manual/ManualBook_Qi</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tradeTags>
+			<li>Technique_Manual</li>
+			<li>Cultivation_Technique</li>
+		</tradeTags> 
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+		<comps>
+			<li Class="ItsSorceryFramework.CompProperties_SchemaItem">
+				<compClass>ItsSorceryFramework.CompSchemaItem</compClass>
+				<useJob>UseItem</useJob>
+				<useLabel>Learn {0}</useLabel>
+				<schemaDef>CTR_RefiningTechnique</schemaDef>
+			</li>
+			<li Class="ItsSorceryFramework.CompProperties_UseEffectSchema">
+				<compClass>ItsSorceryFramework.CompUseEffect_Schema</compClass>
+				<schemaDef>CTR_RefiningTechnique</schemaDef>
+			</li>
+			<li Class="CompProperties_UseEffectArtifact">
+				<sound>PsychicAnimalPulserCast</sound>
+			</li>
+		</comps>
+	</ThingDef>	
+  
+
+	<ThingDef ParentName="ISF_LearningTreeItemBase">
+		<defName>CTR_TechniqueManual_StarCaller</defName>
+		<label>Star Caller Training Manual</label>
+		<description>A item meant to create a system in your mind to organize martial knowledge.</description>
+		<graphicData>
+			<texPath>Things/Items/Manual/ManualBook_Qi</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tradeTags>
+			<li>Technique_Manual</li>
+			<li>Cultivation_Technique</li>
+			<li>Qi_Path</li>
+		</tradeTags> 
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+		<comps>
+			<li Class="ItsSorceryFramework.CompProperties_LearningTreeItem">
+				<compClass>ItsSorceryFramework.CompLearningTreeItem</compClass>
+				<useJob>UseItem</useJob>
+				<useLabel>Learn {0}</useLabel>
+				<schemaDef>CTR_QiTechnique</schemaDef>
+				<learningTrackerDef>CTR_StarCallerearningTree</learningTrackerDef>
+			</li>
+			<li Class="ItsSorceryFramework.CompProperties_UseLearningTree">
+				<schemaDef>CTR_QiTechnique</schemaDef>
+				<learningTrackerDef>CTR_StarCallerearningTree</learningTrackerDef>
 			</li>
 			<li Class="CompProperties_UseEffectArtifact">
 				<sound>PsychicAnimalPulserCast</sound>

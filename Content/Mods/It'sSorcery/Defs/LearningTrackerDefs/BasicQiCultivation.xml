@@ -4,7 +4,7 @@
 	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerProgress">
 		<learningTrackerClass>ItsSorceryFramework.LearningTracker_Progress</learningTrackerClass>
 		<defName>CTR_QiFoundationLearningProgress</defName>
-		<label>qi foundation progress</label>
+		<label>Qi cultivation progress</label>
 	</ItsSorceryFramework.LearningTrackerDef>
 	
 	<ItsSorceryFramework.LearningTrackerDef ParentName = "LearningTrackerTree">
@@ -100,14 +100,10 @@
 			<li>
 				<mode>Lesser</mode>
 				<statReqs>
-					<CTR_QiPath>1</CTR_QiPath>
+					<CTR_BodyPath>1</CTR_BodyPath>
 				</statReqs>
 			</li>
 		</prereqsStats>
-		
-		<abilityGain>
-			<li>CTR_LaucnhQiWave</li>
-		</abilityGain>
 		
 		<statOffsets>
 			<CTR_QiEnergyRecovery>0.05</CTR_QiEnergyRecovery>

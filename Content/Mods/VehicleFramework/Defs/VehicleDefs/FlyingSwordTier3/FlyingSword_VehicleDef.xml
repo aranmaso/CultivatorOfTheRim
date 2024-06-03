@@ -1,0 +1,197 @@
+<Defs>
+
+	<Vehicles.VehicleDef ParentName="CTR_VehiclePawn_SwordCombat">
+		<defName>CTR_FlyingSword_TierThree</defName>
+		<label>ultimate flying sword</label>
+		<description>ultimate flying sword, use Spirit Stone as fuel</description>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/flyingSword_tier3</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(3,3)</drawSize>
+			<drawOffset>(0,0,0)</drawOffset>
+		</graphicData>
+		
+		<fillPercent>0.2</fillPercent>
+		
+		<nameable>true</nameable>
+		<buildDef>CTR_FlyingSword_TierThree_Blueprint</buildDef>
+		
+		<size>(1,3)</size>
+		<uiIconScale>1</uiIconScale>
+		
+		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
+		<vehicleCategory>Transport</vehicleCategory>
+		<techLevel>Medieval</techLevel>
+		<vehicleType>Land</vehicleType>
+				
+		<statBases>
+			<ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.14</ArmorRating_Sharp>
+			<ArmorRating_Heat>1.0</ArmorRating_Heat>
+			<Flammability>0.5</Flammability>
+			<MarketValue>875</MarketValue>
+		</statBases>
+		
+		<vehicleStats>
+			<Mass>50</Mass>
+			<MoveSpeed>50</MoveSpeed>
+			<CargoCapacity>2000</CargoCapacity>
+			<RepairRate>5</RepairRate>
+			<AccelerationRate>2</AccelerationRate>
+			<FlightSpeed>100</FlightSpeed>
+		</vehicleStats>
+		
+		<!-- <soundSustainersOnEvent> -->
+			<!-- <li> -->
+				<!-- <start>IgnitionOn</start> -->
+				<!-- <stop>IgnitionOff</stop> -->
+				<!-- <value>VVE_VehicleEngineBuggy</value> -->
+			<!-- </li> -->
+		<!-- </soundSustainersOnEvent> -->
+		
+		<race>
+			<baseBodySize>1</baseBodySize>
+		</race>
+		
+		<drawProperties>
+			<displayOffsetNorth>(0, -0.2)</displayOffsetNorth>
+			<displayOffsetEast>(-0.05, -0.2)</displayOffsetEast>
+			<displayOffsetSouth>(0, -0.2)</displayOffsetSouth>
+		</drawProperties>
+		
+		<properties>	
+			
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 3)</li>
+			</vehicleJobLimitations>
+			<customRoadCosts AssignDefaults = "0.2" />
+		
+			<!-- <diagonalRotation>false</diagonalRotation> -->
+			<worldSpeedMultiplier>2.5</worldSpeedMultiplier>
+			<winterSpeedMultiplier>3.5</winterSpeedMultiplier>
+			<riverCost>1</riverCost>
+			<!-- <manhunterTargetsVehicle>False</manhunterTargetsVehicle> -->
+			<offRoadMultiplier>1.5</offRoadMultiplier>
+			
+			<customHillinessCosts>
+				<SmallHills>0.1</SmallHills>
+				<LargeHills>0.1</LargeHills>
+				<Mountainous>0.2</Mountainous>
+			</customHillinessCosts>
+			
+			<customSnowCategoryTicks>
+				<Dusting>4</Dusting>
+				<Thin>8</Thin>
+				<Medium>16</Medium>
+				<Thick>24</Thick>
+			</customSnowCategoryTicks>
+			
+			<roles>
+				<li>
+					<key>rider</key>
+					<label>Rider</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<exposed>true</exposed>
+					
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+				
+					<pawnRenderer>
+						<layer>1</layer>
+						<layerNorth>1</layerNorth>
+						<layerSouth>1</layerSouth>
+						<angleNorth>0</angleNorth>
+						<angleEast>0</angleEast>
+						<angleNorthEast>0</angleNorthEast>
+						<angleSouthEast>0</angleSouthEast>
+						<drawOffsetNorth>(0,0,0.25)</drawOffsetNorth>
+						<drawOffsetSouth>(0,0,0.5)</drawOffsetSouth>
+						<drawOffsetEast>(0,0,0.5)</drawOffsetEast>
+					</pawnRenderer>
+				</li>
+			</roles>
+		</properties>
+		
+		<components>
+			<li>
+				<key>Blade</key>
+				<label>Blade</label>
+				<health>2350</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+				</armor>
+				
+				<!-- <tags> -->
+					<!-- <li>Wheel</li> -->
+				<!-- </tags> -->
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>Hilt</key>
+				<label>Hilt</label>
+				<health>2350</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+				</armor>
+				
+				<!-- <tags> -->
+					<!-- <li>Wheel</li> -->
+				<!-- </tags> -->
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>SpiritCore</key>
+				<label>Spirit Core</label>
+				<health>2150</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>External</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.01</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>3</radius>
+						<damageDef>Flame</damageDef>
+					</li>
+				</reactors>
+				
+				<categories>
+					<li>MoveSpeed</li>
+					<li>FlightControl</li>
+					<li>FlightSpeed</li>
+				</categories>
+			</li>
+		</components>
+		
+		<comps>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<fuelType>CTR_SpiritStone</fuelType>
+				<fuelConsumptionRate>6.5</fuelConsumptionRate>				
+				<fuelConsumptionWorldMultiplier>0.5</fuelConsumptionWorldMultiplier>
+				<fuelCapacity>2000</fuelCapacity>
+			</li>
+		</comps>
+	</Vehicles.VehicleDef>
+
+</Defs>

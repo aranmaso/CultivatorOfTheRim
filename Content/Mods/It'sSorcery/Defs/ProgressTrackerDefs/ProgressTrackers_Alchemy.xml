@@ -6,7 +6,8 @@
 		<label>Alchemy Controling Technique</label>
 		<bgPath>UI/TechniqueBG/ACSBG</bgPath>
 		
-		<scaling>1.5</scaling>
+		<baseEXP>1000</baseEXP>
+		<scaling>1.1</scaling>
 		
 		<progressHediff>CTR_ProgressTrackerRPG_Hediff_Alchemy</progressHediff>
 		<levelFactors>
@@ -30,9 +31,9 @@
 					<li>
 						<label>alchemy success chance</label>
 						<description>increase chance to succeed in alchemy</description>
-						<statFactorOffsets>
+						<statOffsets>
 							<AlchemySuccessChance>0.1</AlchemySuccessChance>
-						</statFactorOffsets>
+						</statOffsets>
 					</li>
 					<li>
 						<label>hand and eye training</label>
@@ -112,16 +113,13 @@
 		<hediffClass>ItsSorceryFramework.Hediff_ProgressLevel</hediffClass>
 		<label>Alchemy Training</label>
 		<defaultLabelColor>(0.8,0.8,0.8)</defaultLabelColor> <!-- gray color -->
-		<description>the foundation to the user Red Flame Fist Technique.</description>
+		<description>the foundation to the user Alchemy technique.</description>
 		<initialSeverity>1</initialSeverity> <!-- Severity is bound to level of implant -->
 		<minSeverity>0</minSeverity>
 		<maxSeverity>40</maxSeverity>
+		<isBad>false</isBad>
 		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
 		<stages>
-			<li>
-				<minSeverity>0</minSeverity>
-				<becomeVisible>false</becomeVisible>
-			</li>
 		</stages>
 	</HediffDef>			
 
